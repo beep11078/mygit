@@ -1,0 +1,417 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+.hide {
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: polygon(0 0,0 0,0 0);
+}
+
+.button {
+    padding: 15px 10px;
+    border-radius: 25px;
+}
+
+.blackCircle {
+    border-radius: 50%;
+    background-color: #000;
+    color: white;
+    padding: 20px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.blackCircle:hover {
+    background-color: #555;
+}
+
+.normalTxt {
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.wrap {
+    display: block;
+    width: 100%;
+    /* border: 1px solid #222; */
+}
+
+.wrapper {
+    max-width: 1712px;
+    margin: auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .logoBox {
+    width: 74px;
+}
+
+.header .logoBox .logoLink {
+    background-image: url(../images/Kakao_image/kakaoLogo.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 25px;
+    display: block;
+}
+
+
+.header .nav {
+    margin: auto;
+}
+
+.header .nav .mainMenu {
+    display: flex;
+}
+
+.header .nav .mainMenu li {
+    position: relative;
+}
+
+.header .nav .mainMenu li a {
+    line-height: 92px;
+    font-size: 1.1rem;
+    position: relative;
+    padding: 2rem;
+    color: #000;
+    text-decoration: none;
+}
+
+.header .nav .mainMenu li:last-child a.arrow::after {
+    content: "↗️";
+}
+
+.header .nav .mainMenu:hover li a:not(:hover) {
+    color: #888;
+}
+
+.header .nav .mainMenu li:hover .menuTitle {
+    color: #000 !important;
+}
+
+.header .nav .mainMenu li a:hover {
+    color: #000;
+}
+
+.header .nav .mainMenu li:hover .subMenu,
+.header .nav .mainMenu li:active .subMenu,
+.header .nav .mainMenu li:focus .subMenu
+{
+    display: block;
+}
+
+.header .nav .mainMenu li .subMenu {
+    display: none;
+    background-color: black;
+    position: absolute;
+    top: 80%; 
+    padding: 15px 10px;
+    border-radius: 25px;
+    z-index: 5;
+    white-space: nowrap;
+}
+
+.header .nav .mainMenu li .subMenu li {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.header .nav .mainMenu li .subMenu a {
+    line-height: 20px;
+    display: block;
+    color: #fff;
+    padding: 0;
+}
+
+.header .nav .subMenu a:hover {
+    font-weight: bold;
+}
+
+.header .nav .mainMenu:hover .subMenu li a:not(:hover) {
+    color: #fff;
+}
+
+.header .util button {
+    margin: 0 5px;
+    width: 35px; height: 35px;
+    border-radius: 50%;
+    background-color: transparent;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: none;
+}
+
+.header .util button:hover {
+    background-color: rgba(0, 0, 0, .1);
+}
+
+.main .section1 .mainBox {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 0;
+}
+
+.main .section1 .mainBox .visualBox {
+    display: block;
+    position: relative;
+    /* overflow-x: hidden; */
+    padding: 0;
+}
+
+.main .section1 .mainBox .visualBox .mainVideo {
+    border-radius: 35px;
+    max-height: 809px;
+}
+
+.main .section1 .mainBox .visualBox .kakaoMore {
+    position: absolute;
+    right: 0; top: 0;
+    z-index: 5;
+} 
+
+.main .section1 .mainBox .visualBox .kakaoMore:hover .button {
+    display: block;
+}
+
+.main .section1 .mainBox .visualBox .kakaoMore .button{
+    background-color: #000;
+    width: 180px;
+    text-align: center;
+    color: white;
+    padding: 15px 10px;
+    border-radius: 20px;
+    position: absolute;
+    top: -50px;
+    display: none;
+}
+
+.main .section1 .mainBox .visualBox .kakaoMore .button::after {
+    content: '';
+    background-image: url(../images/Kakao_image/kakaoSpeechBubble.svg);
+    background-size: contain;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    top: 95%; left: 20px;
+    width: 12px; height: 12px;
+}
+
+.main .section1 .mainBox .visualBox .kakaoMore button {
+    width: 148px; 
+    height: 102px;
+    background: url(../images/Kakao_image/light.gif) center no-repeat ;
+    background-size: contain;
+    border: none;
+    background-color: white;
+    border-radius: 0 0 0 25px;
+    padding: 2px 27px 11px;
+    cursor: pointer;
+}
+
+.main .section1 article .mainBox .visualBox .kakaoMore::before {
+    width: 38px; height: 38px;
+    content: "";
+    position: absolute;
+    top: -2px; left: -36px;
+    background-image: url(../images/Kakao_image/kakaoRoundTop.svg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+
+.main .section1 article .mainBox .visualBox .kakaoMore::after {
+    width: 38px; height: 38px;
+    content: "";
+    position: absolute;
+    top: 100px; right: -2px;
+    background-image: url(../images/Kakao_image/kakaoRoundTop.svg);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+
+.main .section1 article .mainBox .visualBox .mainMore {
+    position: absolute;
+    bottom: 0; left: 0;
+    z-index: 5;
+} 
+
+.main .section1 article .mainBox  .visualBox .mainMore button {
+    width: 300px; 
+    height: 102px;
+    border: none;
+    background-color: white;
+    border-radius: 0 25px 0 0;
+    padding: 2px 27px 11px;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.main .section1 article .mainBox .visualBox .mainMore::before {
+    width: 38px; height: 38px;
+    content: "";
+    position: absolute;
+    top: -36px; left: -2px;
+    background-image: url(../images/Kakao_image/kakaoRoundBottom.svg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+
+}
+
+.main .section1 article .mainBox .visualBox .mainMore::after {
+    width: 38px; height: 38px;
+    content: "";
+    position: absolute;
+    top: 62px; right: -36px;
+    background-image: url(../images/Kakao_image/kakaoRoundBottom.svg);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+
+.main .section1 article .mainBox .visualRightBox {
+    margin-left: 16px;
+}
+
+.visualRightBox .visualRight .visualRightList {
+    width: 273px;
+    border-radius: 25px;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.visualRightBox .visualRight .visualRightList .circleBtn {
+    position: absolute;
+    left: 50%; bottom: 25px; transform: translate(-50%, -50%);
+    display: flex;
+}
+
+.visualRightBox .visualRight .visualRightList .circleBtn div {
+    width: 8px; height: 8px; 
+    border-radius: 50%;
+    background-color: #000;
+    margin: 0 5px;
+}
+
+
+.visualRightBox .visualRight .visualRightList1 {
+    background-color: #fae100;
+}
+
+.visualRightBox .visualRight .visualRightList1 .donation {
+    height: 273px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.visualRightBox .visualRight .visualRightList1 .donation .donationAmount {
+    font-size: 2.5rem;
+    line-height: 2rem;
+    margin: 15px 0 5px 0;
+    font-weight: bold;
+}
+
+.visualRightBox .visualRight .visualRightList2 {
+    height: 341px;
+    background-color: #f3f3f3;
+}
+
+.visualRightBox .visualRight .visualRightList2 .campaign {
+    padding: 20px;
+}
+
+.visualRightBox .visualRight .visualRightList2 .campaign span {
+    color: #fff;
+    font-size: .9rem;
+    background-color: #000;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.visualRightBox .visualRight .visualRightList2 .campaign .subjectTitle {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    margin: 15px 0 5px 0;
+}
+
+.visualRightBox .visualRight .visualRightList2 .campaign .keywords {
+    color: #777;
+}
+
+.visualRightBox .visualRight .visualRightList3 {
+    margin-bottom: 0px;
+    position: relative;
+    overflow: hidden;
+    width: 285px;
+}
+
+.visualRightBox .visualRight .visualRightList3 .bgBox {
+    background-color: #fae100;
+    width: 300px;
+    border-radius: 24px;
+}
+
+.visualRightBox .visualRight .visualRightList3 .bgBox div {
+    width: 273px;
+    height: 165px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.visualRightBox .visualRight .visualRightList3 div::after {
+    content: '';
+    width: 39px; height: 168px;
+    position: absolute; right: 0; bottom: -1px;
+    background-image: url(../images/Kakao_image/kakaoSpeechBubbleSide.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 5;
+}
+
+.visualRightBox .visualRight .visualRightList3 div button {
+    border-radius: 50%;
+    border: none;
+    background-color: rgba(255, 255, 255, .7);
+    padding: 5px; margin: 0 5px;
+    width: 2rem; height: 2rem;
+}
+.visualRightBox .visualRight .visualRightList3 p::before {
+    position: absolute;
+    content: '';
+    width: 80px; height: 80px;
+    top: 40%; left: 50%;
+    transform: translate(-50%, -50%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../images/Kakao_image/kakaogroup.webp);
+}
+
+.visualRightBox .visualRight .visualRightList3 p {
+    font-size: 1.3rem;
+    display: flex;
+    align-self: flex-end;
+    padding-bottom: 20px;
+}
