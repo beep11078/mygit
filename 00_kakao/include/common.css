@@ -397,6 +397,7 @@ li {
     padding: 5px; margin: 0 5px;
     width: 2rem; height: 2rem;
 }
+
 .visualRightBox .visualRight .visualRightList3 p::before {
     position: absolute;
     content: '';
