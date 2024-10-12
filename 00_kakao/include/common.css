@@ -1,7 +1,44 @@
+@font-face {
+    font-family: KakaoSmall;
+    font-weight: 300;
+    src: local("☺"),url(//t1.kakaocdn.net/kakaocorp/kakaocorp/service/fonts/KakaoSmall-Light-v1.0.woff2) format("woff2"),url(//t1.kakaocdn.net/kakaocorp/kakaocorp/service/fonts/KakaoSmall-Light-v1.0.woff) format("woff")
+}
+
+@font-face {
+    font-family: KakaoSmall;
+    font-weight: 400;
+    src: local("☺"),url(//t1.kakaocdn.net/kakaocorp/kakaocorp/service/fonts/KakaoSmall-Regular-v1.0.woff2) format("woff2"),url(//t1.kakaocdn.net/kakaocorp/kakaocorp/service/fonts/KakaoSmall-Regular-v1.0.woff) format("woff")
+}
+
+@font-face {
+    font-family: KakaoSmall;
+    font-weight: 700;
+    src: local("☺"),url(//t1.kakaocdn.net/kakaocorp/kakaocorp/service/fonts/KakaoSmall_Bold_OTF.woff2) format("woff2"),url(//t1.kakaocdn.net/kakaocorp/kakaocorp/service/fonts/KakaoSmall_Bold_OTF.woff) format("woff")
+}
+
+@font-face {
+    font-family: KakaoBig;
+    font-weight: 400;
+    src: local("☺"),url(//t1.kakaocdn.net/kakaocorp/kakaocorp/service/fonts/KakaoBig-Regular-v1.0.woff2) format("woff2"),url(//t1.kakaocdn.net/kakaocorp/kakaocorp/service/fonts/KakaoBig-Regular-v1.0.woff) format("woff")
+}
+
+@font-face {
+    font-family: KakaoBig;
+    font-weight: 700;
+    src: local("☺"),url(//t1.kakaocdn.net/kakaocorp/kakaocorp/service/fonts/KakaoBig-Bold-v1.0.woff2) format("woff2"),url(//t1.kakaocdn.net/kakaocorp/kakaocorp/service/fonts/KakaoBig-Bold-v1.0.woff) format("woff")
+}
+
+@font-face {
+    font-family: KakaoBig;
+    font-weight: 800;
+    src: local("☺"),url(//t1.kakaocdn.net/kakaocorp/kakaocorp/service/fonts/KakaoBig_ExtraBold_OTF.woff2) format("woff2"),url(//t1.kakaocdn.net/kakaocorp/kakaocorp/service/fonts/KakaoBig_ExtraBold_OTF.woff) format("woff")
+}
+
 
 * {
     box-sizing: border-box;
     margin: 0;
+    
 }
 
 ul {
@@ -305,12 +342,24 @@ li {
 }
 
 .visualRightBox .visualRight .visualRightList .circleBtn div {
-    width: 8px; height: 8px; 
-    border-radius: 50%;
+    width: 24px; height: 8px; 
+    border-radius: 8px;
     background-color: #000;
     margin: 0 5px;
 }
 
+.visualRightBox .visualRight .visualRightList .circleBtn1 div:not(:first-child){
+    width: 8px; 
+    border-radius: 8px;
+    border: 1px solid #999;
+    background-color: #fff;
+}
+
+.visualRightBox .visualRight .visualRightList .circleBtn2 div:not(:first-child){
+    width: 8px; 
+    border-radius: 8px;
+    background-color: #999;
+}
 
 .visualRightBox .visualRight .visualRightList1 {
     background-color: #fae100;
