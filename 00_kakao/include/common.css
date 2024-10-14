@@ -479,7 +479,6 @@ li {
 
 .storyBox .storyList {
     display: flex;
-    overflow: hidden;
     max-width: 100%;
 }
 
@@ -589,7 +588,7 @@ li {
 }
 
 
-.storyBox .storyList .story2::after 
+.storyBox .storyList .story2::after, 
 /* 스크립트 3, 5, 8 */
 {
     position: absolute;
