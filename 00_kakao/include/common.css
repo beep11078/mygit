@@ -107,6 +107,7 @@ li {
     background-position: center;
     height: 25px;
     display: block;
+    outline: 0;
 }
 
 .header .nav {
@@ -483,26 +484,41 @@ li {
 }
 
 .storyBox .storyList .wide {
-    width: calc(460px * 2);
-    height: 390px;
+    width: 1370px;
+    height: 538px;
+    padding: 40px 976px 40px 40px ;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     position: relative;
 }
 
+.storyBox .storyList .wide::after {
+    position: absolute;
+    content: '';
+    background-image: url(../images/Kakao_image/story1.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 956px;
+    height: 538px;
+    top: 0;
+    right: 0;
+    border-radius: 0 20px 20px 0;
+}
+
 .storyBox .storyList li {
-    width: 460px;
+    width: 414px;
     flex-shrink: 0;
     background-color: #eee;
-    border-radius: 20px;
-    padding:20px;
+    border-radius: 40px;
+    padding:40px;
     margin: 0 10px;
     position: relative;
 }
 
 .storyBox .storyList .storyInfo {
-    width: 460px;
+    width: block;
     display: flex;
     justify-content: space-between;
     margin-bottom: 1rem;
@@ -525,35 +541,23 @@ li {
 }
 
 .storyBox .storyList .storyInfo .storyMore div {
-    width: 5px; height: 5px;
-    border-radius: 50%;
+    width: 4px; height: 4px;
+    border-radius: 100%;
     background-color: #000;
-    margin: 3px;
+    margin: 4px;
 }
 
 .storyBox .storyList h4 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     margin-bottom: 10px;
+    line-height: 2.3rem;
 }
 
 .storyBox .storyList .comment {
     position: relative;
+    line-height: 1.6rem;
 }
 
 .storyBox .storyList .keywords {
     margin-top: auto;
-}
-
-.storyBox .storyList .wide::after {
-    position: absolute;
-    content: '';
-    background-image: url(../images/Kakao_image/story1.webp);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 750px;
-    height: 390px;
-    top: 0;
-    right: 0;
-    border-radius: 0 20px 20px 0;
 }
