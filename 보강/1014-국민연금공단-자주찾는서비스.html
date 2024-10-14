@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <style>
+
+        *{ 
+            box-sizing: border-box; margin: 0; padding: 0;
+        }
+
+        body {
+            padding: 0;
+        }
+
+        ul {
+            list-style: none; 
+        }
+        
+        .service {
+            width: 472px;
+            /* height: 320px; */
+            background-color: #eee;
+            border-radius: 30px;
+            padding: 39px 37px;
+        }
+
+        .service .tit {
+            font-size: 24px;
+            color: #111;
+            line-height: 34px;
+            margin-bottom: 20px;
+        }
+
+        .service .s-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px 10px;
+        }
+
+        .service .s-list li {
+            width: 92px;
+        }
+
+        .service .s-list li a {
+            background-color: rgb(202, 255, 255);
+            display: block;
+            height: 84px;
+            font-size: 13px;
+            text-decoration: none;
+            color: #111;
+            border: 1px solid #000;
+            border-radius: 10px;
+            padding: 13px;
+            position: relative;
+        }
+
+        .service .s-list li a::before {
+            content: '';
+            width: 28px;
+            height: 28px;
+            background-color: rgb(255, 255, 255);
+            position: absolute; 
+            right: 7px; 
+            bottom: 7px;
+            border-radius: 100%;
+        }
+
+        .service .s-list li a:hover {
+            color: #00f;
+            outline: 2px solid #00f;
+            outline-offset: -2px;
+        }
+
+        .service .s-list li a::before {
+            background-color: #00f;
+        }
+
+        .service li:nth-child(1) a:hover::before {
+            background-color: #0f0;
+        }
+
+        .spacer {
+            height: 100px;
+        }
+
+        .list {
+            width: 860px;
+            background-color: #eee;
+            border: 1px solid #000;
+            border-radius: 20px;
+            padding: 20px 28px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px 10px;
+        }
+
+        .list li a {
+            display: block;
+            text-decoration: none;
+            color: #333;
+            background-color: #fc0;
+            line-height: 35px;
+            /* 웬만하면 컨텐츠에는 높이 따로 주지 않음 
+            컨텐츠랑 패딩으로 주자 */
+            border-radius: calc(35px / 2);
+            padding: 0 24px;
+        }
+
+</style>
+
+</head>
+
+<body>
+
+    <div class="service">
+
+        <h2 class="tit">자주 찾는 서비스</h2>
+
+        <ul class="s-list">
+            <li><a href="#">내 연금 <br> 알아보기</a></li>
+            <li><a href="#">내 연금 <br> 알아보기</a></li>
+            <li><a href="#">내 연금 <br> 알아보기</a></li>
+            <li><a href="#">내 연금 <br> 알아보기</a></li>
+            <li><a href="#">내 연금 <br> 알아보기</a></li>
+            <li><a href="#">내 연금 <br> 알아보기</a></li>
+            <li><a href="#">내 연금 <br> 알아보기</a></li>
+            <li><a href="#">내 연금 <br> 알아보기</a></li>
+        </ul>
+    </div>
+
+        <div class="spacer"></div>
+
+        <ul class="list">
+            <li><a href="">졸려요</a></li>
+            <li><a href="">잠온다</a></li>
+            <li><a href="">자고싶어</a></li>
+            <li><a href="">전체</a></li>
+            <li><a href="">전체</a></li>
+            <li><a href="">잠옴</a></li>
+            <li><a href="">전체</a></li>
+            <li><a href="">전체</a></li>
+            <li><a href="">전체</a></li>
+            <li><a href="">전체</a></li>
+            <li><a href="">전체</a></li>
+            <li><a href="">전체</a></li>
+            <li><a href="">전체</a></li>
+        </ul>
+
+
+    <script>
+
+    </script>
+    
+</body>
+</html>
