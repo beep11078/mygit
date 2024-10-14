@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .box {
+            height: 200px;
+            background-color: #fc0;
+        }
+
+        .spacer {
+            height: 100px;
+        }
+
+        .box1 {
+            position: relative;
+        }
+
+        .box1 h1 {
+            position: absolute;
+            top: 0; right: 0;
+        }
+
+        .box1 h2 {
+            position: absolute;
+            left: 50%; top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .box1 h3 {
+            position: absolute;
+            bottom: 0; left: 0;
+        }
+
+        .box2 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+
+        .box2 h2 {
+            position: absolute; left: 50%; bottom: 0;
+            transform: translateX(-50%);
+        }
+        
+        .box2 h3 {
+            background-color: #f00;
+            position: relative;
+        }
+
+        .box2 h3 span {
+            position: absolute;
+            left: 0; top: 0;
+            background-color: #0f0;
+            top: -200%;
+        }
+        
+    </style>
+
+</head>
+
+<body>
+
+    <div class="box box1">
+        <h1>자식1</h1>
+        <h2>자식2</h2>
+        <h3>자식3</h3>
+    </div>
+
+    <div class="spacer"></div>
+
+    <div class="box box2">
+        <h1>자식1</h1>
+        <h2>자식2</h2>
+        <h3>자식3
+            <span>더미박스</span>
+        </h3>
+    </div>
+</body>
+</html>

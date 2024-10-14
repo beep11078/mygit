@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <!--웹폰트(나눔스퀘어) 연결-->
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css" rel="stylesheet">
+
+    <!--아이콘 폰트(폰트어썸) 연결-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+
+        *{    /*모든 요소 공통*/
+            font-family: 'NanumSquareNeo';
+            box-sizing: border-box; margin: 0; padding: 0;
+        }
+
+        li { list-style-type: none; padding: 0; }
+        a { text-decoration: none; }
+
+        .wrap {
+            width: 100%;
+            display: block;
+        }
+
+        .i_header .inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 40px;
+            line-height: 100px;
+            background-color: #f00;
+        }
+
+        .i_header .inner .gnb {
+            display: flex;
+        }
+
+        .i_header .inner .gnb a {  
+            margin: 0 50px;
+        }
+
+        .i_main .inner {
+            background-color: #ddd;
+        }
+
+        .sec1 {
+            height: 720px;
+            margin: 0 40px;
+            border-radius: 2rem;
+            background-color: #0f0;
+            padding: 60px;
+        }
+
+        .inter {
+            margin: 0 auto;
+            margin-top: 180px;
+            width: 1720px;
+            height: 140px;
+        }
+
+        .inter:first-child {
+            background-color: #00f;
+        }
+
+        .sec2 {
+            margin-top: 100px;
+        }
+
+        .sec2 div {
+            margin: auto;
+            width: 1720px;
+            height: 900px;
+            border-radius: 2rem;
+            background-color: #ff0;
+        }
+
+        .sec3, .sec4 {
+            height: 600px;
+            background-color: #0ff;
+            margin: 130px 0;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="wrap">
+
+        <header class="i_header">
+            <div class="inner">
+                <h1 class="logo">INNOGRID</h1>
+                <nav class="gnb">
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">제품소개</a></li>
+                    <li><a href="#">고객사례</a></li>
+                    <li><a href="#">파트너</a></li>
+                    <li><a href="#">홍보센터</a></li>
+                    <li><a href="#">하이퍼스퀘어</a></li>
+                </nav>
+                <div class="right_nav">
+                    <button>Edu Square</button>
+                    <button>채용</button>
+                    <div class="ham"></div>
+                </div>
+            </div>
+        </header>
+
+        <main class="i_main">
+            <div class="inner">
+
+                <section class="sec sec1">
+                    <div></div>
+                </section>
+
+                <section class="sec inter"></section>
+
+                <section class="sec sec2">
+                    <div></div>
+                </section>
+
+                <section class="sec inter"></section>
+
+                <section class="sec sec3">
+                    <div></div>
+                </section>
+
+                <section class="sec sec4">
+                    <div></div>
+                </section>
+
+
+            </div>
+        </main>
+
+    </div>
+
+</body>
+</html>

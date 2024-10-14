@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <style>
+        body {
+            box-sizing: border-box;
+        }
+
+        .box {
+            width: 500px;
+            height: 200px;
+            background-color: #ccc;
+        }
+
+        .box:nth-child(even) {
+            background-color: #cc0;
+        }
+
+        .box1 {
+            position: relative;
+            left: 50px; top: 50px;
+        }
+
+        .box3 .child {
+            width: 50px; height: 50px;
+            background-color: #f00;
+            top: 0; right: 0; position: absolute;
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+    <!-- .box .box$4 -->
+    <div class="box box1">1</div>
+    <div class="box box2">2</div>
+    <div class="box box3">3
+        <div class="child">자식</div>
+    </div>
+    <div class="box box4">4
+        <div class="child1">
+            <div class="child2">
+                <div class="child3">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- 
+    
+        position
+        기본값 : static (문서의 기본 흐름 block, inline 따라서)
+
+        -> 이 흐름을 벗어나고 싶을 때
+        relative, absolute, fixed, sticky 사용
+    
+        1. relative 
+            1) 자기 자신이 기준
+            2) 자신의 자리를 다른 요소에게 내어주지 않음 -> 하위 요소를 이동하기 위한 기준 설정
+        
+        2. absoulute 
+            상위 요소에 포지션이 있을 때 -> 계층구조에서 자신과 가장 가깝게 포지션이 있는 요소를 기준으로 설정
+            상위 요소에 포지션이 없을 때 -> body
+
+        3. fixed
+            1) 스크린 (viewport) 기준, 스크롤의 영향을 받지 않음
+
+
+
+            포지션 적용시 
+        1. z-index 사용 가능
+
+
+    -->
+</body>
+</html>

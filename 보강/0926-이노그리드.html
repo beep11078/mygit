@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .wrapper {
+            border-bottom: 10px solid #f00;
+        }
+        .i_header {
+            background-color: #ccc;
+        }
+        .i_header .inner {
+            width: 1800px;
+            height: 100px;
+            margin: 0 auto;
+            background-color: #fc0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .i_header .inner .gnb {
+            display: flex;
+        }
+
+
+        .i_footer {
+            padding:60px 95px;
+            background-color: #333;
+        }
+        .i_footer .f_top {
+            height: 80px;
+            background-color: #0fc;
+            margin-bottom: 50px;
+        }
+        .i_footer .f_bottom {
+            height: 200px;
+            background-color: #0fc;
+        }
+
+        .sec1 {
+            width: 1840px;
+            height: 800px;
+            margin: 0 auto 100px;
+            background-color: #f0c;
+        }
+        .sec2,
+        .sec3 {
+            width: 1730px;
+            height: 140px;
+            border-radius: 140px;
+            background-color: #aaa;
+            margin:  0 auto 100px;
+        }
+        .sec3 {
+            height: 900px;
+            border-radius: 0;
+        }
+        .sec4 {
+            width: 1730px;
+            height: 1000px;
+            margin: 0 auto 100px;
+            background-color: #f80;
+        }
+        .sec5 {
+            height: 700px;
+            background-color: #ccc;
+            margin-bottom: 100px;
+        }
+        .sec6 {
+            height: 600px;
+            background-color: #aaa;
+            margin-bottom: 100px;
+        }
+        .sec7 {
+            height: 350px;
+            background-color: #f30;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 사이트시작 -->
+    <div class="wrapper">
+        <!-- 헤더시작 -->
+        <header class="i_header">
+            <div class="inner">
+                <h1>사이트로고</h1>
+                <ul class="gnb">
+                    <li><a href="">사이트메뉴1</a></li>
+                    <li><a href="">사이트메뉴2</a></li>
+                    <li><a href="">사이트메뉴3</a></li>
+                    <li><a href="">사이트메뉴4</a></li>
+                    <li><a href="">사이트메뉴5</a></li>
+                    <li><a href="">사이트메뉴6</a></li>
+                </ul>
+                <div class="util">유틸리티메뉴</div>
+            </div>
+        </header>
+        <!-- 헤더끝 -->
+        <!-- 메인시작 -->
+        <main class="i_main">
+            <section class="sec sec1">1</section>
+            <section class="sec sec2">2</section>
+            <section class="sec sec3">3</section>
+            <section class="sec sec4">4</section>
+            <section class="sec sec5">5</section>
+            <section class="sec sec6">6</section>
+            <section class="sec sec7">7</section>
+        </main>
+        <!-- 메인끝 -->
+        <!-- 푸터시작 -->
+        <footer class="i_footer">
+            <section class="f_top">1</section>
+            <section class="f_bottom">2</section>
+        </footer>
+        <!-- 푸터끝 -->
+    </div>
+    <!-- 사이트끝 -->
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* 여백 초기화 */
+        /* 사이트에서 사용하는 태그만 지정 */
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* div = 블록 */
+        /* 블록요소의 높이는 자식요소 컨텐츠가 만듦 
+            블록요소의 가로크기 : 
+            width : auto (디폴트값) : 부모영역의 p+w(가로크기)
+            높이는 line-height가 결정 (기본 글자 크기 16px의 약 120%)
+        */
+        .box1 {
+            background-color: #ccc;
+            line-height: 50px;
+        }
+
+        /* 인라인 요소의 
+        가로는 컨텐츠
+        높이는 line-height 가 결정, but line-height는 block 요소에만 작성 가능*/
+        .box2 {
+            background-color: #fc0;
+            line-height: 50px; 
+        }
+
+        .spacer {
+            height: 100px;
+        }
+
+        .box3 {
+            width: 500px;
+            background-color: #0fc;
+            /* height 200px */
+        }
+
+        .box3-1 {
+            padding: 50px;
+            background-color: #f0c;
+            /* height 200px */
+        }
+
+        .box3-1-1 {
+            background-color: #fc0;
+            height: 100px;
+        }
+
+        .box4 {
+            background-color: #0fc;
+            width: 200px; height: 100px;
+            position: fixed;
+        }
+
+        .link {
+            background-color: #fc0;
+            width: 200px;
+            display: block;
+            text-align: center;
+            /* height: 50px; */
+            line-height: 50px; 
+            /* 박스에서 flex 없이 세로 가운데 정렬할 때 height와 line-height 일치, height 생략가능*/
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+    <div class="box1">
+        4px
+        16px 글자
+        4px
+        기본 높이는 24px
+    </div>
+    <span class="box2">
+        인라인 요소
+    </span>
+    <div class="spacer"></div>
+    <div class="box3">
+        <div class="box3-1">
+            <div class="box3-1-1"></div>
+        </div>
+    </div>
+    <div class="spacer"></div>
+    <span class="box4">인라인요소</span>
+    <div class="spacer"></div>
+    <div class="spacer"></div>
+    <a href="#" class="link">링크</a>
+
+    
+
+</body>
+</html>
+
+<!-- 
+
+    1, 2
+    box model의 가장 안쪽 영역은 컨텐츠
+    
+    contets-box (default)
+    =컨텐츠 + padding + border + margin
+
+    border-box *
+    =width (padding + border) + margin
+
+    3
+    가로는 상위요소에서 하위요소로 전달
+    세로는 하위요소에서 상위요소로 전달
+
+    4
+    인라인 요소에 absolute, fixed 적용시 블록속성(width, height) 적용 가능
+
+
+-->

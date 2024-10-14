@@ -1,0 +1,70 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding:0;
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    color:inherit;
+    text-decoration: none;
+}
+
+body {
+    padding: 50px;
+}
+
+.ham {
+    width: 100px;
+    height: 100px;
+    background-color: #fc0;
+    border: 0 none;
+    position: relative;
+}
+.ham::before {
+    content: '';
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    left:0;
+    top:0;
+    background-color: #f00;
+}
+.ham::after {
+    content: '';
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    left:0;
+    bottom:0;
+    background-color: #f00;
+}
+
+.spacer {
+    height: 100px;
+}
+.test::before {
+    content: '여기는 비포';
+}
+.test::after {
+    content: '';
+}
+.aaa {
+    width: 100px;
+    height: 100px;
+    background-color: #0f0;
+}
+.bbb {
+    width: 100px;
+    height: 100px;
+    background-color: #00f;
+}

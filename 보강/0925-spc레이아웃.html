@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        .s_header {
+            background-color: #ccc;
+            padding: 0 54px;
+        }
+
+        .s_header .inner {
+            height: 120px;
+            background-color: #fc0;
+        }
+
+        .s_main {
+            padding: 0 54px;
+            background-color: #aaa;
+        }
+
+        .s_main .sec {
+            height: 400px;
+            background-color: #f0c;
+        }
+
+        .s_main .sec:nth-child(even) {
+            background-color: #f08;
+        }
+
+        .s_footer {
+            padding: 0 54px;
+            background-color: #ddd;
+        }
+
+        .s_footer .inner {
+            height: 300px;
+            background-color: #f00;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="s_header">
+            <div class="inner">
+            </div>
+        </header>
+
+        <main class="s_main">
+            <section class="sec"></section>
+            <section class="sec"></section>
+            <section class="sec"></section>
+            <section class="sec"></section>
+        </main>
+
+        <footer class="s_footer">
+            <div class="inner">
+
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

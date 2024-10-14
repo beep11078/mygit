@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0; padding: 0; box-sizing: border-box;
+        }
+
+        .box1 {
+            width: 600px;
+            height: 300px;
+            position: relative;
+            background-color: #fc0;
+            z-index: 10;
+        }
+
+        .box1 .child {
+            width: 150px;
+            height: 500px;
+            background-color: #000;
+            position: relative;
+            z-index: 5000;
+            /* 자식의 z-index는 부모의 z-index보다 높지 않음*** */
+        }
+
+        .box2 {
+            width: 600px;
+            height: 300px; position: relative;
+            background-color: #0cf;
+            z-index: 2;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- z-index 
+        미입력시 -> 나중에 작성한 요소가 위로 감
+        자식의 z-index는 부모의 z-index보다 높지 않음***
+    -->
+
+    <div class="box1">
+        <div class="child"></div>
+    </div>
+    <div class="box2"></div>
+
+</body>
+</html>

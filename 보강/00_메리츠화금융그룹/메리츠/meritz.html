@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .wrap {
+            width: 100%;
+            display: block;
+            background-color: #ddd;
+        }
+
+        .m_header {
+            border-bottom: 1px solid red;
+        }
+
+        .m_header .inner {
+            width: 1200px;
+            margin: 0 auto;
+            height: 99px;
+            background-color: #fc0;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        .m_header .inner .logo {
+            margin-right: auto;
+        }
+
+        .m_header .inner .gnb {
+            display: flex;
+            margin-right: 150px;
+        }
+
+        .m_header .inner .gnb li {
+            list-style-type: none;
+        }
+
+        .m_header .inner .gnb li:not(:last-child) {
+            margin-right: 100px;
+        }
+
+        .m_main .inner {
+            width: 1200px;
+            margin: 0 auto; 
+            background-color: #0fc;
+        }
+
+        .m_main .inner .sec {
+            height: 250px;
+            background-color: #aaa;
+        }
+
+        .m_main .inner .sec:nth-child(even) {
+            background-color: #888;
+        }
+
+        .m_footer {
+            background-color: #f0c;
+        }
+
+        .m_footer inner {
+            width: 1200px;
+            height: 200px;
+            margin: 0 auto;
+            background-color: #777;
+        }
+
+    </style>
+
+</head>
+<body>
+    <!--wrap, wrapper, container-->
+    <div class="wrap">
+        <header class="m_header">
+            <div class="inner">
+                <h1 class="logo">메리츠 화재</h1>
+                <ul class="gnb">
+                    <li><a href="">menu1</a></li>
+                    <li><a href="">menu2</a></li>
+                    <li><a href="">menu3</a></li>
+                    <li><a href="">menu4</a></li>
+                </ul>
+                <button class="btn">전체메뉴</button>
+        </div>
+        </header>
+        <main class="m_main">
+            <div class="inner">
+                <section class="sec"></section>
+                <section class="sec"></section>
+                <section class="sec"></section>
+                <section class="sec"></section>
+            </div>
+        </main>
+        <footer class="m_footer">
+            <div class="inner">
+
+            </div>
+        </footer>
+
+    </div>
+</body>
+</html>

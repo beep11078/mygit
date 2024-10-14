@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            padding: 50px;
+        }
+
+        .spacer {
+            height: 50px;
+        }
+
+        .box {
+            border: 5px solid #777;
+        }
+
+        .box .item {
+            background-color: #fc0;
+        }
+
+        .box .item:nth-child(even) {
+            background-color: #0fc;
+        }
+
+        .box1 {
+            display: flex;
+        }
+
+        .box2 {
+            display: flex;
+        }
+
+        .box2 .item {
+            flex-grow: 1;
+        }
+
+        .box3 {
+            display: flex;
+            width: 500px;
+        }
+
+        .box3 .item {
+            width: 200px;
+        }
+
+        .box4 {
+            display: flex;
+            width: 500px;
+        }
+
+        /* 아이템을 정적 크기로 제어하기 위해서 -> flex-shrink : 0으로 줘야함 */
+
+        .box4 .item {
+            flex-basis: 200px;
+            flex-shrink: 0;
+        }
+
+        /* 2행 2열 */
+        .box5 {
+            display: flex;
+            width: 500px;
+            flex-wrap: wrap;
+        }
+
+        .box5 .item {
+            width: 50%;
+            flex-shrink: 0;
+        }
+
+        .box6 {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 50px;
+        }
+
+        .box6 .item {
+            width:  calc(50% - 25px);
+            flex-shrink: 0;
+        }
+
+        .box7 { 
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .box7 .item:nth-child(1) {
+            margin-right: auto;
+            /* flex-item만 가능 : 컨테이너가 가지고 있는 여백을 자동 할당 */
+        }
+
+        .box7 .item:nth-child(2) {
+            margin-right: auto;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="box box1">
+        <div class="item">item1</div>
+        <div class="item">item2</div>
+        <div class="item">item3</div>
+        <div class="item">item4</div>
+    </div>
+    <div class="spacer"></div>
+    <div class="box box2">
+        <div class="item">item1</div>
+        <div class="item">item2</div>
+        <div class="item">item3</div>
+        <div class="item">item4</div>
+    </div>
+    <div class="spacer"></div>
+    <div class="box box3">
+        <div class="item">item1</div>
+        <div class="item">item2</div>
+        <div class="item">item3</div>
+        <div class="item">item4</div>
+    </div>
+    <div class="spacer"></div>
+    <div class="box box4">
+        <div class="item">item1</div>
+        <div class="item">item2</div>
+        <div class="item">item3</div>
+        <div class="item">item4</div>
+    </div>
+    <div class="spacer"></div>
+    <div class="box box5">
+        <div class="item">item1</div>
+        <div class="item">item2</div>
+        <div class="item">item3</div>
+        <div class="item">item4</div>
+    </div>
+    <div class="spacer"></div>
+    <div class="box box6">
+        <div class="item">item1</div>
+        <div class="item">item2</div>
+        <div class="item">item3</div>
+        <div class="item">item4</div>
+    </div>
+    <div class="spacer"></div>
+    <div class="box box7">
+        <div class="item">item1</div>
+        <div class="item">item2</div>
+        <div class="item">item3</div>
+        <div class="item">item4</div>
+    </div>
+    <div class="spacer"></div>
+
+    <!-- 
+    
+    display: flex; 
+        => 부모 & 자식 관계에서만 영향 줌
+        ex) 부모 : Flex Container
+        자식 : Flex item
+
+        자식은 Flex item이면서 동시에 Flex Container가 될 수 있음 (또 플렉스 주면 되니까!)
+
+        -> item을 Row / Column 두 방식으로 배열 (기본값 : Row)
+
+    부모 -> Container
+        자식 -> item 
+            손자 -> 영향 x
+                증손자 -> 영향 x
+
+    Container
+
+    item 
+    : flex-grow
+        아이템의 합이 부모보다 작을 때, 아이템의 크기가 늘어남, 숫자를 통해 크기 지정
+        1 -> 1 / 아이템 개수
+        default : 0 (부모가 더 커도 늘어나지 않음)
+
+    : flex-shrink
+        아이템의 합이 부모보다 클 때, 아이템을 부모의 크기 안에 강제로 맞춤(수축한다)
+        1 -> 기본값 (부모가 더 적으면 줄어듦)
+        0 -> 수축 없음
+        
+    : flex-basis : auto (default) -> w, h 미설정시 아이템(컨텐츠) 크기 따라감
+
+    Row 기본값 = 주축 
+    Col 서브축 
+
+    주축 정렬 = justify-contents
+    보조축 정렬 = align-items, align-content
+
+
+
+
+
+</body>
+</html>

@@ -508,7 +508,7 @@ li {
 }
 
 .storyBox .storyList li {
-    width: 414px;
+    width: 417px;
     flex-shrink: 0;
     background-color: #eee;
     border-radius: 40px;
@@ -535,6 +535,16 @@ li {
     position: absolute;
 }
 
+.storyBox .storyList .story2 .storyInfo .storyTheme::before,
+.storyBox .storyList .story7 .storyInfo .storyTheme::before
+{
+    background-image: url(../images/Kakao_image/icon2.webp);
+}
+
+.storyBox .storyList .story6 .storyInfo .storyTheme::before
+{
+    background-image: url(../images/Kakao_image/icon3.webp);
+}
 .storyBox .storyList .storyInfo .storyMore {
     border: none;
     background-color: transparent;
@@ -560,4 +570,37 @@ li {
 
 .storyBox .storyList .keywords {
     margin-top: auto;
+}
+
+.storyBox .storyList .story2::after 
+/* 스크립트 2, 4, 7, 9 */
+{
+    position: absolute;
+    content: '';
+    background-image: url(../images/Kakao_image/story2.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 417px;
+    height: 234px;
+    bottom: 0;
+    left: 0;
+    border-radius: 0 0 20px 20px;
+}
+
+
+.storyBox .storyList .story2::after 
+/* 스크립트 3, 5, 8 */
+{
+    position: absolute;
+    content: '';
+    background-image: url(../images/Kakao_image/story2.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 417px;
+    height: 234px;
+    bottom: 0;
+    left: 0;
+    border-radius: 0 0 20px 20px;
 }

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: #fc0;
+            position: relative;
+        }
+        .box .child {
+            width: 100px;
+            height: 100px;
+            background-color: #0fc;
+            position: absolute;
+            left:100%;
+            top:0;
+            display: none;
+        }
+        .box:hover .child {
+            display: block;
+        }
+        .spacer {
+            height: 100px;
+        }
+
+
+        .parent {
+            width: 100px;
+            position: relative;
+        }
+        .parent::before {
+            content: '';
+            width: 100%;
+            height: 3px;
+            background-color: #000;
+            position: absolute;
+            left:0;
+            top:97px;
+            z-index: 9999;
+        }
+        .parent .child {
+            height: 100px;
+            background-color: #fc0;
+        }
+        .parent .child-1 {
+            height: 100px;
+            background-color: #f0c;
+            display: none;
+        }
+        .parent:hover .child-1 {
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="child"></div>
+    </div>
+    <div class="spacer"></div>
+    <div class="parent">
+        <div class="child"></div>
+        <div class="child-1"></div>
+    </div>
+</body>
+</html>

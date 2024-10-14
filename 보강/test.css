@@ -1,0 +1,3468 @@
+@charset "utf-8"; /* (임시)메인 공통 */
+.main .new-navigation {
+    display: none
+}
+
+/* 로그인전 - 메인 */
+.main + .ui-footer {
+    margin-top: 70px;
+}
+
+.mg-main-contents {
+    display: flex;
+    padding-top: 40px;
+}
+
+.mg-main-contents .main-content {
+    display: flex;
+    margin-left: 48px;
+    /*width:672px;*/
+}
+
+.mg-main-contents .main-content .main-menu-list, .mg-main-contents .main-content .main-info-group {
+    width: 312px
+}
+
+.mg-main-contents .main-visual-list {
+    width: 672px;
+    height: 872px;
+    border-radius: 15px;
+    /*background:gainsboro*/
+}
+
+.mg-main-contents .main-visual-list .list-item {
+    padding: 77px 18px 65px;
+    box-sizing: border-box
+}
+
+.mg-main-contents .main-visual-list .list-item .item-link {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.mg-main-contents .main-visual-list .list-item .item-link + .item-link {
+    margin-left: 11px;
+}
+
+.mg-main-contents .main-visual-list .list-item .item-box {
+    padding-left: 28px;
+    /*width:320px*/
+}
+
+.mg-main-contents .main-visual-list .item-box .tag-item {
+    color: #ff3d01;
+    font-size: 16px;
+    line-height: 1.2;
+}
+
+.mg-main-contents .main-visual-list .item-box .info-text {
+    margin-top: 50px
+}
+
+.mg-main-contents .main-visual-list .info-text .title {
+    display: block;
+    color: #000000;
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 1.2
+}
+
+.mg-main-contents .main-visual-list .info-text .title > span {
+    font-weight: 700
+}
+
+.mg-main-contents .main-visual-list .info-text .text {
+    display: block;
+    margin-top: 32px;
+    font-size: 15px;
+}
+
+.mg-main-contents .main-visual-list .item-info-list {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    bottom: 66px;
+    z-index: 1;
+    transform: translateX(-50%);
+}
+
+.mg-main-contents .main-visual-list .item-info-list .info-box {
+    position: relative;
+    padding: 28px 28px 25px;
+    width: 205px;
+    height: 280px;
+    border-radius: 3px;
+    background: #fff
+}
+
+.mg-main-contents .main-visual-list .item-info-list .info-box + .info-box {
+    margin-left: 10px
+}
+
+.mg-main-contents .main-visual-list .info-box .info-title {
+    display: block;
+    color: #000;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.4
+}
+
+.mg-main-contents .main-visual-list .info-box .info-text {
+    display: block;
+    margin-top: 5px;
+    color: #888888;
+    font-size: 16px
+}
+
+.mg-main-contents .main-visual-list .info-box .info-tag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    font-size: 14px
+}
+
+.mg-main-contents .main-visual-list .item-info-list.type1 .item-link:nth-child(1) .info-box .info-tag {
+    background: #aa78dc
+}
+
+.mg-main-contents .main-visual-list .item-info-list.type1 .item-link:nth-child(2) .info-box .info-tag {
+    background: #f49ac0
+}
+
+.mg-main-contents .main-visual-list .item-info-list.type1 .item-link:nth-child(3) .info-box .info-tag {
+    background: #f7c71d
+}
+
+.mg-main-contents .main-visual-list .item-info-list.type2 .item-link:nth-child(1) .info-box .info-tag {
+    background: #aa78dc
+}
+
+.mg-main-contents .main-visual-list .item-info-list.type2 .item-link:nth-child(2) .info-box .info-tag {
+    background: #f49ac0
+}
+
+.mg-main-contents .main-visual-list .item-info-list.type2 .item-link:nth-child(3) .info-box .info-tag {
+    background: #f7c71d
+}
+
+.mg-main-contents .main-visual-list .swiper-controller {
+    z-index: 1;
+    display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 26px
+}
+
+.mg-main-contents .main-visual-list .swiper-controller .swiper-pagination {
+    display: flex;
+    align-items: center;
+    position: static;
+    margin-right: 8px;
+}
+
+.mg-main-contents .main-visual-list .swiper-controller .swiper-pagination .swiper-pagination-bullet {
+    width: 6px;
+    height: 6px;
+}
+
+.mg-main-contents .main-visual-list .swiper-controller .swiper-pagination .swiper-pagination-bullet:focus-visible {
+    color: #000;
+    outline: 2px dashed #000!important;
+    border: none!important;
+    opacity: 1;
+}
+
+.mg-main-contents .main-visual-list .swiper-controller .swiper-pagination .swiper-pagination-bullet + .swiper-pagination-bullet {
+    margin-left: 8px;
+}
+
+.mg-main-contents .main-visual-list .swiper-controller .swiper-pagination .swiper-pagination-bullet-active {
+    pointer-events: none;
+    width: 32px;
+    height: 6px;
+    border-radius: 32px;
+    background: #555;
+}
+
+.mg-main-contents .main-visual-list .swiper-controller .swiper-button.playback {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    background: url(../img/main/ico_btn_playback.png) no-repeat center center;
+    opacity: 30%;
+}
+
+.mg-main-contents .main-visual-list .swiper-controller .swiper-button.stop {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    background: url(../img/main/ico_btn_stop.png) no-repeat center center;
+    opacity: 30%;
+}
+
+.mg-main-contents .main-visual-list .swiper-controller .swiper-button.active {
+    pointer-events: none;
+    border-radius: 50%;
+    opacity: 1;
+}
+
+.mg-main-contents .main-visual-list .swiper-button-group .swiper-button-prev {
+    top: 49%;
+    left: 0;
+    width: 36px;
+    height: 64px;
+    border-radius: 0 36px 36px 0;
+    box-shadow: 0 5px 20px 0 rgba(0,0,0,0.05);
+    background: #ffffffad url('../../resource/img/main/ico_prev.png') no-repeat 8px center
+}
+
+.mg-main-contents .main-visual-list .swiper-button-group .swiper-button-next {
+    top: 49%;
+    right: 0;
+    width: 36px;
+    height: 64px;
+    border-radius: 36px 0 0 36px;
+    box-shadow: 0 5px 20px 0 rgba(0,0,0,0.05);
+    background: #ffffffad url('../../resource/img/main/ico_next.png') no-repeat 18px center
+}
+
+/* =========== start :: 메인 슬라이더 애니메이션 =========== */
+/* 슬라이더 첫번째 페이지 캐릭터 모션 */
+.mg-main-contents .main-visual-list .list-item .item-box {
+    position: relative;
+    z-index: 10;
+}
+
+.mg-main-contents .main-visual-list ul.swiper-wrapper .list-item {
+    background: red;
+    position: relative;
+}
+
+.mg-main-contents .main-visual-list ul.swiper-wrapper .list-item.ani01.item-01::before {
+    content: '';
+    animation: none;
+    width: 250px;
+    height: 218px;
+    position: absolute;
+    top: 124px;
+    right: 50px;
+    z-index: 1;
+    background: url('../../resource/img/main/main_character01_sos00.png') no-repeat center center;
+}
+
+.mg-main-contents .main-visual-list ul.swiper-wrapper .list-item.ani01.item-01::after {
+    content: '';
+    animation: none;
+    width: 672px;
+    height: 872px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    background-image: url('../../resource/img/main/main_character01_sos02.png'), url('../../resource/img/main/main_character01_sos03.png'), url('../../resource/img/main/main_character01_sos01.png');
+    background-repeat: no-repeat;
+    background-position: 196px 402px, 510px 16px, 132px 160px;
+    background-size: auto, auto, auto;
+}
+
+.mg-main-contents .main-visual-list ul.swiper-wrapper .list-item.item-01.ani01.swiper-slide-active::before {
+    content: '';
+    transform: rotate(5deg) translate(5px, 50px);
+    opacity: 0;
+    animation: icon-ani-slideUp1 1.5s .5s ease forwards;
+}
+
+.mg-main-contents .main-visual-list ul.swiper-wrapper .list-item.item-01.ani01.swiper-slide-active::after {
+    content: '';
+    transform: translate(-20px, 50px);
+    opacity: 0;
+    animation: icon-ani-slideUp2 1s ease forwards;
+}
+
+.mg-main-contents .main-visual-list ul.swiper-wrapper .list-item.item-01.ani01 {
+    position: relative;
+    background: url('../../resource/img/main/swiper_bg01_box.png') no-repeat center center;
+    animation: none;
+}
+
+/* 슬라이더 두번째 페이지 캐릭터 모션 */
+.mg-main-contents .main-visual-list ul.swiper-wrapper .list-item.item-02.swiper-slide-active {
+    animation: fadeInLeft2 1.5s .5s ease forwards;
+    opacity: 0;
+}
+
+.mg-main-contents .main-visual-list ul.swiper-wrapper .list-item.ani01.item-02.swiper-slide-active .main-character-group01 {
+    animation: fadeInLeft2 1.5s .5s ease 1 forwards;
+    transform: translateX(-30px);
+    opacity: 0;
+}
+
+.mg-main-contents .main-visual-list ul.swiper-wrapper .list-item.ani01.item-02.swiper-slide-active .main-character-group01 .cha-m01 {
+    animation: bounce4 1s 1.2s ease 2;
+}
+
+.mg-main-contents .main-visual-list ul.swiper-wrapper .list-item.ani01.item-02.swiper-slide-active .main-character-group01 .cha-m02 {
+    animation: bounce4 1s 1.4s ease 2;
+}
+
+.mg-main-contents .main-visual-list ul.swiper-wrapper .list-item.ani01.item-02.swiper-slide-active .main-character-group01 .cha-m03 {
+    animation: bounce4 1s 1.6s ease 2;
+}
+
+.mg-main-contents .main-visual-list ul.swiper-wrapper .list-item.ani01.item-02 .main-character-group01 {
+    animation: none;
+    background: url('../../resource/img/main/main_character02_sos00.png') no-repeat center center;
+    position: absolute;
+    width: 335px;
+    height: 338px;
+    top: 130px;
+    right: 28px;
+}
+
+.mg-main-contents .main-visual-list ul.swiper-wrapper .list-item.ani01.item-02 .main-character-group01 .cha-m01 {
+    animation: none;
+    width: 121px;
+    height: 118px;
+    background: url('../../resource/img/main/main_character02_sos03.png') no-repeat center center;
+    position: absolute;
+    top: 172px;
+    left: 10px;
+    z-index: 5;
+}
+
+.mg-main-contents .main-visual-list ul.swiper-wrapper .list-item.ani01.item-02 .main-character-group01 .cha-m02 {
+    animation: none;
+    width: 121px;
+    height: 114px;
+    background: url('../../resource/img/main/main_character02_sos02.png') no-repeat center center;
+    position: absolute;
+    top: 178px;
+    left: 113px;
+    z-index: 6;
+}
+
+.mg-main-contents .main-visual-list ul.swiper-wrapper .list-item.ani01.item-02 .main-character-group01 .cha-m03 {
+    animation: none;
+    width: 115px;
+    height: 125px;
+    background: url('../../resource/img/main/main_character02_sos01.png') no-repeat center center;
+    position: absolute;
+    top: 170px;
+    right: 0px;
+    z-index: 5;
+}
+
+.mg-main-contents .main-visual-list ul.swiper-wrapper .list-item.ani01.item-02 {
+    animation: none;
+    background: url('../../resource/img/main/swiper_bg02_box.png') no-repeat center center;
+    opacity: 1;
+}
+
+/* info-box 아이콘 애니 테스트 - ani01 */
+.mg-main-contents .main-visual-list .item-info-list .info-box {
+    position: relative;
+    display: block;
+}
+
+.mg-main-contents .main-visual-list .list-item.item-01 .item-info-list .info-box.nth01 .icon-box {
+    position: absolute;
+    top: 202px;
+    left: 30px;
+    width: 35px;
+    height: 54px;
+    background: url(../../resource/img/main/ico_visual_ani1_1.png) no-repeat center;
+    animation: pulse 1.5s ease infinite;
+}
+
+.mg-main-contents .main-visual-list .list-item.item-01 .item-info-list .info-box.nth01 .icon-box::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 25px;
+    z-index: 10;
+    top: 0;
+    left: 36px;
+    background: url(../../resource/img/main/ico_visual_ani1_2.png) no-repeat 0 0;
+    animation: rollIn 1.5s .5s infinite alternate;
+}
+
+.mg-main-contents .main-visual-list .list-item.item-01 .item-info-list .info-box.nth02 .icon-box {
+    position: absolute;
+    top: 214px;
+    left: 26px;
+    width: 37px;
+    height: 42px;
+    background: url(../../resource/img/main/ico_visual_ani2_1.png) no-repeat center;
+}
+
+.mg-main-contents .main-visual-list .list-item.item-01 .item-info-list .info-box.nth02 .icon-box::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 25px;
+    z-index: 10;
+    top: -13px;
+    left: 36px;
+    background: url(../../resource/img/main/ico_visual_ani2_2.png) no-repeat 0 0;
+    animation: heartBeat 1.5s infinite;
+}
+
+.mg-main-contents .main-visual-list .list-item.item-01 .item-info-list .info-box.nth03 .icon-box {
+    position: absolute;
+    top: 205px;
+    left: 30px;
+    width: 46px;
+    height: 53px;
+    background: url(../../resource/img/main/ico_visual_ani3_1.png) no-repeat center;
+    animation: pulse 1.5s ease infinite;
+}
+
+.mg-main-contents .main-visual-list .list-item.item-01 .item-info-list .info-box.nth03 .icon-box::before {
+    content: "";
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    z-index: 10;
+    top: 20px;
+    left: 36px;
+    background: url(../../resource/img/main/ico_visual_coin01.png) 0px 0px no-repeat;
+    animation: bounce2 1s 0s infinite;
+}
+
+.mg-main-contents .main-visual-list .list-item.item-01 .item-info-list .info-box.nth03 .icon-box::after {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 29px;
+    z-index: 10;
+    top: 36px;
+    left: 54px;
+    background: url(../../resource/img/main/ico_visual_coin02.png) 0px 0px no-repeat;
+    animation: 1s cubic-bezier(0, 2.43, 0, 3.94) 0.5s infinite normal none running bounce2;
+}
+
+.mg-main-contents .main-visual-list .list-item.item-01 .item-info-list .info-box.ani01.nth01 .icon-box {
+    animation: pulse 1.5s ease infinite;
+}
+
+.mg-main-contents .main-visual-list .list-item.item-01 .item-info-list .info-box.ani01.nth01 .icon-box::before {
+    animation: bounce2 1s 0s infinite;
+}
+
+.mg-main-contents .main-visual-list .list-item.item-01 .item-info-list .info-box.ani01.nth02 .icon-box {
+    animation: pulse 1.5s ease infinite;
+}
+
+.mg-main-contents .main-visual-list .list-item.item-01 .item-info-list .info-box.ani01.nth02 .icon-box::before {
+    animation: fadeInUp 1s 0s infinite alternate;
+    top: -34px;
+    left: 4px;
+}
+
+.mg-main-contents .main-visual-list .list-item.item-01 .item-info-list .info-box.ani01.nth03 .icon-box::after {
+    animation: bounce2 1s .5s infinite alternate;
+}
+
+.mg-main-contents .main-visual-list .list-item.item-02 .item-info-list .info-box.nth01 .icon-box {
+    position: absolute;
+    top: 200px;
+    left: 30px;
+    width: 35px;
+    height: 54px;
+    background: url(../../resource/img/main/ico_visual_ani1_1.png) no-repeat center;
+}
+
+.mg-main-contents .main-visual-list .list-item.item-02 .item-info-list .info-box.nth01 .icon-box::before {
+    content: '';
+    position: absolute;
+    width: 43px;
+    height: 33px;
+    z-index: 10;
+    top: 17px;
+    left: 18px;
+    background: url(../../resource/img/main/ico_visualm0101_box.png) no-repeat 0 0;
+}
+
+.mg-main-contents .main-visual-list .list-item.item-02 .item-info-list .info-box.nth01 .icon-box::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 25px;
+    z-index: 10;
+    top: -9px;
+    left: 36px;
+    background: url(../../resource/img/main/ico_visualm0102_box.png) no-repeat 0 0;
+}
+
+.mg-main-contents .main-visual-list .list-item.item-02 .item-info-list .info-box.nth02 .icon-box {
+    position: absolute;
+    top: 204px;
+    left: 30px;
+    width: 44px;
+    height: 51px;
+    background: url(../../resource/img/main/ico_visual_ani5_1.png) center center no-repeat;
+    animation: pulse 1.5s ease infinite;
+}
+
+.mg-main-contents .main-visual-list .list-item.item-02 .item-info-list .info-box.nth02 .icon-box::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 25px;
+    z-index: 10;
+    top: 17px;
+    left: 36px;
+    background: url(../../resource/img/main/ico_visual_ani5_2.png) no-repeat 0 0;
+    animation: shakeX 7s .1s ease infinite;
+}
+
+.mg-main-contents .main-visual-list .list-item.item-02 .item-info-list .info-box.nth03 .icon-box {
+    position: absolute;
+    top: 210px;
+    left: 26px;
+    width: 50px;
+    height: 38px;
+    background: url(../../resource/img/main/ico_visual03_box.png) no-repeat center;
+    animation: pulse 1.5s ease infinite;
+}
+
+.mg-main-contents .main-visual-list .list-item.item-02 .item-info-list .info-box.nth03 .icon-box::before {
+    content: "";
+    position: absolute;
+    width: 28px;
+    height: 29px;
+    z-index: 10;
+    top: 14px;
+    left: 36px;
+    background: url(../../resource/img/main/ico_visual_ani6_1.png) 0px 0px no-repeat;
+    animation: bounce2 1s 0s infinite;
+}
+
+.mg-main-contents .main-visual-list .list-item.item-02 .item-info-list .info-box.nth03 .icon-box::after {
+    content: "";
+    position: absolute;
+    width: 23px;
+    height: 24px;
+    z-index: 10;
+    top: 14px;
+    left: 58px;
+    background: url(../../resource/img/main/ico_visual_ani6_2.png) 0px 0px no-repeat;
+    animation: 1s cubic-bezier(0, 2.43, 0, 3.94) 0.5s infinite normal none running bounce2;
+}
+
+.mg-main-contents .main-visual-list .list-item.item-02 .item-info-list .info-box.ani01.nth01 .icon-box {
+    animation: pulse 1.5s ease infinite;
+}
+
+.mg-main-contents .main-visual-list .list-item.item-02 .item-info-list .info-box.ani01.nth01 .icon-box::before {
+    animation: jackInTheBox 1.5s 0s infinite alternate;
+}
+
+.mg-main-contents .main-visual-list .list-item.item-02 .item-info-list .info-box.ani01.nth01 .icon-box::after {
+    animation: rollIn 1.5s .5s infinite alternate;
+}
+
+/* 슬라이드 버튼 디자인 수급 필요 */
+.mg-main-contents .main-visual-list .swiper-controller .swiper-button {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background: transparent
+}
+
+.mg-main-contents .main-visual-list .swiper-controller .swiper-button.active {
+    border-radius: 50%
+}
+
+/* 빠른조회/주요메뉴*/
+.mg-main-contents .main-content .quick-menu.tab-group .tab-heading {
+    overflow: hidden;
+    position: relative;
+    margin: 0;
+    border-top: 1px solid #c2c2c2;
+    border-left: 1px solid #c2c2c2;
+    border-right: 1px solid #c2c2c2;
+    border-radius: 15px 15px 0 0;
+    box-sizing: border-box
+}
+
+.mg-main-contents .main-content .quick-menu.tab-group .tab-heading:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 15px;
+    background: #f8f8f8;
+    pointer-events: none
+}
+
+.mg-main-contents .main-content .quick-menu.tab-group .tab-heading li {
+    z-index: 2;
+    overflow: initial;
+    position: relative;
+    margin: -1px 0 0;
+    padding: 0 10px;
+    height: 50px;
+    font-size: 18px;
+    line-height: 50px;
+    border: 0;
+    color: #555;
+    text-align: center;
+    background: #f8f8f8
+}
+
+.mg-main-contents .main-content .quick-menu.tab-group .tab-heading li.on {
+    border: 0;
+    background-color: #fff;
+    font-weight: 700;
+    color: #000;
+}
+
+.mg-main-contents .main-content .quick-menu.tab-group .tab-heading li:nth-child(1) {
+    border-radius: 0 0 15px 0
+}
+
+.mg-main-contents .main-content .quick-menu.tab-group .tab-heading li:nth-child(2) {
+    border-radius: 0 0 0 15px;
+}
+
+.mg-main-contents .main-content .quick-menu.tab-group .tab-heading li:nth-child(1):after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 45%;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    border-right: 1px solid #dadada;
+    border-bottom: 1px solid #dadada;
+    border-radius: 0 0 15px 0;
+    pointer-events: none
+}
+
+.mg-main-contents .main-content .quick-menu.tab-group .tab-heading li:nth-child(2):after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 45%;
+    left: -1px;
+    right: 0;
+    bottom: 0px;
+    border-left: 1px solid #c2c2c2;
+    border-bottom: 1px solid #dadada;
+    border-radius: 0 0 0 15px;
+    pointer-events: none
+}
+
+.mg-main-contents .main-content .quick-menu.tab-group .tab-heading li.on {
+    border-radius: 15px 15px 0 0;
+}
+
+.mg-main-contents .main-content .quick-menu.tab-group .tab-heading li:nth-child(1).on:after {
+    z-index: 2;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0px;
+    bottom: 45%;
+    border: 0;
+    border-top: 1px solid #dadada;
+    border-right: 1px solid #dadada;
+    border-radius: 0 15px 0 0
+}
+
+.mg-main-contents .main-content .quick-menu.tab-group .tab-heading li:nth-child(2).on:after {
+    z-index: 2;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -1px;
+    right: 0px;
+    bottom: 45%;
+    border: 0;
+    border-top: 1px solid #dadada;
+    border-left: 1px solid #dadada;
+    border-radius: 15px 0 0 0
+}
+
+.mg-main-contents .main-content .quick-menu.tab-group .tab-con {
+    height: 406px;
+    padding: 0px 0 12px;
+    border: 1px solid #c2c2c2;
+    border-top: 0;
+    border-radius: 0 0 15px 15px
+}
+
+.mg-main-contents .main-menu-list .quick-menu-list ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.mg-main-contents .main-menu-list .quick-menu-list .list-item {
+    position: relative;
+    padding: 0 16px;
+    width: 152px;
+    height: 136px;
+    box-sizing: border-box
+}
+
+.mg-main-contents .main-menu-list .quick-menu-list .list-item .item-link {
+    display: block;
+    padding-top: 90px;
+    height: 100%;
+    color: #000;
+    font-size: 16px;
+    text-align: center;
+    box-sizing: border-box
+}
+
+.mg-main-contents .main-menu-list .quick-menu-list .list-item button.item-link {
+    width: 100%;
+}
+
+.mg-main-contents .main-menu-list .quick-menu-list .list-item .item-link::before {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 46px;
+    height: 48px;
+}
+
+.mg-main-contents .main-menu-list .quick-menu-list .list-item.type07 .item-link::before {
+    width: 46px;
+    background: url('../../resource/img/main/img_quick_li_01.png') no-repeat center center;
+}
+
+.mg-main-contents .main-menu-list .quick-menu-list .list-item.type08 .item-link::before {
+    width: 48px;
+    background: url('../../resource/img/main/img_quick_li_02.png') no-repeat center center;
+}
+
+.mg-main-contents .main-menu-list .quick-menu-list .list-item.type09 .item-link::before {
+    width: 49px;
+    background: url('../../resource/img/main/img_quick_li_03.png') no-repeat center center;
+}
+
+.mg-main-contents .main-menu-list .quick-menu-list .list-item.type10 .item-link::before {
+    width: 46px;
+    background: url('../../resource/img/main/img_quick_li_01.png') no-repeat center center;
+}
+
+.mg-main-contents .main-menu-list .quick-menu-list .list-item.type11 .item-link::before {
+    width: 48px;
+    background: url('../../resource/img/main/img_quick_li_04.png') no-repeat center center;
+}
+
+.mg-main-contents .main-menu-list .quick-menu-list .list-item.type12 .item-link::before {
+    width: 44px;
+    background: url('../../resource/img/main/img_quick_li_05.png') no-repeat center center;
+}
+
+.mg-main-contents .main-menu-list .quick-menu-list .list-item.type13 .item-link::before {
+    width: 46px;
+    background: url('../../resource/img/main/img_quick_li_06.png') no-repeat center center;
+}
+
+.mg-main-contents .main-menu-list .quick-menu-list .list-item.type14 .item-link::before {
+    width: 48px;
+    background: url('../../resource/img/main/img_quick_li_07.png') no-repeat center center;
+}
+
+.mg-main-contents .main-menu-list .quick-menu-list .list-item.type15 .item-link::before {
+    width: 43px;
+    background: url('../../resource/img/main/img_quick_li_08.png') no-repeat center center;
+}
+
+.mg-main-contents .main-menu-list .banking-info-menu {
+    overflow: hidden;
+    margin-top: 48px;
+    padding: 25px 22px 30px;
+    height: 368px;
+    border: 1px solid #c2c2c2;
+    border-radius: 15px;
+    box-sizing: border-box
+}
+
+.mg-main-contents .main-menu-list .banking-info-menu .info-link {
+    display: inline-block
+}
+
+.mg-main-contents .main-menu-list .info-link .info-titlele {
+    display: block;
+    color: #000;
+    font-size: 24px;
+    line-height: 1.5
+}
+
+.mg-main-contents .main-menu-list .info-link .info-titlele > span {
+    position: relative;
+    font-weight: 700;
+    padding-right: 24px
+}
+
+.mg-main-contents .main-menu-list .info-link .info-titlele > span::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 25px;
+    background: url('../../resource/img/main/ico_plus.png') no-repeat right center
+}
+
+.mg-main-contents .main-menu-list .info-link .info-text {
+    display: block;
+    margin-top: 5px;
+    color: #808080
+}
+
+.mg-main-contents .main-menu-list .info-menu-list {
+    margin-top: 30px
+}
+
+.mg-main-contents .main-menu-list .info-menu-list ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -8px;
+    margin-left: -8px;
+}
+
+.mg-main-contents .main-menu-list .info-menu-list .list-item {
+    margin-top: 8px;
+    margin-left: 8px;
+}
+
+.mg-main-contents .main-menu-list .info-menu-list .list-item .item-link {
+    display: block;
+    padding: 11px 16px;
+    color: #000;
+    font-size: 16px;
+    font-weight: 500;
+    background: #f7f7f7;
+    border-radius: 3px
+}
+
+/* 로그인  */
+.mg-main-contents .main-content .main-info-group {
+    margin-left: 48px
+}
+
+.mg-main-contents .main-content .main-info-group .main-login-wrap .main-login {
+    padding: 21px 20px 20px;
+    height: 168px;
+    border: 1px solid #c2c2c2;
+    border-radius: 15px;
+    background: #f6f7fb
+}
+
+.mg-main-contents .main-content .main-login-wrap .main-login > .title {
+    display: block;
+    color: #000;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1
+}
+
+.mg-main-contents .main-content .main-login-wrap .main-login .login-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%;
+    height: 55px;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 3px;
+    background: #3074f0
+}
+
+.mg-main-contents .main-content .main-login-wrap .main-login .login-link > span {
+    position: relative;
+    padding-left: 23px;
+}
+
+.mg-main-contents .main-content .main-login-wrap .main-login .login-link > span::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 1px;
+    left: 0;
+    width: 23px;
+    height: 23px;
+    background: url('../../resource/img/main/ico_login01.png') no-repeat left center
+}
+
+.mg-main-contents .main-content .main-login-wrap .main-login .login-help {
+    display: flex;
+    margin-top: 13px;
+    justify-content: center;
+}
+
+.mg-main-contents .main-content .main-login-wrap .login-help .help-link {
+    position: relative;
+    letter-spacing: -0.999px;
+}
+
+.mg-main-contents .main-content .main-login-wrap .login-help .help-link.id {
+    text-align: right;
+}
+
+.mg-main-contents .main-content .main-login-wrap .login-help .help-link + .help-link {
+    margin-left: 28px
+}
+
+.mg-main-contents .main-content .main-login-wrap .login-help .help-link + .help-link:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: -14px;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 12px;
+    background: #e5e5e5
+}
+
+.mg-main-contents .main-content .main-login-wrap .certi-util {
+    display: flex;
+    margin-top: 14px
+}
+
+.mg-main-contents .main-content .main-login-wrap .certi-util .util-link {
+    position: relative;
+    letter-spacing: -0.999px;
+}
+
+.mg-main-contents .main-content .main-login-wrap .certi-util .util-link + .util-link {
+    margin-left: 21px
+}
+
+.mg-main-contents .main-content .main-login-wrap .certi-util .util-link + .util-link:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: -11px;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 11px;
+    background: #e6e6e6
+}
+
+.mg-main-contents .main-content .main-notice {
+    margin-top: 40px
+}
+
+/* 230824 원격상담 버튼 추가 */
+.mg-main-contents .main-content .main-notice .notice-link {
+    display: inline-block;
+    color: #000;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1
+}
+
+.mg-main-contents .main-content .main-notice .notice-link > span {
+    position: relative;
+    padding-right: 25px;
+}
+
+.mg-main-contents .main-content .main-notice .notice-link > span:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 25px;
+    background: url('../../resource/img/main/ico_plus.png') no-repeat right center
+}
+
+.mg-main-contents .main-content .main-notice .notice-list {
+    margin-top: 20px
+}
+
+/* 230824 원격상담 버튼 추가 */
+.mg-main-contents .main-content .notice-list .list-item + .list-item {
+    margin-top: 25px
+}
+
+.mg-main-contents .main-content .notice-list .item-link {
+    display: block
+}
+
+.mg-main-contents .main-content .notice-list .item-link > .title {
+    display: inline-block;
+    position: relative;
+    color: #000;
+    font-size: 16px;
+    line-height: 1.2;
+    max-width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+    -webkit-text-overflow: ellipsis;
+}
+
+.mg-main-contents .main-content .notice-list .item-link > .text {
+    margin-top: 8px;
+    color: #555555;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+    -webkit-text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.mg-main-contents .main-content .notice-list .item-link > .date {
+    display: block;
+    margin-top: 16px;
+    color: #555555;
+    line-height: 1.2
+}
+
+.mg-main-contents .main-content .list-item.new .title {
+    padding-right: 24px;
+}
+
+.mg-main-contents .main-content .list-item.new .title:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    background: url('../../resource/img/main/ico_new.png') no-repeat right center
+}
+
+.mg-main-contents .main-content .main-service-center {
+    position: relative;
+    margin-top: 40px
+}
+
+/* 230824 원격상담 버튼 추가 */
+.mg-main-contents .main-content .service-info + .service-number {
+    margin-top: 20px
+}
+
+.mg-main-contents .main-content .main-service-center .service-info > .info-title {
+    display: block;
+    color: #000;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1
+}
+
+.mg-main-contents .main-content .main-service-center .service-info > .info-text {
+    display: inline-block;
+    margin-top: 12px;
+    color: #808080;
+    font-size: 13px;
+    line-height: 1.2
+}
+
+.mg-main-contents .main-content .service-number .kr-number {
+    display: inline-block;
+    color: #000;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1
+}
+
+.mg-main-contents .main-content .service-number .number {
+    display: block;
+    margin-top: 4px;
+    color: #666666;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.2
+}
+
+.mg-main-contents .main-content .remote-consult {
+    margin-top: 16px;
+}
+
+/* 230824 원격상담 버튼 추가 */
+.mg-main-contents .main-content .remote-consult .util-link {
+    background: url(../img/common/ui_btn_expand_right.png) no-repeat center right;
+    padding-right: 12px;
+}
+
+/* 230824 원격상담 버튼 추가 */
+.mg-main-contents .main-content .service-chat-bot {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    width: 114px;
+    height: 141px;
+    cursor: pointer;
+    background: url('../../resource/img/common/ui_img_chatbot.png')no-repeat center center
+}
+
+.mg-main-contents .main-content .service-chat-bot > .bot-link {
+    display: block;
+    width: 100%;
+    height: 115px;
+}
+
+/* 로그인 후 - 메인 */
+.mg-main-login-conts {
+    position: relative;
+    padding-top: 40px
+}
+
+.mg-main-login-conts .login-cont-wrap {
+    display: flex;
+    position: relative
+}
+
+.mg-main-login-conts .login-cont-wrap .login-cont {
+    width: 1034px;
+    margin-left: 46px;
+}
+
+.mg-main-login-conts .login-cont-wrap .login-aside-cont {
+    width: 312px
+}
+
+.mg-main-login-conts .login-cont-wrap.end {
+    justify-content: flex-end
+}
+
+/* 로그인 후 - 메인 공통 */
+.mg-main-login-conts .login-cont-wrap .btn-refresh {
+    position: relative;
+    color: #445768;
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.mg-main-login-conts .login-cont-wrap .btn-refresh .date + .time {
+    margin-left: 3px
+}
+
+.mg-main-login-conts .btn .rotate {
+    width: 18px;
+    height: 15px;
+    background: url(../../resource/img/main/ico_refresh.png) no-repeat center 0;
+}
+
+/* 메인 - 나의 자산 정보 */
+.mg-main-login-conts .my-asset {
+    border: 1px solid #c2c2c2;
+    border-radius: 3px;
+    padding: 0 0;
+}
+
+.mg-main-login-conts .my-asset .asset-box {
+    text-align: center;
+    padding: 56px 32px 18px
+}
+
+.mg-main-login-conts .my-asset .asset-box > .btn-wrap {
+    margin-bottom: 40px
+}
+
+.mg-main-login-conts .my-asset .asset-box .name {
+    position: relative;
+    color: #000000;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.mg-main-login-conts .my-asset .asset-box .asset {
+    margin-top: -6px;
+}
+
+.mg-main-login-conts .my-asset .asset-box .asset > .number {
+    font-size: 14px;
+    color: #000;
+}
+
+.mg-main-login-conts .my-asset .login-info {
+    height: 48px;
+    background: #f8f8f8;
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+    position: relative;
+}
+
+.mg-main-login-conts .my-asset .login-info .text {
+    display: inline-block;
+    vertical-align: middle;
+    color: #555;
+}
+
+.mg-main-login-conts .my-asset .login-info .time {
+    color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    right: 65px;
+    width: 118px;
+}
+
+.mg-main-login-conts .my-asset .login-info .time > span {
+    margin-top: 3px;
+    display: block;
+    padding-left: 22px;
+}
+
+.mg-main-login-conts .my-asset .login-info .time::before {
+    content: '';
+    position: absolute;
+    display: block;
+    left: 0;
+    bottom: 4px;
+    width: 15px;
+    height: 15px;
+    background: url(../img/common/ui_ico_time.png) no-repeat;
+    background-size: cover;
+}
+
+.mg-main-login-conts .my-asset .login-info .time > .login {
+    margin-left: 6px;
+}
+
+.mg-main-login-conts .my-asset .login-info .time .login::before {
+    display: none;
+}
+
+.mg-main-login-conts .my-asset .login-info .login {
+    display: block;
+    position: absolute;
+    right: 24px;
+}
+
+.mg-main-login-conts .my-asset .login-info .login .ui-text {
+    position: relative;
+    color: #000;
+}
+
+.mg-main-login-conts .my-asset .login-info .login .ui-text::before {
+    content: '';
+    position: absolute;
+    display: block;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: #000;
+}
+
+.mg-main-login-conts .my-asset .btn-group .certi-btn.active .ui-text {
+    color: #000;
+}
+
+.mg-main-login-conts .my-asset .btn-group {
+    margin: 16px -32px 0;
+    height: 54px;
+}
+
+.mg-main-login-conts .my-asset .btn-group .certi-btn {
+    position: relative;
+    padding: 0 0 0 22px;
+    height: 32px;
+    font-size: 14px;
+    color: #555;
+}
+
+.mg-main-login-conts .my-asset .btn-group .certi-btn.active {
+    color: #000;
+}
+
+.mg-main-login-conts .my-asset .btn-group .certi-btn:first-of-type {
+    background: url(../img/common/ui_btn_certifate.png) no-repeat left center;
+}
+
+.mg-main-login-conts .my-asset .btn-group .certi-btn.active:first-of-type {
+    background: url(../img/common/ui_btn_certifate_active.png) no-repeat left center;
+}
+
+.mg-main-login-conts .my-asset .btn-group .certi-btn:last-of-type {
+    background: url(../img/common/ui_btn_certifate2.png) no-repeat left center;
+}
+
+.mg-main-login-conts .my-asset .btn-group .certi-btn.active:last-of-type {
+    background: url(../img/common/ui_btn_certifate2_active.png) no-repeat left center;
+}
+
+.mg-main-login-conts .my-asset .btn-group .certi-btn + .certi-btn {
+    margin-left: 20px;
+}
+
+.mg-main-login-conts .my-asset .btn-asset-wrap {
+    display: flex;
+    align-items: center;
+    margin: 24px -32px -24px
+}
+
+.mg-main-login-conts .my-asset .btn-asset-wrap > button {
+    flex: 1;
+    padding: 15px 0;
+    color: #000000;
+    background: #edf6fe;
+    line-height: 1.2
+}
+
+.mg-main-login-conts .my-asset .btn-asset-wrap > button:first-child {
+    padding-left: 12px;
+}
+
+.mg-main-login-conts .my-asset .btn-asset-wrap > button:last-child {
+    padding-right: 17px;
+}
+
+.mg-main-login-conts .my-asset .list-item .money-box {
+    padding-left: 8px;
+    word-break: break-all;
+    text-align: right
+}
+
+.mg-main-login-conts .my-asset .list-item .money-box > .number {
+    color: #000000;
+    font-size: 16px;
+    line-height: 1
+}
+
+.mg-main-login-conts .my-asset .list-item .money-box > .won {
+    font-size: 15px;
+    vertical-align: 0.5px
+}
+
+.mg-main-login-conts .my-asset .asset-total > .title, .mg-main-login-conts .my-asset .asset-loan > .title {
+    font-weight: 700
+}
+
+.mg-main-login-conts .my-asset .asset-total .money-box > .number, .mg-main-login-conts .my-asset .asset-loan .money-box > .number {
+    font-size: 20px;
+    line-height: 1
+}
+
+.mg-main-login-conts .my-asset .asset-total .money-box > .won, .mg-main-login-conts .my-asset .asset-loan .money-box > .won {
+    display: inline-block;
+    margin-bottom: 2px;
+    font-size: 15px;
+    vertical-align: 0.5px
+}
+
+/* 메인 - 맞춤메뉴 */
+.mg-main-login-conts .my-asset .asset-box + .my-menu {
+    border-top: 1px solid #e6e6e6;
+}
+
+.mg-main-login-conts .my-menu {
+    padding: 24px 32px
+}
+
+.mg-main-login-conts .my-menu .my-menu-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+.mg-main-login-conts .my-menu .my-menu-header > .title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #000;
+}
+
+.mg-main-login-conts .my-menu .my-menu-header .btn-menu {
+    position: relative;
+    margin-right: -8px;
+    width: 32px;
+    height: 32px
+}
+
+.mg-main-login-conts .my-menu .my-menu-header .btn-menu:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 16px;
+    height: 16px;
+    background: url('../img/common/ui_ico_setting.png') no-repeat center center
+}
+
+.mg-main-login-conts .my-menu .my-menu-list {
+    margin-top: 15px
+}
+
+.mg-main-login-conts .my-menu .my-menu-list .my-menu-img {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.mg-main-login-conts .my-menu .my-menu-list .list-item {
+    padding: 14px 0 13px 30px;
+    position: relative;
+}
+
+.mg-main-login-conts .my-menu .my-menu-list .list-item .item_link {
+    display: block;
+    position: relative;
+    color: #000;
+    font-size: 16px
+}
+
+.mg-main-login-conts .my-menu .my-menu-list .list-item .item_link:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 16px;
+    background: url(../../resource/img/main/ico_arrow.png) no-repeat center;
+}
+
+.mg-main-login-conts .my-menu .my-menu-list .no-access {
+    padding: 20px 0 18px;
+    color: #000;
+    font-size: 16px
+}
+
+.mg-main-login-conts .my-asset.alone .my-menu {
+    padding: 0px 32px
+}
+
+.mg-main-login-conts .my-asset.alone .my-menu .my-menu-list {
+    margin-top: 0px;
+}
+
+.mg-main-login-conts .my-asset + .my-asset.alone {
+    margin-top: 18px;
+}
+
+/* 메인 - 고객센터 */
+.mg-main-login-conts .login-service-center {
+    margin-top: 44px
+}
+
+.mg-main-login-conts .login-service-center .service-number > .title, .mg-main-login-conts .login-service-center .service-number > .kr-number {
+    display: block;
+    color: #000;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.6
+}
+
+.mg-main-login-conts .login-service-center .service-info {
+    margin-top: 12px
+}
+
+.mg-main-login-conts .login-service-center .service-info > .number, .mg-main-login-conts .login-service-center .service-info > .text {
+    display: block;
+    font-size: 14px;
+    line-height: 1.5
+}
+
+/* 로그인전 */
+.mg-main-contents .main-content .service-chat-bot {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    width: 114px;
+    height: 141px;
+    cursor: pointer;
+    background: url('../../resource/img/common/ui_img_chatbot.png')no-repeat center center
+}
+
+.mg-main-contents .main-content .service-chat-bot > .bot-link {
+    display: block;
+    width: 100%;
+    height: 115px;
+}
+
+/* 로그인후 */
+.mg-main-login-conts .login-aside-cont .chat-bot {
+    position: fixed;
+    left: 50%;
+    transform: translate(660%, -50%);
+    width: 114px;
+    height: 140px;
+    background: url('../../resource/img/common/ui_img_chatbot02.png') no-repeat -7px;
+    z-index: 10;
+}
+
+.mg-main-login-conts .login-aside-cont .chat-bot .bot-link {
+    display: block;
+    width: 90px;
+    height: 114px
+}
+
+/* 로그인전 */
+.main-chat-bot {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    width: 114px;
+    height: 140px;
+    background: url('../../resource/img/common/ui_img_chatbot.png')no-repeat center center
+}
+
+.main-chat-bot > .bot-link {
+    display: block;
+    width: 100%;
+    height: 115px;
+}
+
+/* 로그인후 */
+.main-chat-bot.login {
+    position: fixed;
+    top: inherit;
+    left: 50%;
+    right: inherit;
+    z-index: 10;
+    transform: translate(660%, -50%);
+    background-image: url('../../resource/img/common/ui_img_chatbot02.png');
+}
+
+/* 메인 - 프로필 */
+.mg-main-login-conts .login-cont-wrap .login-cont .my-profile {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0 34px;
+    min-height: 240px;
+    box-sizing: border-box
+}
+
+.mg-main-login-conts .my-profile .profile-cont {
+    flex: 1;
+    padding-right: 51px;
+    position: relative;
+}
+
+.mg-main-login-conts .my-profile .profile-cont .text, .mg-main-login-conts .my-profile .profile-cont .name {
+    display: block;
+    color: #000000;
+    font-size: 32px;
+    line-height: 1.4;
+    letter-spacing: -0.08em
+}
+
+.mg-main-login-conts .my-profile .profile-cont .name {
+    display: inline-block;
+    letter-spacing: -0.06em;
+    font-weight: 700
+}
+
+.mg-main-login-conts .my-profile .profile-cont .hd-text-helper {
+    display: block;
+    color: #000000;
+    font-size: 20px;
+    margin: 10px 0 76px;
+}
+
+.mg-main-login-conts .my-profile .profile-cont .btn.underline {
+    margin-left: 24px;
+    font-size: 16px;
+    vertical-align: super
+}
+
+.mg-main-login-conts .my-profile .profile-cont .btn.underline:after {
+    bottom: 3px
+}
+
+.mg-main-login-conts .my-profile .profile-info {
+    width: 434px
+}
+
+.mg-main-login-conts .my-profile .profile-info {
+    text-align: right;
+    margin-top: 8px;
+    position: relative;
+}
+
+.mg-main-login-conts .my-profile .profile-info .btn-group {
+    justify-content: flex-end;
+    padding-bottom: 24px;
+}
+
+.mg-main-login-conts .my-profile .profile-info .btn-menu {
+    position: relative;
+    padding: 0 22px 0 0px;
+    height: 32px;
+    font-size: 14px;
+    color: #000;
+}
+
+.mg-main-login-conts .my-profile .profile-info .btn-menu:before {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 3px;
+    width: 16px;
+    height: 16px;
+    background: url(../img/common/ui_ico_setting.png) no-repeat center center;
+}
+
+.mg-main-login-conts .my-profile .profile-info .info-box {
+    width: 100%;
+    padding: 5px 0 15px;
+    border-bottom: 1px solid #ebebeb
+}
+
+.mg-main-login-conts .my-profile .profile-info .info-box .info-title {
+    font-weight: 700;
+    letter-spacing: 0.05em
+}
+
+.mg-main-login-conts .my-profile .profile-info .info-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 18px;
+    border-top: 1px solid #c2c2c2;
+}
+
+/* 240117 바닥 고정 스타일 삭제 */
+.mg-main-login-conts .my-profile .profile-info .info-list > ul {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/* 240117 width값 추가 - 데이터 없을 때 줄어드는 현상 방지 */
+.mg-main-login-conts .my-profile .profile-info .info-list > ul li + li {
+    margin-top: 4px;
+}
+
+.mg-main-login-conts .my-profile .info-list .list-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    line-height: 1.8;
+    color: #000;
+}
+
+.mg-main-login-conts .my-profile .info-list .list-item:before {
+    background: #000;
+}
+
+.mg-main-login-conts .my-profile .list-item > .title {
+    flex-shrink: 0;
+    letter-spacing: -0.04em
+}
+
+.mg-main-login-conts .my-profile .list-item > .item-info {
+    flex: 1;
+    padding-left: 10px;
+    text-align: right
+}
+
+.mg-main-login-conts .my-profile .list-item > .item-info > .date + .time {
+    margin-left: 2px
+}
+
+.mg-main-login-conts .my-profile .list-item > .item-info > .security {
+    color: #3074f0
+}
+
+.mg-main-login-conts .my-profile .marker-group li {
+    padding-left: 13px;
+}
+
+.mg-main-login-conts .my-profile .marker-group li:before {
+    border-radius: 50%;
+}
+
+.mg-main-login-conts .my-profile .text-helper {
+    color: #000;
+    font-size: 16px;
+    position: absolute;
+    bottom: 0;
+}
+
+.mg-main-login-conts .my-profile .success {
+    color: #3275f0;
+    font-weight: 700;
+    text-underline-position: under;
+}
+
+/* 메인 - 컨텐츠 공통 */
+.mg-main-login-conts .login-cont .my-cont .cont-item {
+    display: flex;
+    width: 100%
+}
+
+.mg-main-login-conts .login-cont .my-cont .cont-item + .cont-item {
+    margin-top: 32px
+}
+
+.mg-main-login-conts .login-cont .my-cont .cont-item > .item-box {
+    overflow: hidden;
+    position: relative;
+    padding: 28px 32px 62px;
+    border: 1px solid #c2c2c2;
+    border-radius: 3px;
+    box-sizing: border-box;
+    box-shadow: 0px 3px 8px 2px rgb(0 0 0 / 5%);
+}
+
+.mg-main-login-conts .login-cont .my-cont .cont-item > .item-box.bg-type01 {
+    background: #f7f1ff
+}
+
+.mg-main-login-conts .login-cont .my-cont .cont-item > .item-box.bg-type02 {
+    background: #fcf8de
+}
+
+.mg-main-login-conts .login-cont .my-cont .cont-item > .item-box.bg-type03 {
+    background: #f5f8fc
+}
+
+.mg-main-login-conts .login-cont .my-cont .cont-item > .item-box.bg-type04 {
+    background: #ffedf3
+}
+
+.mg-main-login-conts .login-cont .my-cont .cont-item > .item-box.bg-type05 {
+    background: #e5f2fe
+}
+
+.mg-main-login-conts .login-cont .my-cont .cont-item > .item-box.bg-type06 {
+    background: #edfbe3
+}
+
+.mg-main-login-conts .login-cont .my-cont .cont-item > .item-box.border-type01 {
+    border-color: #ee3e00
+}
+
+.mg-main-login-conts .login-cont .my-cont .cont-item > .item-box + .item-box {
+    margin-left: 24px
+}
+
+.mg-main-login-conts .my-cont .cont-item .item-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mg-main-login-conts .my-cont .cont-item .item-header > .title {
+    color: #000;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.4
+}
+
+.mg-main-login-conts .my-cont .cont-item .item-header > .title > .fail {
+    color: #ee3e00
+}
+
+.mg-main-login-conts .my-cont .cont-item .item-cont {
+    margin-top: 9px;
+}
+
+.mg-main-login-conts .my-cont .cont-item .item-cont .alaram-list {
+    padding-bottom: 19px
+}
+
+.mg-main-login-conts .my-cont .cont-item > .item-box, .mg-main-login-conts .my-cont .cont-item.col02.type01 > .item-box {
+    flex: 1
+}
+
+.mg-main-login-conts .my-cont .cont-item.col02.type02 > .item-box:first-child {
+    flex: 0 auto;
+    width: 682px
+}
+
+.mg-main-login-conts .my-cont .cont-item.col03 > .item-box {
+    flex: 0 auto;
+    width: 328px;
+    height: 342px;
+}
+
+.mg-main-login-conts .my-cont .cont-item .item-cont .btn-more {
+    position: relative;
+    padding-right: 13px;
+    color: #000;
+    line-height: 1.2
+}
+
+.mg-main-login-conts .my-cont .cont-item .item-cont .btn-more:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 16px;
+    background: url(../../resource/img/main/ico_arrow.png) no-repeat center;
+}
+
+.mg-main-login-conts .my-cont .cont-item .item-bottom {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 21px 32px 20px;
+    background: #ffffff;
+    z-index: 1;
+}
+
+.mg-main-login-conts .my-cont .cont-item .item-bottom.bg {
+    background: #f9f9f9
+}
+
+.mg-main-login-conts .my-cont .cont-item .item-bottom > .btn-wrap {
+    display: flex
+}
+
+.mg-main-login-conts .my-cont .cont-item .item-bottom > .btn-wrap > .btn-more + .btn-more {
+    margin-left: 32px
+}
+
+.mg-main-login-conts .my-cont .btn-more {
+    position: relative;
+    padding-right: 13px;
+    color: #000;
+    font-size: 16px;
+    line-height: 1.2
+}
+
+.mg-main-login-conts .my-cont .btn-more:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 5px;
+    height: 9px;
+    background: url('../../resource/img/main/ico_arrow.png') no-repeat center
+}
+
+.mg-main-login-conts .my-cont .number-info {
+    text-align: right;
+}
+
+.mg-main-login-conts .my-cont .number-info > .num {
+    position: relative;
+    font-size: 24px;
+    color: #3275f0;
+    font-weight: 700;
+    letter-spacing: .2px;
+}
+
+.mg-main-login-conts .my-cont .number-info > .num:before {
+    z-index: -1;
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: #c9e2f9
+}
+
+.mg-main-login-conts .my-cont .number-info > .won {
+    font-size: 20px;
+    color: #000;
+}
+
+.mg-main-login-conts .my-cont .cont-item .item-bottom .transfer-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-top: 1px solid #c2c2c2;
+    padding-top: 14px;
+    margin: -14px 0 -3px;
+}
+
+.mg-main-login-conts .my-cont .cont-item .item-bottom .transfer-item .title {
+    color: #000;
+}
+
+.mg-main-login-conts .my-cont .cont-item .item-bottom .transfer-item .info-box {
+    color: #000;
+}
+
+.mg-main-login-conts .my-cont .cont-item .item-bottom .transfer-item .won {
+    color: #000;
+    font-size: 16px;
+}
+
+/* 메인 - 금융자산 */
+.mg-main-login-conts .my-transfer .transfer-info .info-text {
+    font-size: 14px;
+}
+
+.mg-main-login-conts .my-transfer .transfer-info .info-text .strong {
+    font-weight: 700;
+    color: #000;
+}
+
+.mg-main-login-conts .my-transfer .transfer-info .info-text > .total {
+    color: #3074f0
+}
+
+.mg-main-login-conts .my-transfer .transfer-info .info-text > .state {
+    position: relative;
+    color: #000;
+    font-weight: 700
+}
+
+.mg-main-login-conts .my-transfer .transfer-info .info-text > .state:before {
+    z-index: -1;
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: #c0d5fa
+}
+
+.mg-main-login-conts .my-transfer .transfer-list {
+    margin-top: 25px;
+    padding-bottom: 10px
+}
+
+.mg-main-login-conts .my-transfer .transfer-list .list-item + .list-item {
+    margin-top: 18px
+}
+
+.mg-main-login-conts .my-transfer .transfer-list .transfer-item {
+    display: flex;
+    justify-content: space-between;
+    line-height: 1.2
+}
+
+.mg-main-login-conts .my-transfer .transfer-item > .title {
+    flex-shrink: 0;
+    line-height: 1.4;
+    font-size: 16px;
+}
+
+.mg-main-login-conts .my-transfer .transfer-item .info-box {
+    padding-left: 8px;
+    word-break: break-all;
+    text-align: right
+}
+
+.mg-main-login-conts .my-transfer .transfer-item .info-box > .number {
+    color: #000;
+    font-size: 16px;
+}
+
+.mg-main-login-conts .my-transfer .transfer-item .info-box > .won {
+    font-size: 15px
+}
+
+.mg-main-login-conts .my-transfer .item-bottom .transfer-item .info-box > .number {
+    font-weight: 700;
+}
+
+.mg-main-login-conts .my-transfer .item-bottom .transfer-item .info-box > .won {
+    font-weight: 700;
+}
+
+.mg-main-login-conts .my-transfer .item-cont.no-result {
+    padding: 128px 0 96px;
+    background-position: center 84px;
+}
+
+/* 메인 - 나의 결재 현황 */
+.mg-main-login-conts .item-box.list-03 .item-cont {
+    margin-top: 16px
+}
+
+.mg-main-login-conts .item-box.list-03 .my-transfer .transfer-list {
+    margin-top: 35px
+}
+
+/* 메인 - 최근이용한 메뉴 */
+.mg-main-login-conts .my-cont .cont-item .item-header > .title.img-stars {
+    margin-left: 22px;
+    position: relative;
+}
+
+.mg-main-login-conts .my-cont .cont-item .item-header > .title.img-stars::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -22px;
+    top: 2px;
+    width: 16px;
+    height: 16px;
+    background: url(../img/main/img_tit_stars.png)no-repeat center center
+}
+
+.mg-main-login-conts .history-list {
+    margin-left: -8px;
+    height: 246px;
+    overflow: hidden;
+}
+
+.mg-main-login-conts .history-list .list-item {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 8px 0 0px 8px;
+}
+
+.mg-main-login-conts .history-list .item-box {
+    display: inline-block;
+    padding: 9px 21px;
+    background: #f5f9ff;
+    border-radius: 20px;
+}
+
+.mg-main-login-conts .history-list .item-box .text.blue {
+    color: #3275f0;
+}
+
+.mg-main-login-conts .history-list .no-result {
+    padding: 140px 0 96px;
+    background-position: center 96px;
+}
+
+/* 메인 -  결재선 관리 */
+.mg-main-login-conts .login-cont .my-cont .cont-item > .item-box.appro-line-box {
+    padding: 28px 32px 32px;
+    background: linear-gradient(45deg, #f2f5e7, #e4f7fd);
+}
+
+.mg-main-login-conts .item-box.appro-line-box .appro-line-list {
+    margin-top: 20px;
+}
+
+.mg-main-login-conts .item-box.appro-line-box .appro-line-list li + li {
+    margin-left: 24px;
+}
+
+.mg-main-login-conts .item-box.appro-line-box .appro-line-item {
+    display: inline-block;
+    vertical-align: middle;
+    width: 252px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 28px 26px;
+    height: 128px;
+    position: relative;
+}
+
+.mg-main-login-conts .item-box.appro-line-box .appro-line-item .tit {
+    font-size: 16px;
+    color: #000;
+    font-weight: 700;
+}
+
+.mg-main-login-conts .item-box.appro-line-box .appro-line-item .appro-line-con {
+    margin-top: 4px;
+}
+
+.mg-main-login-conts .item-box.appro-line-box .appro-line-item .txt {
+    font-size: 12px;
+    color: #888;
+    display: block;
+}
+
+.mg-main-login-conts .item-box.appro-line-box .appro-line-item .bottom {
+    font-size: 14px;
+    position: absolute;
+    bottom: 26px;
+}
+
+.mg-main-login-conts .item-box.appro-line-box .appro-line-item .bottom .btn-more {
+    font-size: 14px;
+}
+
+.mg-main-login-conts .item-box.appro-line-box .appro-line-item.no-item {
+    position: relative;
+    border: 1px dashed #c2c2c2;
+    background: #ffffffb8 url(../img/main/ico_appro-line.png)no-repeat top 68px center/23px auto
+}
+
+.mg-main-login-conts .item-box.appro-line-box .appro-line-item.no-item .appro-info {
+    display: block;
+    color: #888;
+    position: absolute;
+    top: 61%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* 메인 - 하위사용자 > 결재선 없는 경우 */
+.mg-main-login-conts .login-cont .my-cont .cont-item > .item-box.appro-none-box {
+    position: relative;
+    background: linear-gradient(45deg, #f2f5e7, #e4f7fd);
+}
+
+.mg-main-login-conts .login-cont .my-cont .cont-item > .item-box.appro-none-box::before {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 86px;
+    top: 29px;
+    width: 74px;
+    height: 66px;
+    background: url(../img/main/ico_visual17.png) no-repeat;
+}
+
+.mg-main-login-conts .appro-none-box .item-header .tit-deco {
+    padding: 2px 0 6px;
+}
+
+.mg-main-login-conts .appro-none-box .my-alaram {
+    margin-bottom: 34px;
+}
+
+.mg-main-login-conts .my-cont .cont-item .appro-none-box .item-bottom {
+    border-top: 1px solid #e6e6e6;
+}
+
+/* 메인 - 나의 알림 */
+.mg-main-login-conts .my-alaram .item-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+.mg-main-login-conts .my-alaram .item-header .text {
+    color: #888;
+}
+
+.mg-main-login-conts .my-alaram .alaram-list > ul {
+    display: flex;
+    flex-wrap: wrap
+}
+
+.mg-main-login-conts .my-alaram .alaram-list .list-item {
+    padding: 11px 0 10px;
+    width: 100%
+}
+
+.mg-main-login-conts .my-alaram .list-item .alaram-item {
+    display: flex;
+    align-items: center
+}
+
+.mg-main-login-conts .my-alaram .alaram-item .info-box {
+    flex: 1;
+    overflow: hidden
+}
+
+.mg-main-login-conts .my-alaram .info-box .info-text {
+    color: #000;
+    font-size: 16px;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+    -webkit-text-overflow: ellipsis;
+    letter-spacing: -0.04em;
+}
+
+.mg-main-login-conts .my-alaram .info-box .info-text > .date, .mg-main-login-conts .my-alaram .info-box .info-text > .fail, .mg-main-login-conts .my-alaram .info-box .info-text > .success {
+    font-weight: 700
+}
+
+.mg-main-login-conts .my-alaram .info-box .info-text > .fail {
+    color: #ee3e00
+}
+
+.mg-main-login-conts .my-alaram .info-box .info-text > .success {
+    color: #3074f0
+}
+
+.mg-main-login-conts .my-alaram .info-box .info-text > .success-sub {
+    color: #3074f0
+}
+
+.mg-main-login-conts .my-alaram .login-box {
+    padding-left: 16px;
+    width: 76px;
+    text-align: center;
+}
+
+.mg-main-login-conts .my-alaram .login-box > .login {
+    color: #3074f0;
+    font-size: 16px;
+    font-weight: 700
+}
+
+.mg-main-login-conts .my-alaram .date-box {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+    font-size: 16px
+}
+
+.mg-main-login-conts .my-alaram .date-box .date + .time {
+    margin-left: 2px
+}
+
+/* 메인 - 대량이체 완료 현황 */
+.mg-main-login-conts .my-trans .my-trans-info .info-box {
+    position: relative;
+    padding-bottom: 125px;
+}
+
+.mg-main-login-conts .my-trans.comp .my-trans-info .info-box:before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 71px;
+    background: url('../../resource/img/main/ico_visual11.png') no-repeat center center
+}
+
+.mg-main-login-conts .my-trans .my-trans-info .info-text {
+    font-size: 16px
+}
+
+.mg-main-login-conts .my-trans .my-trans-info .info-text .strong {
+    font-weight: 700;
+    color: #000;
+}
+
+/* start :: 메인 - 기업뱅킹 이용안내 :hover 아이콘 애니메이션 추가 .mg-bank-item.ani01 */
+.mg-main-login-conts .item-box .my-trans .my-trans-info.ani01 .info-box:before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(0);
+    margin-left: -38px;
+    width: 80px;
+    height: 70px;
+    background: url('../../resource/img/main/ico_visual11_box.png') no-repeat center center;
+    animation: none;
+}
+
+.mg-main-login-conts .item-box .my-trans .my-trans-info.ani01 .info-box::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 31px;
+    left: 50%;
+    margin-left: -11px;
+    width: 22px;
+    height: 20px;
+    background: url('../../resource/img/main/ico_visual11_inco.png') no-repeat center center;
+    animation: none;
+}
+
+.mg-main-login-conts .item-box .my-trans .my-trans-info.ani01 .info-box.no-trans::after {
+    background-image: url('../../resource/img/main/ico_visual11_2_inco.png');
+    animation: none;
+}
+
+.mg-main-login-conts .item-box:hover .my-trans .my-trans-info.ani01 .info-box::before {
+    animation: pulse 1s ease infinite;
+}
+
+.mg-main-login-conts .item-box:hover .my-trans .my-trans-info.ani01 .info-box::after {
+    animation: bounce4 1s ease infinite;
+}
+
+.mg-main-login-conts .item-box:hover .my-trans .my-trans-info.ani01 .info-box.no-trans::after {
+    animation: headShake 1.5s ease-out infinite;
+}
+
+/* 메인 - 대량이체 완료 현황 */
+.mg-main-login-conts .my-trans.prog .my-trans-info .info-box:before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 71px;
+    background: url('../../resource/img/main/ico_visual04.png') no-repeat center center
+}
+
+.mg-main-login-conts .my-trans.prog .my-trans-info .info-text > .impt {
+    position: relative;
+    color: #000;
+    font-weight: 700;
+    z-index: 0;
+}
+
+.mg-main-login-conts .my-trans.prog .my-trans-info .info-text > .impt:before {
+    z-index: -1;
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: #feda74
+}
+
+/* start :: 메인 - 기업뱅킹 이용안내 :hover 아이콘 애니메이션 추가 .mg-bank-item.ani01 */
+.mg-main-login-conts .item-box .my-trans.prog .my-trans-info.ani01 .info-box:before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(0);
+    margin-left: -38px;
+    width: 80px;
+    height: 71px;
+    background: url('../../resource/img/main/ico_visual04_box.png') no-repeat center center;
+    animation: none;
+}
+
+.mg-main-login-conts .item-box .my-trans.prog .my-trans-info.ani01 .info-box::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(0);
+    margin-left: -14px;
+    width: 32px;
+    height: 24px;
+    background: url('../../resource/img/main/ico_visual04_inco.png') no-repeat center center;
+    animation: none;
+}
+
+.mg-main-login-conts .item-box:hover .my-trans.prog .my-trans-info.ani01 .info-box::before {
+    animation: pulse 1s ease infinite;
+}
+
+.mg-main-login-conts .item-box:hover .my-trans.prog .my-trans-info.ani01 .info-box::after {
+    animation: headShake 1.5s ease-out infinite;
+}
+
+/* 메인 - 이체알림 */
+.mg-main-login-conts .my-transfer.noti .item-cont {
+    margin-top: 15px;
+}
+
+.mg-main-login-conts .my-transfer.noti .no-result {
+    padding: 106px 0 96px;
+    background-position: center 64px;
+}
+
+/* 메인 - 이벤트 */
+.mg-main-login-conts .login-cont .my-cont .cont-item > .item-box.my-event-wrapper {
+    padding: 0 0
+}
+
+.mg-main-login-conts .login-cont .my-cont .cont-item > .my-event-swiper {
+    padding: 0
+}
+
+.mg-main-login-conts .login-cont .my-cont .cont-item > .my-event-swiper .swiper-slide {
+    padding: 32px 32px 30px
+}
+
+.mg-main-login-conts .my-event-swiper.swiper-container {
+    width: 327px;
+}
+
+.mg-main-login-conts .my-event-swiper .item-cont {
+    padding-bottom: 12px
+}
+
+.mg-main-login-conts .my-cont .cont-item .my-event-swiper .item-header {
+    margin-top: 12px;
+}
+
+.mg-main-login-conts .my-cont .cont-item .my-event-swiper .item-header > .title {
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.mg-main-login-conts .my-event-swiper .item-header > .title .txt-blue {
+    display: block;
+    color: #3074f0 ;
+}
+
+.mg-main-login-conts .my-event-swiper .event-tag {
+    color: #fff;
+    background: #4d88f2;
+    padding: 4px 10px 3px;
+    border-radius: 20px;
+}
+
+.mg-main-login-conts .my-event-swiper .swiper-slide .link {
+    display: block;
+    padding: 28px 32px 38px;
+}
+
+.mg-main-login-conts .my-event-swiper .swiper-slide.event-item01 {
+    background: #f5f8fc url('../../resource/img/main/img_event.png') no-repeat 90% 82%
+}
+
+.mg-main-login-conts .my-event-swiper .swiper-controller {
+    z-index: 1;
+    display: flex;
+    position: absolute;
+    top: 34px;
+    right: 24px;
+}
+
+.mg-main-login-conts .swiper-controller .swiper-pagination {
+    display: flex;
+    align-items: center;
+    position: static;
+    margin-right: 8px;
+}
+
+.mg-main-login-conts .swiper-controller .swiper-pagination .swiper-pagination-bullet {
+    width: 6px;
+    height: 6px;
+}
+
+.mg-main-login-conts .swiper-controller .swiper-pagination .swiper-pagination-bullet:focus {
+    color: #000;
+    outline: 2px dashed #000!important;
+    border: none!important;
+    opacity: 1;
+}
+
+.mg-main-login-conts .swiper-controller .swiper-pagination .swiper-pagination-bullet + .swiper-pagination-bullet {
+    margin-left: 8px;
+}
+
+.mg-main-login-conts .swiper-controller .swiper-pagination .swiper-pagination-bullet-active {
+    pointer-events: none;
+    width: 32px;
+    height: 6px;
+    border-radius: 32px;
+    background: #555;
+}
+
+.mg-main-login-conts .swiper-controller .swiper-button.playback {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    background: url(../img/main/ico_btn_playback.png) no-repeat center center;
+    opacity: 30%;
+}
+
+.mg-main-login-conts .swiper-controller .swiper-button.stop {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    background: url(../img/main/ico_btn_stop.png) no-repeat center center;
+    opacity: 30%;
+}
+
+.mg-main-login-conts .swiper-controller .swiper-button.active {
+    pointer-events: none;
+    border-radius: 50%;
+    opacity: 1;
+}
+
+/* 메인 - 통합공과금, 세금공과금 */
+.mg-main-login-conts .login-cont .my-cont .cont-item .my-utility-bill {
+    padding: 28px 32px 76px;
+}
+
+.mg-main-login-conts .my-cont .my-utility-bill .item-cont {
+    margin-top: 14px;
+}
+
+.mg-main-login-conts .my-cont .my-utility-bill .utility-bill {
+    font-size: 16px;
+}
+
+.mg-main-login-conts .my-cont .my-utility-bill .item-bottom {
+    padding: 21px 32px 30px;
+}
+
+.mg-main-login-conts .my-cont .my-utility-bill .item-iconbox {
+    position: absolute;
+    width: 96px;
+    height: 96px;
+    background: #f7f8fc;
+    top: 50%;
+    z-index: 2;
+    margin-top: -48px;
+    right: 32px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+/* start :: 메인 - 나의 통합공과금 조회 :hover 아이콘 애니메이션 추가 */
+.mg-main-login-conts .my-utility-bill .item-iconbox::before, .mg-main-login-conts .my-utility-bill .item-iconbox::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.mg-main-login-conts .my-utility-bill.inte .item-iconbox::before {
+    animation: none;
+    width: 96px;
+    height: 96px;
+    background: url('../../resource/img/main/img_utility_bill_inte_inco01.png') no-repeat center;
+}
+
+.mg-main-login-conts .my-utility-bill.inte .item-iconbox::after {
+    animation: none;
+    width: 96px;
+    height: 96px;
+    background: url('../../resource/img/main/img_utility_bill_inte_inco02.png') no-repeat center;
+}
+
+.mg-main-login-conts .my-utility-bill.inte:hover .item-iconbox::before {
+    animation: fadeInLeft2 1.5s ease 1 forwards;
+}
+
+.mg-main-login-conts .my-utility-bill.inte:hover .item-iconbox::after {
+    animation: fadeInLeft2 1.5s ease 1 forwards;
+}
+
+.mg-main-login-conts .my-utility-bill.tex .item-iconbox::before {
+    width: 96px;
+    height: 96px;
+    background: url('../../resource/img/main/img_utility_bill_tex_inco.png') no-repeat center center;
+    animation: none;
+}
+
+.mg-main-login-conts .my-utility-bill.tex:hover .item-iconbox::before {
+    animation: fadeInLeft2 1.5s ease 1 forwards;
+}
+
+/* 메인 - 풀 배너 */
+.mg-main-login-conts .cont-banner-wrap {
+    position: relative;
+    width: 1392px;
+    margin: 0 auto;
+}
+
+.mg-main-login-conts .cont-banner-wrap::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: calc(50% + 8px);
+    left: 50%;
+    transform: translate(-50% , -50%);
+    width: 100vw;
+    height: 186px;
+    background-color: #f7f8fc;
+}
+
+.mg-main-login-conts .cont-banner-item {
+    position: relative;
+}
+
+.mg-main-login-conts .cont-banner-item .banner-info {
+    margin-top: 8px;
+}
+
+.mg-main-login-conts .cont-banner-item .item-header > .title {
+    color: #000;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.mg-main-login-conts .cont-banner-item .banner-info .info-text {
+    font-size: 16px;
+}
+
+.mg-main-login-conts .cont-banner-item .swiper-slide {
+    padding-top: 74px;
+    margin-bottom: 56px;
+    width: 100%;
+    position: relative;
+    opacity: 0;
+}
+
+.mg-main-login-conts .cont-banner-item .swiper-slide.swiper-slide-active a.link {
+    background-color: #f7f8fc;
+}
+
+.mg-main-login-conts .cont-banner-item .swiper-slide .link {
+    display: block;
+}
+
+.mg-main-login-conts .cont-banner-item .swiper-button-group {
+    position: absolute;
+    bottom: 23%;
+    left: 32%;
+    width: 40px;
+    height: 22px
+}
+
+.mg-main-login-conts .cont-banner-item .banner-item {
+    position: relative;
+    margin-left: auto;
+    width: 1034px;
+    padding-top: 42px;
+    height: 186px;
+}
+
+.mg-main-login-conts .cont-banner-item .banner01.swiper-slide-active .banner-item:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -42px;
+    right: 7%;
+    width: 256px;
+    height: 227px;
+    background: url('../../resource/img/main/img_banner01.png') no-repeat
+}
+
+.mg-main-login-conts .cont-banner-item .banner02.swiper-slide-active .banner-item:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 13px;
+    right: 6%;
+    width: 169px;
+    height: 173px;
+    background: url('../../resource/img/main/img_banner02.png') no-repeat
+}
+
+.mg-main-login-conts .cont-banner-item .swiper-controller {
+    z-index: 1;
+    display: flex;
+    position: absolute;
+    top: 73%;
+    left: 358px;
+    transform: translate(0, -50%);
+}
+
+.mg-main-login-conts .cont-banner-item .banner03.swiper-slide-active .banner-item:before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+    width: 264px;
+    height: 219px;
+    background: url('../../resource/img/main/img_banner03.png') no-repeat
+}
+
+.mg-main-login-conts .cont-banner-item .banner04.swiper-slide-active .banner-item:before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 13%;
+    width: 255px;
+    height: 201px;
+    background: url('../../resource/img/main/img_banner04.png') no-repeat
+}
+
+/* 메인 - 기업뱅킹 이용안내 */
+.mg-main-login-conts .my-mg-bank .mg-bank-item .info-text {
+    font-size: 16px;
+}
+
+.mg-main-login-conts .my-mg-bank .mg-bank-item .info-text > .txt-point {
+    position: relative;
+    display: inline-block;
+    color: #000;
+    font-weight: 700;
+    z-index: 0;
+}
+
+.mg-main-login-conts .my-mg-bank .mg-bank-item .info-text > .txt-point:before {
+    z-index: -1;
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: #ffc4d8
+}
+
+.mg-main-login-conts .my-mg-bank .mg-bank-item .info-box:before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 80px;
+    background: url('../../resource/img/main/ico_visual12.png') no-repeat center center;
+    animation: none;
+}
+
+.mg-main-login-conts .my-mg-bank .mg-bank-item .info-box {
+    position: relative;
+    padding-bottom: 142px;
+}
+
+/* start :: 메인 - 기업뱅킹 이용안내 :hover 아이콘 애니메이션 추가 .mg-bank-item.ani01 */
+.mg-main-login-conts .item-box .my-mg-bank .mg-bank-item.ani01 .info-box:before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(0);
+    margin-left: -30px;
+    width: 60px;
+    height: 80px;
+    background: url('../../resource/img/main/ico_visual12_box.png') no-repeat center center;
+    animation: none;
+}
+
+.mg-main-login-conts .item-box .my-mg-bank .mg-bank-item.ani01 .info-box::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 52px;
+    left: 105px;
+    width: 46px;
+    height: 44px;
+    background: url('../../resource/img/main/ico_visual12_inco.png') no-repeat center center;
+    animation: none;
+}
+
+.mg-main-login-conts .item-box:hover .my-mg-bank .mg-bank-item.ani01 .info-box::before {
+    animation: pulse 1s ease infinite;
+}
+
+.mg-main-login-conts .item-box:hover .my-mg-bank .mg-bank-item.ani01 .info-box::after {
+    animation: ani_flipY 1s .5s ease infinite;
+}
+
+/* 메인 - 직원이 있는 대표님 이신가요? */
+.mg-main-login-conts .my-repres .lar-trans-item .info-text {
+    font-size: 16px;
+}
+
+.mg-main-login-conts .my-repres .lar-trans-item .info-box:before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 82px;
+    height: 72px;
+    background: url('../../resource/img/main/ico_visual06.png') no-repeat center center
+}
+
+.mg-main-login-conts .my-repres .lar-trans-item .info-box {
+    position: relative;
+    padding-bottom: 142px;
+}
+
+/* start :: 메인 - 직원이 있는 대표님 이신가요? :hover 아이콘 애니메이션 추가 .lar-trans-item.ani01 */
+.mg-main-login-conts .item-box .my-repres .lar-trans-item.ani01 .info-box:before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(0);
+    margin-left: -41px;
+    width: 82px;
+    height: 72px;
+    background: url('../../resource/img/main/ico_visual06_box.png') no-repeat center center;
+    animation: none;
+}
+
+.mg-main-login-conts .item-box .my-repres .lar-trans-item.ani01 .info-box::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 48px;
+    left: 105px;
+    width: 46px;
+    height: 44px;
+    background: url('../../resource/img/main/ico_visual06_inco.png') no-repeat center center;
+    animation: none;
+}
+
+.mg-main-login-conts .item-box:hover .my-repres .lar-trans-item.ani01 .info-box::before {
+    animation: pulse 1s ease infinite;
+}
+
+.mg-main-login-conts .item-box:hover .my-repres .lar-trans-item.ani01 .info-box::after {
+    animation: bounce4 1s .5s ease infinite;
+}
+
+/* 메인 - 매월 대량이체를 하시나요? */
+.mg-main-login-conts .my-lar-trans .lar-trans-item .info-text {
+    font-size: 16px;
+}
+
+.mg-main-login-conts .my-lar-trans .lar-trans-item .info-box:before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 80px;
+    background: url('../../resource/img/main/ico_visual13.png') no-repeat center center
+}
+
+.mg-main-login-conts .my-lar-trans .lar-trans-item .info-box {
+    position: relative;
+    padding-bottom: 142px;
+}
+
+/* start :: 메인 - 매월 대량이체를 하시나요? :hover 아이콘 애니메이션 추가 .lar-trans-item.ani01 */
+.mg-main-login-conts .item-box .my-lar-trans .lar-trans-item.ani01 .info-box:before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(0);
+    margin-left: -30px;
+    width: 60px;
+    height: 80px;
+    background: url('../../resource/img/main/ico_visual13_box.png') no-repeat center center;
+    animation: none;
+}
+
+.mg-main-login-conts .item-box .my-lar-trans .lar-trans-item.ani01 .info-box::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 51px;
+    left: 50%;
+    margin-left: -14px;
+    width: 24px;
+    height: 42px;
+    background: url('../../resource/img/main/ico_visual13_inco.png') no-repeat center center;
+    animation: none;
+}
+
+.mg-main-login-conts .item-box:hover .my-lar-trans .lar-trans-item.ani01 .info-box::before {
+    animation: pulse 1s ease infinite;
+}
+
+.mg-main-login-conts .item-box:hover .my-lar-trans .lar-trans-item.ani01 .info-box::after {
+    animation: wobble2 1.5s ease infinite;
+}
+
+/* 메인 - 승인결재통제 메뉴별접근권한 */
+.mg-main-login-conts .my-access .access-item {
+    position: relative;
+    padding-bottom: 142px
+}
+
+.mg-main-login-conts .my-access .access-item .info-text {
+    font-size: 16px
+}
+
+.mg-main-login-conts .my-access .access-item .info-text > .txt-point {
+    position: relative;
+    display: inline-block;
+    color: #000;
+    font-weight: 700;
+    z-index: 0;
+}
+
+.mg-main-login-conts .my-access .access-item .info-text > .txt-point:before {
+    z-index: -1;
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: #72ecac
+}
+
+/* start :: 메인 - 메뉴별접근권한 :hover 아이콘 애니메이션 추가 .access-item.ani01 */
+.mg-main-login-conts .item-box .my-access .access-item.ani01 .info-box:before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 44px;
+    left: 50%;
+    transform: translateX(0);
+    margin-left: -36px;
+    width: 72px;
+    height: 70px;
+    background: url('../../resource/img/main/ico_visual09_box.png') no-repeat center center;
+    animation: none;
+}
+
+.mg-main-login-conts .item-box .my-access .access-item.ani01 .info-box::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 42px;
+    left: 50%;
+    margin-left: 0px;
+    width: 44px;
+    height: 44px;
+    background: url('../../resource/img/main/ico_visual09_inco.png') no-repeat center center;
+    animation: none;
+}
+
+.mg-main-login-conts .item-box:hover .my-access .access-item.ani01 .info-box::before {
+    animation: pulse 1s ease infinite;
+}
+
+.mg-main-login-conts .item-box:hover .my-access .access-item.ani01 .info-box::after {
+    animation: icon-ani-rotate 2s linear infinite;
+}
+
+/* end :: 메인 - 메뉴별접근권한 아이콘 애니메이션 추가 */
+/* 메인 - 카드 정보  */
+.mg-main-login-conts .login-cont .my-cont .cont-item > .item-box.my-card-box {
+    padding: 0 0;
+}
+
+.mg-main-login-conts .my-card {
+    height: 100%;
+    position: relative;
+}
+
+.mg-main-login-conts .my-card .swiper-slide {
+    position: relative;
+    padding: 28px 32px 62px;
+}
+
+.mg-main-login-conts .my-card .card-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mg-main-login-conts .my-card .swiper-button-group {
+    position: absolute;
+    top: 50px;
+    right: 66px;
+}
+
+.mg-main-login-conts .my-card .swiper-button-prev {
+    width: 24px;
+    height: 24px;
+    left: -22px;
+    background: url(../img/main/ui_main_arrow_L.png)no-repeat center center/100% auto;
+}
+
+.mg-main-login-conts .my-card .swiper-button-next {
+    width: 24px;
+    height: 24px;
+    right: -35px;
+    background: url(../img/main/ui_main_arrow_R.png)no-repeat center center/100% auto;
+}
+
+.mg-main-login-conts .my-card .card-item .card-info-list {
+    flex: 1;
+    padding-right: 8px
+}
+
+.mg-main-login-conts .my-card .card-info-list .list-item {
+    display: flex;
+    align-items: center
+}
+
+.mg-main-login-conts .my-card .card-info-list .list-item + .list-item {
+    margin-top: 4px
+}
+
+.mg-main-login-conts .my-card .card-info-list .list-item .title, .mg-main-login-conts .my-card .card-info-list .list-item .text {
+    font-size: 16px
+}
+
+.mg-main-login-conts .my-card .card-info-list .list-item .title {
+    flex-shrink: 0;
+    padding-right: 10px;
+    width: 112px
+}
+
+.mg-main-login-conts .my-card .card-info-list .list-item .text {
+    font-weight: 700;
+    color: #000;
+}
+
+.mg-main-login-conts .my-card .card-item .card-img-box {
+    flex-shrink: 0;
+    box-shadow: 10px 9px 10px 4px rgb(0 0 0 / 5%);
+    height: 70px;
+}
+
+.mg-main-login-conts .my-card .card-img-box .card-img {
+    display: block;
+    width: 112px;
+    height: 70px
+}
+
+.mg-main-login-conts .my-card .card-img-box .card-img > img {
+    width: 100%;
+    height: 100%
+}
+
+.mg-main-login-conts .my-cont .cont-item .my-card .item-cont {
+    margin-top: 12px
+}
+
+/* 메인 - 카드 정보 > 단수사용자 카드없음 */
+.mg-main-login-conts .my-cont .cont-item .item-header.column {
+    flex-direction: column;
+    align-items: baseline;
+}
+
+.mg-main-login-conts .my-card.my-none-card .txt-box {
+}
+
+.mg-main-login-conts .my-card.my-none-card .txt-box .txt {
+    color: #888;
+    font-size: 14px;
+}
+
+.mg-main-login-conts .my-card.my-none-card .txt-box .txt + .txt {
+    margin-left: 8px;
+}
+
+.mg-main-login-conts .my-card.my-none-card .txt-box .txt + .txt::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 1px;
+    height: 8px;
+    background: #e6e6e6;
+    margin-right: 8px;
+}
+
+.mg-main-login-conts .my-card.my-none-card .card-info-text .text {
+    display: block;
+    color: #555;
+}
+
+.mg-main-login-conts .my-card.my-none-card .card-info-text .text .txt-blue {
+    color: #3275f0;
+}
+
+.mg-main-login-conts .my-card.my-none-card .card-info-text .text + .text {
+    margin-top: 2px;
+}
+
+.mg-main-login-conts .my-cont .cont-item .my-card.my-none-card .item-cont {
+    margin-top: 23px;
+}
+
+.mg-main-login-conts .my-cont .cont-item .my-card.my-none-card .item-bottom {
+    bottom: 10px;
+}
+
+/* 메인 - 공지사항 */
+.mg-main-login-conts .my-cont .cont-item .my-notice .item-cont {
+    padding-bottom: 20px;
+    margin-top: 15px;
+}
+
+.mg-main-login-conts .my-notice .notice-list .item-link {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+.mg-main-login-conts .my-notice .notice-list .list-item + .list-item {
+    margin-top: 6px
+}
+
+.mg-main-login-conts .my-notice .item-link .item-title {
+    position: relative;
+    padding-right: 24px;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+    -webkit-text-overflow: ellipsis
+}
+
+.mg-main-login-conts .my-notice .item-link .item-date {
+    flex-shrink: 0;
+    padding-left: 16px
+}
+
+.mg-main-login-conts .my-notice .item-link .item-title > .title, .mg-main-login-conts .my-notice .item-link .item-date > .date {
+    font-size: 16px
+}
+
+.mg-main-login-conts .my-notice .item-link .item-title > .title {
+    flex: 1;
+    display: inline;
+    color: #000
+}
+
+.mg-main-login-conts .my-notice .list-item.new .title:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 46%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    background: url(../../resource/img/main/ico_new.png) no-repeat right center;
+}
+
+/* 메인 - 인터넷 뱅킹 이용시간 */
+.mg-main-login-conts .my-cont .cont-item .my-banking-time .banking-time {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+    margin-top: 17px;
+}
+
+.mg-main-login-conts .my-banking-time .banking-time > .time-box {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    line-height: 1.2
+}
+
+.mg-main-login-conts .my-banking-time .banking-time > .time-box + .time-box {
+    margin-top: 12px
+}
+
+.mg-main-login-conts .my-banking-time .banking-time > .time-box > .title + .time {
+    margin-left: 18px
+}
+
+.mg-main-login-conts .my-banking-time .banking-time > .time-box > .time {
+    color: #000;
+}
+
+/* MG더뱅킹기업(인터넷) 메인 배너 수정 요청 */
+/* 2023-12-07 */
+.mg-main-contents .main-visual-list .new-list .list-item {
+    overflow: hidden;
+}
+
+.mg-main-contents .main-visual-list ul.swiper-wrapper.new-list .list-item.item-01.ani01 {
+    background: linear-gradient(31deg, #f9f5dc 0.44%, #e2f7ff 81.74%);
+}
+
+.mg-main-contents .main-visual-list ul.swiper-wrapper.new-list .list-item.ani01.item-01 .main-character-group01 .cha-m01 {
+    position: absolute;
+    top: 83px;
+    right: 71px;
+    width: 240px;
+    height: 350px;
+    z-index: 3;
+    background: url(../../resource/img/main/main_br01_s1.png) no-repeat center center;
+}
+
+.mg-main-contents .main-visual-list ul.swiper-wrapper.new-list .list-item.ani01.item-01 .main-character-group01 .cha-m02 {
+    position: absolute;
+    top: 437px;
+    right: 262px;
+    width: 100px;
+    height: 60px;
+    z-index: 1;
+    background: url(../../resource/img/main/main_br01_s2.png) no-repeat center center;
+}
+
+.mg-main-contents .main-visual-list ul.swiper-wrapper.new-list .list-item.ani01.item-01 .main-character-group01 .cha-m03 {
+    position: absolute;
+    top: 245px;
+    right: -33px;
+    width: 130px;
+    height: 70px;
+    z-index: 1;
+    background: url(../../resource/img/main/main_br01_s3.png) no-repeat center center;
+}
+
+.mg-main-contents .main-visual-list ul.swiper-wrapper.new-list .list-item.ani01.item-01::before, .mg-main-contents .main-visual-list ul.swiper-wrapper.new-list .list-item.ani01.item-01::after {
+    display: none
+}
+
+.mg-main-contents .main-visual-list ul.swiper-wrapper.new-list .list-item.item-01.ani01.swiper-slide-active .main-character-group01 .cha-m01 {
+    opacity: 0;
+    animation: item-01-m01 3s ease 1 forwards;
+}
+
+.mg-main-contents .main-visual-list ul.swiper-wrapper.new-list .list-item.item-01.ani01.swiper-slide-active .main-character-group01 .cha-m02 {
+    opacity: 0;
+    animation: fadeInUp 2s .3s ease 1 forwards;
+}
+
+.mg-main-contents .main-visual-list ul.swiper-wrapper.new-list .list-item.item-01.ani01.swiper-slide-active .main-character-group01 .cha-m03 {
+    opacity: 0;
+    animation: fadeInUp 2s .3s ease 1 forwards;
+}
+
+.mg-main-contents .main-visual-list ul.swiper-wrapper.new-list .list-item.item-02.ani01 {
+    background: linear-gradient(31deg, #f9dcec 0.44%, #fff4e2 81.74%);
+}
+
+.mg-main-contents .main-visual-list ul.swiper-wrapper.new-list .list-item.ani01.item-02 .main-character-group01 {
+    top: 0;
+    right: 0;
+    background: none;
+}
+
+.mg-main-contents .main-visual-list ul.swiper-wrapper.new-list .list-item.ani01.item-02 .main-character-group01 .cha-m01 {
+    position: absolute;
+    top: 155px;
+    right: 37px;
+    left: inherit;
+    width: 310px;
+    height: 270px;
+    z-index: 1;
+    background: url(../../resource/img/main/main_br02_s1.png) no-repeat center center;
+}
+
+.mg-main-contents .main-visual-list ul.swiper-wrapper.new-list .list-item.ani01.item-02 .main-character-group01 .cha-m02 {
+    position: absolute;
+    top: 131px;
+    right: 99px;
+    left: inherit;
+    width: 50px;
+    height: 50px;
+    z-index: 1;
+    background: url(../../resource/img/main/main_br02_s2.png) no-repeat center center;
+}
+
+.mg-main-contents .main-visual-list ul.swiper-wrapper.new-list .list-item.ani01.item-02 .main-character-group01 .cha-m03 {
+    position: absolute;
+    top: 114px;
+    right: 166px;
+    left: inherit;
+    width: 40px;
+    height: 40px;
+    z-index: 1;
+    background: url(../../resource/img/main/main_br02_s3.png) no-repeat center center;
+}
+
+.mg-main-contents .main-visual-list ul.swiper-wrapper.new-list .list-item.ani01.item-02 .main-character-group01 .cha-m04 {
+    position: absolute;
+    top: 88px;
+    right: 103px;
+    width: 30px;
+    height: 30px;
+    z-index: 1;
+    background: url(../../resource/img/main/main_br02_s4.png) no-repeat center center;
+}
+
+.mg-main-contents .main-visual-list ul.swiper-wrapper.new-list .list-item.ani01.item-02.swiper-slide-active .main-character-group01 .cha-m01 {
+    animation: fadeInLeft2 1.5s .5s ease 1 forwards;
+    transform: translateX(-30px);
+    opacity: 0;
+}
+
+.mg-main-contents .main-visual-list ul.swiper-wrapper.new-list .list-item.ani01.item-02.swiper-slide-active .main-character-group01 .cha-m02 {
+    animation: bounce4 1s 1.2s ease 3;
+}
+
+.mg-main-contents .main-visual-list ul.swiper-wrapper.new-list .list-item.ani01.item-02.swiper-slide-active .main-character-group01 .cha-m03 {
+    animation: bounce4 1s 1.4s ease 3;
+}
+
+.mg-main-contents .main-visual-list ul.swiper-wrapper.new-list .list-item.ani01.item-02.swiper-slide-active .main-character-group01 .cha-m04 {
+    animation: bounce4 1s 1.6s ease 3;
+}
+
+.mg-main-contents .main-visual-list ul.swiper-wrapper.new-list .list-item.item-03.ani01 {
+    background: linear-gradient(31deg, #f9dcec 0.44%, #ddf8fc 81.74%);
+}
+
+.mg-main-contents .main-visual-list ul.swiper-wrapper.new-list .list-item.ani01.item-03 .main-character-group01 .cha-m01 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 672px;
+    height: 340px;
+    z-index: 1;
+    background: url(../../resource/img/main/main_br03_s3.png) no-repeat center center;
+}
+
+.mg-main-contents .main-visual-list ul.swiper-wrapper.new-list .list-item.ani01.item-03 .main-character-group01 .cha-m02 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 672px;
+    height: 340px;
+    z-index: 3;
+    background: url(../../resource/img/main/main_br03_s2.png) no-repeat center center;
+}
+
+.mg-main-contents .main-visual-list ul.swiper-wrapper.new-list .list-item.ani01.item-03 .main-character-group01 .cha-m03 {
+    position: absolute;
+    bottom: 82px;
+    left: 0;
+    width: 672px;
+    height: 390px;
+    z-index: 2;
+    background: url(../../resource/img/main/main_br03_s1.png) no-repeat center center;
+}
+
+.mg-main-contents .main-visual-list ul.swiper-wrapper.new-list .list-item.ani01.item-03.swiper-slide-active .main-character-group01 .cha-m01 {
+    animation: fadeIn 1.5s .5s ease 1 forwards;
+    opacity: 0;
+}
+
+.mg-main-contents .main-visual-list ul.swiper-wrapper.new-list .list-item.ani01.item-03.swiper-slide-active .main-character-group01 .cha-m02 {
+    animation: fadeInRight 1.5s ease 1 forwards;
+    opacity: 0;
+}
+
+.mg-main-contents .main-visual-list ul.swiper-wrapper.new-list .list-item.ani01.item-03.swiper-slide-active .main-character-group01 .cha-m03 {
+    animation: fadeInRight 1.8s .5s ease 1 forwards;
+    opacity: 0;
+}
+
+.mg-main-contents .main-visual-list ul.swiper-wrapper.new-list .list-item.item-04.ani01 {
+    background: linear-gradient(30deg, #fff0ca 2.29%, #e4f2ff 77.54%);
+}
+
+.mg-main-contents .main-visual-list ul.swiper-wrapper.new-list .list-item.ani01.item-04 .main-character-group01 .cha-m01 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 582px;
+    height: 460px;
+    z-index: 1;
+    background: url(../../resource/img/main/main_br04_s2.png) no-repeat center center;
+}
+
+.mg-main-contents .main-visual-list ul.swiper-wrapper.new-list .list-item.ani01.item-04 .main-character-group01 .cha-m02 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 310px;
+    height: 563px;
+    z-index: 1;
+    background: url(../../resource/img/main/main_br04_s3.png) no-repeat center center;
+}
+
+.mg-main-contents .main-visual-list ul.swiper-wrapper.new-list .list-item.ani01.item-04 .main-character-group01 .cha-m03 {
+    position: absolute;
+    bottom: -24px;
+    right: 324px;
+    width: 375px;
+    height: 517px;
+    z-index: 3;
+    background: url(../../resource/img/main/main_br04_s1.png) no-repeat center center;
+}
+
+.mg-main-contents .main-visual-list ul.swiper-wrapper.new-list .list-item.ani01.item-04.swiper-slide-active .main-character-group01 .cha-m01 {
+    animation: fadeInRight 1.5s ease 1 forwards;
+    opacity: 0;
+}
+
+.mg-main-contents .main-visual-list ul.swiper-wrapper.new-list .list-item.ani01.item-04.swiper-slide-active .main-character-group01 .cha-m02 {
+    animation: fadeInRight 1s .5s ease 1 forwards;
+    opacity: 0;
+}
+
+.mg-main-contents .main-visual-list ul.swiper-wrapper.new-list .list-item.ani01.item-04.swiper-slide-active .main-character-group01 .cha-m03 {
+    animation: fadeInUp 1.5s .5s ease 1 forwards;
+    opacity: 0;
+}
+
+.mg-main-contents .btn-link-arrow {
+    display: inline-block;
+    position: relative;
+    height: 28px;
+    padding: 2px 23px 4px 12px;
+    text-align: center;
+    border: 1px solid #c2c2c2;
+    border-radius: 20px;
+    font-size: 14px;
+    color: #555;
+    letter-spacing: -0.14px;
+    box-sizing: border-box;
+    margin-top: 24px;
+}
+
+.mg-main-contents .btn-link-arrow:after {
+    display: block;
+    position: absolute;
+    right: 13px;
+    top: 8px;
+    content: '';
+    width: 9px;
+    height: 9px;
+    border-top: 1px solid #666;
+    border-right: 1px solid #666;
+    transform: rotate(45deg) scale(0.7);
+}
+
+.mg-main-contents .btn-link-arrow:hover {
+    border: 1px solid #3074f0;
+    color: #3074f0;
+}
+
+.mg-main-contents .btn-link-arrow:hover:after {
+    border-top: 1px solid #3074f0;
+    border-right: 1px solid #3074f0;
+}
+
+@keyframes item-01-m01 {
+    0% {
+        top: 0px;
+        opacity: 0;
+        transform: translateX(-10%) scale(0.6) rotate(0deg);
+    }
+
+    35% {
+        top: 20px;
+        opacity: 0.7;
+        transform: translateX(10%) scale(0.8) rotate(-5deg);
+    }
+
+    60% {
+        top: 50px;
+        opacity: 1;
+        transform: translateX(-10%) scale(0.9) rotate(10deg);
+    }
+
+    100% {
+        top: 83px;
+        opacity: 1;
+        transform: translateX(0%) scale(1) rotate(0deg);
+    }
+}

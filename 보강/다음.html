@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding:0;
+            box-sizing: border-box;
+        }
+
+        .logo {
+            width: 233px;
+            height: 32px;
+            background-image: url(img/logoHeader.svg);
+            background-repeat: no-repeat;
+            text-indent: -9999px;
+        }
+        .logo1 {
+            width: 233px;
+            height: 32px;
+            background-image: url(img/logoHeader.svg);
+            background-repeat: no-repeat;
+        }
+        .hide {
+            width: 1px;
+            height: 1px;
+            position: absolute;
+            margin: -1px;
+            overflow: hidden;
+            clip-path: polygon(0 0,0 0,0 0);
+        }
+
+
+        .box {
+            width: 100px;
+            background-color: #fc0;
+        }
+        .box::before {
+            content: '비포영역';
+            display: block;
+            background-color: #0fc;
+            width: 100px;
+            height: 100px;
+            background-image: url(img/logoHeader.svg);
+
+        }
+        .spacer {
+            height: 100px;
+        }
+
+
+        .prev {
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;
+            background-image: url(img/logoHeader.svg);
+            cursor: pointer;
+        }
+
+
+        .lg {
+            width: 255px;
+        }
+        .lg a {
+            display: block;
+            height: 27px;
+            background: url(img/logo-bestshop.svg) no-repeat;
+        }
+
+    </style>
+</head>
+<body>
+    <h1><img src="img/logoHeader.svg" alt="메리츠금융그룹"></h1>
+    <h1 class="logo">메리츠금융그룹</h1>
+    <!-- 이방법을 제일 많이 씀 -->
+    <h1 class="logo1"><span class="hide">메리츠금융그룹</span></h1>
+    <div class="spacer"></div>
+    <div class="box">메일</div>
+    <div class="spacer"></div>
+    <div class="box1">
+        <img src="img/logoHeader.svg" alt="메일을 표현하는 아이콘"><br>메일
+    </div>
+    <div class="spacer"></div>
+    <button class="prev"><span class="hide">이전보기</span></button>
+    <button class="prev"><span class="hide">다음보기</span></button>
+    <!-- 애니메이션요소 -->
+    <div class="ani"></div>
+    <div class="spacer"></div>
+    <h2><span class="hide">사이트 주요 메뉴</span></h2>
+    <nav>
+        <ul class="gnb">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </nav>
+    <button><span class="hide">전체메뉴닫기</span></button>
+
+    <h1 class="aa">
+        <!-- a에 배경이미지 넣기 -->
+        <a href="#"><span class="hide">메리츠화재보험</span></a>
+    </h1>
+    <div class="spacer"></div>
+    <h1 class="lg">
+        <a href="#" title="LG베스트샵 홈페이지 가기"><span class="hide">LG베스트샵</span></a>
+    </h1>
+
+    <div class="spacer"></div>
+    <img src="img/logo-bestshop.svg" alt="">
+</body>
+</html>
