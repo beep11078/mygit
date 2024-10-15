@@ -63,10 +63,20 @@ li {
 }
 
 .container {
+    position: relative;
     margin-bottom: 5rem;
 }
 
-.titleArticle {
+.container .titleBox .titleArticle::before {
+    content: '';
+    width: 72px; height: 72px;
+    position: absolute;
+    left: -72px;
+    background-position: center;
+    background-size: cover;
+}
+
+.container .titleBox .titleArticle {
     font-size: 2.5rem;
     font-weight: normal;
     position: relative;
@@ -87,7 +97,7 @@ li {
     margin-left: 32px;
 }
 
-.keywords {
+.keyword {
     color: #777;
 }
 
@@ -116,11 +126,11 @@ li {
     display: flex;
 }
 
-.header .nav .mainMenu>li {
+.header .nav .mainMenu > li {
     position: relative;
 }
 
-.header .nav .mainMenu>li a {
+.header .nav .mainMenu > li a {
     line-height: 85px;
     font-size: 17px;
     position: relative;
@@ -129,16 +139,16 @@ li {
     text-decoration: none;
 }
 
-.header .nav .mainMenu li:last-child a.arrow::after {
+.header .nav .mainMenu > li:last-child a.arrow::after {
     content: "↗️";
     font-size: .9rem;
 }
 
-.header .nav .mainMenu:hover li a:not(:hover) {
+.header .nav .mainMenu:hover > li a:not(:hover) {
     color: #888;
 }
 
-.header .nav .mainMenu li:hover .menuTitle {
+.header .nav .mainMenu > li:hover .menuTitle {
     color: #000 !important;
 }
 
@@ -463,10 +473,6 @@ li {
 }
 
 .storyBox .titleBox .titleArticle::before {
-    content: '';
-    width: 72px; height: 72px;
-    position: absolute;
-    left: -72px;
     background-image: url(../images/Kakao_image/video.webp);
 }
 
@@ -494,7 +500,6 @@ li {
 .storyBox .storyList .wide::after {
     position: absolute;
     content: '';
-    background-image: url(../images/Kakao_image/story1.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -503,6 +508,13 @@ li {
     top: 0;
     right: 0;
     border-radius: 0 20px 20px 0;
+}
+
+.storyBox .storyList .story1::after {
+    background-image: url(../images/Kakao_image/story1.webp);
+}
+.storyBox .storyList .story6::after {
+    background-image: url(../images/Kakao_image/story6.webp);
 }
 
 .storyBox .storyList li {
@@ -515,11 +527,18 @@ li {
     position: relative;
 }
 
+.storyBox .storyList .over {
+    display: flex;
+    padding-top: 274px;
+    flex-direction: column;
+}
+
 .storyBox .storyList .storyInfo {
     width: block;
     display: flex;
     justify-content: space-between;
     margin-bottom: 1rem;
+    flex-wrap: wrap;
 }
 
 .storyBox .storyList .storyInfo .storyTheme::before {
@@ -543,6 +562,7 @@ li {
 {
     background-image: url(../images/Kakao_image/icon3.webp);
 }
+
 .storyBox .storyList .storyInfo .storyMore {
     border: none;
     background-color: transparent;
@@ -566,16 +586,15 @@ li {
     line-height: 1.6rem;
 }
 
-.storyBox .storyList .keywords {
+.storyBox .storyList .keyword {
     margin-top: auto;
 }
 
-.storyBox .storyList .story2::after 
+.storyBox .storyList .under::after 
 /* 스크립트 2, 4, 7, 9 */
 {
     position: absolute;
     content: '';
-    background-image: url(../images/Kakao_image/story2.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -586,19 +605,45 @@ li {
     border-radius: 0 0 20px 20px;
 }
 
+.storyBox .storyList .story2::after {
+    background-image: url(../images/Kakao_image/story2.webp);
+}
+.storyBox .storyList .story4::after {
+    background-image: url(../images/Kakao_image/story4.webp);
+}
+.storyBox .storyList .story7::after {
+    background-image: url(../images/Kakao_image/story7.webp);
+}
+.storyBox .storyList .story9::after {
+    background-image: url(../images/Kakao_image/story9.webp);
+}
 
-.storyBox .storyList .story2::after, 
-/* 스크립트 3, 5, 8 */
+
+.storyBox .storyList .over::before 
 {
     position: absolute;
     content: '';
-    background-image: url(../images/Kakao_image/story2.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     width: 417px;
     height: 234px;
-    bottom: 0;
+    top: 0;
     left: 0;
-    border-radius: 0 0 20px 20px;
+    border-radius: 20px 20px 0 0;
+}
+
+.storyBox .storyList .story3::before {
+    background-image: url(../images/Kakao_image/story3.webp);
+}
+.storyBox .storyList .story5::before {
+    background-image: url(../images/Kakao_image/story5.webp);
+}
+.storyBox .storyList .story8::before {
+    background-image: url(../images/Kakao_image/story8.webp);
+}
+
+
+.serviceBox .titleBox .titleArticle::before {
+    background-image: url(../images/Kakao_image2/lamp.gif);
 }
