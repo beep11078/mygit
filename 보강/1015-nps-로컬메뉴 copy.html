@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        a {
+            color:inherit;
+            /* 상속 */
+            text-decoration: none;
+        }
+
+        body {
+            padding: 50px;
+        }
+
+        .introbox {
+            display: flex;
+            justify-content: space-between;
+            width: 1280px;
+            margin: 0 auto;
+        }
+
+        .intro {
+            width: 596px;
+            border:1px solid #999;
+            border-radius: 30px;
+            padding: 27px;
+            background-color: #efefef;
+            display: flex;
+            flex-wrap: wrap;
+            gap:10px 26px;
+        }
+        .intro li {
+            width: 162px;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        .intro li a {
+            display: block;
+            text-align: center;
+            height: 112px;
+            padding-top: 17px;
+        }
+        .intro li a::before {
+            content: '';
+            width: 48px;
+            height: 48px;
+            border-radius: 100%;
+            background-color: #f00;
+            display: block;
+            /* 블록 가운데정렬 좌우마진을 auto */
+            margin: 0 auto 10px;
+        }
+        .intro li:nth-child(1) a::before {
+            background-color: #0fc;
+        }
+        .intro li:nth-child(1):hover a::before {
+            background-color: #f0c;
+        }
+        .intro li:hover a {
+            background-color: #ccc;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="introbox">
+        <ul class="intro introa">
+            <li><a href="">연혁 및 CI</a></li>
+            <li><a href="">연혁 및 CI</a></li>
+            <li><a href="">연혁 및 CI</a></li>
+            <li><a href="">연혁 및 CI</a></li>
+            <li><a href="">연혁 및 CI</a></li>
+            <li><a href="">연혁 및 CI</a></li>
+            <li><a href="">연혁 및 CI</a></li>
+            <li><a href="">연혁 및 CI</a></li>
+            <li><a href="">연혁 및 CI</a></li>
+        </ul>
+        <ul class="intro introb">
+            <li><a href="">연혁 및 CI</a></li>
+            <li><a href="">연혁 및 CI</a></li>
+            <li><a href="">연혁 및 CI</a></li>
+            <li><a href="">연혁 및 CI</a></li>
+            <li><a href="">연혁 및 CI</a></li>
+            <li><a href="">연혁 및 CI</a></li>
+            <li><a href="">연혁 및 CI</a></li>
+            <li><a href="">연혁 및 CI</a></li>
+            <li><a href="">연혁 및 CI</a></li>
+        </ul>
+    </div>
+
+</body>
+</html>
