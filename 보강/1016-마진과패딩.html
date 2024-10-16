@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        *{ 
+            box-sizing: border-box; 
+            margin: 0; 
+            padding:0;
+        }
+
+        ul { list-style: none; padding: 0; }
+        a { text-decoration: none; }
+
+        body {
+            padding: 50px;
+        }
+
+        .box {
+            width: 100%;
+            background-color: tomato;
+            
+        }
+
+        .child {
+            height: 100px;
+            background-color: orange;
+        }
+
+        .child:nth-child(even) {
+            background-color: yellow;
+        }
+
+        .child1 {
+            margin-bottom: 50px;
+        }
+
+        /* 형제 요소에 대해 상하 마진은 상쇄된다.
+        더하는 게 아니라 큰 값만 취한다. (마진겹침문제)
+        형제 사이의 margin은 한쪽에만 주는 것 권장 
+        (좌우 마진은 저 문제 없으나 한쪽에만 줘라 걍) */
+
+        .child2 {
+            margin-top: 50px;
+        }
+        
+        /* 부모 요소에 padding, border가 없을 때,
+        첫째 자식의 margin-top, 막내의 margin-bottom은 부모에게 전달된다.
+        부모-자식의 여백은 부모 요소에 padding 주는 것 권장 */
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="box">
+        <div class="child child1"></div>
+        <div class="child child2"></div>
+        <div class="child child3"></div>
+    </div>
+    
+    <script>
+
+        
+    </script>
+</body>
+</html>
