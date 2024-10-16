@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Choice Picker</title>
+    <style>
+
+      @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #2b88f0;
+        font-family: 'Muli', sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        overflow: hidden;
+        margin: 0;
+      }
+
+      h3 {
+        color: #fff;
+        margin: 10px 0 20px;
+        text-align: center;
+      }
+
+      .container {
+        width: 500px;
+      }
+
+      textarea {
+        border: none;
+        display: block;
+        width: 100%;
+        height: 100px;
+        font-family: inherit;
+        padding: 10px;
+        margin: 0 0 20px;
+        font-size: 16px;
+      }
+
+      textarea:focus {
+        outline: none;
+      }
+
+      .tag {
+        background-color: #f0932b;
+        color: #fff;
+        border-radius: 50px;
+        padding: 10px 20px;
+        margin: 0 5px 10px 0;
+        font-size: 14px;
+        display: inline-block;
+      }
+
+      .tag.highlight {
+        background-color: #273c75;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <div class="container">
+      <h3>Enter all of the choices divided by a comma (','). <br> Press enter when you're done</h3>
+      <textarea placeholder="Enter choices here..." id="textarea"></textarea>
+      <div id="tags"></div>
+    </div>
+
+    <script>
+      const tagsEl = document.getElementById('tags')
+      const textarea = document.getElementById('textarea')
+
+      textarea.focus()
+
+      textarea.addEventListener('keyup', 
+        function(e) {
+          createTags(e.target.value) // 아래에서 정의
+          if(e.key === 'Enter') {
+            setTimeout( function() {
+              e.target.value = '' 
+            }, 10)
+            randomSelect() // 아래에서 정의
+        }
+        })
+
+      function createTags(input) {
+        const tags = input.split(',')
+        .filter(tag => tag.trim() !== '')
+        .map(tag => tag.trim())
+
+        /**
+         * input.split(','): 입력된 문자열을 쉼표(,)로 나누어 배열로 변환
+         * filter(tag => tag.trim() !== ''): 공백만 있는 항목은 제거
+         * trim(): 문자열 공백을 제거할 때 쓰는 함수
+         * map(tag => tag.trim()): 각 태그의 앞뒤 공백을 제거
+         * => textarea 입력값에서 태그 추출, 가공
+        */
+          
+        tagsEl.innerHTML = ''
+        // 태그 영역 비우기
+
+        tags.forEach(tag => {
+          const tagEl = document.createElement('span')
+          tagEl.classList.add('tag')
+          tagEl.innerText = tag
+          tagsEl.appendChild(tagEl)
+        })
+        /** 각 태그에 대해 span 요소를 생성하고, 
+         * tag 클래스 추가 후 
+         * 해당 태그 내용을 설정한 후 
+         * tagsEl에 추가 
+         * => 추출한 태그들 textarea 아래에 출력 */
+      }
+
+      function randomSelect() {
+
+          const times = 30
+          const interval = setInterval( 
+            function() {
+              const randomTag = pickRandomTag()
+              
+              if (randomTag !== undefined) {
+                highlightTag(randomTag)
+                setTimeout( function() { unHighlightTag(randomTag) }, 100 )
+              }
+            }, 100);
+
+          setTimeout( function() {
+            
+            clearInterval(interval)
+
+            setTimeout( function() {
+              const randomTag = pickRandomTag()
+              highlightTag(randomTag)
+            }, 100)
+
+          }, times * 100)
+      }
+
+      function pickRandomTag() {
+        const tags = document.querySelectorAll('.tag')
+        return tags[Math.floor(Math.random() * tags.length)]
+      }
+
+      function highlightTag(tag) {
+        tag.classList.add('highlight')
+      }
+
+      function unHighlightTag(tag) {
+        tag.classList.remove('highlight')
+      }
+
+
+    </script>
+</body>
+</html>
