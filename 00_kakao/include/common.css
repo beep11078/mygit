@@ -64,24 +64,24 @@ li {
 
 .container {
     position: relative;
-    margin-bottom: 5rem;
+    margin-bottom: 210px;
 }
 
 .container .titleBox .titleArticle::before {
     content: '';
     width: 72px; height: 72px;
     position: absolute;
-    left: -72px;
+    left: -112px;
     background-position: center;
     background-size: cover;
 }
 
 .container .titleBox .titleArticle {
-    font-size: 2.5rem;
+    font-size: 50px;
     font-weight: normal;
     position: relative;
-    margin-left: 72px;
-    margin-bottom: 20px;
+    margin-left: 112px;
+    margin-bottom: 72px;
     line-height: 72px;
     display: flex;
     justify-content: space-between;
@@ -100,6 +100,8 @@ li {
 .keyword {
     color: #777;
 }
+
+/* header --------------------------------------------------------- */
 
 .header {
     display: flex;
@@ -208,6 +210,8 @@ li {
 .header .util button:hover {
     background-color: rgba(0, 0, 0, .1);
 }
+
+/* mainBox --------------------------------------------------------- */
 
 .main .section1 .mainBox {
     display: flex;
@@ -472,8 +476,10 @@ li {
     padding-bottom: 20px;
 }
 
+/* storyBox --------------------------------------------------------- */
+
 .storyBox .titleBox .titleArticle::before {
-    background-image: url(../images/Kakao_image/video.webp);
+    background-image: url(../images/Kakao_image/ico_archives.gif);
 }
 
 .storyBox .titleBox .titleArticle .pause {
@@ -482,7 +488,8 @@ li {
     border-radius: 50%;
 }
 
-.storyBox .storyList {
+.storyBox .storyList,
+.newsBox .newsList {
     display: flex;
     max-width: 100%;
 }
@@ -533,10 +540,10 @@ li {
     flex-direction: column;
 }
 
-.storyBox .storyList .storyInfo {
-    width: block;
+.storyBox .storyList .storyInfo,
+.newsBox .newsList .newsInfo {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     margin-bottom: 1rem;
     flex-wrap: wrap;
 }
@@ -563,12 +570,15 @@ li {
     background-image: url(../images/Kakao_image/icon3.webp);
 }
 
-.storyBox .storyList .storyInfo .storyMore {
+.storyBox .storyList .storyInfo .storyMore,
+.newsBox .newsList .newsInfo .newsMore {
     border: none;
     background-color: transparent;
+    margin-left: auto;
 }
 
-.storyBox .storyList .storyInfo .storyMore div {
+.storyBox .storyList .storyInfo .storyMore div,
+.newsBox .newsList .newsInfo .newsMore div {
     width: 4px; height: 4px;
     border-radius: 100%;
     background-color: #000;
@@ -588,11 +598,10 @@ li {
 
 .storyBox .storyList .keyword {
     margin-top: auto;
+    font-size: 16px;
 }
 
-.storyBox .storyList .under::after 
-/* 스크립트 2, 4, 7, 9 */
-{
+.storyBox .storyList .under::after {
     position: absolute;
     content: '';
     background-position: center;
@@ -618,9 +627,7 @@ li {
     background-image: url(../images/Kakao_image/story9.webp);
 }
 
-
-.storyBox .storyList .over::before 
-{
+.storyBox .storyList .over::before {
     position: absolute;
     content: '';
     background-position: center;
@@ -644,6 +651,215 @@ li {
 }
 
 
+/* serviceBox --------------------------------------------------------- */
+
 .serviceBox .titleBox .titleArticle::before {
     background-image: url(../images/Kakao_image2/lamp.gif);
+}
+
+.serviceBox .serviceGroup {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.serviceBox .serviceGroup > li {
+    width: 848px;
+    height: 180px;
+    border-radius: 20px;
+    background-color: #f3f3f3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 63px;
+}
+
+.serviceBox .serviceGroup  h4 {
+    font-size: 28px;
+}
+
+.serviceBox .serviceGroup ul {
+    display: flex;
+    justify-content: flex-end;
+    width: 258px;
+    gap: 68px;
+}
+
+.serviceBox .serviceGroup ul li {
+    position: relative;
+}
+
+.serviceBox .serviceGroup ul li::after {
+    content: '';
+    position: absolute;
+    width: 54px;
+    height: 54px;
+    top: 0; left: 0; transform: translate(-50%, -50%);
+    background-size: cover;
+}
+
+.serviceBox .serviceGroup .comService li:nth-child(1)::after {
+    background-image: url(../images/Kakao_image2/kakaoTalk.png);
+}
+
+.serviceBox .serviceGroup .comService li:nth-child(2)::after {
+    background-image: url(../images/Kakao_image2/daum.png);
+}
+
+.serviceBox .serviceGroup .comService li:nth-child(3)::after {
+    background-image: url(../images/Kakao_image2/kakaoStory.png);
+}
+
+.serviceBox .serviceGroup .comService li:nth-child(4)::after {
+    background-image: url(../images/Kakao_image2/plus.svg);
+}
+
+.serviceBox .serviceGroup .busiService li:nth-child(1)::after {
+    background-image: url(../images/Kakao_image2/kakaoChannel.png);
+}
+
+.serviceBox .serviceGroup .busiService li:nth-child(2)::after {
+    background-image: url(../images/Kakao_image2/kakaoCloud.png);
+}
+
+.serviceBox .serviceGroup .busiService li:nth-child(3)::after {
+    background-image: url(../images/Kakao_image2/agit.png);
+}
+
+.serviceBox .serviceGroup .busiService li:nth-child(4)::after {
+    background-image: url(../images/Kakao_image2/plus.svg);
+}
+
+.serviceBox .serviceGroup .cateService li:nth-child(1)::after {
+    background-image: url(../images/Kakao_image2/kakaoMap.png);
+}
+
+.serviceBox .serviceGroup .cateService li:nth-child(2)::after {
+    background-image: url(../images/Kakao_image2/kakaoTaxi.png);
+}
+
+.serviceBox .serviceGroup .cateService li:nth-child(3)::after {
+    background-image: url(../images/Kakao_image2/kakaoBank.png);
+}
+
+.serviceBox .serviceGroup .cateService li:nth-child(4)::after {
+    background-image: url(../images/Kakao_image2/plus.svg);
+}
+
+.serviceBox .serviceGroup .shopService li:nth-child(1)::after {
+    background-image: url(../images/Kakao_image2/kakaoGift.png);
+}
+
+.serviceBox .serviceGroup .shopService li:nth-child(2)::after {
+    background-image: url(../images/Kakao_image2/kakaoShopping.png);
+}
+
+.serviceBox .serviceGroup .shopService li:nth-child(3)::after {
+    background-image: url(../images/Kakao_image2/zigzeg.png);
+}
+
+.serviceBox .serviceGroup .shopService li:nth-child(4)::after {
+    background-image: url(../images/Kakao_image2/plus.svg);
+}
+
+.serviceBox .serviceGroup .enterService li:nth-child(1)::after {
+    background-image: url(../images/Kakao_image2/kakaoPage.png);
+}
+
+.serviceBox .serviceGroup .enterService li:nth-child(2)::after {
+    background-image: url(../images/Kakao_image2/pickoma.png);
+}
+
+.serviceBox .serviceGroup .enterService li:nth-child(3)::after {
+    background-image: url(../images/Kakao_image2/melon.png);
+}
+
+.serviceBox .serviceGroup .enterService li:nth-child(4)::after {
+    background-image: url(../images/Kakao_image2/plus.svg);
+}
+
+.serviceBox .serviceGroup .socialService li:nth-child(1)::after {
+    background-image: url(../images/Kakao_image2/withTogeter.png);
+}
+
+.serviceBox .serviceGroup .socialService li:nth-child(2)::after {
+    background-image: url(../images/Kakao_image2/plus.svg);
+}
+
+.fullBtn {
+    display: block;
+    margin: auto;
+    width: 316px;
+    border-radius: 36px;
+    border: none;
+    background-color: #f3f3f3;
+    margin-top: 60px;
+    font-size: 22px;
+    line-height: 76px;
+}
+
+/* newsBox --------------------------------------------------------- */
+
+.newsBox .newsList li {
+    width: 560px;
+    flex-shrink: 0;
+    background-color: #eee;
+    border-radius: 40px;
+    padding:40px;
+    margin: 0 10px;
+    position: relative;
+}
+
+.newsBox .newsList .newsInfo .newsTheme::before {
+    content: '';
+    background-image: url(../images/Kakao_image2/trumpet.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 46px; height: 46px;
+    left: -46px; top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+}
+
+.newsBox .newsList .date {
+    position: relative;
+    margin-top: auto;
+    margin-left: 12px;
+    font-size: 16px;
+}
+
+.newsBox .newsList h4 {
+    font-size: 28px;
+    margin-bottom: 140px;
+}
+
+.newsBox .newsList .keyword {
+    position: relative;
+    margin-top: auto;
+    font-size: 16px;
+    margin-bottom: 36px;
+}
+
+.newsBox .newsList .under::after {
+    position: absolute;
+    content: '';
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 560px;
+    height: 315px;
+    left: 0;
+    border-radius: 0 0 20px 20px;
+}
+
+.newsBox .newsList .news1::after {
+    background-image: url(../images/Kakao_image2/news1.webp);
+}
+
+.newsBox .newsList .news2::after {
+    background-image: url(../images/Kakao_image2/news2.webp);
+}
+
+.newsBox .newsList .news3::after {
+    background-image: url(../images/Kakao_image2/news3.webp);
 }
