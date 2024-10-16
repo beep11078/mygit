@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <!--아이콘 폰트(폰트어썸) 연결-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+
+        *{    /*모든 요소 공통*/
+            box-sizing: border-box; margin: 0; padding:0;
+        }
+
+        ul { list-style: none; padding: 0; }
+        a { text-decoration: none; }
+
+        .nps {
+            width: 1220px;
+            margin: 0 auto;
+            border-bottom: 10px solid salmon;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .nps .sec {
+            flex: none; 
+            /* flex-grow: 0; flex-shrink: 0; flex-basis: auto;
+            width로 flex-item 크기 제어 */
+            height: 150px;
+            background-color: #fc0;
+        }
+
+        .nps .sec:nth-child(even) {
+            background-color: #fac;
+        }
+
+        .nps .sec1 {
+            width: 725px;
+            margin-bottom: 50px;
+        }
+
+        .nps .sec2 {
+            width: 473px;
+        }
+
+        .nps .sec3,
+        .nps .sec4 {
+            width: 100%;
+            margin-bottom: 40px;
+        }
+
+        .nps .sec5 {
+            width: 656px;
+        }
+
+        .nps .sec6 {
+            width: 533px;
+        }
+
+        .spacer {
+            height: 100px;
+        }
+
+        .card {
+            width: 1220px;
+            margin: 0 auto;
+            border-bottom: 10px solid orange;
+            display: flex;
+            flex-direction: column;
+            background-color: #eee;
+            height: 638px;
+            flex-wrap: wrap;
+            align-content: space-between;
+            justify-content: space-between;
+        }
+
+        .card .sec {
+            flex: none;
+            background-color: #ccc;
+            width: 387px;
+            height: 200px;
+        }
+
+        .card .sec:nth-child(even) {
+            background-color: #aaa;
+        }
+
+        .card .sec1 {
+            height: 208px;
+        }
+
+        .card .sec2 {
+            height: 410px;
+        }
+
+        .card .sec3,
+        .card .sec4 {
+            width: 386px;
+        }
+
+        .card .sec3 {
+            height: 385px;
+        }
+        
+        .card .sec4,
+        .card .sec7 {
+            height: 234px;
+        }
+
+        .card .sec5,
+        .card .sec6 {
+            height: 182px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <main class="nps">
+        <section class="sec sec1">컨텐츠1</section>
+        <section class="sec sec2">컨텐츠2</section>
+        <section class="sec sec3">컨텐츠3</section>
+        <section class="sec sec4">컨텐츠4</section>
+        <section class="sec sec5">컨텐츠5</section>
+        <section class="sec sec6">컨텐츠6</section>
+    </main>
+
+    <div class="spacer"></div>
+
+    <div class="card">
+        <section class="sec sec1">컨텐츠1</section>
+        <section class="sec sec2">컨텐츠2</section>
+        <section class="sec sec3">컨텐츠3</section>
+        <section class="sec sec4">컨텐츠4</section>
+        <section class="sec sec5">컨텐츠5</section>
+        <section class="sec sec6">컨텐츠6</section>
+        <section class="sec sec7">컨텐츠7</section>
+    </div>
+
+    <div class="spacer"></div>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        *{ 
+            box-sizing: border-box; 
+            margin: 0; 
+            padding:0;
+        }
+
+        body {
+            padding: 50px;
+        }
+
+        ul { list-style: none; padding: 0; }
+        a { text-decoration: none; }
+
+        .list {
+            display: flex;
+            width: 590px;
+            border-bottom: 10px solid orange;
+            flex-wrap: wrap;
+        }
+
+        .list li {
+            width: 200px;
+            flex: none;
+            border: 5px solid rgb(245, 226, 59);
+        }
+
+        .list li:nth-child(3n+2) {
+            margin: 0 -5px;
+        }
+
+        .list li:nth-child(n+4) {
+            margin-top: -5px;
+        }
+
+        .list li:hover {
+            border-color: rgb(255, 58, 124);
+            z-index: 5;
+            position: relative;
+        }
+
+        .list li:hover a {
+            background-color: rgb(250, 142, 178);
+        }
+
+        .list li a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 190px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <ul class="list">
+        <li><a href="">메뉴1</a></li>
+        <li><a href="">메뉴2</a></li>
+        <li><a href="">메뉴3</a></li>
+        <li><a href="">메뉴4</a></li>
+        <li><a href="">메뉴5</a></li>
+        <li><a href="">메뉴6</a></li>
+        <li><a href="">메뉴7</a></li>
+        <li><a href="">메뉴8</a></li>
+        <li><a href="">메뉴9</a></li>
+    </ul>
+    
+    <script>
+
+        
+    </script>
+</body>
+</html>
