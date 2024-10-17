@@ -7,156 +7,180 @@
     <title>Random Choice Picker</title>
     <style>
 
-      @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+        @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 
-      * {
-        box-sizing: border-box;
-      }
+        * {
+          box-sizing: border-box;
+        }
 
-      body {
-        background-color: #2b88f0;
-        font-family: 'Muli', sans-serif;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-        overflow: hidden;
-        margin: 0;
-      }
+        body {
+          background-color: #2b88f0;
+          font-family: 'Muli', sans-serif;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          height: 100vh;
+          overflow: hidden;
+          margin: 0;
+        }
 
-      h3 {
-        color: #fff;
-        margin: 10px 0 20px;
-        text-align: center;
-      }
+        h3 {
+          color: #fff;
+          margin: 10px 0 20px;
+          text-align: center;
+        }
 
-      .container {
-        width: 500px;
-      }
+        .container {
+          width: 500px;
+        }
 
-      textarea {
-        border: none;
-        display: block;
-        width: 100%;
-        height: 100px;
-        font-family: inherit;
-        padding: 10px;
-        margin: 0 0 20px;
-        font-size: 16px;
-      }
+        textarea {
+          border: none;
+          display: block;
+          width: 100%;
+          height: 100px;
+          font-family: inherit;
+          padding: 10px;
+          margin: 0 0 20px;
+          font-size: 16px;
+        }
 
-      textarea:focus {
-        outline: none;
-      }
+        textarea:focus {
+          outline: none;
+        }
 
-      .tag {
-        background-color: #f0932b;
-        color: #fff;
-        border-radius: 50px;
-        padding: 10px 20px;
-        margin: 0 5px 10px 0;
-        font-size: 14px;
-        display: inline-block;
-      }
+        .tag {
+          background-color: #f0932b;
+          color: #fff;
+          border-radius: 50px;
+          padding: 10px 20px;
+          margin: 0 5px 10px 0;
+          font-size: 14px;
+          display: inline-block;
+        }
 
-      .tag.highlight {
-        background-color: #273c75;
-      }
+        .tag.highlight {
+          background-color: #273c75;
+        }
 
     </style>
   </head>
   <body>
 
     <div class="container">
-      <h3>Enter all of the choices divided by a comma (','). <br> Press enter when you're done</h3>
+      <h3>Enter all of the choices divided by a comma (','). 
+        <br> Press enter when you're done</h3>
       <textarea placeholder="Enter choices here..." id="textarea"></textarea>
+      <!-- textarea : input과 다르게 width, height로 줄과 너비 지정 가능, 댓글이나 방명록 같은 곳에 사용하는 태그 -->
       <div id="tags"></div>
     </div>
 
     <script>
-      const tagsEl = document.getElementById('tags')
-      const textarea = document.getElementById('textarea')
+        const tagsEl = document.getElementById('tags')
+        const textarea = document.getElementById('textarea')
 
-      textarea.focus()
+        textarea.focus()
 
-      textarea.addEventListener('keyup', 
-        function(e) {
-          createTags(e.target.value) // 아래에서 정의
-          if(e.key === 'Enter') {
-            setTimeout( function() {
-              e.target.value = '' 
-            }, 10)
-            randomSelect() // 아래에서 정의
-        }
+        textarea.addEventListener('keyup', (e) => {
+        // e = event의 e, textarea에 입력된 값을 지칭
+        // 키를 누를 때는 keydown 타입 이벤트 발생, 
+        // 키를 놓을 때는 keyup 타입 이벤트 발생
+        // textarea에 입력 완료 후
+
+            createTags(e.target.value)
+            // 아래 정의한 createTags 함수에 e값 입력
+
+            if(e.key === 'Enter') {
+                setTimeout(() => {
+                    e.target.value = '' // e의 값에 공백('')
+                }, 10)
+                // setTimeout(function(), 시간): 시간이 지난 후 함수 실행
+
+                randomSelect()
+            }
+            // 엔터 키 누르면 10초 후에 아래 정의한 randomSelect함수 실행
         })
 
-      function createTags(input) {
-        const tags = input.split(',')
-        .filter(tag => tag.trim() !== '')
-        .map(tag => tag.trim())
+        function createTags(input) {
+            const tags = input.split(',').filter(tag => tag.trim() !== '').map(tag => tag.trim())
+            /** input.split(','): input 문자열을 쉼표(,)로 나누어 배열로 변환 
+             * -> { 문자열1, 문자열2, 문자열3, ... }
+             * filter(tag => tag.trim() !== ''): 조건에 맞는 데이터(tag에서 공백 제거했을 때 값이 ''이 아닌 것)만 필터링
+             * trim(): 문자열 공백을 제거 함수
+             * map(tag => tag.trim()):  ,로 split되고 filter된 tag들에서 공백을 제거해 새로운 배열로 만들어줌
+             * => textarea 입력값에서 태그 추출, 가공해 tags로 넣어줌*/
 
-        /**
-         * input.split(','): 입력된 문자열을 쉼표(,)로 나누어 배열로 변환
-         * filter(tag => tag.trim() !== ''): 공백만 있는 항목은 제거
-         * trim(): 문자열 공백을 제거할 때 쓰는 함수
-         * map(tag => tag.trim()): 각 태그의 앞뒤 공백을 제거
-         * => textarea 입력값에서 태그 추출, 가공
-        */
+            tagsEl.innerHTML = ''
+            // tags 영역 비우기
+
           
-        tagsEl.innerHTML = ''
-        // 태그 영역 비우기
+            tags.forEach(tag => { // tags: 배열, tag: 배열의 현재 요소, forEach: 배열의 각 요소를 돌며 => 뒤의 콜백함수 실행
+              // tags = [ tag1, tag2, tag3, ... ]
+                const tagEl = document.createElement('span')
+                tagEl.classList.add('tag')
+                tagEl.innerText = tag
+                tagsEl.appendChild(tagEl)
+            })
+            /** tagEl = 각 태그에 대해 span 요소를 생성
+             * 생성한 span에 tag 클래스 추가 (<span class="tag"></span>) 
+             * 해당 태그 내용 = tags 설정한 후 
+             * tagEl에 tag 추가  (<span class="tag"> tag 내용 </span>) 
+             * => tagEl을 tags div에 chlid로 넣어줌
+             * ============================
+             *    <div class="tags">
+             *        <span class="tag"> tag1 </span>
+             *        <span class="tag"> tag2 </span>
+             *    </div>
+             */
+        }
 
-        tags.forEach(tag => {
-          const tagEl = document.createElement('span')
-          tagEl.classList.add('tag')
-          tagEl.innerText = tag
-          tagsEl.appendChild(tagEl)
-        })
-        /** 각 태그에 대해 span 요소를 생성하고, 
-         * tag 클래스 추가 후 
-         * 해당 태그 내용을 설정한 후 
-         * tagsEl에 추가 
-         * => 추출한 태그들 textarea 아래에 출력 */
-      }
+        function randomSelect() {
+            const times = 30
 
-      function randomSelect() {
-
-          const times = 30
-          const interval = setInterval( 
-            function() {
-              const randomTag = pickRandomTag()
-              
-              if (randomTag !== undefined) {
+            const interval = setInterval(() => {
+                const randomTag = pickRandomTag()
+          
+          if (randomTag !== undefined) {
                 highlightTag(randomTag)
-                setTimeout( function() { unHighlightTag(randomTag) }, 100 )
-              }
+
+                setTimeout(() => {
+                    unHighlightTag(randomTag)
+                }, 100)
+          }
             }, 100);
 
-          setTimeout( function() {
-            
-            clearInterval(interval)
+            setTimeout(() => {
+                clearInterval(interval)
 
-            setTimeout( function() {
-              const randomTag = pickRandomTag()
-              highlightTag(randomTag)
-            }, 100)
+                setTimeout(() => {
+                    const randomTag = pickRandomTag()
 
-          }, times * 100)
-      }
+                    highlightTag(randomTag)
+                }, 100)
 
-      function pickRandomTag() {
-        const tags = document.querySelectorAll('.tag')
-        return tags[Math.floor(Math.random() * tags.length)]
-      }
+            }, times * 100)
+        }
 
-      function highlightTag(tag) {
-        tag.classList.add('highlight')
-      }
+        function pickRandomTag() {
+            const tags = document.querySelectorAll('.tag')
+            return tags[Math.floor(Math.random() * tags.length)]
+        }
+        /** class가 tag인 태그 모두 선택해서 
+         * 랜덤으로 반환
+         * Math : JS 내장 객체, 수학 함수와 상수 제공
+         * Math.random(): 0~1 사이의 난수 반환
+         * Math.floor(x): x이하의 가장 큰 정수 반환
+         *  ex) 태그 길이 = 10, 난수 0.34이 나온 경우 -> tags[(3.4의 정수 = 3)] = tags에서 3번 자리에 해당하는 tag가 반환되는 것 
+        */
 
-      function unHighlightTag(tag) {
-        tag.classList.remove('highlight')
-      }
+        function highlightTag(tag) {
+            tag.classList.add('highlight')
+        }
+
+        function unHighlightTag(tag) {
+            tag.classList.remove('highlight')
+        }
 
 
     </script>
