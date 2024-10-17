@@ -88,15 +88,6 @@ li {
     align-items: center;
 }
 
-.theme {
-    font-size: .9rem;
-    background-color: #fff;
-    padding: 5px 10px;
-    border-radius: 10px;
-    position: relative;
-    margin-left: 32px;
-}
-
 .keyword {
     color: #777;
 }
@@ -548,13 +539,23 @@ li {
     flex-wrap: wrap;
 }
 
+.storyBox .storyList .storyInfo .storyTheme {
+    font-size: .9rem;
+    background-color: #fff;
+    padding: 5px 10px;
+    border-radius: 10px;
+    position: relative;
+    margin-left: 32px;
+}
+
 .storyBox .storyList .storyInfo .storyTheme::before {
     content: '';
     background-image: url(../images/Kakao_image/icon1.webp);
     background-repeat: no-repeat;
     background-size: cover;
     width: 32px; height: 32px;
-    left: -36px; top: 50%;
+    left: -36px; 
+    top: 50%;
     transform: translateY(-50%);
     position: absolute;
 }
@@ -810,27 +811,39 @@ li {
     position: relative;
 }
 
+
 .newsBox .newsList .newsInfo .newsTheme::before {
     content: '';
     background-image: url(../images/Kakao_image2/trumpet.webp);
     background-repeat: no-repeat;
     background-size: cover;
     width: 46px; height: 46px;
-    left: -46px; top: 50%;
+    left: -58px; top: 50%;
     transform: translateY(-50%);
     position: absolute;
 }
 
+.newsBox .newsList  .newsInfo .newsTheme {
+    position: relative;
+    color: #000;
+    font-size: 13px;
+    background-color: #fff;
+    margin-left: 58px;
+    padding: 15px 14px;
+    border-radius: 7px;
+}
+
 .newsBox .newsList .date {
     position: relative;
-    margin-top: auto;
+    margin: auto 0;
     margin-left: 12px;
-    font-size: 16px;
+    font-size: 12px;
 }
 
 .newsBox .newsList h4 {
-    font-size: 28px;
-    margin-bottom: 140px;
+    font-size: 30px;
+    line-height: 42px;
+    height: 210px;
 }
 
 .newsBox .newsList .keyword {
@@ -847,7 +860,7 @@ li {
     background-repeat: no-repeat;
     background-size: cover;
     width: 560px;
-    height: 315px;
+    height: 313px;
     left: 0;
     border-radius: 0 0 20px 20px;
 }
