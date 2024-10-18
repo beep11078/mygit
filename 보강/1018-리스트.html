@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            padding-bottom: 500px;
+        }
+        .kakao {
+            background-color: #fc0;
+            width: 90%;
+            height: 100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+        .kakao nav {
+            background-color: #0fc;
+            width: 500px;
+            position: absolute;
+            left:50%;
+            top:50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .spacer {
+            height: 100px;
+        }
+
+        .bing {
+            width: 90%;
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+            list-style: none;
+        }
+        .bing li {
+            flex:none;
+            width: 200px;
+            background-color: #ccc;
+            height: 250px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .bing li div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap:30px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .bing li div span {
+            display: none;
+        }
+        .bing li a {
+            position: absolute;
+            left:50%;
+            bottom:20px;
+            transform: translateX(-50%);
+            width: 90%;
+            line-height: 30px;
+            background-color: #fc0;
+            text-align: center;
+            display: none;
+        }
+        .bing li:hover a {
+            display: block;
+        }
+        .bing li:hover div span {
+            display: block;
+        }
+        .bing li:hover div {
+            transform: translateY(-20px);
+        }
+
+        .slide {
+            width: 80%;
+            height: 400px;
+            background-color: #fc0;
+            border-radius: 50px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .slide .box1 {
+            position: absolute;
+            right:0;
+            top:0;
+            background-color: #fff;
+            width: 200px;
+            height: 200px;
+            border-radius: 0 0 0 50px;;
+        }
+        .slide .box1::before {
+            content: '';
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            left:-100px;
+            top:0;
+            background:url(aa.png);
+        }
+        .slide .box1::after {
+            content: '';
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            right:0;
+            bottom:-100px;
+            background:url(aa.png);
+        }
+
+        .btn {
+            width: 400px;
+            height: 100px;
+            background-color: #fc0;
+            position: relative;
+        }
+        .btn a {
+            position: absolute;
+            right:100px;
+            top:50%;
+            transform: translateY(-50%);
+            background-color: #ccc;
+            display: flex;
+            align-items: center;
+            gap:20px;
+        }
+        .btn a::after {
+            content: '';
+            width: 30px;
+            height: 30px;
+            background-color: #f00;
+            transition: transform 0.3s ease-in-out;
+        }
+        .btn:hover a::after {
+            transform: rotate(360deg);
+        }
+
+        .navi {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap:30px
+        }
+        .navi li span {
+            /* 스크린리더가 안읽음 */
+            font-size: 0;
+            line-height: 0;
+        }
+        .navi li {
+            width: 30px;
+            height: 30px;
+            background-color: #f00;
+            border-radius: 15px;
+            transition: width 0.3s ease-in-out;
+        }
+        .navi li:hover {
+            width: 200px;
+
+        }
+
+    </style>
+</head>
+<body>
+    <header class="kakao">
+        <h1>kakao</h1>
+        <nav>메sjdflkjasld kjflkajs   dflj  kasd 뉴</nav>
+        <div>기타등등버튼 기타등등버튼 기타등등버튼</div>
+    </header>
+    <div class="spacer"></div>
+    <div>이전보기,정지,다음보기</div>
+    <div>
+        <button><span class="hide">이전보기</span></button>
+        <button></button>
+        <button><span>유트브숏츠</span>재생</button>
+    </div>
+    <a href="">html페이지</a>
+    <button>인터랙션</button>
+    <a href="">더보기</a>
+    <a href=""><span class="hide">국민연금 소식</span>더보기</a>
+    <div class="spacer"></div>
+    <ul class="bing">
+        <li>
+            <div>
+                <strong>더단백</strong>
+                <span>어쩌고저쩌고</span>
+            </div>
+            <a href="#">페이지이동</a>
+        </li>
+        <li>
+            <div>
+                <strong>더단백</strong>
+                <span>어쩌고저쩌고</span>
+            </div>
+            <a href="#">페이지이동</a>
+        </li>
+        <li>
+            <div>
+                <strong>더단백</strong>
+                <span>어쩌고저쩌고</span>
+            </div>
+            <a href="#">페이지이동</a>
+        </li>
+        <li>
+            <div>
+                <strong>더단백</strong>
+                <span>어쩌고저쩌고</span>
+            </div>
+            <a href="#">페이지이동</a>
+        </li>
+        <li>
+            <div>
+                <strong>더단백</strong>
+                <span>어쩌고저쩌고</span>
+            </div>
+            <a href="#">페이지이동</a>
+        </li>
+        <li>
+            <div>
+                <strong>더단백</strong>
+                <span>어쩌고저쩌고</span>
+            </div>
+            <a href="#">페이지이동</a>
+        </li>
+    </ul>
+    <div class="spacer"></div>
+    <div class="slide">
+        <div class="box1">형광등</div>
+        <div class="box2">더보기</div>
+    </div>
+    <div class="spacer"></div>
+    <div class="btn">
+        <a href="#">더dfasdfasdfad보기</a>
+    </div>
+    <div class="spacer"></div>
+    <!-- page navigation -->
+    <ul class="navi">
+        <li><span>1</span></li>
+        <li><span>2</span></li>
+        <li><span>3</span></li>
+        <li><span>4</span></li>
+        <li><span>5</span></li>
+    </ul>
+
+    <div class="swier">
+        <div class="swiper-wrapper">
+            <div class="swiper-slider">1</div>
+            <div class="swiper-slider">2</div>
+            <div class="swiper-slider">3</div>
+            <div class="swiper-slider">4</div>
+            <div class="swiper-slider">5</div>
+        </div>
+    </div>
+</body>
+</html>

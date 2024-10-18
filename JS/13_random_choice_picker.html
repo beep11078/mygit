@@ -72,7 +72,8 @@
       <h3>Enter all of the choices divided by a comma (','). 
         <br> Press enter when you're done</h3>
       <textarea placeholder="Enter choices here..." id="textarea"></textarea>
-      <!-- textarea : input과 다르게 width, height로 줄과 너비 지정 가능, 댓글이나 방명록 같은 곳에 사용하는 태그 -->
+      <!-- textarea : input과 다르게 width, height로 줄과 너비 지정 가능. 
+      댓글이나 방명록 같은 곳에 사용하는 태그 -->
       <div id="tags"></div>
     </div>
 
@@ -83,13 +84,22 @@
         textarea.focus()
 
         textarea.addEventListener('keyup', (e) => {
-        // e = event의 e, textarea에 입력된 값을 지칭
-        // 키를 누를 때는 keydown 타입 이벤트 발생, 
-        // 키를 놓을 때는 keyup 타입 이벤트 발생
-        // textarea에 입력 완료 후
+        /** <addEventListener의 형식>
+         *          element.addEventListener('eventType', (event) => {
+         *          이벤트 발생 시 실행할 코드
+         *          });
+         *    * element: 이벤트를 걸 HTML 요소 (예: textarea, button)
+         *    * eventType: 감지할 이벤트의 종류 (예: 'click', 'keyup', 'keydown')
+         *    * event: 이벤트 발생 시 전달되는 이벤트 객체
+         *
+         * e = event의 e, textarea에 입력된 값을 지칭
+         * 키를 누를 때는 keydown 타입 이벤트 발생, 
+         * 키를 놓을 때는 keyup 타입 이벤트 발생
+         */
 
             createTags(e.target.value)
-            // 아래 정의한 createTags 함수에 e값 입력
+            // 이벤트 객체 e에서 이벤트가 발생한 대상(target)의 현재 값(value)
+            // 아래 정의한 createTags 함수에 e.target.value 입력
 
             if(e.key === 'Enter') {
                 setTimeout(() => {
@@ -105,11 +115,12 @@
         function createTags(input) {
             const tags = input.split(',').filter(tag => tag.trim() !== '').map(tag => tag.trim())
             /** input.split(','): input 문자열을 쉼표(,)로 나누어 배열로 변환 
-             * -> { 문자열1, 문자열2, 문자열3, ... }
-             * filter(tag => tag.trim() !== ''): 조건에 맞는 데이터(tag에서 공백 제거했을 때 값이 ''이 아닌 것)만 필터링
-             * trim(): 문자열 공백을 제거 함수
-             * map(tag => tag.trim()):  ,로 split되고 filter된 tag들에서 공백을 제거해 새로운 배열로 만들어줌
-             * => textarea 입력값에서 태그 추출, 가공해 tags로 넣어줌*/
+             * -> [ 문자열1, 문자열2, 문자열3, ... ]
+             * filter(tag => tag.trim() !== ''):  input.split(',') 배열에서 조건에 맞는 데이터(tag에서 공백 제거했을 때 값이 ''이 아닌 것)만 필터링해 배열로 반환
+             * trim(): 문자열 공백 제거 함수
+             * map(tag => tag.trim()):  , 로 split되고 filter된 tag들( input.split(',').filter(tag => tag.trim() !== '') )에서 공백을 제거해 새로운 배열로 만들어줌
+             * => textarea 입력값에서 태그 추출, 가공해 tags로 넣어줌
+             */
 
             tagsEl.innerHTML = ''
             // tags 영역 비우기
@@ -127,6 +138,8 @@
              * 해당 태그 내용 = tags 설정한 후 
              * tagEl에 tag 추가  (<span class="tag"> tag 내용 </span>) 
              * => tagEl을 tags div에 chlid로 넣어줌
+             * appendChild() : 부모 요소의 마지막 자식으로 추가할 때 사용하는 메서드
+             *    <-> prependchild()
              * ============================
              *    <div class="tags">
              *        <span class="tag"> tag1 </span>
@@ -141,7 +154,7 @@
             const interval = setInterval(() => {
                 const randomTag = pickRandomTag()
           
-          if (randomTag !== undefined) {
+            if (randomTag !== undefined) {
                 highlightTag(randomTag)
 
                 setTimeout(() => {
@@ -161,17 +174,18 @@
 
             }, times * 100)
         }
-
+        
         function pickRandomTag() {
             const tags = document.querySelectorAll('.tag')
             return tags[Math.floor(Math.random() * tags.length)]
         }
+
         /** class가 tag인 태그 모두 선택해서 
          * 랜덤으로 반환
          * Math : JS 내장 객체, 수학 함수와 상수 제공
-         * Math.random(): 0~1 사이의 난수 반환
+         * Math.random(): 0~1 사이의 난수 반환 
          * Math.floor(x): x이하의 가장 큰 정수 반환
-         *  ex) 태그 길이 = 10, 난수 0.34이 나온 경우 -> tags[(3.4의 정수 = 3)] = tags에서 3번 자리에 해당하는 tag가 반환되는 것 
+         *  ex) 태그 길이 = 10, 난수 0.34이 나온 경우 -> tags[(3.4의 정수 = 3)]   *  즉, tags에서 3번 자리에 해당하는 tag가 반환되는 것 
         */
 
         function highlightTag(tag) {
@@ -186,3 +200,32 @@
     </script>
 </body>
 </html>
+
+
+<!-- 
+times의 역할과 시간 계산 이해
+javascript
+코드 복사
+setTimeout(() => {
+    clearInterval(interval);
+    // ... 생략 ...
+}, times * 100);
+여기서 무슨 일이 벌어지나요?
+times는 반복 횟수를 정의합니다.
+setInterval은 100ms 간격으로 실행되기 때문에, times번 반복하려면 총 times × 100ms가 걸립니다.
+즉, **30번 반복하려면 30 × 100ms = 3000ms(3초)**가 소요됩니다.
+왜 횟수가 시간 계산에 사용되나요?
+setInterval 반복을 중지할 적절한 시점을 설정하기 위해서는 횟수에 해당하는 시간이 필요합니다.
+예를 들어, 매 100ms마다 태그를 선택할 때 30번 반복하고 싶다면, 전체 반복에 걸리는 시간은 30 × 100ms입니다.
+
+그래서 **times * 100**은 총 소요 시간을 계산한 것이고, 이 값(3000ms)을 **setTimeout**에 전달해 반복을 멈추는 시점을 설정한 것입니다.
+
+핵심 개념: 횟수와 시간의 관계
+setInterval: 매 100ms마다 1회씩 반복.
+30번 반복할 때 전체 소요 시간: 30 × 100ms = 3000ms.
+따라서 반복 종료 시간을 설정하기 위해 **횟수(times)**에 **반복 간격(100ms)**을 곱한 값이 사용됩니다.
+정리
+**times**는 횟수를 의미하지만, **반복 간격(100ms)**과 곱해 총 실행 시간을 계산하는 데 사용됩니다.
+30번 반복 = 3초 동안 반복이기 때문에, 마지막에 setTimeout(() => clearInterval(...), times * 100);가 사용된 것입니다.
+이처럼 반복 횟수와 간격이 주어지면, 곱셈으로 전체 소요 시간을 구할 수 있습니다.
+ -->
