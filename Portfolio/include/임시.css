@@ -1,0 +1,712 @@
+@charset 'utf-8';
+
+/*웹폰트(나눔스퀘어) 연결 */
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap);
+
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+
+/*아이콘 폰트(폰트어썸) 연결*/
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css);
+
+
+* {    /*모든 요소 공통*/
+    font-family: "Noto Sans KR", sans-serif;
+    box-sizing: border-box; margin: 0;
+}
+
+ul { list-style: none; padding: 0; }
+a { text-decoration: none; }
+
+body {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+/*크롬, 사파리 계열 브라우저, MS Edge*/
+body::-webkit-scrollbar { width: 10px }
+body::-webkit-scrollbar-track { background-color:#f1f1f1; }
+body::-webkit-scrollbar-thumb { background-color:#777; }
+body::-webkit-scrollbar-thumb:hover { background: #555 }
+body::-webkit-scrollbar-button:start:decrement,::-webkit-scrollbar-button:end:increment { width:0;height:0 }     
+
+#modalBox::-webkit-scrollbar { width: 10px }
+#modalBox::-webkit-scrollbar-track { background-color:#f1f1f1; }
+#modalBox::-webkit-scrollbar-thumb { background-color:#777; }
+#modalBox::-webkit-scrollbar-thumb:hover { background: #555 }
+#modalBox::-webkit-scrollbar-button:start:decrement,::-webkit-scrollbar-button:end:increment { width:0;height:0 }     
+
+.box {
+    border: 2px solid black;
+    box-shadow: 2px 2px 0 black;
+    border-radius: 20px;
+}
+
+.orange { background-color: #ff5733;    }
+.blue { background-color: #0077b6; }
+.green { background-color: #40d39c; }
+.skyblue { background-color: #b9e2f8; }
+.pink { background-color: #ffc5c8; }
+.violet { background-color: #bc98cb; }
+.turquoise { background-color: #b9e7de; }
+.teal { background-color: #4799ae; }
+.yellow { background-color: #fdfd96; }
+
+
+#preload { /* 프리로딩 */
+    position: fixed; top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: #f2f2f2;
+    z-index: 99;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader,
+.loader:before,
+.loader:after {
+    border-radius: 50%;
+}
+.loader {
+    color: #222222;
+    font-size: 11px;
+    text-indent: -99999em;
+    margin: 55px auto;
+    position: relative;
+    width: 10em;
+    height: 10em;
+    box-shadow: inset 0 0 0 1em;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+}
+.loader:before,
+.loader:after {
+    position: absolute;
+    content: '';
+}
+.loader:before {
+    width: 5.2em;
+    height: 10.2em;
+    background: #f2f2f2;
+    border-radius: 10.2em 0 0 10.2em;
+    top: -0.1em;
+    left: -0.1em;
+    -webkit-transform-origin: 5.1em 5.1em;
+    transform-origin: 5.1em 5.1em;
+    -webkit-animation: load2 2s infinite ease 1.5s;
+    animation: load2 2s infinite ease 1.5s;
+}
+.loader:after {
+    width: 5.2em;
+    height: 10.2em;
+    background: #f2f2f2;
+    border-radius: 0 10.2em 10.2em 0;
+    top: -0.1em;
+    left: 4.9em;
+    -webkit-transform-origin: 0.1em 5.1em;
+    transform-origin: 0.1em 5.1em;
+    -webkit-animation: load2 2s infinite ease;
+    animation: load2 2s infinite ease;
+}
+@-webkit-keyframes load2 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+    }
+    @keyframes load2 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+/* #navBox 시작---------------------------------------------- */
+
+#navBox { 
+    width: 100%; height: 50px;
+    position: fixed; top: 0; left: 0;
+    display: flex; align-items: center;
+    transition: 0.3s;
+    z-index: 10;
+}
+
+/*화면을 스크롤할 때 바뀔 내비박스 스타일*/
+.navBoxOn {
+    background: #f2f2f2;
+    box-shadow: 0 5px 5px rgba(24, 24, 24, 0.2);
+    height: 50px !important;
+}
+
+#navBox2 { 
+    width: 100%; max-width: 1500px;
+    margin: auto; display: flex;
+    align-items: center;
+}
+
+#logoBox { 
+    width: 20%; 
+    display: flex; align-items: center;
+    transition: .3s;
+    padding: 0 1rem;
+}
+
+#logoBox > a { 
+    font-size: 2rem;
+    font-weight: bold; color: #fff;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#logo {
+    width: 100%;
+    display: block;
+}
+
+#navi { width: 80%; display: none; }
+
+.hamburger {    /*햄버거메뉴(펼침메뉴)*/
+    width:70px; height:70px;  padding: 0;
+    cursor:pointer; display:none; 
+}
+
+/*햄버거메뉴의 크기와 색상*/
+.hamburger-box { scale: .7 }
+.hamburger-inner, .hamburger-inner:after, .hamburger-inner:before,
+.hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner::before, .hamburger.is-active .hamburger-inner::after {
+    background: #fff;
+}
+
+
+#menu { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    height: 40px; }
+
+.main { }
+.main > a { 
+    display: block;
+    padding: 0 2rem;
+    transition: 0.3s;
+}
+
+.white { color: #FFFEFF; text-shadow: 0 0 5px #FFFEFF; }
+.white:hover { text-shadow: none; }
+
+/* 모바일 화면의 메뉴 뒤에 보여지는 배경  */
+#black {
+    position: fixed; top: 0; left: 0; 
+    width: 100%; height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    z-index: 9;
+    display: none;
+}
+
+/*화면을 스크롤할 때 바뀔 링크 스타일*/
+.mainOn {
+    /* font-weight: bold; */
+    color: rgb(0, 0, 0); 
+}
+
+/* #navBox 끝---------------------------------------------- */
+/* #header 시작---------------------------------------------- */
+
+#header {
+    /* background-image: url(../images/bg_header.jpg); */
+    position: relative;
+    overflow: hidden;
+}
+
+
+.planetListBox {
+    width: 1200px; 
+    background-image: url(../images/planet_bg.png);
+    background-size: cover;
+    display: flex;
+    margin: auto;
+}
+
+.planetList {
+    margin: 0 1rem;
+    border-radius: 20px;
+    box-shadow: 0 0 5px #222;
+    background-color: #f2f2f2;
+    aspect-ratio: 4 / 5;
+    display: flex;
+    align-items: center;
+    width: 200px;
+}
+
+.planetList img {
+    display: block;
+    width: 100%;
+}
+
+#headerBox {
+    z-index: 3;
+    position: absolute; top: 150px; width: 100%;
+    padding: 0 1rem;
+    text-align: left; color: #222; text-shadow: 0 0 3px rgba(0,0,0,0.3)
+}
+
+#headerBox > h1 { 
+    width: 100%; max-width: 1200px; margin: auto;
+    font-size: 2.5rem;
+    animation: title .5s 1.6s both ease-out;
+}
+
+#headerBox > h3 { 
+    width: 100%; max-width: 1200px; margin: auto;
+    font-size: 1.5rem; font-weight: normal;
+    animation: title .5s 1.8s both ease-out;
+}
+
+@keyframes title {
+    from { transform: translateX(50px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+
+/* 각 영역 공통 (풀스크린 화면)---------------------------------- */
+
+.fullScreen {
+    padding-top: 40px;
+    width: 100%; height: 100vh;
+    background: no-repeat center;
+    background-size: cover;
+    background-color: #000;
+    position: relative;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.sectionTitle {
+    line-height: 5rem;
+    font-size: 7rem; color: #f2f2f2;
+    width: 1200px; text-align: center; 
+    margin: auto;
+    text-align: justify;
+    text-transform: uppercase;
+}
+
+.sectionTitle:after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+}
+
+
+
+/* WOW에서 사용할 애니메이션 클래스 */
+.titleAnimation {
+    animation: sectionTitle 1s both;
+}
+@keyframes sectionTitle {
+    from { transform: translateX(-20%); opacity: 0; }
+    to { transform: translateX(0%); opacity: 1; }
+}
+
+.titleAnimation2 {
+    animation: sectionTitle2 1s both;
+}
+@keyframes sectionTitle2 {
+    from { transform: translateX(20%); opacity: 0; }
+    to { transform: translateX(0%); opacity: 1; }
+}
+
+.sectionTitle2 {
+    font-size: 1.2rem; color: #fff;
+    text-shadow: 0 0 5px rgba(0,0,0,.5);
+    width: 100%; text-align: center;
+}
+
+#about2 { background-image: linear-gradient(0deg, #fdfbfb 80%, #c5c5c5 100%); }
+#portfolio2 { background-image: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%); }
+#contact2 { background-image: linear-gradient(-225deg, #FFFEFF 0%, #D7FFFE 100%); }
+
+.contentsBox {    /*섹션 내부 내용 박스*/
+    width: 95%; max-width: 1200px; margin: auto;
+    padding: 2rem 0;
+}
+.contentTitle { 
+    font-size: 2rem;
+    border-bottom: 1px solid #222;
+}
+.smallTitle { font-size: 1.5rem; margin-bottom: 1rem;}
+.contents { line-height: 1.5rem; }
+
+/* WOW에서 사용할 애니메이션 클래스(본문) */
+.contentsAnimation {
+    animation: sectionContents 1s both;
+}
+
+@keyframes sectionContents {
+    from { transform: translateY(20%); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.fullScreen p { font-size: 20px; font-weight: bold; }
+
+/* 각 영역 공통 (풀스크린 화면) 끝 ---------------------------------- */
+/* about 섹션 시작 ------------------------------------------- */
+
+
+#aboutBox {   /*About 내용 박스*/
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-gap: 1rem; 
+    margin-top: 2rem;
+    padding: 1rem;
+}
+
+.jeongbin {
+    display: block;
+    width: 100%;
+}
+
+.moreButton { 
+    display: block;
+    margin-left: auto;
+    width: 50px;
+    margin-left: auto;
+    background: none;
+    border: none;
+}
+
+.moreAbout {
+    border: none;
+    color: white;
+    width: 0;
+    height: 0;
+    border-bottom: 25px solid rgb(0, 0, 0);
+    border-top: 25px solid transparent;
+    border-right: 25px solid rgb(0, 0, 0);
+    border-left: 25px solid transparent;
+}
+
+#profileModal { 
+    display: none;
+    position: fixed; top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6);
+
+    backdrop-filter: blur(3px);
+}
+
+#profileModalBox { 
+    height: 66vh;
+    display: flex;
+    width: 95%; max-width: calc(1200px + 8rem);
+    background: #fff;
+    padding: 2rem;
+    padding-bottom: 3rem;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#profileList {
+    display: grid;
+	grid-template-columns: 1fr 2fr 2fr;
+    width: calc(1200px + 4rem);
+    grid-gap: 2rem;
+}
+
+.profile {
+    position: relative;
+    padding: 10px;
+    align-content: space-around;
+}
+
+.profile h3 {
+    position: absolute;
+    top: 0;
+    font-size: 2rem;
+}
+
+.profile1 {
+    grid-row: 1 / span 1;
+}
+
+.profile1, .profile2 { width: 100%; display: block; text-align: center; }
+
+.profile2 {
+    grid-row: 2 / span 1;
+}
+
+#copyTxt, #copyTxt2 {
+    border:  none;
+    background: transparent;
+}
+
+.profile3, .profile4, .profile5 {
+    grid-row: 1 / span 2;
+}
+
+.date {
+    margin: 0 10px;
+    color: #555555;
+    font-size: .7rem;
+    width: 150px;
+}
+
+.education { display: flex; }
+
+.profileClose { 
+    position: absolute; top: 0; right: 0;
+    background: none; border: none;
+    font-size: 2.5rem; cursor: pointer;
+    transform: translate(50%, -50%);
+}
+
+
+
+
+.slick-list {
+    padding: 10px;
+}
+
+#slideBox {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+.slide {
+    width: 400px;
+    height: 500px;
+    margin: 0 1rem;
+    border-radius: 1rem;
+    display: block;
+    background: #fff;
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.slide:hover {
+    scale: 1.01;
+    box-shadow: 3px 3px 3px #00000014;
+}
+
+.graphicBox {
+    position: relative;
+}
+
+.thumb { 
+    position: absolute;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+    transition: 0.3s;
+    cursor: pointer;
+    border-radius: 1rem;
+    margin-bottom: .5rem;
+}
+
+.graphicInfo {
+    position: absolute;
+    backdrop-filter: brightness(50%);
+    width: 400px; height: 500px;
+    z-index: 5;
+    color: white;
+    transition: .3s;
+    padding: 1rem;
+}
+
+.graphicBox:hover .graphicInfo {
+    display: none;
+}
+
+.graphicInfo h3 {
+    font-size: 1.75rem;
+    margin: 5px 0;
+}
+
+.graphicInfo h4 {
+    font-size: 1.1rem;
+    font-weight: normal;
+    margin: 3px 0;
+}
+
+.graphicInfo h5 {
+    font-size: 0.9rem;
+}
+
+/* 슬라이더 내부 이미지 크기*/
+.slick-slide img { width: 100% }
+
+/*좌우 슬라이더 버튼*/
+.slick-prev:before, .slick-next:before { color: rgba(0, 0, 0, .5) } 
+.slick-prev { transform:scale(2.5); z-index:10; }    /* 이전버튼 */ 
+.slick-next { transform:scale(2.5); z-index:10; }    /* 다음버튼 */ 
+
+.slick-prev:before { /* 이전버튼 모양 */
+    content: "\e5cb";
+    font-family: "Material Symbols Outlined";
+}
+
+.slick-next:before { /* 다음버튼 모양 */
+    content: "\e5cc";
+    font-family: "Material Symbols Outlined";
+}
+
+.regular {     /*슬라이더 박스*/
+width:90%; max-width:1200px; margin:50px auto
+}
+
+
+
+#modal { 
+    display: none;
+    position: fixed; top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6);
+
+    z-index: 99;
+    backdrop-filter: blur(3px);
+}
+
+#modalBox { /* 모달창 내용 박스 */
+    width: auto; max-width: 1600px;
+    height: 80vh; /* 세로 최대 폭 */
+    background: #fff;
+    padding: 1rem;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#modalBox2 {
+    overflow-x: hidden;
+}
+
+#mTitle { 
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+#modalBox2 h4 {
+    font-weight: bold;  
+}
+
+#modalBox2 p {
+    font-weight: normal;
+    margin-left: 1rem;
+}
+
+#modalBox2 a {
+    color: #e05555;
+}
+
+#modalBox2 a:hover {
+    color: #e05555;
+}
+
+
+#mImage { 
+    display: block;
+    height: 100%;
+    max-height: calc(80vh - 2rem);
+}
+
+#mVideo { 
+    display: none;
+    height: calc(80vh - 2rem);
+    max-height: calc(80vh - 2rem);
+}
+
+#mClose { 
+    position: absolute; top: 40px; right: 50px;
+    background: none; border: none;
+    cursor: pointer;
+    transform: translate(50%, -50%);
+    color: #fff;
+}
+
+#contactBox {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+}
+
+#contactBox > li { padding: 2rem; text-align: center; }
+
+#contactBox i { display: block; font-size: 5rem;}
+/*내비게이션 반응형*/
+
+
+#top {    /*스크롤 탑 버튼*/
+    position: fixed; right: 2rem; bottom: 2rem;
+    font-size: 3rem; cursor: pointer;
+    transition: 0.3s;
+    mix-blend-mode: multiply;
+    transform: scale(0);
+    border-radius: 50%;
+}
+
+@media screen and (max-width:850px) {
+    #navBox, #navi { height: 70px;}
+
+    .hamburger { display: block; margin-left: auto;}
+
+    #menu {
+        width: 200px; height: 50vh;
+        background: #000;
+        margin-left: auto;
+        display: none;
+    }
+
+    #modalBox2 {
+        grid-template-columns: 1fr;
+    }
+
+    #mTitle {
+        margin-top: 0;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:800px) {
+    
+    #aboutBox, #contactBox {
+        grid-template-columns: 1fr;
+    }
+
+    #about2, #portfolio2, #contact2 {
+        height: auto;
+    }
+
+}
+
+@media screen and (max-width:768px) {
+
+    .slick-prev { left: 20px; }    /* 이전버튼 */ 
+    .slick-next { right: 20px; }    /* 다음버튼 */ 
+
+}
+
+@media screen and (max-width:450px) {
+
+    #headerBox > h1 { font-size: 2rem;}
+    #headerBox > h3 { font-size: 1.3rem;}
+
+}

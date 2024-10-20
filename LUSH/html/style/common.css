@@ -1,0 +1,528 @@
+@charset "utf-8";
+
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap);
+
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css);
+
+@import url(https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+KR:wght@100..900&display=swap);
+
+
+* {
+    font-family: "Noto Sans KR", sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* 모든 리스트 공통 */
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+/* 모든 링크 공통 */
+a { 
+    text-decoration: none;
+    color: #222;
+}
+
+.white { color: #f2f2f2; }
+.gray { color: #535353; }
+.black { color: #222; }
+
+.red { color: #F25D50; }
+.yellow { color: #FBE85E; }
+.green { color: #18a957; }
+.blue { color: #316cff; }
+.purple { color: #9D50FF; }
+.pink { color: #FF4DC6; }
+
+
+/*내비게이션 영역---------------------------------*/
+#navBox {
+    width: 100%; height: 10vh;
+
+    /*내부 내용을 세로 가운데 정렬하기*/
+    display: flex; align-items: flex-end;
+
+    position: fixed;
+    top: 0; left: 0;
+
+    margin: 0 auto;
+    z-index: 10;
+}
+
+#navBox2 {
+    width: 90%; 
+    max-width: 1200px;
+    margin: auto; display: flex;
+}
+
+.scroll {
+    height: 10vh;
+    background-color: #222 !important;
+}
+
+.scrollMenu {
+    background-color: #222 !important;
+}
+
+#logoBox {
+    width: 11%;
+    display: flex; 
+    align-items: center;
+}
+
+.home {
+    display: block;
+    width: 100%;
+}
+
+.home > img {
+    display: block;
+    width: 100%;
+}
+
+
+/* #navi --------------------------------------------------------------- */
+
+#mainMenu {
+    margin: auto;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#main {
+    display: flex;
+    align-items: center;
+    color: #f2f2f2;
+    transition: .3s;
+}
+
+.menuTitle > i {
+    display: none;
+}
+
+.menuTitle > a {
+    color: #f2f2f2;
+}
+
+.menu {
+    display: list-item;
+    position: relative;
+}
+
+.menu {
+    width: 6rem;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.menuTitle:hover {
+    /* text-shadow: 0 0 3px #f2f2f2; */
+    font-weight: bold;
+}
+
+
+.menu:hover > .menuTitle {
+    /* text-shadow: 0 0 3px #f2f2f2; */
+    font-weight: bold;
+}
+
+.menuTitle:hover > a {
+    /* text-shadow: 0 0 3px #f2f2f2; */
+    font-weight: bold;
+}
+
+.sub {
+    position: absolute; top:100%; left: 0;
+    width:150%;
+    display: none;
+    margin-top: 1.5rem;
+}
+
+.subMenu > a {
+    color: #f2f2f2;
+    display: block; line-height: 35px; padding: 0 .5rem;
+    transition: 0.3s;
+}
+
+.subMenu > a:hover { 
+    color: #f2f2f2;
+    /* text-shadow: 0 0 3px #f2f2f2; */
+    font-weight: bold;
+}
+
+
+
+#view {
+    border: none;
+    background: none;
+    font-size: 1em;
+    cursor: pointer;
+
+    /* 데스크탑 화면에서는 숨김 */
+    display: none; 
+
+    /* 여백? 다 쓰는 게 auto... 왼쪽 다 쓰게 했으니까 오른쪽 맞춤이 된다.
+    margin 사용할 때는 display: block으로 */
+    margin-left:auto;
+}
+
+/* #iconBox --------------------------------------------------------------- */
+
+#iconBox {
+    width: 11%;
+    margin: 0;
+}
+
+#rightMenu {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu > a, .fa-solid {
+    color: #f2f2f2;
+}
+
+.search {
+    display: flex;
+    position: relative;
+}
+
+.searchBox {
+    position: absolute;
+    top: 50%; transform: translateY(-50%);
+    right: 215%;
+    display: flex;
+    width: 150px;
+    transition: 0.3s ease-out;
+    opacity: 0;
+}
+
+.searchButton {
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+    color: #f2f2f2;
+}
+
+.search:hover .searchBox{
+    opacity: 1;
+}
+
+.searchBox:not(:placeholder-shown){
+    opacity: 1;
+}
+
+.pannel {
+    margin: 1rem;
+}
+
+.pannel:hover i {
+    text-shadow: 0 0 5px #f2f2f2;
+}
+
+
+
+/* #footer --------------------------------------------------------------- */
+#footer {
+    padding-top: 10vh;
+    margin-top: 5rem;
+    background: #222;
+}
+
+
+#footerListBox {
+    margin: auto;
+    color: #f2f2f2;
+    display: grid;
+    width: 100%;
+    max-width: 1200px;
+    grid-template-columns: 1fr 1fr 1fr 3fr 1fr;
+    grid-gap: .5rem;
+    font-size: .75rem;
+}
+
+#footerListBox a {
+    color: #f2f2f2;
+}
+
+.footerList:last-child {
+    text-align: right;
+}
+
+.footerList h3 {
+    margin-bottom: .5rem;
+}
+
+.app img {
+    width: 80%;
+    display: block;
+    margin: 1rem 0;
+}
+
+
+
+/* ScrollTop 버튼 */
+#top {
+    font-size: 3rem;
+    position: fixed;
+    right: 2rem; bottom: -5rem;
+    color: #222;
+    background: #f2f2f2;
+    border-radius: 100%;
+    cursor: pointer; transition: .3s;
+}
+
+#top:hover {
+    transform: scale(1.1);
+    color: #222;
+}
+
+
+
+@media screen and (max-width:1200px) {
+
+    #navBox {
+        height: 10vh;
+        display: flex;
+        align-items: stretch;
+    }
+
+    #navBox2 {
+        margin: 1rem auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #logoBox {
+        min-width: 100px;
+    }
+
+    #mainMenu {
+        position: absolute;
+        left: 0; top: calc(10vh - 1px);
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    #main {
+        width: 100%;
+        justify-content: center;
+        padding: 1rem;
+        border-top: 1px solid #f2f2f2;
+        border-bottom: 1px solid #f2f2f2;
+    }
+
+    .menu {
+        width: calc(100% / 6);
+        text-align: center;
+        transition: .1s;
+    }
+
+    #iconBox {
+        width: 20%;
+        display: flex;
+        align-items: center;
+    }
+
+    #footer {
+        background: #222;
+        padding: 5rem ;
+    }
+
+    #footerListBox {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 1.5rem;
+    }
+
+    #footerList {
+        display: block;
+        width: 100%;
+    }
+
+    .app {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .app img {
+        margin: .5rem auto;
+    }
+}
+
+
+
+@media screen and (max-width:600px) {
+
+    #navBox {
+        position: fixed !important;
+        height: 10vh;
+    }
+
+    .scroll {
+        height: 0;
+    }
+
+    #navBox2 {
+        width: 100%;
+        height: 10vh;
+        position: relative;
+        padding: 0;
+        margin: 0;
+        justify-content: center;
+        border-bottom: none;
+    }
+
+    #logoBox {
+        width: 25%;
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .back {
+        display: none;
+    }
+
+    /* 메뉴 버튼 보이기 */
+    #view { 
+        display: block; color:#f2f2f2;
+        z-index: 9;
+        position: absolute;
+        line-height: 10vh; 
+        left: 5%;
+    }
+
+    #view > i {
+        font-size: 1.5rem;
+        line-height: 10vh; 
+    }
+
+    #mainMenu {
+        top: 0;
+        width: 100%;
+        height: 10vh;
+        border-left: none;
+    }
+
+    /* 메뉴 스타일 바꾸기 (세로 방향) */
+    #main {
+        position: absolute;
+        top: 0; left: -110%;
+        width:  100%;
+        height: 100vh; 
+        background-color: #222;
+        display: block;
+        padding-top: 100px;
+        border: none;
+        overflow-y: auto;
+    }
+    
+    .menuTitle {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+        color: #f2f2f2;
+        font-size: 1.25rem;
+        padding: 0;
+    }
+
+    .menuTitle > a {
+        color: #f2f2f2;
+    }
+
+    .menuTitle > i {
+        padding-right: .5rem;
+        display: flex;
+        align-items: center;
+    }
+
+    .menu {
+        text-align-last: left;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 95%;
+        border-bottom: 1px solid #f2f2f2;
+        font-size: 1rem;
+        padding: 1rem 0;
+    }
+    
+    .menu:hover > .menuTitle {
+        text-shadow: 0 0 0 transparent;
+        font-weight: bold;
+    }
+
+    .menu:hover {
+        color: #f2f2f2;
+        text-shadow: 0 0 0 transparent;
+    }
+
+    .menu:hover > a {
+        color: #f2f2f2;
+        text-shadow: 0 0 0 transparent;
+        padding-bottom: 0;
+    }
+
+
+    /* 왼쪽 박스 on/off 용 */
+    .active {
+        left: 100% !important;
+        transform: translateX(-100%) !important;
+    }
+
+    .menu {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #brand {
+        display: block;
+        width: 100%;
+    }
+
+    /*현재 활성화된 메인 메뉴의 스타일*/
+    .slide {
+        padding-bottom: 1rem;
+    }
+
+
+    /* 서브메뉴 스타일 ----------------------------*/
+    .sub { 
+        position: relative; 
+        margin-bottom:10px;
+        margin-top: 24px;
+        display: none 
+    }
+
+    .sub li { padding: 5px 15px; transition: .3s }
+    .sub li:hover { cursor:pointer; }
+
+
+    #iconBox {
+        font-size: 1rem;
+        display: none;
+        width: 95%;
+        line-height: 10vh;
+    }
+
+    .pannel {
+        position: relative;
+        margin: 0 1rem;
+    }
+
+    #footer {
+        margin-top: 2rem;
+        background: #222;
+        padding: 2rem ;
+    }
+
+}

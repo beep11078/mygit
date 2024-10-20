@@ -1,0 +1,517 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@import url("https://use.typekit.net/kfk0vwi.css");
+
+* {
+    font-family: 'Pretendard-Regular';
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* 모든 리스트 공통 */
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+/* 모든 링크 공통 */
+a { text-decoration: none; color:#111; }
+
+
+
+/* 내비게이션 영역 ---------------------------------------- */
+
+/* 전체 박스 */
+#navBox {
+    width: 100%; height: 70px;
+    /* 화면에 고정하기 */
+    position: fixed; 
+    top: 0; left: 0;
+    /* 레이어 순서 변경 */
+    z-index: 9;
+    background: #fff;
+    border-bottom: 1px solid #172601;
+    box-shadow: 0 3px 3px rgba(0,0,0,.2);}
+
+/* 내부 1200박스 */
+#navBox2 {
+    height: 70px;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 10px;
+    display: flex;
+}
+
+#logoBox { width: 20%;}
+
+#logoBox>img { height: 45px; margin-left: 5px;}
+
+#navi { width: 80%; }
+
+#view {
+    border: none;
+    background: none;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5em;
+    cursor: pointer;
+
+    /* 데스크탑 화면에서는 숨김 */
+    display: none; 
+
+    /* 여백? 다 쓰는 게 auto... 왼쪽 다 쓰게 했으니까 오른쪽 맞춤이 된다.
+    margin 사용할 때는 display: block으로 */
+    margin-left:auto;
+}
+
+/* 메뉴 박스 */
+#menu {
+    /* 내용이 차면 줄바꿈이 되는 flex */
+    display: flex; flex-wrap: wrap;
+    width: 100%;
+    justify-content:flex-end;
+}
+
+/* 메뉴 리스트 */
+/* .main {} */
+
+/* 메뉴 링크 */
+.main>a {
+    color: #111;
+    font-family: "Roboto Slab", serif;
+    font-weight: bold;
+    display: block;
+    line-height: 50px;
+    transition: 0.3s;
+    padding: 0 .5em;
+}
+
+.main>a:hover { color: #317302;}
+
+
+
+/* 헤더 영역 ---------------------------------------- */
+
+#header {
+    position: relative;
+    width: 100%;
+    margin-top: 70px;
+
+    height: 70vh; /* 화면의 70% */
+    background: url(../images/img1.jpg) no-repeat center;
+    background-size: cover;
+}
+
+/* 헤더 이미지 */
+#header>img {
+    width: 100%;
+    display: block;
+}
+
+@keyframes title {
+    from { transform: translate(-50%, -50%) scale(0); }
+    to { transform: translate(-50%, -50%) scale(1); }
+}
+
+.custom-shape-divider-bottom-1722998954 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1722998954 svg {
+    position: relative;
+    display: block;
+    width: calc(115% + 1.3px);
+    height: 130px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1722998954 .shape-fill {
+    fill: #FFFFFF;
+}
+
+.blob {
+    width: 300px;
+    position: absolute;
+    opacity: .5;
+}
+
+.blob1 { top: 10%; left: 5%; }
+.blob2 { top: 70%; right: 5%; }
+.blob3 { top: 0%; left: 70%; }
+
+
+/* 헤더 텍스트 박스 */
+#headerBox {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #eee;
+    width: 90%;
+    animation: title 1s ease-out;
+}
+
+#title1 {
+    font-size: 3em;
+    font-weight: lighter;
+    margin-bottom: 0.2em;
+}
+
+#title2 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    text-shadow: 3px 3px 3px rgba(0,0,0,0.4);
+}
+
+#headerBox > p { margin-bottom: 1em; }
+
+#headerBox > button {
+    border: none;
+    padding: 0.5em 1em;
+    background: #C4D929;
+    transition: 0.3s ease-out;
+    cursor: pointer;
+    border-radius: 0.3em;
+    color: #111;
+}
+
+
+
+/* Section 공통사항 ---------------------------------------- */
+section { 
+    width: 95%; max-width: 1200px;
+    margin: 100px auto;
+    text-align: center;
+}
+
+/* 각 섹션 타이틀 */
+.sectionTitle {
+    font-family: "Roboto Slab", serif;
+    font-size: 2.5rem;
+    margin: .5em;
+    color: #365902;
+}
+
+/* 섹션 타이틀 앞에 */
+.sectionTitle::before {
+    /* 스타일에서 이미지 가져오려면 url 사용!! */
+    content: url(../images/title.png);
+    /* 현 폴더 style의 부모폴더 통해 images 폴더로 갈 수 있음*/
+} 
+
+/* 각 섹션 소개글 */
+.sectionCaption {
+    margin-bottom: .5em;
+    line-height: 1.5em;
+}
+
+
+/* section1 ---------------------------------------- */
+#listBox1 {
+    /* 바둑판식(표) 배치,
+    flex는 1차원 배열, grid는 2차원 배열, 화면이 좁아지면 자동으로 Y축도 사용한다. */
+    display: grid;
+    
+    grid-template-columns: repeat(4,1fr);
+    /* 가로(column) 4개를 같은 비율로 반복 배치한다 
+    (= 25% 25% 25% 25% = 1fr 1fr 1fr 1fr)
+    fr: fraction (비율) */
+
+    /* 사이 간격 gap */
+    grid-gap: 1em; 
+}
+
+.list1 {
+    background: radial-gradient(rgba(0,0,0,.1), rgba(0,0,0,0));
+    padding: 1em;
+    box-shadow:
+    2.9px 2.9px 9.3px rgba(0, 0, 0, 0.034),
+    4.6px 4.6px 19.7px rgba(0, 0, 0, 0.041),
+    5.9px 5.9px 32.5px rgba(0, 0, 0, 0.048),
+    28.7px 28.7px 52.9px rgba(0, 0, 0, 0.058),
+    100px 100px 80px rgba(0, 0, 0, 0.07)
+    ;
+}
+
+.list1 > i {
+    font-size: 2rem;
+    border: 1px solid #ccc;
+    width: 2em; /* 바로 위 2rem의 두배 */
+    line-height: 2em;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    transition: 0.3s;
+}
+
+/* .lis1에 닿으면 i가 바뀐다 */
+.list1:hover > i { 
+    background: #317302;
+    color: #eee;
+}
+
+.list1 > p {
+    color: #555;
+    line-height: 1.3em;
+    font-weight: lighter;
+}
+
+
+/* section2 ---------------------------------------- */
+#listBox2 {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.video {
+    width: 100%;
+    display: block;
+}
+
+
+/* section3 ---------------------------------------- */
+.listBox3 {
+    display: flex;
+    flex-wrap: wrap; /* 자동 줄바꿈 */
+}
+
+.list3 { width: 50%; }
+
+.list3 > img { width: 100%; display: block; }
+
+.list3 {
+    background: #eee;
+    align-content: center;
+}
+
+.listBox3:last-child {
+    /* 행의 좌우를 반전 */
+    flex-direction: row-reverse;
+}
+
+.list3 > h3 {
+    font-family: "Roboto Slab", serif;
+    font-size: 1.5rem;
+    margin: .25rem; 
+}
+
+.list3 > p:nth-child(2) {
+    font-family: "Roboto Slab", serif;
+    font-size: 1.25rem;
+}
+
+.list3 > p {
+    line-height: 1.3em; 
+    margin-bottom: .5rem;
+    padding: 0 .25rem;
+    color: #555;
+}
+
+.readMore { 
+    padding: .5rem .7rem; 
+    font-size: 1.1rem;
+    color: #fff;
+    background: #111;
+    border: none;
+    margin-bottom: .5rem;
+}
+
+
+/* section4 ---------------------------------------- */
+#listBox4 {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 1em;
+}
+
+.imageBox4 { overflow: hidden; }
+
+.image4 {
+    width: 100%; display: block;
+    transition: 0.3s;
+}
+
+/* 리스트 영역에 닿으면, 사진 확대하기 */
+.list4:hover .image4 {
+    transform: scale(1.1);
+}
+
+.textBox4 {
+    padding: 0.5rem;
+    text-align: left;
+}
+
+.textBox4 > h3 {
+    font-family: "Roboto Slab", serif;
+    font-size: 1.5rem;
+    margin-bottom: 1rem; 
+}
+
+.textBox4 > p {
+    line-height: 1.3em; 
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+
+/* section5 ---------------------------------------- */
+#sec5 {
+    background: #eee;
+    max-width: 100%;
+    padding: 2rem 0;
+    width: 100%;
+}
+
+#box5 {
+    max-width: 1200px; width: 95%;
+    margin: auto;
+}
+
+#listBox5 {
+    width:100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 1rem;
+    text-align: left;
+}
+
+.list5 > h3 {
+    font-family: "Roboto Slab", serif;
+    font-size: 1.5rem;
+    margin-bottom: 1rem; 
+}
+
+.list5 > p {
+    line-height: 1.3em; 
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+.list5 > p > i { margin-right: 0.5rem; }
+
+.list5 a { color: #555; }
+
+.list5 a:hover { color: #317302}
+
+#daumRoughmapContainer1721281475130 {
+    width: 100%; height: 18rem;
+}
+
+/* 입력 양식 공통 */
+.input1 { 
+    font-size: 1.25rem;
+    width:100%; background: #ddd;
+    border: none;
+    padding: .5em;
+    margin: .5rem 0; 
+}
+
+/* 입력 항목에 커서가 있을 때 */
+.input1:focus {
+    outline: none; /* 기본 포커스 표시 제거 */
+    border: 2px solid #d97941;
+    box-shadow: 0 0 3px rgba(0,0,0,.3);
+}
+
+/* 메세지 입력 항목 */
+.input2 {
+    height: 10rem;
+}
+
+.input3 {
+    padding: .5rem 1rem;
+    width: 100%;
+    border: none;
+    background: #317302;
+    color: #eee;
+    font-size: 1.2rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.input3:hover {
+    background: #C4D929;
+    color: #111;
+}
+
+
+/* 웹 스타일 끝 */
+
+
+
+/* 내비게이션 반응형 (960px 이하) ------------------------------ */
+@media screen and (max-width:960px) {
+
+    /* 메뉴 버튼 보이기 */
+    #view { display: block; color:#111;}
+
+    /* 메뉴 스타일 바꾸기 (오른쪽 세로 방향) */
+    #menu {
+        width: 175px;
+        /* 기본 세로 방향으로 배치 */
+        display: none;
+        background: #fff;
+        margin-left: auto;
+        /* v(iewport)h(eight)*/
+        height: 100vh; 
+        text-align: right;
+        padding-right: .5em;
+    }
+
+    #navi {
+        height: 50px;
+    }
+
+} /* 내비게이션 반응형 끝 */
+
+
+
+/* 태블릿 화면 (800px 이하) 반응형 ------------------------------ */
+@media screen and (max-width: 800px) {
+
+    #title1 { font-size: 1.5em; }
+    #title2 { font-size: 1.5em; }
+
+    #listBox1 {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    #listBox2 {
+        grid-template-columns: 1fr;
+    }
+
+    .list3 {
+        width: 100%;
+    }
+
+    #listBox4, #listBox5 {
+        grid-template-columns: 1fr;
+    }
+
+} /* 태블릿 반응형 끝 */
+
+
+
+/* 스마트폰 (450px 이하) 반응형 ------------------------------ */
+@media screen and (max-width: 450px) {
+    
+    .sectionTitle { font-size: 2rem; }
+
+    #listBox1 {
+        grid-template-columns: 1fr;
+    }
+
+}

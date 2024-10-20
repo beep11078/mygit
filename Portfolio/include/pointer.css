@@ -1,0 +1,55 @@
+/* 
+    This CSS file was created by OwL for use by pointer.js, 
+    witch can be found on https://seattleowl.com. 
+*/
+
+#pointer-dot {
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    border: 2.5px solid white;
+    position: fixed;
+    border-radius: 4px;
+    z-index: 101;
+    pointer-events: none;
+    transition: border-color 0.5s;
+}
+
+#pointer-ring {
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    padding: 15px;
+    border: 2px solid #750c7e;
+    position: fixed;
+    border-radius: 100px;
+    z-index: 102;
+    pointer-events: none;
+}
+
+html {
+    cursor: none !important;
+}
+
+a {
+    cursor: none !important;
+}
+
+
+/* 
+    <--사용 예시-->
+    <h2 id="title" data-cursor="-opaque"> fancy Cursor</h2>    <--마우스 투명 효과>
+
+    <p class="red" data-cursor="-color-red">Pellentesque augue massa</p>    <--Red color 마우스 효과>
+
+    <p class="red" data-cursor="-color-green">Pellentesque augue massa</p>    <--Green color 마우스 효과>
+
+    <p class="red"  data-cursor="-lg">Pellentesque augue massa</p>    <--큰 마우스 효과>
+    
+    <img src="images/Image01.jpg" class="img" data-cursor-text="Hello!" />    <--마우스 Zoom&텍스트 효과>
+
+    <button data-cursor="-opaque" data-magnetic>Show Conentents</button>    <--마우스 Zoom & Magnetic 효과>
+
+    */
