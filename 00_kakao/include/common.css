@@ -67,25 +67,23 @@ li {
     margin-bottom: 210px;
 }
 
-.container .titleBox .titleArticle::before {
-    content: '';
-    width: 72px; height: 72px;
-    position: absolute;
-    left: -92px;
-    background-position: center;
-    background-size: cover;
-}
-
 .container .titleBox .titleArticle {
     font-size: 50px;
     font-weight: normal;
     position: relative;
-    margin-left: 112px;
     margin-bottom: 72px;
     line-height: 72px;
     display: flex;
-    justify-content: space-between;
+    gap: 20px;
+    justify-content: flex-start;
     align-items: center;
+}
+
+.container .titleBox .titleArticle::before {
+    content: '';
+    width: 72px; height: 72px;
+    background-position: center;
+    background-size: cover;
 }
 
 .keyword {
@@ -952,19 +950,18 @@ a .blackCircle {
 
 .esgBox .esgList li {
     width: 560px;
-    /* border: 1px solid #000; */
     position: relative;
 }
 
 .esgBox .esgList .esgType {
     width: 282px;
-    padding: 5px;
+    padding: 10px;
     text-align: center;
     line-height: 58px;
     border-radius: 0 0 0 29px;
     position: absolute;
     right: 0;
-    outline: 10px solid white;
+    background-color: white;
     z-index: 2;
 }
 
@@ -981,6 +978,8 @@ a .blackCircle {
     position: relative;
     background-position: center;
     background-repeat: no-repeat;
+    display: flex;
+    align-items: end;
 }
 
 .esgBox .esgList .esgComment::before {
@@ -989,7 +988,7 @@ a .blackCircle {
     position: absolute;
     background-image: url(../images/Kakao_image2/corner.svg);
     top: -2px;
-    right: 290px;
+    right: 280px;
 }
 
 .esgBox .esgList .esgComment::after {
@@ -999,23 +998,40 @@ a .blackCircle {
     background-image: url(../images/Kakao_image2/corner.svg);
     top: 65px;
     right: -2px;
+    top: 77px;
 }
 
-.esgBox .esgList li .esgComment span {
+.esgBox .esgList .esgComment p::before {
+    content: '';
+    width: 26px; height: 26px;
     position: absolute;
-    left: 40px; bottom: 46px;
-    z-index: 3;
+    background-image: url(../images/Kakao_image2/corner.svg);
+    bottom: 76px;
+    right: -2px;
+    transform: rotate(90deg);
+}
+
+.esgBox .esgList .esgComment p::after {
+    content: '';
+    width: 26px; height: 26px;
+    position: absolute;
+    background-image: url(../images/Kakao_image2/corner.svg);
+    bottom: -2px;
+    right: 76px;
+    transform: rotate(90deg);
+}
+
+.esgBox .esgList li .esgComment p {
     font-size: 24px;
+    margin-bottom: 6px;
 }
 
 .esgBox .esgList .esg1 h4, 
-.esgBox .esgList .esg1 div {
+.esgBox .esgList .esg1 .esgComment {
     background-color: #89dcff;
 }
 
 .esgBox .esgList .esg1 .esgComment {
-    content: '';
-    position: absolute;
     background-image: url(../images/Kakao_image2/walkingPeople.gif);
     background-size: 560px;
 }
@@ -1025,8 +1041,6 @@ a .blackCircle {
 }
 
 .esgBox .esgList .esg2 .esgComment {
-    content: '';
-    position: absolute;
     background-image: url(../images/Kakao_image2/forest.gif);
     background-size: 360px;
 }
@@ -1040,12 +1054,38 @@ a .blackCircle {
 }
 
 .esgBox .esgList .esg3 .esgComment {
-    content: '';
-    position: absolute;
     background-image: url(../images/Kakao_image2/heartBlock.gif);
     background-size: 360px;
 }
 
 .esgBox .esgList .esg3 .esgComment {
     background-color: #333;
+}
+
+.esgBox .esgList li .esgComment + div {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(255, 255, 255);
+    width: 78px;
+    height: 78px;
+    border-radius: 37px 0;
+}
+
+.esgBox .esgList li .blackCircle {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    text-decoration: none;
+    width: 64px;
+    height: 64px;
+    text-align: center;
+    outline: 10px solid white;
+    padding: 0;
+    line-height: 64px;
+}
+
+.esgBox .esgList .esg3 div+div {
+    color: white;
 }
