@@ -39,6 +39,7 @@ li {
     color: white;
     padding: 20px;
     margin-left: 20px;
+    font-size: 20px;
     cursor: pointer;
 }
 
@@ -970,10 +971,10 @@ a .blackCircle {
 
 .esgBox .esgList .esgType {
     width: 282px;
-    padding: 10px;
+    padding: 2px 2px 16px 16px;
     text-align: center;
     line-height: 58px;
-    border-radius: 0 0 0 29px;
+    border-radius: 0 0 0 36px;
     position: absolute;
     right: 0;
     background-color: white;
@@ -1011,9 +1012,8 @@ a .blackCircle {
     width: 26px; height: 26px;
     position: absolute;
     background-image: url(../images/Kakao_image2/corner.svg);
-    top: 65px;
     right: -2px;
-    top: 77px;
+    top: 74px;
 }
 
 .esgBox .esgList .esgComment p::before {
@@ -1095,6 +1095,7 @@ a .blackCircle {
     text-decoration: none;
     width: 64px;
     height: 64px;
+    font-size: 20px;
     text-align: center;
     outline: 10px solid white;
     padding: 0;
@@ -1104,4 +1105,58 @@ a .blackCircle {
 .esgBox .esgList .esg2 .esgComment,
 .esgBox .esgList .esg3 .esgComment {
     color: white;
+}
+
+/* helpBox --------------------------------------------------------- */
+
+.helpBox .titleBox .titleArticle::before {
+    background-image: url(../images/Kakao_image3/ico_tit_help.gif);
+}
+
+.helpBox .helpBoxTop .helpCenter {
+    display: flex;
+    flex-direction: column;
+
+
+}.helpBox .helpBoxTop {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1712px;
+    justify-content: space-between;
+}
+
+.helpBox .helpBoxTop div {
+    width: 560px;
+    flex-shrink: 0;
+}
+
+.helpBox .helpBoxTop .helpCenter a {
+    padding: 40px;
+    background-color: #eee;
+    border-radius: 20px;
+    height: 161px;
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    flex-wrap: wr;
+}
+
+.helpBox .helpBoxTop .helpCenter a strong {
+    font-size: 26px;
+}
+
+.helpBox .helpBoxTop .helpCenter a:first-child span {
+    position: relative;
+}
+.helpBox .helpBoxTop .helpCenter a:first-child span::after {
+    content: '';
+    position: absolute;
+    background-image: url(../images/Kakao_image3/help1.webp);
+    background-position: center;
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    right: 40px; top: 0;
 }
