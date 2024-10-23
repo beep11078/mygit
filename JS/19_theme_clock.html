@@ -221,6 +221,7 @@
         const scale = (num, in_min, in_max, out_min, out_max) => {
             return (num - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
         }   
+        // https://mblogthumb-phinf.pstatic.net/20160215_244/junhyuk7272_1455511844957JQc2k_PNG/%B1%E2%BF%EF%B1%E2.png?type=w420
         // (scale - out_min) / (num - in_min) = (out_max - out_min) / (in_max - in_min)
         // 변화량은 동일
         // scale / num = 30
