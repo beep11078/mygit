@@ -60,12 +60,15 @@
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
+            /* background-color: #e74c3c; */
         }
 
         .clock {
             position: relative;
             width: 200px;
             height: 200px;
+            /* border: 1px solid #000;
+            border-radius: 50%; */
         }
 
         .needle {
@@ -76,11 +79,13 @@
             height: 65px;
             width: 3px;
             transform-origin: bottom center;
+            /* transform의 기준 */
             transition: all 0.5s ease-in linear;
         }
 
         .needle.hour {
             transform: translate(-50%, -100%) rotate(0deg);
+            /* 바늘이 시계 중심부터 시작해서 6시 방향으로 향해있기 때문에 그것을 자신의 두배만큼 위로 이동해서(-100%) 12시 방향부터 시작하게 함 */
         }
 
         .needle.minute {

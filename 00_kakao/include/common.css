@@ -22,12 +22,16 @@ html {
 
 html.dark {
     --primary-color: #fff;
-    --secondary-color: #333;
+    --secondary-color: #000;
 }
 
 html.dark {
-    background-color: #111;
+    background-color: #000;
     color: var(--primary-color);
+}
+
+button.dark {
+    backdrop-filter: invert(100%);
 }
 
 ul {
@@ -125,6 +129,11 @@ li {
     justify-content: space-between;
     align-items: center;
     z-index: 9;
+    transition: border-bottom 0.3s;
+}
+
+.header.scrolled {
+    border-bottom: 1px solid #eee;
 }
 
 .header .logo {
@@ -183,6 +192,10 @@ li {
 .header .nav .mainMenu li:focus .subMenu
 {
     display: block;
+}
+
+.subActive {
+    display: block !important;
 }
 
 .header .nav .mainMenu li .subMenu {
