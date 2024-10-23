@@ -192,8 +192,8 @@
 
         function setTime() {
             const time = new Date();
-            // **new Date()**는 날짜 객체를 생성하며, 날짜와 시간 조작이 필요할 때 사용
-            // **Date()**는 현재 날짜와 시간을 사람이 읽기 쉽게 표현한 형식의 문자열로 반환
+            // new Date(): 날짜 객체 생성, 날짜와 시간 조작이 필요할 때 사용
+            // Date()는 현재 날짜와 시간을 사람이 읽기 쉽게 표현한 형식의 문자열로 반환
             const month = time.getMonth()
             const day = time.getDay()
             const date = time.getDate()
@@ -221,7 +221,10 @@
         const scale = (num, in_min, in_max, out_min, out_max) => {
             return (num - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
         }   
-
+        // (scale - out_min) / (num - in_min) = (out_max - out_min) / (in_max - in_min)
+        // 변화량은 동일
+        // scale / num = 30
+        // scale = 30*num
         setTime()
 
         setInterval(setTime, 1000)
