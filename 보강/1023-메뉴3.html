@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <style>
+
+        *{ 
+            box-sizing: border-box; 
+            margin: 0; 
+            padding: 0;
+        }
+
+        ul { list-style: none; padding: 0; }
+        a { text-decoration: none; }
+
+        .menu {
+            background-color: #f10;
+        }
+
+        .menu::before,
+        .menu::after {
+            content: '';
+            width: 100%;
+            height: 1px;
+            background-color: #000;
+            position: absolute;
+            left: 0;
+            z-index: 999;
+        }
+
+        .menu::after {
+            top: 0;
+        }
+
+        .menu::before {
+            top: 49px;
+        }
+
+        .gnb {
+            width: 1200px;
+            display: flex;
+            margin: auto;
+        }
+
+        .gnb > li {
+            width: 400px;
+            background-color: #fc0;
+        }
+
+        .gnb > li > a {
+            display: block;
+            line-height: 50px;
+            background-color: #0fc;
+        }
+
+        .gnb > li:nth-child(even) > a {
+            background-color: #f0c;
+        }
+
+        .gnb .sub {
+            background-color: #ccc;
+        }
+
+        .gnb > li:nth-child(even) .sub {
+            background-color: #aaa;
+        }
+
+        
+    </style>
+
+</head>
+
+<body>
+    <nav class="menu">
+        <ul class="gnb">
+            <li><a href="">menu</a>
+                <ul class="sub">
+                    <li>서브메뉴1</li>
+                    <li>서브메뉴2</li>
+                    <li>서브메뉴3</li>
+                    <li>서브메뉴4</li>
+                </ul>
+            </li>
+            <li><a href="">menu</a>
+                <ul class="sub">
+                    <li>서브메뉴1</li>
+                    <li>서브메뉴2</li>
+                    <li>서브메뉴3</li>
+                    <li>서브메뉴4</li>
+                </ul>
+            </li>
+            <li><a href="">menu</a>
+                <ul class="sub">
+                    <li>서브메뉴1</li>
+                    <li>서브메뉴2</li>
+                    <li>서브메뉴3</li>
+                    <li>서브메뉴4</li>
+                </ul>
+            </li>
+        </ul>    
+    </nav>
+
+    <script src="jqeury/jquery-3.7.1.js"></script>
+    <script>
+
+        $('.gnb .sub').hide();
+
+        $('.gnb > li').on('mouseenter', function(){
+            $('.gnb .sub').show();
+        });
+
+        $('.menu').on('mouseleave', function(){
+            $('.gnb .sub').hide();
+        });
+
+    </script>
+</body>
+</html>

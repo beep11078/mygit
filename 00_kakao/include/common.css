@@ -11,6 +11,25 @@
     margin: 0;
 }
 
+:root {
+    --primary-color: #000;
+    --secondary-color: #fff;
+}
+
+html {
+    transition: all 0.5s ease-in;
+}
+
+html.dark {
+    --primary-color: #fff;
+    --secondary-color: #333;
+}
+
+html.dark {
+    background-color: #111;
+    color: var(--primary-color);
+}
+
 ul {
     padding: 0;
 }
@@ -35,8 +54,8 @@ li {
 
 .blackCircle {
     border-radius: 50%;
-    background-color: #000;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
     padding: 20px;
     margin-left: 20px;
     font-size: 20px;
@@ -101,7 +120,7 @@ li {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    background-color: white;
+    background-color: var(--secondary-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -138,7 +157,7 @@ li {
     font-size: 17px;
     position: relative;
     padding: 0 40px;
-    color: #000;
+    color: var(--primary-color);
     text-decoration: none;
 }
 
@@ -152,11 +171,11 @@ li {
 }
 
 .header .nav .mainMenu > li:hover .menuTitle {
-    color: #000 !important;
+    color: var(--primary-color) !important;
 }
 
 .header .nav .mainMenu li a:hover {
-    color: #000;
+    color: var(--primary-color);
 }
 
 .header .nav .mainMenu li:hover .subMenu,
@@ -168,7 +187,7 @@ li {
 
 .header .nav .mainMenu li .subMenu {
     display: none;
-    background-color: black;
+    background-color: var(--primary-color);
     position: absolute;
     top: 80%; 
     padding: 15px 10px;
@@ -185,7 +204,7 @@ li {
 .header .nav .mainMenu li .subMenu a {
     line-height: 20px;
     display: block;
-    color: #fff;
+    color: var(--secondary-color);
     padding: 0;
 }
 
@@ -194,7 +213,7 @@ li {
 }
 
 .header .nav .mainMenu:hover .subMenu li a:not(:hover) {
-    color: #fff;
+    color: var(--secondary-color);
 }
 
 .header .util button {
@@ -247,10 +266,10 @@ li {
 }
 
 .main .section1 .mainBox .visualBox .kakaoMore .button{
-    background-color: #000;
+    background-color: var(--primary-color);
     width: 180px;
     text-align: center;
-    color: white;
+    color: var(--secondary-color);
     padding: 15px 10px;
     border-radius: 20px;
     position: absolute;
@@ -275,7 +294,7 @@ li {
     background: url(../images/Kakao_image/light.gif) center no-repeat ;
     background-size: contain;
     border: none;
-    background-color: white;
+    background-color: var(--secondary-color);
     border-radius: 0 0 0 25px;
     padding: 2px 27px 11px;
     cursor: pointer;
@@ -312,7 +331,7 @@ li {
     width: 300px; 
     height: 102px;
     border: none;
-    background-color: white;
+    background-color: var(--secondary-color);
     border-radius: 0 25px 0 0;
     padding: 2px 27px 11px;
     font-size: 1.3rem;
@@ -361,7 +380,7 @@ li {
 .visualRightBox .visualRight .visualRightList .circleBtn div {
     width: 24px; height: 8px; 
     border-radius: 8px;
-    background-color: #000;
+    background-color: var(--primary-color);
     margin: 0 5px;
 }
 
@@ -369,7 +388,7 @@ li {
     width: 8px; 
     border-radius: 8px;
     border: 1px solid #999;
-    background-color: #fff;
+    background-color: var(--secondary-color);
 }
 
 .visualRightBox .visualRight .visualRightList .circleBtn2 div:not(:first-child){
@@ -407,9 +426,9 @@ li {
 }
 
 .visualRightBox .visualRight .visualRightList2 .campaign .theme {
-    color: #fff;
+    color: var(--secondary-color);
     font-size: .9rem;
-    background-color: #000;
+    background-color: var(--primary-color);
     padding: 5px 10px;
     border-radius: 10px;
     margin-left: 0;
@@ -488,7 +507,7 @@ li {
 }
 
 .storyBox .titleBox .titleArticle .pause {
-    background-color: #000;
+    background-color: var(--primary-color);
     width: 50px; height: 50px;
     border-radius: 50%;
 }
@@ -555,7 +574,7 @@ li {
 
 .storyBox .storyList .storyInfo .storyTheme {
     font-size: .9rem;
-    background-color: #fff;
+    background-color: var(--secondary-color);
     padding: 5px 10px;
     border-radius: 10px;
     position: relative;
@@ -596,7 +615,7 @@ li {
 .newsBox .newsList .newsInfo .newsMore div {
     width: 4px; height: 4px;
     border-radius: 100%;
-    background-color: #000;
+    background-color: var(--primary-color);
     margin: 4px;
 }
 
@@ -869,9 +888,9 @@ li {
 
 .newsBox .newsList  .newsInfo .newsTheme {
     position: relative;
-    color: #000;
+    color: var(--primary-color);
     font-size: 13px;
-    background-color: #fff;
+    background-color: var(--secondary-color);
     margin-left: 58px;
     padding: 15px 14px;
     border-radius: 7px;
@@ -909,7 +928,7 @@ li {
     justify-content: space-between;
     align-items: center;
     text-decoration: none;
-    color: #000;
+    color: var(--primary-color);
 }
 
 a .blackCircle {
@@ -978,13 +997,13 @@ a .blackCircle {
     border-radius: 0 0 0 36px;
     position: absolute;
     right: 0;
-    background-color: white;
+    background-color: var(--secondary-color);
     z-index: 2;
 }
 
 .esgBox .esgList .esgType h4 {
     border-radius: 36px;
-    outline: 10px solid white;
+    outline: 10px solid var(--secondary-color);
 
 }
 .esgBox .esgList .esgComment {
@@ -1098,14 +1117,13 @@ a .blackCircle {
     height: 64px;
     font-size: 20px;
     text-align: center;
-    outline: 10px solid white;
-    padding: 0;
+    outline: 10px solid var(--secondary-color);
     line-height: 64px;
 }
 
 .esgBox .esgList .esg2 .esgComment,
 .esgBox .esgList .esg3 .esgComment {
-    color: white;
+    color:  var(--secondary-color);
 }
 
 /* helpBox --------------------------------------------------------- */
@@ -1144,7 +1162,7 @@ a .blackCircle {
     justify-content: space-between;
     position: relative;
     text-decoration: none;
-    color: #000;
+    color: var(--primary-color);
 }
 
 .helpBox .helpBoxTop .helpCenter a:last-child {
@@ -1164,11 +1182,11 @@ a .blackCircle {
 
 .helpBox .helpBoxTop .helpCenter a span::after
 {
-    color: #fff;
+    color:  var(--secondary-color);
     content: "↗️";
     width: 24px;
     height: 24px;
-    background-color: #000;
+    background-color: var(--primary-color);
     border-radius: 50%;
     display: flex;
     line-height: 24px;
@@ -1214,7 +1232,7 @@ a .blackCircle {
     background-size: 560px auto;
     background-position: bottom;
     background-repeat: no-repeat;
-    color: #fff;
+    color:  var(--secondary-color);
 }
 
 .helpBox .helpBoxTop .helpSocial  p,
@@ -1266,15 +1284,15 @@ a .blackCircle {
     justify-content: start;
     align-items: center;
     text-decoration: none;
-    color: #fff;
+    color:  var(--secondary-color);
 }
 
 .helpBox .helpBoxTop .helpRecruit a::after {
-    color: #000;
+    color: var(--primary-color);
     content: "↗️";
     width: 24px;
     height: 24px;
-    background-color: #fff;
+    background-color:  var(--secondary-color);
     border-radius: 50%;
     display: flex;
     line-height: 24px;
@@ -1303,7 +1321,7 @@ a .blackCircle {
     justify-content: space-between;
     position: relative;
     text-decoration: none;
-    color: #000;
+    color: var(--primary-color);
 }
 
 .helpBox .helpBoxBottom a span {
@@ -1314,11 +1332,11 @@ a .blackCircle {
 
 .helpBox .helpBoxBottom a span::after
 {
-    color: #fff;
+    color:  var(--secondary-color);
     content: "↗️";
     width: 24px;
     height: 24px;
-    background-color: #000;
+    background-color: var(--primary-color);
     border-radius: 50%;
     display: flex;
     line-height: 24px;
@@ -1354,11 +1372,11 @@ a .blackCircle {
 
 .helpBox .fullBtn::after
 {
-    color: #fff;
+    color:  var(--secondary-color);
     content: "→";
     width: 24px;
     height: 24px;
-    background-color: #000;
+    background-color: var(--primary-color);
     border-radius: 50%;
     display: flex;
     line-height: 24px;
@@ -1376,7 +1394,7 @@ a .blackCircle {
 }
 
 .footer div {
-    border: 1px solid #000;
+    border: 1px solid var(--primary-color);
     flex: 1;
     display: flex;
     flex-direction: column;
