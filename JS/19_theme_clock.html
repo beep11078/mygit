@@ -7,6 +7,33 @@
     <style>
         @import url('https://fonts.googleapis.com/css?family=Heebo:300&display=swap');
 
+        /*  선택자 비교
+        
+        * {
+            -모든 요소에 적용되는 범용 선택자
+            -주로, margin: 0; padding: 0; box-sizing 등 box-model 디폴트값 정할 때 많이 사용
+        }
+
+        :root {
+            -문서의 최상위 요소
+            -html 문서에서는 html 선택자와 같음
+            -html 선택자보다 우선순위(명시도) 높음
+            -주로 전역 변수 선언 (반복 사용되는 스타일 유지보수관리에 사용)
+        }
+            
+        html{
+            -html문서의 root 요소
+            -<head>, <body> 자식 요소에 영향
+            -주로, scroll behavior 등에 쓰이지만 :root에 넣어주어도 똑같이 동작함
+        }
+            
+        body{
+            -html문서에 보여지는 모든 요소
+            -전역 스타일 선언은 html보다 body에 하는 것이 좋음
+        }
+        
+        */
+        
         * {
             box-sizing: border-box;
         }
