@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <style>
+
+        *{ 
+            box-sizing: border-box; 
+            margin: 0; 
+            padding:0;
+        }
+
+        body {
+            padding: 50px;
+        }
+
+        ul { list-style: none; padding: 0; }
+        a { text-decoration: none; }
+
+        .box1 {
+            width: 200px;
+            border-bottom: 10px solid #000;
+        }
+
+        .box1 .child1 {
+            height: 50px;
+            background-color: #fc0;
+        }
+
+        .box1 .child2 {
+            height: 200px;
+            background-color: #ccc;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="box1">
+        <div class="child1">메뉴텍스트</div>
+        <div class="child2">서브메뉴</div>
+    </div>
+    
+    <script src="jqeury/jquery-3.7.1.js"></script>
+    <script>
+        
+        $('.box1 .child2').hide();
+
+        $('.box1 .child1').on('mouseenter', function(){
+            $('.box1 .child2').show();
+        });
+
+        $('.box1').on('mouseleave', function(){
+            $('.box1 .child2').hide();
+        });
+    </script>
+</body>
+</html>

@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="ko">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Theme Clock</title>
     <style>
         @import url('https://fonts.googleapis.com/css?family=Heebo:300&display=swap');
@@ -46,8 +45,8 @@
             background-color: var(--primary-color);
             color: var(--secondary-color);
             border: 0;
-            border-radius: 4px;
-            padding: 8px 12px;
+            border-radius: 50%;
+            padding: 9px 12px;
             position: absolute;
             top: 100px;
         }
@@ -144,11 +143,10 @@
         }
     </style>
 </head>
-<body>
-
+    <body>
     <!-- Inspired by this dribbble shot https://dribbble.com/shots/5958443-Alarm-clock -->
 
-    <button class="toggle">Dark mode</button>
+    <button class="toggle">D</button>
 
     <div class="clock-container">
         <div class="clock">
@@ -162,7 +160,6 @@
         <div class="date"></div>
     </div>
 
-    
     <script>
         const hourEl = document.querySelector('.hour')
         const minuteEl = document.querySelector('.minute')
@@ -175,30 +172,41 @@
         const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
         toggle.addEventListener('click', (e) => {
+            // e: 이벤트가 발생했을 때 그 처리를 담당하는 콜백 함수-의 객체 (이벤트 객체)
+            // toggle키에 클릭 이벤트가 발생했을 때, 
             const html = document.querySelector('html')
             if (html.classList.contains('dark')) {
                 html.classList.remove('dark')
-                e.target.innerHTML = 'Dark mode'
+                e.target.innerHTML = 'D'
+                // 이벤트의 타겟(사용자가 클릭한 실제 요소)인 toggle키의 HTML 태그의 안에 'D'를 넣는다.
             } else {
                 html.classList.add('dark')
-                e.target.innerHTML = 'Light mode'
+                e.target.innerHTML = 'L'
             }
         })
 
         function setTime() {
             const time = new Date();
+            // **new Date()**는 날짜 객체를 생성하며, 날짜와 시간 조작이 필요할 때 사용
+            // **Date()**는 현재 날짜와 시간을 사람이 읽기 쉽게 표현한 형식의 문자열로 반환
             const month = time.getMonth()
             const day = time.getDay()
             const date = time.getDate()
             const hours = time.getHours()
             const hoursForClock = hours >= 13 ? hours % 12 : hours;
+            // hours가 13보다 크면 hours를 12로 나눈 나머지를 반환, 아니면 hours 그대로 반환 (12시간 형식으로 바꿔줌)
             const minutes = time.getMinutes()
             const seconds = time.getSeconds()
             const ampm = hours >= 12 ? 'PM' : 'AM'
 
             hourEl.style.transform = `translate(-50%, -100%) rotate(${scale(hoursForClock, 0, 12, 0, 360)}deg)`
+            // hourEl의 스타일에  transform=translate() rotate() 속성을 넣는다.
             minuteEl.style.transform = `translate(-50%, -100%) rotate(${scale(minutes, 0, 60, 0, 360)}deg)`
             secondEl.style.transform = `translate(-50%, -100%) rotate(${scale(seconds, 0, 60, 0, 360)}deg)`
+            // scale(num, in_min, in_max, out_min, out_max)
+            // 0시 -> 0도(deg), 12시 -> 360도(deg)
+            // ex) 18시의 경우 hoursForClock = 6이므로
+            // 6 -> 180도가 된다.
 
             timeEl.innerHTML = `${hoursForClock}:${minutes < 10 ? `0${minutes}` : minutes} ${ampm}`
             dateEl.innerHTML = `${days[day]}, ${months[month]} <span class="circle">${date}</span>`
@@ -207,13 +215,11 @@
         // StackOverflow https://stackoverflow.com/questions/10756313/javascript-jquery-map-a-range-of-numbers-to-another-range-of-numbers
         const scale = (num, in_min, in_max, out_min, out_max) => {
             return (num - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
-        }
+        }   
 
         setTime()
 
         setInterval(setTime, 1000)
-
-
     </script>
-</body>
+    </body>
 </html>
