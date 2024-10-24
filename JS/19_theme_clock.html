@@ -7,7 +7,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css?family=Heebo:300&display=swap');
 
-        /*  선택자 비교
+        /*  * / :root / html / body 선택자 비교
         
         * {
             -모든 요소에 적용되는 범용 선택자
@@ -21,18 +21,16 @@
             -주로 전역 변수 선언 (반복 사용되는 스타일 유지보수관리에 사용)
         }
             
-        html{
+        html {
             -html문서의 root 요소
             -<head>, <body> 자식 요소에 영향
             -주로, scroll behavior 등에 쓰이지만 :root에 넣어주어도 똑같이 동작함
         }
             
-        body{
+        body {
             -html문서에 보여지는 모든 요소
             -전역 스타일 선언은 html보다 body에 하는 것이 좋음
-        }
-        
-        */
+        } */
         
         * {
             box-sizing: border-box;
@@ -55,40 +53,8 @@
         html.dark {
             background-color: #111;
             color: var(--primary-color);
+            /* 스크롤바 스타일 적용 문제 해결, 일관된 전역 스타일 관리, 빠른 렌더링 등의 이유로 다크모드는 body 태그가 아닌 html 태그를 통해 구현한다. */
         }
-        
-        /*
-        
-        body가 아닌 html을 통해 다크 모드를 구현하는 이유
-        
-            1. 스크롤바 스타일 적용 문제
-                웹 브라우저에서 스크롤바는 기본적으로 <html> 요소의 스타일에 따라 렌더링됩니다.
-                만약 <body>에만 클래스를 부여하면 스크롤바는 여전히 라이트모드 스타일로 남을 수 있습니다.
-
-            2. 전역 스타일 및 CSS 상속 관리
-
-                <html>에 클래스를 부여하면 전역 스타일이 하위 모든 요소에 더 일관되게 적용됩니다.
-            	•	<body>에 클래스를 부여할 경우, 일부 전역 스타일(특히 폼 컨트롤 요소나 <html>에 의존하는 기본 스타일)에서 원하는 대로 적용되지 않을 수 있습니다.
-
-            3. <html>과 <body>의 특성 차이
-
-                HTML 문서 구조상 <html>은 문서 전체를 감싸고 있고, <body>는 그 안의 컨텐츠 영역만 포함합니다.
-
-            	•	브라우저에 따라 **문서 외부 영역(예: 뷰포트 바깥 부분)**의 배경색 같은 스타일은 <html>에 정의된 것이 우선합니다.
-            	•	따라서 다크모드 배경이나 색상 스타일을 <html>에 적용하는 것이 더 일관된 디자인을 보장합니다.
-
-            4. HTML 요소는 <body>보다 상위에 있음
-
-                JS에서 다크모드 전환 시, <html>에 클래스를 부여하면 더 빠르게 반응합니다.
-
-            	•	이유는 <html>은 문서 트리의 최상위 요소이기 때문에, CSS 파싱 시 바로 적용되기 때문입니다.
-            	•	반면 <body>에 클래스를 부여하면, 해당 요소가 렌더된 이후에 스타일이 적용되기 때문에 잠깐이라도 깜빡이는 현상(flash)이 생길 수 있습니다.
-
-            5. 추가적인 유연성 확보
-
-                <html>에 클래스를 적용하면, 필요에 따라 <body> 외의 다른 전역 설정에도 유연하게 스타일을 적용할 수 있습니다. 예를 들어, <head>에 있는 <style>이나 <link> 태그에서 조건부 스타일을 적용할 때도 더 쉽게 관리할 수 있습니다.  
-        
-        */
 
         body {
             font-family: 'Heebo', sans-serif;
@@ -120,15 +86,15 @@
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
-            /* background-color: #e74c3c; */
+            background-color: #fc0;
         }
 
         .clock {
             position: relative;
             width: 200px;
             height: 200px;
-            /* border: 1px solid #000;
-            border-radius: 50%; */
+            border: 1px solid #000;
+            border-radius: 50%;
         }
 
         .needle {

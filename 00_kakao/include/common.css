@@ -382,6 +382,7 @@ li {
     border-radius: 25px;
     margin-bottom: 15px;
     position: relative;
+    overflow: hidden;
 }
 
 .visualRightBox .visualRight .visualRightList .circleBtn {
@@ -410,12 +411,13 @@ li {
     background-color: #999;
 }
 
-.visualRightBox .visualRight .visualRightList1 {
-    background-color: #fae100;
+.visualRightBox .visualRight .visualSlide {
+    display: flex;
 }
 
 .visualRightBox .visualRight .visualRightList1 .donation {
     height: 273px;
+    background-color: #fae100;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -425,8 +427,16 @@ li {
 .visualRightBox .visualRight .visualRightList1 .donation .donationAmount {
     font-size: 2.5rem;
     line-height: 2rem;
-    margin: 15px 0 5px 0;
     font-weight: bold;
+}
+
+.visualRightBox .visualRight .visualRightList1 .kakaoimpact {
+    width: 273px;
+    height: 273px;
+    background-image: url(../images/Kakao_image/impact.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .visualRightBox .visualRight .visualRightList2 {
@@ -1447,4 +1457,12 @@ a .blackCircle {
 .footer a {
     font-size: 12px;
     line-height: 34px;
+}
+
+
+@media screen and (max-width:1024px) {
+
+
+
+
 }
