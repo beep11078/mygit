@@ -1,15 +1,22 @@
-// 스크롤시 메뉴 하단 경계선
+// 스크롤시 메뉴 하단 경계선, 배너 제거
 const header = document.querySelector('.header');
+const moreButton = document.querySelectorAll('.kakaoMoreBox');
 
 window.addEventListener('scroll', () => {
     if (window.scrollY > 0) {
         header.classList.add('scrolled');
         header.style.zIndex = 999;
+        moreButton.forEach(element => {
+            element.style.opacity = '0%';
+        });
     } else {
         header.classList.remove('scrolled');
         header.style.zIndex = 9;
     }
 });
+
+// 서치버튼
+
 
 // 배너 슬라이드
 const menuTitle = document.querySelector('.menuTitle');
