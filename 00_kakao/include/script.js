@@ -1,12 +1,12 @@
-// 스크롤시 메뉴 하단 경계선, 배너 제거
+// 스크롤 이벤트
 const header = document.querySelector('.header');
-const moreButton = document.querySelectorAll('.kakaoMoreBox');
+const moreBtn = document.querySelectorAll('.kakaoMoreBox');
 
 window.addEventListener('scroll', () => {
     if (window.scrollY > 0) {
         header.classList.add('scrolled');
         header.style.zIndex = 999;
-        moreButton.forEach(element => {
+        moreBtn.forEach(element => {
             element.style.opacity = '0%';
         });
     } else {
@@ -15,7 +15,37 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// 서치버튼
+
+// 서치 이벤트
+const searchBtn = document.querySelector('.btn_search');
+const searchBox = document.querySelector('.searchBox');
+const logo = document.querySelector('.logo');
+const zDown = document.querySelector('.kakaoMore');
+
+let isSearchVisible = false; // 버튼 상태를 나타내는 변수
+
+searchBtn.addEventListener('click', (e) => {
+    // searchBtn이 클릭된 경우
+    const searchSpan = searchBtn.querySelector('.material-symbols-outlined');
+
+    if (!isSearchVisible) {
+        searchSpan.textContent = 'close'; // 아이콘 변경
+        searchSpan.style.zIndex = 999;
+        logo.style.zIndex = 999;
+        zDown.style.zIndex = '-1';
+        searchBox.style.display = 'block';  // 검색창 열기
+        isSearchVisible = true; // 상태 업데이트
+    } else {
+        searchSpan.textContent = 'search'; // 아이콘 변경
+        searchSpan.style.zIndex = '';
+        logo.style.zIndex = '';
+        zDown.style.zIndex = 999;
+        searchBox.style.display = 'none'; // 검색창 닫기
+        isSearchVisible = false; // 상태 업데이트
+    }
+});
+
+
 
 
 // 배너 슬라이드

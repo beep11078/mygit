@@ -145,6 +145,7 @@ li {
     height: 24px;
     display: block;
     outline: 0;
+    position: relative;
 }
 
 .header .nav {
@@ -241,6 +242,10 @@ li {
     border: none;
 }
 
+.material-symbols-outlined {
+    position: relative;
+}
+
 .header .util button:hover {
     background-color: rgba(0, 0, 0, .1);
 }
@@ -251,8 +256,32 @@ li {
     top: 0; left: 0;
     height: 454px;
     width: 100vw;
+    background-image: url(../images/Kakao_image/bg_search.png);
     background-color: var(--secondary-color);
+    background-position: 67% center;
+    background-repeat: no-repeat;
+    background-size: auto 178px;
 }
+
+.searchBar {
+    position: relative;
+    left: 50%;
+    top: calc(454px / 2);
+    transform: translate(-50%, -50%);
+    border: none;
+    background-color: var(--primary-color);
+    font-size: 24px;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.searchBar::placeholder {
+    color: var(--secondary-color);
+}
+
+
 
 /* mainBox --------------------------------------------------------- */
 
@@ -282,10 +311,6 @@ li {
     position: absolute;
     right: 0; top: 0;
     z-index: 99;
-} 
-
-.main .section1 .mainBox .visualBox .kakaoMore:hover .button {
-    display: block;
 }
 
 .main .section1 .mainBox .visualBox .kakaoMore .kakaoMoreBox{
@@ -300,6 +325,10 @@ li {
     display: block;
     font-size: 13px;
     letter-spacing: -0.3px;
+}
+
+.kakaoMore:hover .kakaoMoreBox {
+    display: block;
 }
 
 .main .section1 .mainBox .visualBox .kakaoMore .kakaoMoreBox::after {
