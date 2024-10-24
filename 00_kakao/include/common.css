@@ -4,7 +4,6 @@
     src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.eot?#iefix) format("embedded-opentype"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.woff) format("woff"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.ttf) format("truetype");
 }
 
-
 * {
     font-family: 'NanumSquareNeo';
     box-sizing: border-box;
@@ -119,7 +118,7 @@ li {
 .header {
     position: fixed;
     width: 100%;
-    height: 85px;
+    height: 90px;
     padding: 0 calc(calc(100% - 1727px) /2 );
     top: 0;
     left: 50%;
@@ -162,7 +161,7 @@ li {
 }
 
 .header .nav .mainMenu > li a {
-    line-height: 85px;
+    line-height: 90px;
     font-size: 17px;
     position: relative;
     padding: 0 40px;
@@ -247,7 +246,7 @@ li {
 /* mainBox --------------------------------------------------------- */
 
 .main {
-    margin: 85px auto 0;
+    margin: 90px auto 0;
 }
 
 .main .section1 .mainBox {
@@ -271,7 +270,7 @@ li {
 .main .section1 .mainBox .visualBox .kakaoMore {
     position: absolute;
     right: 0; top: 0;
-    z-index: 5;
+    z-index: 99;
 } 
 
 .main .section1 .mainBox .visualBox .kakaoMore:hover .button {
@@ -377,7 +376,7 @@ li {
     margin-left: 16px;
 }
 
-.visualRightBox .visualRight .visualRightList {
+.visualRight .visualRightList {
     width: 273px;
     border-radius: 25px;
     margin-bottom: 15px;
@@ -385,38 +384,43 @@ li {
     overflow: hidden;
 }
 
-.visualRightBox .visualRight .visualRightList .circleBtn {
+.visualSlide {
+    display: flex;
+    transition: transform 0.3s ease-in-out; /* 부드러운 전환 */
+    width: calc(273px * 2);
+}
+
+.visualSlide li {
+    width: 273px;
+    height: 273px; 
+}
+
+.circleBtn {
     position: absolute;
-    left: 50%; bottom: 25px; transform: translate(-50%, -50%);
+    left: 50%; 
+    bottom: 25px; 
+    transform: translate(-50%, -50%);
     display: flex;
 }
 
-.visualRightBox .visualRight .visualRightList .circleBtn div {
-    width: 24px; height: 8px; 
+.circleBtn div {
+    width: 24px; 
+    height: 8px; 
     border-radius: 8px;
     background-color: var(--primary-color);
     margin: 0 5px;
+    z-index: 999;    
 }
 
-.visualRightBox .visualRight .visualRightList .circleBtn1 div:not(:first-child){
+.circleBtn div:not(:first-child) {
     width: 8px; 
     border-radius: 8px;
     border: 1px solid #999;
     background-color: var(--secondary-color);
 }
 
-.visualRightBox .visualRight .visualRightList .circleBtn2 div:not(:first-child){
-    width: 8px; 
-    border-radius: 8px;
-    background-color: #999;
-}
-
-.visualRightBox .visualRight .visualSlide {
-    display: flex;
-}
-
 .visualRightBox .visualRight .visualRightList1 .donation {
-    height: 273px;
+    width: 273px;
     background-color: #fae100;
     display: flex;
     flex-direction: column;
@@ -428,9 +432,11 @@ li {
     font-size: 2.5rem;
     line-height: 2rem;
     font-weight: bold;
+    margin: 15px 0 5px 0;
 }
 
-.visualRightBox .visualRight .visualRightList1 .kakaoimpact {
+.visualRightBox .visualRight .visualRightList1 .kakaoimpact a {
+    display: inline-block;
     width: 273px;
     height: 273px;
     background-image: url(../images/Kakao_image/impact.webp);
@@ -1462,7 +1468,14 @@ a .blackCircle {
 
 @media screen and (max-width:1024px) {
 
-
-
+    .wrap .header {
+        width: 100%;
+        height: 100vh;
+        background-color: var(--secondary-color);
+        display: flex;
+        justify-content: space-around;
+        align-items: start;
+        padding-top: 24px;
+    }
 
 }
