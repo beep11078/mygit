@@ -243,12 +243,12 @@ li {
     cursor: pointer;
 }
 
-.material-symbols-outlined {
-    position: relative;
-}
-
 .header .util button:hover {
     background-color: rgba(0, 0, 0, .1);
+}
+
+.material-symbols-outlined {
+    position: relative;
 }
 
 .searchBg {
@@ -275,7 +275,7 @@ li {
     background-size: auto 178px;
 }
 
-.searchBar {
+.searchBox .searchBar {
     position: relative;
     left: 50%;
     top: calc(454px / 2);
@@ -294,16 +294,37 @@ li {
     outline: 0;
 }
 
-.searchBar::placeholder {
+.searchBox .searchBar::placeholder {
     color: var(--secondary-color);
 }
 
+.searchBox .searchKeywordBox {
+    position: absolute;
+    left: 50%;
+    top: 300px;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 6px;
+}
+
+.searchBox .searchKeywordBox .searchKeyword {
+    padding: 10px 12px;
+    background-color: #eee;
+    border-radius: 16px;
+    font-size: 12px;
+}
 
 
 /* mainBox --------------------------------------------------------- */
 
 .main {
     margin: 92px auto 0;
+    transition: transform .2s ease-in-out;
+    position: relative;
+}
+
+.main.searched {
+    transform: translateY(300px);
 }
 
 .main .section1 {
@@ -474,7 +495,8 @@ li {
     border-radius: 8px;
     background-color: var(--primary-color);
     margin: 0 5px;
-    z-index: 999;    
+    cursor: pointer;
+    z-index: 999;
 }
 
 .circleBtn div:not(:first-child) {

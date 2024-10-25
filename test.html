@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            h1 {
+                color: #fc0;
+            }
+
+            /* 무슨무슨 모드?? */
+            .style1 h1 {
+                color: #0f0;
+            }
+
+            .overlay {
+                position: fixed;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                background-color: rgba(0, 0, 0, 0.3);
+                display: none;
+            }
+
+            body.style1 .overlay {
+                display: block;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="overlay"></div>
+        <button class="btn">click</button>
+        <h1>test</h1>
+        <h1>test</h1>
+        <h1>test</h1>
+        <h1>test</h1>
+        <h1>test</h1>
+        <h1>test</h1>
+        <h1>test</h1>
+        <h1>test</h1>
+        <h1>test</h1>
+        <h1>test</h1>
+    </body>
+
+    <script>
+        const BTN = document.querySelector(".btn");
+        const BODY_EL = document.querySelector("body");
+        const OVERLAY_EL = document.querySelector(".overlay");
+
+        BTN.addEventListener("click", function () {
+            BODY_EL.classList.add("style1");
+        });
+        OVERLAY_EL.addEventListener("click", function () {
+            BODY_EL.classList.remove("style1");
+        });
+    </script>
+</html>

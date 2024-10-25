@@ -20,30 +20,35 @@ window.addEventListener('scroll', () => {
 const searchBtn = document.querySelector('.btn_search');
 const searchBox = document.querySelector('.searchBox');
 const searchBg = document.querySelector('.searchBg');
+const searchBar = document.querySelector('.searchBar');
 const logo = document.querySelector('.logo');
 const zDown = document.querySelector('.kakaoMore');
+const mainBox = document.querySelector('.main');
+const searchSpan = searchBtn.querySelector('.material-symbols-outlined');
 
 let isSearchVisible = false; // 버튼 상태를 나타내는 변수
 
 searchBtn.addEventListener('click', (e) => {
     // searchBtn이 클릭된 경우
-    const searchSpan = searchBtn.querySelector('.material-symbols-outlined');
 
     if (!isSearchVisible) {
         searchSpan.textContent = 'close'; // 아이콘 변경
         searchSpan.style.zIndex = 999;
         logo.style.zIndex = 999;
         zDown.style.zIndex = '-1';
-        searchBox.style.display = 'block';  // 검색창 열기
-        searchBg.style.display = 'block';  // 검색창 열기
+        searchBox.style.display = 'block';
+        searchBg.style.display = 'block';
+        mainBox.classList.add('searched');
         isSearchVisible = true; // 상태 업데이트
     } else {
         searchSpan.textContent = 'search'; // 아이콘 변경
         searchSpan.style.zIndex = '';
         logo.style.zIndex = '';
         zDown.style.zIndex = 999;
-        searchBox.style.display = 'none'; // 검색창 닫기
-        searchBg.style.display = 'none'; // 검색창 닫기
+        searchBox.style.display = 'none';
+        searchBar.value = null;
+        searchBg.style.display = 'none';
+        mainBox.classList.remove('searched');
         isSearchVisible = false; // 상태 업데이트
     }
 });
@@ -59,39 +64,23 @@ menuTitle.addEventListener('click', () => {
 
 window.onload = function () {
     const slideWrap = document.querySelector('.visualRightList1');
-    const slider = slideWrap.querySelector('.visualSlide');
-    const slideLis = slider.querySelectorAll('li'); 
-    const prevButton = slideWrap.querySelector('.circleBtn1 .prev');
-    const nextButton = slideWrap.querySelector('.circleBtn1 .next');
 
-    // 슬라이드 너비 계산
-    const liWidth = slideLis[0].clientWidth;
-    slider.style.width = `${liWidth * slideLis.length}px`; // 전체 슬라이드 너비 설정
+    const fstButton = slideWrap.querySelector('.slide1');
+    const sndButton = slideWrap.querySelector('.slide2');
 
-    // 리스너 설치하기
-    let currentIdx = 0; // 슬라이드 현재 번호
-    let translate = 0; // 슬라이드 위치 값
 
-    prevButton.addEventListener('click', moveSlide);
-    nextButton.addEventListener('click', moveSlide);
+    fstButton.addEventListener('click', moveSlide);
+    sndButton.addEventListener('click', moveSlide);
 
     function moveSlide(event) {
         event.preventDefault();
-        if (event.target.classList.contains('next')) {
-            if (currentIdx < slideLis.length - 1) {
-                currentIdx++;
-                prevButton.style.width = '8px';
-                nextButton.style.width = '24px';
-            }
-        } else if (event.target.classList.contains('prev')) {
-            if (currentIdx > 0) {
-                currentIdx--;
-                prevButton.style.width = '24px';
-                nextButton.style.width = '8px';
-            }
-        }
-        translate = -liWidth * currentIdx; // 정확히 273px씩 이동
-        slider.style.transform = `translateX(${translate}px)`;
+        if (event.target.classList.contains('slide2')) {
+            fstButton.style.width = '8px';
+            sndButton.style.width = '24px';
+        } else if (event.target.classList.contains('slide1')) {
+            fstButton.style.width = '24px';
+            sndButton.style.width = '8px';
+        } 
     }
 }
 

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <style>
+
+        *{ 
+            box-sizing: border-box; 
+            margin: 0; 
+            padding:0;
+        }
+
+        ul { list-style: none; padding: 0; }
+        a { text-decoration: none; }
+
+        body  {
+            background-color: #fff;
+            color: #444;
+            font-size: 60px;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0; left: 0;
+            bottom: 0; right: 0;
+            background-color: #fff;
+            z-index: 9999;
+            mix-blend-mode: difference;
+            pointer-events: none; 
+            /* z-index는 깔되 버튼 이벤트는 방해하지 않게 해줌 */
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="overlay"></div>
+    <div>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias maiores esse cum nostrum, placeat aperiam atque excepturi sapiente. Fugit quas pariatur doloremque asperiores, quod quam rem, dignissimos eos qui voluptatem doloribus officiis tempore possimus, autem perspiciatis iure consequuntur totam soluta?
+    </div>
+    <button>안녕</button>
+    <script>
+
+        
+    </script>
+</body>
+</html>
