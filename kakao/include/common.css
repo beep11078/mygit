@@ -161,13 +161,14 @@ li {
 
 .header .nav .mainMenu > li {
     position: relative;
+    margin: 0 40px;
+    flex-shrink: 0;
 }
 
 .header .nav .mainMenu > li a {
     line-height: 85px;
     font-size: 17px;
     position: relative;
-    padding: 0 40px;
     color: var(--primary-color);
     text-decoration: none;
 }
@@ -1554,16 +1555,71 @@ a .blackCircle {
 }
 
 
-@media screen and (max-width:1024px) {
+@media screen and (max-width:1200px) {
 
-    .wrap .header {
-        width: 100%;
-        height: 100vh;
-        background-color: var(--secondary-color);
-        display: flex;
-        justify-content: space-around;
-        align-items: start;
-        padding-top: 24px;
+    .wrap {
+        max-width: 712px;
+        margin: auto;
     }
 
+    .wrap .header {    
+        height: 72px;
+        background-color: var(--secondary-color);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        padding: 25px 0;
+    }
+
+    .wrap .header .logo {
+        height: 22px;
+    }
+
+    .wrap .header .nav {
+        display: none;
+    }
+
+    .main .section1 .mainBox {
+        display: block;
+    }
+
+    .main .section1 .mainBox .visualBox .mainVideo {
+        width: 712px;
+        height: 406px;
+        object-fit: fill;
+        border-radius: 20px;
+    }
+
+    .main .section1 .mainBox .visualBox .kakaoMore button {
+        width: 208px;
+        height: 56px;
+        padding: 14px;
+        line-height: 14px;
+    }
+
+    .main .section1 .mainBox .visualBox .kakaoMore .kakaoMoreBox {
+        width: 148px;
+        top: 0;
+    }
+
+    .main .section1 .mainBox .visualBox .kakaoMore .kakaoMoreBox::after  {
+        top: 0; left: auto; right: 0;
+        height: 50px;
+        width: 20px;
+        background-size: auto 50px;
+        background-image: url(../images/Kakao_image/kakaoSpeechBubbleSide.svg);
+    }
+
+    .main .section1 article .mainBox .visualBox .kakaoMore::before {
+        width: 20px; height: 20px;
+        top: -1px;
+        left: -19px;
+    }
+
+    .main .section1 article .mainBox .visualBox .kakaoMore::after {
+        width: 20px; height: 20px;
+        top: 55px;
+        right: -1px;
+    }
 }
