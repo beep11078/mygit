@@ -7,7 +7,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css?family=Heebo:300&display=swap');
 
-        /*  * / :root / html / body 선택자 비교
+        /*  cf) * / :root / html / body 선택자 비교
         
         * {
             -모든 요소에 적용되는 범용 선택자
@@ -101,7 +101,7 @@
             background-color: var(--primary-color);
             position: absolute;
             top: 50%;
-            left: 50%;
+            left: 50%; 
             height: 65px;
             width: 3px;
             transform-origin: bottom center;
@@ -224,6 +224,7 @@
             const day = time.getDay()
             const date = time.getDate()
             const hours = time.getHours()
+            
             const hoursForClock = hours >= 13 ? hours % 12 : hours;
             // hours가 13보다 크면 hours를 12로 나눈 나머지를 반환, 아니면 hours 그대로 반환 (12시간 형식으로 바꿔줌)
             const minutes = time.getMinutes()
