@@ -19,6 +19,7 @@ window.addEventListener('scroll', () => {
 // 서치 이벤트
 const searchBtn = document.querySelector('.btn_search');
 const searchBox = document.querySelector('.searchBox');
+const searchBg = document.querySelector('.searchBg');
 const logo = document.querySelector('.logo');
 const zDown = document.querySelector('.kakaoMore');
 
@@ -34,6 +35,7 @@ searchBtn.addEventListener('click', (e) => {
         logo.style.zIndex = 999;
         zDown.style.zIndex = '-1';
         searchBox.style.display = 'block';  // 검색창 열기
+        searchBg.style.display = 'block';  // 검색창 열기
         isSearchVisible = true; // 상태 업데이트
     } else {
         searchSpan.textContent = 'search'; // 아이콘 변경
@@ -41,11 +43,10 @@ searchBtn.addEventListener('click', (e) => {
         logo.style.zIndex = '';
         zDown.style.zIndex = 999;
         searchBox.style.display = 'none'; // 검색창 닫기
+        searchBg.style.display = 'none'; // 검색창 닫기
         isSearchVisible = false; // 상태 업데이트
     }
 });
-
-
 
 
 // 배너 슬라이드

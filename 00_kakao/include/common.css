@@ -240,6 +240,7 @@ li {
     background-size: cover;
     background-repeat: no-repeat;
     border: none;
+    cursor: pointer;
 }
 
 .material-symbols-outlined {
@@ -250,15 +251,26 @@ li {
     background-color: rgba(0, 0, 0, .1);
 }
 
+.searchBg {
+    display: none;
+    position: absolute;
+    top: 0; left: 0;
+    z-index: 99;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, .7);
+}
+
 .searchBox {
     display: none;
     position: absolute;
+    z-index: 100;
     top: 0; left: 0;
     height: 454px;
     width: 100vw;
     background-image: url(../images/Kakao_image/bg_search.png);
     background-color: var(--secondary-color);
-    background-position: 67% center;
+    background-position: 80% center;
     background-repeat: no-repeat;
     background-size: auto 178px;
 }
@@ -269,12 +281,17 @@ li {
     top: calc(454px / 2);
     transform: translate(-50%, -50%);
     border: none;
-    background-color: var(--primary-color);
-    font-size: 24px;
+    background-image: url(../images/Kakao_image/kakaoSearch.svg);
+    color: var(--secondary-color);
+    width: 823px;
+    height: 72px;
+    font-size: 22px;
+    font-weight: bold;
     padding: 20px;
     border-radius: 10px;
     display: flex;
     justify-content: space-between;
+    outline: 0;
 }
 
 .searchBar::placeholder {
@@ -287,6 +304,10 @@ li {
 
 .main {
     margin: 92px auto 0;
+}
+
+.main .section1 {
+    position: relative;
 }
 
 .main .section1 .mainBox {
