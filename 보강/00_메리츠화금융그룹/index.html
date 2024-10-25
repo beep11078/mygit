@@ -12,21 +12,26 @@
 
 </head>
 
-<body onwheel="homzzang(event)">
+<body>
 
     <div class="wrapper">
                     
-        <header id="header">
-            <div id="headerBox">    
-                <a href="index.html" class="logoLink">
+        <header class="header nav-down">
+            <div class="headerBox">    
                     <h1>
-                        <span class="red logo">meritz</span>메리츠금융그룹
+                        <a href="index.html" class="logoLink">
+                            <span class="red logo">meritz</span>메리츠금융그룹
+                        </a>
                     </h1>
-                </a>
+
                 <nav id="gnb">
-                    <ul id="main">
+
+                    <h2><span class="hide">사이트 주요 메뉴</span></h2>
+
+                    <ul class="main">
+
                         <li class="menu">
-                            <a href="#" class="red meunList">그룹소개</a>
+                            <h3 class="red meunTitle">그룹소개</h3>
                             <ul class="sub">
                                 <li class="subList">
                                     <a href="#">CEO 인사말</a>
@@ -42,8 +47,9 @@
                                 </li>
                             </ul>
                         </li>
+
                         <li class="menu">
-                            <a href="#" class="meunList">IR</a>
+                            <h3  class="meunTitle">IR</h3>
                             <ul class="sub">
                                 <li class="subList">
                                     <a href="#">자료</a>
@@ -65,8 +71,9 @@
                                 </li>
                             </ul>
                         </li>
+
                         <li class="menu">
-                            <a href="#" class="meunList">PR</a>
+                            <h3  class="meunTitle">PR</h3>
                             <ul class="sub">
                                 <li class="subList">
                                     <a href="#">NEWS</a>
@@ -82,8 +89,9 @@
                                 </li>
                             </ul>
                         </li>
+
                         <li class="menu">
-                            <a href="#" class="meunList">ESG</a>
+                            <h3  class="meunTitle">ESG</h3>
                             <ul class="sub">
                                 <li class="subList">
                                     <a href="#">ESG전략</a>
@@ -99,18 +107,23 @@
                                 </li>
                             </ul>
                         </li>
+
                     </ul>
+                    <div class="subListBack"></div>
                 </nav>
-                <div class="subListBack"></div>
+                
                 <div class="buttonBox">
                     <button class="ham">
                         <div class="peti"></div>
                     </button>
                 </div>
-                <div class="fullMenu">
+
+                <nav class="fullMenu">
+
                     <div class="logoBox">
                         <span class="red logo">meritz</span>메리츠금융그룹
                     </div>
+                    
                     <ul class="majorList">
                         <li class="major">
                             <h3>그룹소개</h3>
@@ -208,7 +221,7 @@
                         </li>
                         
                     </ul>
-                </div>
+                </nav>
             </div>
             <div id="langBox">
                 <ul id="lang">

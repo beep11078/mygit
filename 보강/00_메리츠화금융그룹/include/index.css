@@ -14,10 +14,19 @@
 ul { list-style: none; padding: 0; }
 a { text-decoration: none; }
 
+.hide {
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: polygon(0 0,0 0,0 0);
+}
+
 .scrollLock { 
     overflow: hidden;
     touch-action: none;
-}
+    }
 
 .red {
     color: red !important;
@@ -25,10 +34,6 @@ a { text-decoration: none; }
 
 .bold {
     font-weight: bold !important;
-}
-
-h1 {
-    font-size: 1.25rem;
 }
 
 .logo {
@@ -45,7 +50,9 @@ h1 {
     color: #888;
 }
 
-#header {
+
+
+.header {
     width: 100%;
     height: 100px;
     display: block;
@@ -55,14 +62,14 @@ h1 {
     position: fixed;
     top: 0; z-index: 3;
     background: #fff;
-    transition: .3s ease-in-out;
+    transition : transform .3s ease-in-out;
 }
 
 .headerUP {
     top: -100px !important;
 }
 
-#headerBox {
+.header .headerBox {
     display: flex;
     align-items: center;
     width: 100%;
@@ -73,7 +80,11 @@ h1 {
     padding: 0 2rem;
 }
 
-.logoLink {
+.header .headerBox h1 {
+    font-size: 1.25rem;
+}
+
+.header .headerBox .logoLink {
     color: #000;
     font-size: 1.25rem;
     font-weight: bold;
@@ -83,62 +94,30 @@ h1 {
     width: 50%;
 }
 
-&.full {
-height: 400px;
-overflow: hidden;
-#gnb .list .depth01 {
-    transition: none;
-}
-#gnb .list .depth02 {
-    transition: none;
-    border-radius: 0;
-    li {
-    transition: none;
-    }
-}
-#gnb .list > li:hover .depth02 {
-    color: #fff;
-    background-color: $main-color;
-}
-#gnb .list .depth02 {
-    height: 300px;
-    color: #111;
-    opacity: 1;
-    pointer-events: auto;
-    background-color: #fff;
-    li {
-    opacity: 1;
-    }
-}
-}
-
-#main {
+#gnb .main {
     display: grid;
     width: 100%;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 0;
 }
 
-.menu {
-    width: 100%;
+#gnb .main .menu {
     text-align: center;
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.1s ease-in-out;
     position: relative;
 }
 
-.menu:hover .sub{
+#gnb .main .menu:hover .meunTitle::before {
+    transform: scaleX(1);
+}
+
+#gnb .main .menu:hover .sub{
     transform: scale(1);
+    background-color: #f5f5f5;
+    /* display: block; */
 }
 
-.meunList:hover,
-.subList:hover a,
-.subMinorList a:hover,
-.minor:hover, 
-.subMinorList li:hover::marker {
-    color: red;
-}
-
-.meunList{
+#gnb .main .menu .meunTitle{
     display: block;
     color: black;
     line-height: 100px;
@@ -156,7 +135,7 @@ overflow: hidden;
 }
 
 /* ::beofre, ::after 가상요소 = 인라인 */
-.meunList::before {
+#gnb .main .menu  .meunTitle::before {
     content: '';
     /* %는 부모기준 */
     /* transform % 자신이 기준 */
@@ -171,41 +150,40 @@ overflow: hidden;
     transition: transform 0.3s ease-in-out;
 }
 
-.meunList:hover::before {
+#gnb .main .menu .meunTitle:hover::before {
     transform: scaleX(1);
 }
 
-.menu:hover .meunList::before {
-    transform: scaleX(1);
+#gnb .main .menu .meunTitle:hover,
+.subList:hover a,
+.subMinorList a:hover,
+.minor:hover, 
+.subMinorList li:hover::marker {
+    color: red;
 }
 
-.menu:hover .sub {
-    background-color: #f5f5f5;
-}
-
-.sub {
+#gnb .main .menu .sub {
     position: absolute;
     z-index: 99;
     display: none;
     width: 100%;
-    transition: .3s ease-in-out;
+    transition: transform 0.1s ease-in-out;
     transform-origin: 50% 0;
-    transition: transform 0.3s ease-in-out;
     background-color: #fff; height: 336px; 
     border-top: 1px solid red;
 }
 
-.subList {
+#gnb .main .menu .sub .subList {
     padding: 1rem 0;
 }
 
-.subList a {
+#gnb .main .menu .sub .subList a {
     font-weight: normal;
     font-size: 1rem;
     color: black;
 }
 
-.subListBack {
+#gnb .subListBack {
     position: absolute;
     display: none;
     z-index: 98;
@@ -213,15 +191,18 @@ overflow: hidden;
     background: white;
     top: 100px; left: 0;
     border-top: 1px solid red;
-    transition: .3s ease-in-out both;
+    transition: .1s ease-in-out both;
 }
+
+
+
 
 .buttonBox {
     display: block;
     width: 50px;
 }
 
-.ham {
+.buttonBox .ham {
     width: 30px;
     height: 30px;
     background-color: transparent;
@@ -230,8 +211,8 @@ overflow: hidden;
     cursor: pointer;
 }
 
-.ham::before,
-.ham::after {
+.buttonBox .ham::before,
+.buttonBox .ham::after {
     content: '';
     width: 100%;
     height: 3px;
@@ -242,25 +223,25 @@ overflow: hidden;
     transform: rotate(0); 
 }
 
-.ham::before {
+.buttonBox .ham::before {
     top:0;
 }
 
-.ham::after {
+.buttonBox .ham::after {
     bottom:0;
 }
 
-.ham.close::before {
+.buttonBox .ham.close::before {
     top:50% !important;
     transform: rotate(45deg) !important;
 }
 
-.ham.close::after {
+.buttonBox .ham.close::after {
     top:50% !important;
     transform: rotate(-45deg) !important;
 }
 
-.peti {
+.buttonBox .ham .peti {
     width: 100%;
     height: 3px;
     position: absolute;
@@ -270,7 +251,7 @@ overflow: hidden;
     transform: translateY(-50%);
 }
 
-.peti.close {
+.buttonBox .ham .peti.close {
     background-color: rgba(0, 0, 0, 0) !important;
 }
 
@@ -284,7 +265,7 @@ overflow: hidden;
     z-index: 1000;
 }
 
-.fullMenu {
+.header .fullMenu {
     display: none;
     position: fixed;
     top: 0; left: 0;
@@ -300,13 +281,14 @@ overflow: hidden;
     display: block;
 }
 
-.logoBox {
+
+.header .fullMenu .logoBox {
     display: block;
     width: 100%;
     text-align: center;
 }
 
-.majorList {
+#header .fullMenu .majorList {
     display: grid;
     width: 1200px;
     grid-template-columns: repeat(4, 1fr);
@@ -315,11 +297,11 @@ overflow: hidden;
     margin-top: 3rem;
 }
 
-.major {
+.header .fullMenu .majorList .major {
     position: relative;
 }
 
-.major::before {
+.header .fullMenu .majorList .major::before {
     content: '';
     width: 90%;
     height: 1px;
@@ -327,7 +309,7 @@ overflow: hidden;
     position: absolute;
 }
 
-.major h3 {
+.header .fullMenu .majorList .major h3 {
     width: 90%;
     padding: 1rem;
     line-height: 4rem;
