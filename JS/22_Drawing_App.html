@@ -121,6 +121,9 @@
 
                     drawCircle(x2, y2)
                     drawLine(x, y, x2, y2)
+                    // drawCircle(): 특정 지점에 작은 원을 그려 브러시의 흔적을 남김
+                    // drawLine(): 두 지점 사이에 연속적인 선을 그림
+                    // 두 함수가 함께 동작하면서 마우스가 빠르게 움직여도 선이 끊기지 않고 부드럽게 그려짐
 
                     x = x2
                     y = y2
@@ -128,8 +131,10 @@
             })
 
             function drawCircle(x, y) {
-                ctx.beginPath();
+                ctx.beginPath(); // 새로운 path 만들기
                 ctx.arc(x, y, size, 0, Math.PI * 2)
+                // arc(x, y, 반지름, 시작 각도, 끝 각도, 방향 설정(옵션))
+                // Math.PI = π
                 ctx.fillStyle = color
                 ctx.fill()
             }
@@ -171,30 +176,32 @@
 
             clearEl.addEventListener('click', () => ctx.clearRect(0,0, canvas.width, canvas.height))
 
-            canvas.addEventListener('touchstart', (e) => {
-                const touch = e.touches[0];
-                isPressed = true;
-                x = touch.clientX - canvas.offsetLeft;
-                y = touch.clientY - canvas.offsetTop;
-            });
 
-            canvas.addEventListener('touchmove', (e) => {
-                if (isPressed) {
-                    const touch = e.touches[0];
-                    const x2 = touch.clientX - canvas.offsetLeft;
-                    const y2 = touch.clientY - canvas.offsetTop;
-                    drawCircle(x2, y2);
-                    drawLine(x, y, x2, y2);
-                    x = x2;
-                    y = y2;
-                }
-            });
+            // // 모바일 작동
+            // canvas.addEventListener('touchstart', (e) => {
+            //     const touch = e.touches[0];
+            //     isPressed = true;
+            //     x = touch.clientX - canvas.offsetLeft;
+            //     y = touch.clientY - canvas.offsetTop;
+            // });
 
-            document.addEventListener('touchend', () => {
-                isPressed = false;
-                x = undefined;
-                y = undefined;
-            });
+            // canvas.addEventListener('touchmove', (e) => {
+            //     if (isPressed) {
+            //         const touch = e.touches[0];
+            //         const x2 = touch.clientX - canvas.offsetLeft;
+            //         const y2 = touch.clientY - canvas.offsetTop;
+            //         drawCircle(x2, y2);
+            //         drawLine(x, y, x2, y2);
+            //         x = x2;
+            //         y = y2;
+            //     }
+            // });
+
+            // document.addEventListener('touchend', () => {
+            //     isPressed = false;
+            //     x = undefined;
+            //     y = undefined;
+            // });
 
         </script>
     </body>
