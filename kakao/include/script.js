@@ -10,7 +10,7 @@ window.addEventListener('scroll', () => {
     } else {
         header.classList.remove('scrolled');
         header.style.zIndex = 9;
-        moreBtn.style.opacity = '1'; // 스크롤 초기 상태에서 표시
+        // moreBtn.style.opacity = '1'; // 스크롤 초기 상태에서 표시
         moreBtn.style.pointerEvents = 'auto'; // hover 가능하게 복원
     }
 });
@@ -71,6 +71,7 @@ searchBtn.addEventListener('click', (e) => {
 
 
 // 배너 슬라이드
+const right1 = document.querySelector('.visualRightList1')
 const slide1 = document.querySelector('.slide1');
 const slide2 = document.querySelector('.slide2');
 const donation = document.querySelector('.donation');
