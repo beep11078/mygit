@@ -356,23 +356,24 @@ li {
     z-index: 99;
 }
 
-.main .section1 .mainBox .visualBox .kakaoMore .kakaoMoreBox{
-    background-color: var(--primary-color);
+.main .section1 .mainBox .visualBox .kakaoMore .kakaoMoreBox {
+    display: block;
     width: 146px;
+    background-color: var(--primary-color);
     text-align: center;
     color: var(--secondary-color);
     padding: 18px 15px;
     border-radius: 12px;
     position: absolute;
     top: -50px;
-    display: block;
     font-size: 13px;
     letter-spacing: -0.3px;
 }
-
-.kakaoMore:hover .kakaoMoreBox {
+/* 
+.main .section1 .mainBox .visu  alBox .kakaoMore:hover .kakaoMoreBox {
     display: block;
-}
+    pointer-events: auto;
+} */
 
 .main .section1 .mainBox .visualBox .kakaoMore .kakaoMoreBox::after {
     content: '';
@@ -516,11 +517,16 @@ li {
     align-items: center;
 }
 
+
 .visualRightBox .visualRight .visualRightList1 .donation .donationAmount {
     font-size: 2.5rem;
     line-height: 2rem;
     font-weight: bold;
     margin: 15px 0 5px 0;
+}
+
+.visualRightBox .visualRight .visualRightList1 .kakaoimpact {
+    display: none;
 }
 
 .visualRightBox .visualRight .visualRightList1 .kakaoimpact a {

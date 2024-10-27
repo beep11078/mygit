@@ -1,19 +1,35 @@
-// 스크롤 이벤트
 const header = document.querySelector('.header');
-const moreBtn = document.querySelectorAll('.kakaoMoreBox');
+const moreBtn = document.querySelector('.kakaoMoreBox');
 
 window.addEventListener('scroll', () => {
     if (window.scrollY > 0) {
         header.classList.add('scrolled');
         header.style.zIndex = 999;
-        moreBtn.forEach(element => {
-            element.style.opacity = '0%';
-        });
+        moreBtn.style.opacity = '0'; // 스크롤 시 숨기기
+        moreBtn.style.pointerEvents = 'none'; // hover 방지
     } else {
         header.classList.remove('scrolled');
         header.style.zIndex = 9;
+        moreBtn.style.opacity = '1'; // 스크롤 초기 상태에서 표시
+        moreBtn.style.pointerEvents = 'auto'; // hover 가능하게 복원
     }
 });
+
+// 마우스 오버/아웃 이벤트 리스너 추가
+moreBtn.addEventListener('mouseenter', () => {
+    if (window.scrollY === 0) {  // 스크롤이 없는 경우에만 동작
+        moreBtn.style.opacity = '1';
+    }
+});
+
+moreBtn.addEventListener('mouseleave', () => {
+    if (window.scrollY > 0) {  // 스크롤이 있는 경우에만 숨기기
+        moreBtn.style.opacity = '0';
+    }
+});
+
+
+
 
 
 // 서치 이벤트
@@ -55,34 +71,31 @@ searchBtn.addEventListener('click', (e) => {
 
 
 // 배너 슬라이드
-const menuTitle = document.querySelector('.menuTitle');
-const subMenu = document.querySelector('.subMenu');
+const slide1 = document.querySelector('.slide1');
+const slide2 = document.querySelector('.slide2');
+const donation = document.querySelector('.donation');
+const kakaoImpact = document.querySelector('.kakaoimpact');
 
-menuTitle.addEventListener('click', () => {
-    subMenu.classList.toggle('subActive');
-})
+// 초기 상태 설정 (donation만 보이도록)
+donation.style.display = 'flex';
+kakaoImpact.style.display = 'none';
 
-window.onload = function () {
-    const slideWrap = document.querySelector('.visualRightList1');
+// slide1 버튼 클릭 시 donation 표시
+slide1.addEventListener('click', () => {
+    donation.style.display = 'flex';
+    kakaoImpact.style.display = 'none'; // 다른 슬라이드는 숨기기
+    slide1.style.width = '24px';
+    slide2.style.width = '8px';
+});
 
-    const fstButton = slideWrap.querySelector('.slide1');
-    const sndButton = slideWrap.querySelector('.slide2');
+// slide2 버튼 클릭 시 kakaoimpact 표시
+slide2.addEventListener('click', () => {
+    donation.style.display = 'none'; // 기존 슬라이드는 숨기기
+    kakaoImpact.style.display = 'block';
+    slide1.style.width = '8px';
+    slide2.style.width = '24px';
+});
 
-
-    fstButton.addEventListener('click', moveSlide);
-    sndButton.addEventListener('click', moveSlide);
-
-    function moveSlide(event) {
-        event.preventDefault();
-        if (event.target.classList.contains('slide2')) {
-            fstButton.style.width = '8px';
-            sndButton.style.width = '24px';
-        } else if (event.target.classList.contains('slide1')) {
-            fstButton.style.width = '24px';
-            sndButton.style.width = '8px';
-        } 
-    }
-}
 
 
 // // 다크모드
