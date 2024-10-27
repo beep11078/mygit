@@ -544,14 +544,20 @@ li {
     background-color: #f3f3f3;
 }
 
+
 .visualRightBox .visualRight .visualRightList2 .campaign {
     padding: 20px;
 }
 
-.visualRightBox .visualRight .visualRightList2 .campaign .theme {
+.visualRightBox .visualRight .visualRightList2 .campaign:first-child .theme {
     color: var(--secondary-color);
-    font-size: .9rem;
     background-color: var(--primary-color);
+}
+
+.visualRightBox .visualRight .visualRightList2 .campaign .theme {
+    color: #000;
+    font-size: .9rem;
+    background-color: #fae100;
     padding: 5px 10px;
     border-radius: 10px;
     margin-left: 0;

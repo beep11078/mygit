@@ -70,32 +70,38 @@ searchBtn.addEventListener('click', (e) => {
 });
 
 
-// 배너 슬라이드
-const right1 = document.querySelector('.visualRightList1')
-const slide1 = document.querySelector('.slide1');
-const slide2 = document.querySelector('.slide2');
-const donation = document.querySelector('.donation');
-const kakaoImpact = document.querySelector('.kakaoimpact');
+// 모든 슬라이드 세트 초기화
+function initializeSlides(slideSet) {
+    const slides = slideSet.querySelectorAll('.visualSlide li');
+    const buttons = slideSet.querySelectorAll('.circleBtn div');
 
-// 초기 상태 설정 (donation만 보이도록)
-donation.style.display = 'flex';
-kakaoImpact.style.display = 'none';
+    // 슬라이드와 버튼 초기 상태 설정
+    slides.forEach((slide, index) => {
+        slide.style.display = index === 0 ? 'flex' : 'none'; // 첫 슬라이드 표시
+        buttons[index].style.width = index === 0 ? '24px' : '8px'; // 첫 버튼 강조
+    });
 
-// slide1 버튼 클릭 시 donation 표시
-slide1.addEventListener('click', () => {
-    donation.style.display = 'flex';
-    kakaoImpact.style.display = 'none'; // 다른 슬라이드는 숨기기
-    slide1.style.width = '24px';
-    slide2.style.width = '8px';
-});
+    // 각 버튼에 클릭 이벤트 추가
+    buttons.forEach((button, index) => {
+        button.addEventListener('click', () => {
+            showSlideAndUpdateButtons(slides, buttons, index); // 슬라이드와 버튼 동시 업데이트
+        });
+    });
+}
 
-// slide2 버튼 클릭 시 kakaoimpact 표시
-slide2.addEventListener('click', () => {
-    donation.style.display = 'none'; // 기존 슬라이드는 숨기기
-    kakaoImpact.style.display = 'block';
-    slide1.style.width = '8px';
-    slide2.style.width = '24px';
-});
+// 슬라이드와 버튼을 동시에 업데이트하는 함수
+function showSlideAndUpdateButtons(slides, buttons, activeIndex) {
+    slides.forEach((slide, index) => {
+        slide.style.display = index === activeIndex ? 'flex' : 'none'; // 활성 슬라이드 표시
+    });
+
+    buttons.forEach((button, index) => {
+        button.style.width = index === activeIndex ? '24px' : '8px'; // 활성 버튼 강조
+    });
+}
+
+// 모든 슬라이드 세트에 기능 적용
+document.querySelectorAll('.visualRightList').forEach(initializeSlides);
 
 
 
