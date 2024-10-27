@@ -1,3 +1,11 @@
+const menuTitle = document.querySelector('.menuTitle');
+const subMenu = document.querySelector('.subMenu');
+
+menuTitle.addEventListener('click', () => {
+    subMenu.classList.toggle('subActive');
+})
+
+
 const header = document.querySelector('.header');
 const moreBtn = document.querySelector('.kakaoMoreBox');
 
