@@ -36,11 +36,45 @@
             position: absolute;
             right: 10px;
             top: 10px;
-            background-color: #ccc;
+            /* background-color: #ccc; */
             z-index: 9999;
             display: flex;
             align-items: center;
             gap: 10px;
+        }
+
+        .hide {
+            width: 1px;
+            height: 1px;
+            position: absolute;
+            margin: -1px;
+            overflow: hidden;
+            clip-path: polygon(0 0,0 0,0 0);
+        }
+
+        .prev, .next {
+            position: relative;
+            padding: 8px;
+        }
+
+        .prev::before, .next::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(0);
+            width: 5px;
+            height: 5px;
+            border-left: 1px solid black;
+            border-top: 1px solid black;
+        }
+
+        .prev::before {
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+
+        .next::before {
+            transform: translate(-50%, -50%) rotate(135deg);
         }
     </style>
 
@@ -60,8 +94,8 @@
             <div class="control">
                 <div class="pager"></div>
                 <button class="play_stop">pause</button>
-                <button class="btn prev">prev</button>
-                <button class="btn next">next</button>
+                <button class="btn prev"><span class="hide">prev</span></button>
+                <button class="btn next"><span class="hide">next</span></button>
             </div>
         </div>
     </div>
@@ -82,6 +116,18 @@
                 nextEl : '.slider .next'
             }
         })
+
+        // .play_stop 버튼 이벤트 처리
+    document.querySelector('.play_stop').addEventListener('click', function () {
+        if (this.innerHTML === 'pause') {
+            slide.autoplay.stop(); // 슬라이드 멈춤
+            this.innerHTML = 'play';
+        } else {
+            slide.autoplay.start(); // 슬라이드 재생
+            this.innerHTML = 'pause';
+        }
+    });
+
         
     </script>
 </body>
