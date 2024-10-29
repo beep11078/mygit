@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="swiper/swiper-bundle.min.css">
+    <style>
+
+        *{ 
+            box-sizing: border-box; 
+            margin: 0; 
+            padding:0;
+        }
+
+        body {
+            padding: 50px;
+        }
+
+        ul { list-style: none; padding: 0; }
+
+        a { text-decoration: none; }
+
+        .slider {
+            width: 800px;
+            margin: 0 auto;
+            border-bottom: 10px solid #000;
+        }
+
+        .slider .swiper-slide {
+            background-color: #fc0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+            height: 400px;
+        }
+
+        .slider .swiper-slide:nth-child(even) {
+            background-color: #f0c;
+        }
+
+        .slider .btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 99;
+        }
+
+        .slider .prev {
+            left: 0;
+        }
+
+        .slider .next {
+            right: 0;
+        }
+
+        .slider .mypager {
+            position: absolute;
+            left: 0;
+            bottom: 40px;
+            z-index: 99;
+            background-color: #eee;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .slider .mypager .swiper-pagination-bullet {
+            width: 20px;
+            height: 20px;
+        }
+        
+        .slider .mypager .swiper-pagination-bullet-active {
+            background-color: #0fc;
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- slidebox start -->
+    <div class="slider">
+        <!-- swiper start -->
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">slide1</div>
+                <div class="swiper-slide">slide2</div>
+                <div class="swiper-slide">slide3</div>
+                <div class="swiper-slide">slide4</div>
+                <div class="swiper-slide">slide5</div>
+            </div>
+            <!-- 커스텀 좌우버튼(navigation)은 wrapper 다음에! -->
+            <button class="btn prev">이전보기</button>
+            <button class="btn next">다음보기</button>
+            <!-- 커스텀 페이지 네비(pagination) 박스만 생성하면 안에 코드 자동생성-->
+            <div class="mypager"></div>
+        </div>
+        <!-- 컨트롤 내비가 스와이프 박스 외부에 위치할 경우 코딩 위치-->
+        <!-- swiper end -->
+
+    </div>
+    <!-- slidebox end -->
+
+    <!-- 슬라이더 박스 바깥 쪽에 컨트롤 버튼 위치하고 싶을 땐 -->
+    <!-- swiper 박스 바깥쪽에 내비게이션을 코딩해야 한다 -->
+
+
+    <script src="swiper/swiper-bundle.min.js"></script>
+    <script>
+
+        // swiper 
+        let mySlide = new Swiper('.swiper', {
+            autoplay : {
+                delay : 1000,
+            },
+            navigation : {
+                prevEl : '.slider .prev',
+                nextEl : '.slider .next'
+            },
+            pagination : {
+                el : '.slider .mypager',
+            },
+        });
+        
+    </script>
+</body>
+</html>
