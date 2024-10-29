@@ -1,11 +1,16 @@
 @font-face {
-    font-family: 'NanumSquareNeo';
+    font-family: "NanumSquareNeo";
     src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.eot);
-    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.eot?#iefix) format("embedded-opentype"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.woff) format("woff"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.ttf) format("truetype");
+    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.eot?#iefix)
+            format("embedded-opentype"),
+        url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.woff)
+            format("woff"),
+        url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.ttf)
+            format("truetype");
 }
 
 * {
-    font-family: 'NanumSquareNeo';
+    font-family: "NanumSquareNeo";
     box-sizing: border-box;
     margin: 0;
 }
@@ -47,7 +52,7 @@ li {
     position: absolute;
     margin: -1px;
     overflow: hidden;
-    clip-path: polygon(0 0,0 0,0 0);
+    clip-path: polygon(0 0, 0 0, 0 0);
 }
 
 .button {
@@ -103,8 +108,9 @@ li {
 }
 
 .container .titleBox .titleArticle::before {
-    content: '';
-    width: 78px; height: 78px;
+    content: "";
+    width: 78px;
+    height: 78px;
     background-position: center;
     background-size: cover;
 }
@@ -120,7 +126,7 @@ li {
     width: 100%;
     height: 85px;
     margin-bottom: 7px;
-    padding: 0 calc(calc(100vw - 1727px) /2 );
+    padding: 0 calc(calc(100vw - 1727px) / 2);
     top: 0;
     left: 50%;
     transform: translateX(-50%);
@@ -140,7 +146,7 @@ li {
     background-image: url(../images/Kakao_image/kakaoLogo.svg);
     background-repeat: no-repeat;
     background-position: center;
-    padding: .5px;
+    padding: 0.5px;
     width: 74px;
     height: 24px;
     display: block;
@@ -150,7 +156,8 @@ li {
 
 .header .nav {
     position: absolute;
-    top: 50%; left: 50%;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
     margin: auto;
 }
@@ -175,7 +182,7 @@ li {
 
 .header .nav .mainMenu > li:last-child a.arrow::after {
     content: "↗️";
-    font-size: .9rem;
+    font-size: 0.9rem;
 }
 
 .header .nav .mainMenu:hover > li a:not(:hover) {
@@ -192,8 +199,7 @@ li {
 
 .header .nav .mainMenu li:hover .subMenu,
 .header .nav .mainMenu li:active .subMenu,
-.header .nav .mainMenu li:focus .subMenu
-{
+.header .nav .mainMenu li:focus .subMenu {
     display: block;
 }
 
@@ -205,7 +211,7 @@ li {
     display: none;
     background-color: var(--primary-color);
     position: absolute;
-    top: 80%; 
+    top: 80%;
     padding: 15px 10px;
     border-radius: 25px;
     z-index: 5;
@@ -234,7 +240,8 @@ li {
 
 .header .util button {
     margin: 0 5px;
-    width: 35px; height: 35px;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
     background-color: transparent;
     background-position: center;
@@ -245,7 +252,7 @@ li {
 }
 
 .header .util button:hover {
-    background-color: rgba(0, 0, 0, .1);
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 .material-symbols-outlined {
@@ -255,18 +262,20 @@ li {
 .searchBg {
     display: none;
     position: absolute;
-    top: 0; left: 0;
+    top: 0;
+    left: 0;
     z-index: 99;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(255, 255, 255, .7);
+    background-color: rgba(255, 255, 255, 0.7);
 }
 
 .searchBox {
     display: none;
     position: absolute;
     z-index: 100;
-    top: 0; left: 0;
+    top: 0;
+    left: 0;
     height: 454px;
     width: 100vw;
     background-image: url(../images/Kakao_image/bg_search.png);
@@ -315,12 +324,11 @@ li {
     font-size: 12px;
 }
 
-
 /* mainBox --------------------------------------------------------- */
 
 .main {
     margin: 92px auto 0;
-    transition: transform .2s ease-in-out;
+    transition: transform 0.2s ease-in-out;
     position: relative;
 }
 
@@ -352,7 +360,8 @@ li {
 
 .main .section1 .mainBox .visualBox .kakaoMore {
     position: absolute;
-    right: 0; top: 0;
+    right: 0;
+    top: 0;
     z-index: 99;
 }
 
@@ -376,20 +385,22 @@ li {
 } */
 
 .main .section1 .mainBox .visualBox .kakaoMore .kakaoMoreBox::after {
-    content: '';
+    content: "";
     background-image: url(../images/Kakao_image/kakaoSpeechBubble.svg);
     background-size: contain;
     border: none;
     background-color: transparent;
     position: absolute;
-    top: 95%; left: 20px;
-    width: 12px; height: 12px;
+    top: 95%;
+    left: 20px;
+    width: 12px;
+    height: 12px;
 }
 
 .main .section1 .mainBox .visualBox .kakaoMore button {
-    width: 148px; 
+    width: 148px;
     height: 102px;
-    background: url(../images/Kakao_image/light.gif) center no-repeat ;
+    background: url(../images/Kakao_image/light.gif) center no-repeat;
     background-size: contain;
     border: none;
     background-color: var(--secondary-color);
@@ -401,20 +412,24 @@ li {
 }
 
 .main .section1 article .mainBox .visualBox .kakaoMore::before {
-    width: 35px; height: 35px;
+    width: 35px;
+    height: 35px;
     content: "";
     position: absolute;
-    top: -2px; left: -33px;
+    top: -2px;
+    left: -33px;
     background-image: url(../images/Kakao_image/kakaoRoundTop.svg);
     background-repeat: no-repeat;
     background-size: 100% auto;
 }
 
 .main .section1 article .mainBox .visualBox .kakaoMore::after {
-    width: 35px; height: 35px;
+    width: 35px;
+    height: 35px;
     content: "";
     position: absolute;
-    top: 100px; right: -2px;
+    top: 100px;
+    right: -2px;
     background-image: url(../images/Kakao_image/kakaoRoundTop.svg);
     background-position: 50%;
     background-repeat: no-repeat;
@@ -423,12 +438,13 @@ li {
 
 .main .section1 article .mainBox .visualBox .mainMore {
     position: absolute;
-    bottom: 0; left: 0;
+    bottom: 0;
+    left: 0;
     z-index: 5;
-} 
+}
 
 .main .section1 article .mainBox .visualBox .mainMore button {
-    width: 300px; 
+    width: 300px;
     height: 98px;
     border: none;
     background-color: var(--secondary-color);
@@ -439,21 +455,24 @@ li {
 }
 
 .main .section1 article .mainBox .visualBox .mainMore::before {
-    width: 35px; height: 35px;
+    width: 35px;
+    height: 35px;
     content: "";
     position: absolute;
-    top: -33px; left: -2px;
+    top: -33px;
+    left: -2px;
     background-image: url(../images/Kakao_image/kakaoRoundBottom.svg);
     background-repeat: no-repeat;
     background-size: 100% auto;
-
 }
 
 .main .section1 article .mainBox .visualBox .mainMore::after {
-    width: 35px; height: 35px;
+    width: 35px;
+    height: 35px;
     content: "";
     position: absolute;
-    top: 61px; right: -33px;
+    top: 61px;
+    right: -33px;
     background-image: url(../images/Kakao_image/kakaoRoundBottom.svg);
     background-position: 50%;
     background-repeat: no-repeat;
@@ -474,26 +493,20 @@ li {
 
 .visualSlide {
     display: flex;
-    transition: transform 0.3s ease-in-out; /* 부드러운 전환 */
-    width: calc(273px * 2);
-}
-
-.visualSlide li {
-    width: 273px;
-    height: 273px; 
+    height: 273px;
 }
 
 .circleBtn {
     position: absolute;
-    left: 50%; 
-    bottom: 25px; 
+    left: 50%;
+    bottom: 25px;
     transform: translate(-50%, -50%);
     display: flex;
 }
 
 .circleBtn div {
-    width: 24px; 
-    height: 8px; 
+    width: 24px;
+    height: 8px;
     border-radius: 8px;
     background-color: var(--primary-color);
     margin: 0 5px;
@@ -502,7 +515,7 @@ li {
 }
 
 .circleBtn div:not(:first-child) {
-    width: 8px; 
+    width: 8px;
     border-radius: 8px;
     border: 1px solid #999;
     background-color: var(--secondary-color);
@@ -510,13 +523,13 @@ li {
 
 .visualRightBox .visualRight .visualRightList1 .donation {
     width: 273px;
+    height: 273px;
     background-color: #fae100;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-
 
 .visualRightBox .visualRight .visualRightList1 .donation .donationAmount {
     font-size: 2.5rem;
@@ -526,7 +539,7 @@ li {
 }
 
 .visualRightBox .visualRight .visualRightList1 .kakaoimpact {
-    display: none;
+    /* display: none; */
 }
 
 .visualRightBox .visualRight .visualRightList1 .kakaoimpact a {
@@ -544,7 +557,6 @@ li {
     background-color: #f3f3f3;
 }
 
-
 .visualRightBox .visualRight .visualRightList2 .campaign {
     padding: 20px;
 }
@@ -556,7 +568,7 @@ li {
 
 .visualRightBox .visualRight .visualRightList2 .campaign .theme {
     color: #000;
-    font-size: .9rem;
+    font-size: 0.9rem;
     background-color: #fae100;
     padding: 5px 10px;
     border-radius: 10px;
@@ -591,9 +603,12 @@ li {
 }
 
 .visualRightBox .visualRight .visualRightList3 div::after {
-    content: '';
-    width: 39px; height: 168px;
-    position: absolute; right: 0; bottom: -2px;
+    content: "";
+    width: 39px;
+    height: 168px;
+    position: absolute;
+    right: 0;
+    bottom: -2px;
     background-image: url(../images/Kakao_image/kakaoSpeechBubbleSide.svg);
     background-position: center;
     background-repeat: no-repeat;
@@ -604,17 +619,21 @@ li {
 .visualRightBox .visualRight .visualRightList3 div button {
     border-radius: 50%;
     border: none;
-    background-color: rgba(255, 255, 255, .7);
-    padding: 5px; margin: 0 5px;
-    width: 2rem; height: 2rem;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 5px;
+    margin: 0 5px;
+    width: 2rem;
+    height: 2rem;
     font-weight: bolder;
 }
 
 .visualRightBox .visualRight .visualRightList3 p::before {
     position: absolute;
-    content: '';
-    width: 80px; height: 80px;
-    top: 40%; left: 50%;
+    content: "";
+    width: 80px;
+    height: 80px;
+    top: 40%;
+    left: 50%;
     transform: translate(-50%, -50%);
     background-position: center;
     background-repeat: no-repeat;
@@ -637,7 +656,8 @@ li {
 
 .storyBox .titleBox .titleArticle .pause {
     background-color: var(--primary-color);
-    width: 50px; height: 50px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     margin-left: auto;
 }
@@ -651,7 +671,7 @@ li {
 .storyBox .storyList .wide {
     width: 1370px;
     height: 538px;
-    padding: 40px 976px 40px 40px ;
+    padding: 40px 976px 40px 40px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -660,7 +680,7 @@ li {
 
 .storyBox .storyList .wide::after {
     position: absolute;
-    content: '';
+    content: "";
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -683,7 +703,7 @@ li {
     flex-shrink: 0;
     background-color: #eee;
     border-radius: 40px;
-    padding:40px;
+    padding: 40px;
     margin: 0 10px;
     position: relative;
 }
@@ -703,7 +723,7 @@ li {
 }
 
 .storyBox .storyList .storyInfo .storyTheme {
-    font-size: .9rem;
+    font-size: 0.9rem;
     background-color: var(--secondary-color);
     padding: 5px 10px;
     border-radius: 10px;
@@ -712,25 +732,24 @@ li {
 }
 
 .storyBox .storyList .storyInfo .storyTheme::before {
-    content: '';
+    content: "";
     background-image: url(../images/Kakao_image/icon1.webp);
     background-repeat: no-repeat;
     background-size: cover;
-    width: 32px; height: 32px;
-    left: -36px; 
+    width: 32px;
+    height: 32px;
+    left: -36px;
     top: 50%;
     transform: translateY(-50%);
     position: absolute;
 }
 
 .storyBox .storyList .story2 .storyInfo .storyTheme::before,
-.storyBox .storyList .story7 .storyInfo .storyTheme::before
-{
+.storyBox .storyList .story7 .storyInfo .storyTheme::before {
     background-image: url(../images/Kakao_image/icon2.webp);
 }
 
-.storyBox .storyList .story6 .storyInfo .storyTheme::before
-{
+.storyBox .storyList .story6 .storyInfo .storyTheme::before {
     background-image: url(../images/Kakao_image/icon3.webp);
 }
 
@@ -743,7 +762,8 @@ li {
 
 .storyBox .storyList .storyInfo .storyMore div,
 .newsBox .newsList .newsInfo .newsMore div {
-    width: 4px; height: 4px;
+    width: 4px;
+    height: 4px;
     border-radius: 100%;
     background-color: var(--primary-color);
     margin: 4px;
@@ -767,7 +787,7 @@ li {
 
 .storyBox .storyList .under::after {
     position: absolute;
-    content: '';
+    content: "";
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -793,7 +813,7 @@ li {
 
 .storyBox .storyList .over::before {
     position: absolute;
-    content: '';
+    content: "";
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -813,7 +833,6 @@ li {
 .storyBox .storyList .story8::before {
     background-image: url(../images/Kakao_image/story8.webp);
 }
-
 
 /* serviceBox --------------------------------------------------------- */
 
@@ -838,7 +857,7 @@ li {
     padding: 63px;
 }
 
-.serviceBox .serviceGroup  h4 {
+.serviceBox .serviceGroup h4 {
     font-size: 28px;
 }
 
@@ -854,11 +873,13 @@ li {
 }
 
 .serviceBox .serviceGroup ul li::after {
-    content: '';
+    content: "";
     position: absolute;
     width: 54px;
     height: 54px;
-    top: 0; left: 0; transform: translate(-50%, -50%);
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
     background-size: cover;
 }
 
@@ -986,7 +1007,7 @@ li {
 .newsBox .newsList .news1,
 .newsBox .newsList .news2,
 .newsBox .newsList .news3 {
-    margin-bottom: 60px; 
+    margin-bottom: 60px;
     width: 560px;
     border-radius: 40px;
 }
@@ -1006,17 +1027,19 @@ li {
 }
 
 .newsBox .newsList .newsInfo .newsTheme::before {
-    content: '';
+    content: "";
     background-image: url(../images/Kakao_image2/trumpet.webp);
     background-repeat: no-repeat;
     background-size: cover;
-    width: 46px; height: 46px;
-    left: -58px; top: 50%;
+    width: 46px;
+    height: 46px;
+    left: -58px;
+    top: 50%;
     transform: translateY(-50%);
     position: absolute;
 }
 
-.newsBox .newsList  .newsInfo .newsTheme {
+.newsBox .newsList .newsInfo .newsTheme {
     position: relative;
     color: var(--primary-color);
     font-size: 13px;
@@ -1035,7 +1058,7 @@ li {
 
 .newsBox .newsList .news1 h4,
 .newsBox .newsList .news2 h4,
-.newsBox .newsList .news3 h4  {
+.newsBox .newsList .news3 h4 {
     font-size: 30px;
     line-height: 42px;
     height: 210px;
@@ -1045,11 +1068,10 @@ li {
 .newsBox .newsList .news5 h4,
 .newsBox .newsList .news6 span:first-child,
 .newsBox .newsList .news7 span:first-child,
-.newsBox .newsList .news8 span:first-child  {
+.newsBox .newsList .news8 span:first-child {
     font-size: 26px;
     font-weight: bold;
 }
-
 
 .newsBox .newsList .news6 a,
 .newsBox .newsList .news7 a,
@@ -1067,7 +1089,8 @@ a .blackCircle {
     display: inline-block;
     text-align: center;
     line-height: 24px;
-    width: 24px; height: 24px;
+    width: 24px;
+    height: 24px;
     margin-left: 8px;
 }
 
@@ -1080,13 +1103,14 @@ a .blackCircle {
 
 .newsBox .newsList .under::after {
     position: absolute;
-    content: '';
+    content: "";
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     width: 560px;
     height: 313px;
-    left: 0; bottom: 0;
+    left: 0;
+    bottom: 0;
     border-radius: 0 0 20px 20px;
 }
 
@@ -1101,7 +1125,6 @@ a .blackCircle {
 .newsBox .newsList .news3::after {
     background-image: url(../images/Kakao_image2/news3.webp);
 }
-
 
 /* esgBox --------------------------------------------------------- */
 
@@ -1134,13 +1157,12 @@ a .blackCircle {
 .esgBox .esgList .esgType h4 {
     border-radius: 36px;
     outline: 10px solid var(--secondary-color);
-
 }
 .esgBox .esgList .esgComment {
     width: 560px;
     height: 668px;
     border-radius: 22px;
-    padding:40px;
+    padding: 40px;
     position: relative;
     background-position: center;
     background-repeat: no-repeat;
@@ -1149,8 +1171,9 @@ a .blackCircle {
 }
 
 .esgBox .esgList .esgComment::before {
-    content: '';
-    width: 26px; height: 26px;
+    content: "";
+    width: 26px;
+    height: 26px;
     position: absolute;
     background-image: url(../images/Kakao_image2/corner.svg);
     top: -2px;
@@ -1158,8 +1181,9 @@ a .blackCircle {
 }
 
 .esgBox .esgList .esgComment::after {
-    content: '';
-    width: 26px; height: 26px;
+    content: "";
+    width: 26px;
+    height: 26px;
     position: absolute;
     background-image: url(../images/Kakao_image2/corner.svg);
     right: -2px;
@@ -1167,8 +1191,9 @@ a .blackCircle {
 }
 
 .esgBox .esgList .esgComment p::before {
-    content: '';
-    width: 26px; height: 26px;
+    content: "";
+    width: 26px;
+    height: 26px;
     position: absolute;
     background-image: url(../images/Kakao_image2/corner.svg);
     bottom: 76px;
@@ -1177,8 +1202,9 @@ a .blackCircle {
 }
 
 .esgBox .esgList .esgComment p::after {
-    content: '';
-    width: 26px; height: 26px;
+    content: "";
+    width: 26px;
+    height: 26px;
     position: absolute;
     background-image: url(../images/Kakao_image2/corner.svg);
     bottom: -2px;
@@ -1191,7 +1217,7 @@ a .blackCircle {
     margin-bottom: 6px;
 }
 
-.esgBox .esgList .esg1 h4, 
+.esgBox .esgList .esg1 h4,
 .esgBox .esgList .esg1 .esgComment {
     background-color: #89dcff;
 }
@@ -1253,7 +1279,7 @@ a .blackCircle {
 
 .esgBox .esgList .esg2 .esgComment,
 .esgBox .esgList .esg3 .esgComment {
-    color:  var(--secondary-color);
+    color: var(--secondary-color);
 }
 
 /* helpBox --------------------------------------------------------- */
@@ -1310,9 +1336,8 @@ a .blackCircle {
     align-items: center;
 }
 
-.helpBox .helpBoxTop .helpCenter a span::after
-{
-    color:  var(--secondary-color);
+.helpBox .helpBoxTop .helpCenter a span::after {
+    color: var(--secondary-color);
     content: "↗️";
     width: 24px;
     height: 24px;
@@ -1325,7 +1350,7 @@ a .blackCircle {
 }
 
 .helpBox .helpBoxTop .helpCenter a::after {
-    content: '';
+    content: "";
     position: absolute;
     background-position: center;
     background-size: cover;
@@ -1349,7 +1374,8 @@ a .blackCircle {
     width: 560px;
     padding: 40px;
     background-color: #fae100;
-    background-image: url(../images/Kakao_image3/img_ryan.png);    background-size: 266px auto;
+    background-image: url(../images/Kakao_image3/img_ryan.png);
+    background-size: 266px auto;
     background-position: bottom;
     background-repeat: no-repeat;
 }
@@ -1362,11 +1388,11 @@ a .blackCircle {
     background-size: 560px auto;
     background-position: bottom;
     background-repeat: no-repeat;
-    color:  var(--secondary-color);
+    color: var(--secondary-color);
 }
 
-.helpBox .helpBoxTop .helpSocial  p,
-.helpBox .helpBoxTop .helpRecruit  p {
+.helpBox .helpBoxTop .helpSocial p,
+.helpBox .helpBoxTop .helpRecruit p {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 32px;
@@ -1384,7 +1410,8 @@ a .blackCircle {
 
 .helpBox .helpBoxTop .helpSocial .socialList a {
     display: inline-block;
-    width: 80px; height: 80px;
+    width: 80px;
+    height: 80px;
     background-size: cover;
 }
 
@@ -1404,7 +1431,7 @@ a .blackCircle {
     background-image: url(../images/Kakao_image3/icon_fb.png);
 }
 
-.helpBox .helpBoxTop .helpSocial .socialList  li:nth-child(5) a {
+.helpBox .helpBoxTop .helpSocial .socialList li:nth-child(5) a {
     background-image: url(../images/Kakao_image3/icon_li.png);
 }
 
@@ -1414,7 +1441,7 @@ a .blackCircle {
     justify-content: start;
     align-items: center;
     text-decoration: none;
-    color:  var(--secondary-color);
+    color: var(--secondary-color);
 }
 
 .helpBox .helpBoxTop .helpRecruit a::after {
@@ -1422,7 +1449,7 @@ a .blackCircle {
     content: "↗️";
     width: 24px;
     height: 24px;
-    background-color:  var(--secondary-color);
+    background-color: var(--secondary-color);
     border-radius: 50%;
     display: flex;
     line-height: 24px;
@@ -1431,7 +1458,7 @@ a .blackCircle {
 }
 
 .helpBox .helpBoxTop .helpRecruit a:hover::after {
-    background-color: rgba(255, 255, 255, .7);
+    background-color: rgba(255, 255, 255, 0.7);
 }
 
 .helpBox .helpBoxBottom {
@@ -1460,9 +1487,8 @@ a .blackCircle {
     align-items: center;
 }
 
-.helpBox .helpBoxBottom a span::after
-{
-    color:  var(--secondary-color);
+.helpBox .helpBoxBottom a span::after {
+    color: var(--secondary-color);
     content: "↗️";
     width: 24px;
     height: 24px;
@@ -1475,7 +1501,7 @@ a .blackCircle {
 }
 
 .helpBox .helpBoxBottom a::after {
-    content: '';
+    content: "";
     position: absolute;
     background-position: center;
     background-size: cover;
@@ -1500,9 +1526,8 @@ a .blackCircle {
     justify-content: center;
 }
 
-.helpBox .fullBtn::after
-{
-    color:  var(--secondary-color);
+.helpBox .fullBtn::after {
+    color: var(--secondary-color);
     content: "→";
     width: 24px;
     height: 24px;
@@ -1535,7 +1560,7 @@ a .blackCircle {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-} 
+}
 
 .footer div h3,
 .footer div strong {
@@ -1566,15 +1591,13 @@ a .blackCircle {
     text-decoration: none;
 }
 
-
-@media screen and (max-width:1200px) {
-
+@media screen and (max-width: 1200px) {
     .wrap {
         max-width: 712px;
         margin: auto;
     }
 
-    .wrap .header {    
+    .wrap .header {
         height: 72px;
         background-color: var(--secondary-color);
         display: flex;
@@ -1592,8 +1615,16 @@ a .blackCircle {
         display: none;
     }
 
+    .main {
+        margin: auto;
+    }
+
     .main .section1 .mainBox {
         display: block;
+    }
+
+    .main .section1 .mainBox .visualBox {
+        margin-bottom: 20px;
     }
 
     .main .section1 .mainBox .visualBox .mainVideo {
@@ -1603,35 +1634,192 @@ a .blackCircle {
         border-radius: 20px;
     }
 
-    .main .section1 .mainBox .visualBox .kakaoMore button {
+    .main .section1 .mainBox .visualBox .kakaoMore {
         width: 208px;
-        height: 56px;
-        padding: 14px;
-        line-height: 14px;
+        border-radius: 0 0 0 20px;
+        background-color: var(--secondary-color);
+        display: flex;
+        flex-direction: row;
     }
 
     .main .section1 .mainBox .visualBox .kakaoMore .kakaoMoreBox {
         width: 148px;
-        top: 0;
+        padding: 14px;
+        line-height: 14px;
+        position: static;
+        margin-left: 11px;
+        margin-bottom: 11px;
     }
 
-    .main .section1 .mainBox .visualBox .kakaoMore .kakaoMoreBox::after  {
-        top: 0; left: auto; right: 0;
-        height: 50px;
-        width: 20px;
-        background-size: auto 50px;
-        background-image: url(../images/Kakao_image/kakaoSpeechBubbleSide.svg);
+    .main .section1 .mainBox .visualBox .kakaoMore .kakaoMoreBox::after {
+        width: 10.5px;
+        height: 13px;
+        left: auto;
+        top: auto;
+        bottom: 7px;
+        background-image: url(../images/Kakao_image/1024more.svg);
     }
 
     .main .section1 article .mainBox .visualBox .kakaoMore::before {
-        width: 20px; height: 20px;
+        width: 20px;
+        height: 20px;
         top: -1px;
         left: -19px;
     }
 
     .main .section1 article .mainBox .visualBox .kakaoMore::after {
-        width: 20px; height: 20px;
-        top: 55px;
+        width: 20px;
+        height: 20px;
+        top: 52px;
         right: -1px;
     }
+
+    .main .section1 .mainBox .visualBox .kakaoMore button {
+        width: 48px;
+        height: 48px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .main .section1 .mainBox .visualBox .mainMore {
+        width: 158px;
+        height: 54px;
+        border-radius: 20px;
+        padding: 0;
+    }
+
+    .main .section1 article .mainBox .visualBox .mainMore button {
+        width: 158px;
+        font-size: 14px;
+        padding: 0;
+        height: 54px;
+        border-radius: 0 20px 0 0;
+    }
+
+    .main .section1 article .mainBox .visualBox .mainMore .blackCircle {
+        width: 24px;
+        height: 24px;
+        display: inline-block;
+        padding: 0;
+        line-height: 24px;
+        font-size: 14px;
+    }
+
+    .main .section1 article .mainBox .visualBox .mainMore::before {
+        width: 20px;
+        height: 20px;
+        top: -19px;
+        left: -1px;
+    }
+
+    .main .section1 article .mainBox .visualBox .mainMore::after {
+        width: 20px;
+        height: 20px;
+        top: 31px;
+        right: -19px;
+    }
+
+    .main .section1 article .mainBox .visualRightBox {
+        margin-left: 0;
+    }
+
+    .main .section1 article .mainBox .visualRightBox .visualRight {
+        display: flex;
+        flex-direction: row;
+        margin-left: 0;
+        gap: 8px;
+        height: 232px;
+    }
+
+    .visualRight .visualRightList {
+        width: 232px;
+        margin-bottom: 0;
+    }
+
+    .visualRightBox .visualRight .visualRightList1 .donation {
+        width: 232px;
+        height: 232px;
+        font-size: 14px;
+    }
+
+    .visualRightBox .visualRight .visualRightList1 .donation .donationAmount {
+        font-size: 26px;
+    }
+
+    .visualRightBox .visualRight .visualRightList1 .kakaoimpact a {
+        width: 232px;
+        height: 232px;
+    }
+
+    .visualSlide {
+        width: 232px;
+        height: 232px;
+    }
+
+    .visualRightBox .visualRight .visualRightList2 {
+        height: 232px;
+    }
+
+    .visualRightBox .visualRight .visualRightList2 .campaign .theme {
+        font-size: 11px;
+    }
+
+    .visualRightBox .visualRight .visualRightList2 .campaign .subjectTitle {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .visualRightBox .visualRight .visualRightList2 .campaign .keywords {
+        font-size: 14px;
+        color: #666;
+    }
+
+    .visualRightBox .visualRight .visualRightList3 {
+        width: 232px;
+    }
+
+    .visualRightBox .visualRight .visualRightList3 .bgBox div {
+        width: 232px;
+        height: 232px;
+    }
+
+    .visualRightBox .visualRight .visualRightList3 div::after {
+        content: none;
+    }
+
+    .visualRightBox .visualRight .visualRightList3 p {
+        font-size: 16px;
+        padding-bottom: 0;
+        display: flex;
+        flex-direction: column;
+        align-self: auto;
+    }
+
+    .visualRightBox .visualRight .visualRightList3 p::before {
+        position: static;
+        transform: translate(0, 0);
+    }
+
+    .container .titleBox {
+    }
+
+    .container .titleBox .titleArticle {
+        gap: 4px;
+        font-size: 32px;
+    }
+
+    .container .titleBox .titleArticle::before {
+        width: 48px;
+        height: 48px;
+    }
+
+    .storyBox .titleBox .titleArticle .pause {
+        width: 28px;
+        height: 28px;
+    }
+
+    .storyBox .storyList li {
+        width: 234px;
+    }
+
 }

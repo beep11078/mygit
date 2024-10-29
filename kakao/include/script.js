@@ -1,11 +1,30 @@
-const menuTitle = document.querySelector('.menuTitle');
-const subMenu = document.querySelector('.subMenu');
+// 서브 메뉴
+const menus = document.querySelectorAll('.mainMenu > li'); // 모든 li 쌍 선택
 
-menuTitle.addEventListener('click', () => {
-    subMenu.classList.toggle('subActive');
-})
+menus.forEach(menu => {
+    const menuTitle = menu.querySelector('.menuTitle'); 
+    const subMenu = menu.querySelector('.subMenu'); 
+
+    if (menuTitle && subMenu) {
+        menuTitle.addEventListener('click', () => {
+            // 현재 클릭된 메뉴의 subMenu 외의 모든 subMenu 닫기
+            menus.forEach(m => {
+                const otherSubMenu = m.querySelector('.subMenu');
+                if (otherSubMenu && otherSubMenu !== subMenu) {
+                    otherSubMenu.classList.remove('subActive');
+                }
+            });
+
+            // 현재 subMenu 토글
+            subMenu.classList.toggle('subActive');
+        });
+    } else {
+        console.warn('menuTitle 또는 subMenu를 찾을 수 없습니다.', menu);
+    }
+});
 
 
+// 메뉴 스크롤
 const header = document.querySelector('.header');
 const moreBtn = document.querySelector('.kakaoMoreBox');
 
@@ -22,6 +41,7 @@ window.addEventListener('scroll', () => {
         moreBtn.style.pointerEvents = 'auto'; // hover 가능하게 복원
     }
 });
+
 
 // 마우스 오버/아웃 이벤트 리스너 추가
 moreBtn.addEventListener('mouseenter', () => {
@@ -85,12 +105,18 @@ function initializeSlides(slideSet) {
 
     // 슬라이드와 버튼 초기 상태 설정
     slides.forEach((slide, index) => {
-        slide.style.display = index === 0 ? 'flex' : 'none'; // 첫 슬라이드 표시
-        buttons[index].style.width = index === 0 ? '24px' : '8px'; // 첫 버튼 강조
+        slide.style.opacity = index === 0 ? '1' : '0'; // 첫 슬라이드 표시
+        slide.style.transition = 'opacity 0.5s ease'; // 서서히 바뀌는 애니메이션
+        slide.style.position = 'absolute'; // 슬라이드가 겹치도록 설정
+        slide.style.top = '0';
+        slide.style.left = '0';
     });
 
-    // 각 버튼에 클릭 이벤트 추가
     buttons.forEach((button, index) => {
+        button.style.width = index === 0 ? '24px' : '8px'; // 첫 버튼 강조
+        button.style.backgroundColor = index === 0 ? 'var(--primary-color)' : 'var(--secondary-color)';
+
+        // 각 버튼에 클릭 이벤트 추가
         button.addEventListener('click', () => {
             showSlideAndUpdateButtons(slides, buttons, index); // 슬라이드와 버튼 동시 업데이트
         });
@@ -100,13 +126,15 @@ function initializeSlides(slideSet) {
 // 슬라이드와 버튼을 동시에 업데이트하는 함수
 function showSlideAndUpdateButtons(slides, buttons, activeIndex) {
     slides.forEach((slide, index) => {
-        slide.style.display = index === activeIndex ? 'flex' : 'none'; // 활성 슬라이드 표시
+        slide.style.opacity = index === activeIndex ? '1' : '0'; // 활성 슬라이드 표시
     });
 
     buttons.forEach((button, index) => {
         button.style.width = index === activeIndex ? '24px' : '8px'; // 활성 버튼 강조
+        button.style.backgroundColor = index === 0 ? 'var(--primary-color)' : 'var(--secondary-color)';
     });
 }
+
 
 // 모든 슬라이드 세트에 기능 적용
 document.querySelectorAll('.visualRightList').forEach(initializeSlides);
