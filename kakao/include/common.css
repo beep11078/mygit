@@ -511,17 +511,26 @@ li {
     width: 24px;
     height: 8px;
     border-radius: 8px;
-    background-color: var(--primary-color);
     margin: 0 5px;
     cursor: pointer;
     z-index: 999;
 }
 
-.circleBtn div:not(:first-child) {
+.visualRightList1 .circleBtn div:not(:first-child) {
     width: 8px;
     border-radius: 8px;
     border: 1px solid #999;
     background-color: var(--secondary-color);
+}
+
+.visualRightList1 .circleBtn div {
+    background-color: var(--primary-color);
+}
+
+.visualRightList2 .circleBtn div:not(:first-child) {
+    border-radius: 8px;
+    background-color: var(--primary-color) !important;
+    opacity: 0.4;
 }
 
 .visualRightBox .visualRight .visualRightList1 .donation {
@@ -999,7 +1008,7 @@ li {
     justify-content: space-between;
 }
 
-.newsBox .newsList li {
+.newsBox .newsList > div {
     flex-shrink: 0;
     background-color: #eee;
     padding: 40px;
@@ -1126,6 +1135,10 @@ a .blackCircle {
 
 .newsBox .newsList .news3::after {
     background-image: url(../images/Kakao_image2/news3.webp);
+}
+
+.newsBox .newsList .circleBtn {
+    display: none;
 }
 
 /* esgBox --------------------------------------------------------- */
@@ -1274,9 +1287,10 @@ a .blackCircle {
     width: 64px;
     height: 64px;
     font-size: 20px;
-    text-align: center;
     outline: 10px solid var(--secondary-color);
-    line-height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .esgBox .esgList .esg2 .esgComment,
@@ -1621,6 +1635,10 @@ a .blackCircle {
         margin: auto;
     }
 
+    .container {
+        margin-bottom: 80px;
+    }
+    
     .main .section1 .mainBox {
         display: block;
     }
@@ -1809,7 +1827,7 @@ a .blackCircle {
     .container .titleBox .titleArticle {
         gap: 4px;
         font-size: 32px;
-        margin-bottom: 32px;
+        margin-bottom: 12px;
     }
 
     .container .titleBox .titleArticle::before {
@@ -1838,24 +1856,23 @@ a .blackCircle {
         height: 327px;
         border-radius: 15px;
         padding: 24px;
+        padding-bottom: 130px;
+        position: relative;
     }
-    
+
     .storyBox .storyList .storyInfo .storyTheme {
         font-size: 11px;
         padding: 7px 12px;
     }
-    
-    .storyBox .storyList .storyInfo .storyMore div, .newsBox .newsList .newsInfo .newsMore div {
+
+    .storyBox .storyList .storyInfo .storyMore div,
+    .newsBox .newsList .newsInfo .newsMore div {
         width: 3px;
         height: 3px;
     }
 
     .storyBox .storyList h4 {
         font-size: 18px;
-    }
-
-    .storyBox .storyList .keyword {
-        margin-top: auto;
     }
 
     .storyBox .storyList .comment {
@@ -1873,22 +1890,30 @@ a .blackCircle {
 
     .storyBox .storyList .wide .keyword,
     .storyBox .storyList .over .keyword {
-        margin-top: 0;
+        margin-top: auto;
+        margin-bottom: 130px;
+    }
+
+    .storyBox .storyList .under .keyword {
+        position: absolute;
+        bottom: 0;
+        margin-top: auto;
+        margin-bottom: 154px;
     }
 
     .storyBox .storyList .over {
         padding: 24px;
     }
-    
+
     .storyBox .storyList .over::before {
         content: none;
     }
 
     .storyBox .storyList .wide::after,
-    .storyBox .storyList .under::after, 
+    .storyBox .storyList .under::after,
     .storyBox .storyList .over::after {
         position: absolute;
-        content: '';
+        content: "";
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -1908,7 +1933,7 @@ a .blackCircle {
     .storyBox .storyList .story8::after {
         background-image: url(../images/Kakao_image/story8.webp);
     }
-    
+
     .kakaoMoreBox {
         opacity: 1 !important;
     }
@@ -1938,6 +1963,15 @@ a .blackCircle {
         justify-content: normal;
         width: auto;
     }
+    
+    .serviceBox .serviceGroup li:nth-child(3),
+    .serviceBox .serviceGroup li:nth-child(3)::after {
+        display: none;
+    }
+    
+    .serviceBox .serviceGroup > li:nth-child(3) {
+        display: flex;
+    }
 
     .serviceBox .serviceGroup ul li:last-child {
         margin-right: 24px;
@@ -1954,16 +1988,24 @@ a .blackCircle {
         align-items: center;
     }
 
+    .newsBox .newsListTop,
+    .newsBox .newsListBottom {
+        position: relative;
+
+        margin-bottom: 400px;
+    }
+
     .newsBox .newsList .news1,
     .newsBox .newsList .news2,
     .newsBox .newsList .news3 {
+        position: absolute;
         width: 352px;
         border-radius: 15px;
         padding: 22px 20px;
     }
 
     .newsBox .newsList .news1 h4,
-    .newsBox .newsList .news2 h4, 
+    .newsBox .newsList .news2 h4,
     .newsBox .newsList .news3 h4 {
         font-size: 18px;
         height: 84px;
@@ -1989,8 +2031,122 @@ a .blackCircle {
     }
 
     .newsBox .newsList .keyword {
-        font-size: 14px;
-        margin-top: 80px;
-        margin-bottom: 220px;
+        margin-bottom: 200px;
+        font-size: 12px;
+    }
+
+    .newsBox .newsListBottom .news4,
+    .newsBox .newsListBottom .news5 {
+        height: 186px;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .newsBox .newsListBottom .news4 .keyword,
+    .newsBox .newsListBottom .news5 .keyword {
+        display: none;
+    }
+
+    .newsBox .newsListBottom .news4::after,
+    .newsBox .newsListBottom .news5::after {
+        background-image: none;
+    }
+
+    .newsBox .newsListTop .circleBtn {
+        display: flex;
+        position: absolute;
+        z-index: 99;
+    }
+
+    .newsBox .newsListTop .circleBtn div {
+        background-color: #0073ff;
+    }
+
+    .news4, .news5, .news6, .news7, .news8 {
+        display: none;
+    }
+
+    .esgBox .esgList {
+        width: 711px;
+    }
+
+    .esgBox .esgList li {
+        width: 231px;
+    }
+
+    .esgBox .esgList .esgType {
+        width: 137px;
+        font-size: 12px;
+        line-height: 32px;
+        border-radius: 0 0 0 20px;
+        padding: 0 0 12px 12px;
+    }
+
+    .esgBox .esgList .esgType h4 {
+        width: 125px;
+        outline: none;
+    }
+
+    .esgBox .esgList .esgComment {
+        width: 231px;
+        height: 341px;
+        border-radius: 15px;
+    } 
+
+    .esgBox .esgList .esgComment::before,
+    .esgBox .esgList .esgComment::after, 
+    .esgBox .esgList .esgComment p::before,
+    .esgBox .esgList .esgComment p::after {
+        width: 15px;
+        height: 15px;
+    }
+
+    .esgBox .esgList .esgComment::before {
+        top: -1px;
+        right: 136px;
+    }
+
+    .esgBox .esgList .esgComment::after {
+        top: 43px;
+        right: -1px;
+    }
+    
+    .esgBox .esgList .esg1 .esgComment {
+        background-size: 231px auto;
+        padding: 20px 24px;
+    }
+
+    .esgBox .esgList .esg2 .esgComment,
+    .esgBox .esgList .esg3 .esgComment {
+        background-size: auto 141px;
+        padding: 20px 24px;
+    }
+
+    .esgBox .esgList li .esgComment + div {
+        width: 57px;
+        height: 57px;
+        border-radius: 25px 0 0 0;
+    }
+
+    .esgBox .esgList li .blackCircle {
+        width: 48px;
+        height: 48px;
+        outline: 5px solid var(--secondary-color);
+    }
+
+    .esgBox .esgList li .esgComment p {
+        font-size: 16px;
+        width: 145px;
+    }
+    
+    .esgBox .esgList .esgComment p::before {
+        bottom: 56px;
+        right: -1px;
+    }
+
+    .esgBox .esgList .esgComment p::after {
+        bottom: -1px;
+        right: 56px;
     }
 }

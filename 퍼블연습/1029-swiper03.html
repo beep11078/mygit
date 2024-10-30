@@ -105,7 +105,7 @@
 
         let slide = new Swiper('.swiper',{
             autoplay : {
-                delay : 2000,
+                delay : 1000,
             },
             pagination : {
                 el : '.slider .pager',
@@ -117,16 +117,17 @@
             }
         })
 
-        // .play_stop 버튼 이벤트 처리
-    document.querySelector('.play_stop').addEventListener('click', function () {
-        if (this.innerHTML === 'pause') {
-            slide.autoplay.stop(); // 슬라이드 멈춤
-            this.innerHTML = 'play';
-        } else {
-            slide.autoplay.start(); // 슬라이드 재생
-            this.innerHTML = 'pause';
-        }
-    });
+        let controlBtn = document.querySelector('.play_stop')
+        
+        controlBtn.addEventListener('click', function () {
+            if (this.innerHTML === 'pause') {
+                slide.autoplay.stop(); // 슬라이드 멈춤
+                this.innerHTML = 'play';
+            } else {
+                slide.autoplay.start(); // 슬라이드 재생
+                this.innerHTML = 'pause';
+            }
+        });
 
         
     </script>
