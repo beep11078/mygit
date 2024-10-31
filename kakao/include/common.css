@@ -487,7 +487,7 @@ li {
 }
 
 .visualRight .visualRightList {
-    width: 273px;
+    width: 272px;
     border-radius: 25px;
     margin-bottom: 15px;
     position: relative;
@@ -496,7 +496,14 @@ li {
 
 .visualSlide {
     display: flex;
-    height: 273px;
+    height: 272px;
+}
+
+.visualSlide li {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity .5s ease;
 }
 
 .circleBtn {
@@ -508,7 +515,6 @@ li {
 }
 
 .circleBtn div {
-    width: 24px;
     height: 8px;
     border-radius: 8px;
     margin: 0 5px;
@@ -516,26 +522,28 @@ li {
     z-index: 999;
 }
 
-.visualRightList1 .circleBtn div:not(:first-child) {
+.visualRightList1 .circleBtn div.active,
+.visualRightList2 .circleBtn div.active {
+    width: 24px;
+    background-color: var(--primary-color);
+    opacity: 1;
+}
+
+.visualRightList1 .circleBtn div {
     width: 8px;
-    border-radius: 8px;
     border: 1px solid #999;
     background-color: var(--secondary-color);
 }
 
-.visualRightList1 .circleBtn div {
+.visualRightList2 .circleBtn div {
+    width: 8px;
     background-color: var(--primary-color);
-}
-
-.visualRightList2 .circleBtn div:not(:first-child) {
-    border-radius: 8px;
-    background-color: var(--primary-color) !important;
-    opacity: 0.4;
+    opacity: .4;
 }
 
 .visualRightBox .visualRight .visualRightList1 .donation {
-    width: 273px;
-    height: 273px;
+    width: 272px;
+    height: 272px;
     background-color: #fae100;
     display: flex;
     flex-direction: column;
@@ -544,20 +552,21 @@ li {
 }
 
 .visualRightBox .visualRight .visualRightList1 .donation .donationAmount {
-    font-size: 2.5rem;
+    display: flex;
+    align-items: baseline;
+}
+
+.visualRightBox .visualRight .visualRightList1 .donation .donationAmount .counter {
+    font-size: 32px;
     line-height: 2rem;
     font-weight: bold;
     margin: 15px 0 5px 0;
 }
 
-.visualRightBox .visualRight .visualRightList1 .kakaoimpact {
-    /* display: none; */
-}
-
 .visualRightBox .visualRight .visualRightList1 .kakaoimpact a {
     display: inline-block;
-    width: 273px;
-    height: 273px;
+    width: 272px;
+    height: 272px;
     background-image: url(../images/Kakao_image/impact.webp);
     background-position: center;
     background-repeat: no-repeat;
@@ -593,29 +602,17 @@ li {
     margin: 15px 0 5px 0;
 }
 
-.visualRightBox .visualRight .visualRightList3 {
-    margin-bottom: 0px;
-    position: relative;
-    overflow: hidden;
+.visualRight .visualRightList.visualRightList3 {
     width: 285px;
-}
-
-.visualRightBox .visualRight .visualRightList3 .bgBox {
+    height: 164px;
+    margin-bottom: 0px;
     background-color: #fae100;
-    width: 300px;
-    border-radius: 24px;
+    overflow: hidden;
+    border-radius: 25px 0 0 25px;
 }
 
-.visualRightBox .visualRight .visualRightList3 .bgBox div {
-    width: 270px;
-    height: 165px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.visualRightBox .visualRight .visualRightList3 div::after {
-    content: "";
+.visualRightList3::after {
+    content: '';
     width: 39px;
     height: 168px;
     position: absolute;
@@ -628,18 +625,23 @@ li {
     z-index: 5;
 }
 
-.visualRightBox .visualRight .visualRightList3 div button {
-    border-radius: 50%;
-    border: none;
-    background-color: rgba(255, 255, 255, 0.7);
-    padding: 5px;
-    margin: 0 5px;
-    width: 2rem;
-    height: 2rem;
-    font-weight: bolder;
+.visualRightList3 .bgBox {
+    border-radius: 24px;
+    position: relative;
 }
 
-.visualRightBox .visualRight .visualRightList3 p::before {
+.visualRightList3 .bgBox li {
+    width: 272px;
+    height: 168px;
+    display: flex;
+    font-size: 20px;
+    text-align: center;
+    align-items: end;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.visualRightList3 .bgBox li::before {
     position: absolute;
     content: "";
     width: 80px;
@@ -653,12 +655,32 @@ li {
     background-image: url(../images/Kakao_image/kakaogroup.webp);
 }
 
-.visualRightBox .visualRight .visualRightList3 p {
-    font-size: 1.3rem;
-    display: flex;
-    align-self: flex-end;
-    padding-bottom: 20px;
+.visualRightList3 .circleBtn.circleBtn3 {
+    width: 272px;
+    left: 0;
+    bottom: 95px;
+    transform: translate(0);
 }
+
+.visualRightList3 .circleBtn.circleBtn3 button {
+    border-radius: 50%;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 5px;
+    margin: 0 5px;
+    width: 2rem;
+    height: 2rem;
+    font-weight: bolder;
+    position: absolute;
+}
+
+.visualRightList3 .circleBtn.circleBtn3 .prev {
+    left: 0;
+}
+
+.visualRightList3 .circleBtn.circleBtn3 .next {
+    right: 0;
+} 
 
 /* storyBox --------------------------------------------------------- */
 
