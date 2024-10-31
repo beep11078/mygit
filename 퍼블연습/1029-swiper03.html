@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,25 +7,21 @@
     <link rel="stylesheet" href="swiper/swiper-bundle.min.css">
     <style>
 
-        *{ 
-            box-sizing: border-box; 
-            margin: 0; 
-            padding:0;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
         body {
             padding-top: 50px;
         }
 
-        ul { list-style: none; padding: 0; }
-        a { text-decoration: none; }
-
         .slider {
             width: 800px;
             margin: 0 auto;
             border-bottom: 10px solid #000;
         }
-
         .slider .swiper-slide {
             background-color: #fc0;
             height: 300px;
@@ -34,54 +29,21 @@
 
         .slider .control {
             position: absolute;
-            right: 10px;
-            top: 10px;
-            /* background-color: #ccc; */
+            right:10px;
+            top:10px;
+            background-color: #ccc;
             z-index: 9999;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap:10px;
+        }
+        .slider .control .playcontrol.hide {
+            display: none;
         }
 
-        .hide {
-            width: 1px;
-            height: 1px;
-            position: absolute;
-            margin: -1px;
-            overflow: hidden;
-            clip-path: polygon(0 0,0 0,0 0);
-        }
-
-        .prev, .next {
-            position: relative;
-            padding: 8px;
-        }
-
-        .prev::before, .next::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%) rotate(0);
-            width: 5px;
-            height: 5px;
-            border-left: 1px solid black;
-            border-top: 1px solid black;
-        }
-
-        .prev::before {
-            transform: translate(-50%, -50%) rotate(-45deg);
-        }
-
-        .next::before {
-            transform: translate(-50%, -50%) rotate(135deg);
-        }
     </style>
-
 </head>
-
 <body>
-
     <div class="slider">
         <div class="swiper">
             <div class="swiper-wrapper">
@@ -91,51 +53,61 @@
                 <div class="swiper-slide">slide4</div>
                 <div class="swiper-slide">slide5</div>
             </div>
+            <!-- control box -->
             <div class="control">
                 <div class="pager"></div>
-                <button class="play_stop">pause</button>
-                <button class="btn prev"><span class="hide">prev</span></button>
-                <button class="btn next"><span class="hide">next</span></button>
+                <button class="playcontrol stop">pause</button>
+                <button class="playcontrol play hide">play</button>
+                <button class="btn prev">prev</button>
+                <button class="btn next">next</button>
             </div>
         </div>
     </div>
-    
+
+
     <script src="swiper/swiper-bundle.min.js"></script>
     <script>
 
-        let slide = new Swiper('.swiper',{
+        const PLAYCONTORL = document.querySelectorAll('.playcontrol');
+        let slide = new Swiper('.swiper', {
             autoplay : {
                 delay : 1000,
             },
             pagination : {
                 el : '.slider .pager',
                 type : 'fraction',
-            }, 
+            },
             navigation : {
                 prevEl : '.slider .prev',
-                nextEl : '.slider .next'
-            }
-        })
-
-        let controlBtn = document.querySelector('.play_stop')
-        
-        controlBtn.addEventListener('click', function () {
-            if (this.innerHTML === 'pause') {
-                slide.autoplay.stop(); // 슬라이드 멈춤
-                this.innerHTML = 'play';
-            } else {
-                slide.autoplay.start(); // 슬라이드 재생
-                this.innerHTML = 'pause';
+                nextEl : '.slider .next',
             }
         });
 
-        
+        PLAYCONTORL.forEach(function(el) {
+            el.addEventListener('click', function(event) {
+                // 누르는 버튼이 stop, play인지 체크 ( event.target을 활용 )
+                if (event.target.classList.contains('stop')) {
+                    document.querySelector('.stop').classList.add('hide');
+                    document.querySelector('.play').classList.remove('hide');
+                    // 오토실행 멈춤
+                    slide.autoplay.stop();
+                } else if(event.target.classList.contains('play')) {
+                    document.querySelector('.play').classList.add('hide');
+                    document.querySelector('.stop').classList.remove('hide');
+                    // 오토실행 시작
+                    slide.autoplay.start();
+                }
+            });
+        });
+
+
     </script>
 </body>
 </html>
 
-<!-- 숙제
+<!--
+숙제
 : 버튼 2개 좌우 화살표로 변경 (텍스트는 숨기기)
-: Pause 클릭시 autoslide 멈춤 & 
-Play 클릭시 autoslide 실행
+Pause 클릭시 오토슬라이드 멈춤 > 버튼텍스트는 Play로 변경
+Play클릭하면 오토슬라이드 실행 
 -->
