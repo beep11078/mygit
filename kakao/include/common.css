@@ -1593,11 +1593,11 @@ a .blackCircle {
     padding: 86px 0;
 }
 
-.footer {
+.footer .footerServiceBox {
     display: flex;
 }
 
-.footer div {
+.footer .footerServiceBox div {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -1605,40 +1605,72 @@ a .blackCircle {
     text-align: left;
 }
 
-.footer .kakaoGroup {
+.footer .footerServiceBox .kakaoGroup {
     flex: 2;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
 }
 
-.footer div h3,
-.footer div strong {
+.footer .footerServiceBox div h3,
+.footer .footerServiceBox div strong {
     line-height: 40px;
     margin-top: 46px;
     display: block;
 }
 
-.footer div h3 {
+.footer .footerServiceBox div h3{
     font-size: 26px;
 }
 
-.footer div strong {
+.footer .footerServiceBox div strong {
     font-size: 16px;
 }
 
-.footer .kakaoGroup ul {
+.footer .footerServiceBox .kakaoGroup ul {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     height: 250px;
 }
 
-.footer a {
+.footer .footerServiceBox a {
     font-size: 12px;
     line-height: 34px;
     color: var(--primary-color);
     text-decoration: none;
+}
+
+.footer .footerRelationBox {
+    display: flex;
+}
+
+.footer .footerRelationBox div h3,
+.footer .footerRelationBox div a  {
+    font-size: 12px;
+    color: #888;
+    text-decoration: none;
+}
+
+.footer .footerRelationBox div h3:hover,
+.footer .footerRelationBox div a:hover,
+.footer .footerRelationBox div:nth-child(n+3):nth-child(-n+4) h3 {
+    color: var(--primary-color);
+}
+
+.footer .footerRelationBox div h3 {
+    margin-right: 24px;
+    position: relative;
+}
+
+.footer .footerRelationBox .sub h3::after {
+    position: absolute;
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-top: 1px solid #888;
+    border-right: 1px solid #888;
+    transform: translate(5px, 2px) rotate(135deg);
 }
 
 @media screen and (max-width: 1200px) {
