@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                padding: 50px;
+                padding-top: 300px;
+            }
+
+            .box {
+                width: 200px;
+                height: 40px;
+                border-radius: 25px;
+                background-color: #fc0;
+                position: relative;
+            }
+            
+            .box ul {
+                position: absolute;
+                left: 0;
+                bottom: 50px;
+                list-style-type: none;
+                background-color: #ccc;
+                width: 100%;
+                display: none;
+            }
+
+            /* 보일때 */
+            .box ul.active {
+                display: block;
+            }
+
+            .box button {
+                border: 0 none;
+                background-color: #0fc;
+                width: 100%;
+                display: block;
+                height: 40px;
+                text-align: left;
+                padding: 0 20px;
+                position: relative;
+                cursor: pointer;
+                border-radius: 20px;
+                outline: 0 none;
+            }
+
+            .box button::before,
+            .box button::after {
+                content: "";
+                width: 15px;
+                height: 2px;
+                background-color: #000;
+                position: absolute;
+                right: 20px;
+                top: 50%;
+                margin-top: -1px;
+            }
+
+            .box button::after {
+                transform: rotate(90deg);
+            }
+
+            .box button.active::after {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <button>관련사이트</button>
+            <ul>
+                <li><a href="">menu1</a></li>
+                <li><a href="">menu2</a></li>
+                <li><a href="">menu3</a></li>
+                <li><a href="">menu4</a></li>
+                <li><a href="">menu5</a></li>
+            </ul>
+        </div>
+
+        <script>
+            let btn = document.querySelector(".box button");
+            let menu = document.querySelector(".box ul");
+
+            btn.addEventListener("click", function () {
+                if (menu.classList.contains("active")) {
+                    // 있을때
+                    menu.classList.remove("active");
+                    btn.classList.remove("active");
+                } else {
+                    menu.classList.add("active");
+                    btn.classList.add("active");
+                }
+            });
+        </script>
+    </body>
+</html>

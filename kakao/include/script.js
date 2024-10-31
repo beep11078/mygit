@@ -1,4 +1,4 @@
-// 서브 메뉴
+// 서브 메뉴 오픈
 const menus = document.querySelectorAll(".mainMenu > li"); // 모든 li 쌍 선택
 
 menus.forEach((menu) => {
@@ -23,6 +23,7 @@ menus.forEach((menu) => {
     }
 });
 
+
 // 메뉴 스크롤
 const header = document.querySelector(".header");
 const moreBtn = document.querySelector(".kakaoMoreBox");
@@ -41,6 +42,7 @@ window.addEventListener("scroll", () => {
     }
 });
 
+
 // 마우스 오버/아웃 이벤트 리스너 추가
 moreBtn.addEventListener("mouseenter", () => {
     if (window.scrollY === 0) {
@@ -55,6 +57,7 @@ moreBtn.addEventListener("mouseleave", () => {
         moreBtn.style.opacity = "0";
     }
 });
+
 
 // 서치 이벤트
 const searchBtn = document.querySelector(".btn_search");
@@ -93,6 +96,7 @@ searchBtn.addEventListener("click", (e) => {
     }
 });
 
+
 // 모든 슬라이드 세트 초기화
 function initializeSlides(slideSet) {
     const slides = slideSet.querySelectorAll(".visualSlide li");
@@ -119,6 +123,7 @@ function initializeSlides(slideSet) {
     });
 }
 
+
 // 슬라이드와 버튼을 동시에 업데이트하는 함수
 function showSlideAndUpdateButtons(slides, buttons, activeIndex) {
     slides.forEach((slide, index) => {
@@ -134,6 +139,7 @@ function showSlideAndUpdateButtons(slides, buttons, activeIndex) {
 
 // 모든 슬라이드 세트에 기능 적용
 document.querySelectorAll(".visualRightList").forEach(initializeSlides);
+
 
 // // 다크모드
 // let toggle = document.querySelector('.btn_dark')
