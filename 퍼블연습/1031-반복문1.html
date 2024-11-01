@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        *{ 
+            box-sizing: border-box; 
+            margin: 0; 
+            padding:0;
+        }
+
+        ul { list-style: none; padding: 0; }
+        a { text-decoration: none; }
+
+        .control2 {
+            padding: 30px;
+            background-color: #fc0;
+            width: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .control2 .hide {
+        display: none;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="link1">test1</div>
+    <div class="link2">test2</div>
+    <div class="link3">test3</div>
+    <div class="link4">test4</div>
+
+    <ul class="list">
+        <li>리스트1</li>
+        <li>리스트2</li>
+        <li>리스트3</li>
+    </ul>
+    
+    <div class="box">
+        <button class="btn1">버튼1</button>
+        <button class="btn2">버튼2</button>
+        <button class="btn3">버튼3</button>
+        <button class="btn4">버튼4</button>
+    </div>
+
+    <div class="control">
+        <button class="play_stop">재생</button>
+    </div>
+
+    <div class="control2">
+        <button class="play hide">재생</button>
+        <button class="stop">정지</button>
+    </div>
+
+
+    <script>
+        
+        console.log(1);
+        console.log(2);
+        console.log(3);
+        console.log(4);
+        
+        for(let i = 1; i < 5; i=i+1) {
+            console.log(i);
+        }
+
+
+
+        document.querySelector('.link1').addEventListener('click', function(){
+            window.alert('test');
+        });
+
+        let colors = ['red', 'green', 'blue'];
+        // length = 3, index: 0, 1, 2
+        console.log(colors[0]); // red
+        console.log(colors[1]); // green
+        console.log(colors[2]); // blue
+        
+        for(let i = 0; i < 3; i = i+1){
+            console.log(colors[i]);
+        }
+        
+        colors.forEach(function(element, index) {
+            // forEach : 배열 순서대로 명령 실행
+            console.log(colors[index]);
+        })
+
+
+
+        const list = document.querySelectorAll('.list li');
+
+        list.forEach(function(element,index){
+            // element : 객체 자기 자신, 여기서는 .list li, index : 방 번호
+            element.style.backgroundColor = colors[index];
+        });
+
+
+
+        const btn = document.querySelectorAll('.box button');
+        // btn.forEach(function(element,index){
+        //     element.addEventListener('click', function(){
+        //         window.alert(index);
+        //     });
+        //     // 모든 요소 각각에 대해 이벤트 리스너가 붙음 
+        // });
+
+        btn.forEach(function(el, i){
+            el.addEventListener('click', function(event) {
+                // 조건문 적용
+                if(event.target.classList.contains('btn1')){ // 클릭(이벤트가 발생한)한 대상
+                    window.alert('버튼 1번입니다');
+                } else {
+                    window.alert('버튼 1번이 아닙니다');
+                }
+            });
+        });
+
+
+
+        const play_stop = document.querySelector('.control .play_stop');
+        play_stop.addEventListener('click',function(){
+            this.innerText = '실행';
+            // 글자 바꾸는 방법 innerText / textContent
+            // but 이 방법 권장x
+        });
+
+        const btn2 = document.querySelectorAll('.control2 button');
+        btn2.forEach(function(el, i){
+            el.addEventListener('click', function(e){
+                if(e.target.classList.contains('play')) {
+                    btn2[0].classList.add('hide');
+                    btn2[1].classList.remove('hide');
+                    // 스와이퍼 오토플레이 실행
+                    // swiper변수.autoplay.start();
+                } else if (e.target.classList.contains('stop')) {
+                    btn2[1].classList.add('hide');
+                    btn2[0].classList.remove('hide');
+                    // 스와이퍼 오토플레이 중지
+                    // swiper변수.autoplay.stop();
+                }
+            });
+        });
+
+    </script>
+</body>
+</html>

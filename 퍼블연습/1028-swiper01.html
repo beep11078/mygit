@@ -1,121 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- swiper css -->
-    <link rel="stylesheet" href="swiper/swiper-bundle.min.css">
-    <style>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <!-- swiper css -->
+        <link rel="stylesheet" href="swiper/swiper-bundle.min.css" />
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+            body {
+                padding-top: 50px;
+            }
 
-        body {
-            padding-top: 50px;
-        }
+            .spacer {
+                height: 50px;
+            }
 
-        .spacer {
-            height: 50px;
-        }
+            .sliderbox {
+                width: 800px;
+                height: 420px;
+                background-color: #fc0;
+                border-bottom: 10px solid #000;
+                margin: 0 auto;
+            }
 
-        .sliderbox {
-            width: 800px;
-            height: 420px;
-            background-color: #fc0;
-            border-bottom: 10px solid #000;
-            margin: 0 auto;
-        }
-        .swiper01 .swiper-slide,
-        .swiper02 .swiper-slide {
-            height: 400px;
-            background-color: #f0c;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 50px;
-            color:#fff;
-        }
-
-    </style>
-</head>
-<body>
-    <!-- 슬라이더박스 시작 -->
-    <div class="sliderbox">
-        <!-- swiper start -->
-        <!-- 초보자는 클래스명 수정은 권장X -->
-        <div class="swiper swiper01">
-            <div class="swiper-wrapper">
-                <!-- 컨텐츠영역 -->
-                <div class="swiper-slide">slide1</div>
-                <div class="swiper-slide">slide2</div>
-                <div class="swiper-slide">slide3</div>
-                <div class="swiper-slide">slide4</div>
-                <div class="swiper-slide">slide5</div>
+            .swiper01 .swiper-slide,
+            .swiper02 .swiper-slide {
+                height: 400px;
+                background-color: #f0c;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 50px;
+                color: #fff;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- 슬라이더박스 시작 -->
+        <div class="sliderbox">
+            <!-- swiper start -->
+            <!-- 초보자는 클래스명 수정은 권장X -->
+            <div class="swiper swiper01">
+                <div class="swiper-wrapper">
+                    <!-- 컨텐츠영역 -->
+                    <div class="swiper-slide">slide1</div>
+                    <div class="swiper-slide">slide2</div>
+                    <div class="swiper-slide">slide3</div>
+                    <div class="swiper-slide">slide4</div>
+                    <div class="swiper-slide">slide5</div>
+                </div>
             </div>
+            <!-- swiper end -->
         </div>
-        <!-- swiper end -->
-    </div>
-    <!-- 슬라이더박스 끝  -->
-    <div class="spacer"></div>
-    <!-- 슬라이더박스 시작 -->
-    <div class="sliderbox">
-        <!-- swiper start -->
-        <!-- 초보자는 클래스명 수정은 권장X -->
-        <div class="swiper swiper02">
-            <div class="swiper-wrapper">
-                <!-- 컨텐츠영역 -->
-                <div class="swiper-slide">slide1</div>
-                <div class="swiper-slide">slide2</div>
-                <div class="swiper-slide">slide3</div>
-                <div class="swiper-slide">slide4</div>
-                <div class="swiper-slide">slide5</div>
+
+        <!-- 슬라이더박스 끝  -->
+        <div class="spacer"></div>
+        <!-- 슬라이더박스 시작 -->
+
+        <div class="sliderbox">
+            <!-- swiper start -->
+            <!-- 초보자는 클래스명 수정은 권장X -->
+            <div class="swiper swiper02">
+                <div class="swiper-wrapper">
+                    <!-- 컨텐츠영역 -->
+                    <div class="swiper-slide">slide1</div>
+                    <div class="swiper-slide">slide2</div>
+                    <div class="swiper-slide">slide3</div>
+                    <div class="swiper-slide">slide4</div>
+                    <div class="swiper-slide">slide5</div>
+                </div>
+                <!-- swiper에서 제공하는걸 사용할경우 클래스명변경금지 -->
+                <!-- 사용자디자인하는경우 클래스명 임의로 작성 가능 -->
+                <!-- 페이지네비게이션 -->
+                <div class="swiper-pagination"></div>
+                <!-- 좌우버튼 -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
-            <!-- swiper에서 제공하는걸 사용할경우 클래스명변경금지 -->
-            <!-- 사용자디자인하는경우 클래스명 임의로 작성 가능 -->
-            <!-- 페이지네비게이션 -->
-            <div class="swiper-pagination"></div>
-            <!-- 좌우버튼 -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+            <!-- swiper end -->
         </div>
-        <!-- swiper end -->
-    </div>
-    <!-- 슬라이더박스 끝  -->
-    <div class="spacer"></div>
+        <!-- 슬라이더박스 끝  -->
 
+        <div class="spacer"></div>
 
-    <!-- swiper js -->
-    <script src="swiper/swiper-bundle.min.js"></script>
-    <script>
+        <!-- swiper js -->
+        <script src="swiper/swiper-bundle.min.js"></script>
+        <script>
+            // swiper slide
+            // swiper 객체의 인스턴스 생성 = 변수화
+            const mySlide01 = new Swiper(".swiper01");
 
-        // swiper slide
-        // swiper 객체의 인스턴스 생성 = 변수화
-        const mySlide01 = new Swiper('.swiper01');
-
-
-        const mySlide02 = new Swiper('.swiper02', {
-                autoplay : {
-                    delay : 2000, // 2000 = 2초
+            const mySlide02 = new Swiper(".swiper02", {
+                autoplay: {
+                    delay: 2000, // 2000 = 2초
                 },
                 // 페이지네비게이션
-                pagination : {
-                    el : '.swiper-pagination', // 페이지네비가 들어갈박스의 클래스명 지정
-                    clickable : true, // 클릭활성화 (기본값 : false)
-                    type : 'fraction', // 페이지네비 타입 변경 1/4
+                pagination: {
+                    el: ".swiper-pagination", // 페이지네비가 들어갈박스의 클래스명 지정
+                    clickable: true, // 클릭활성화 (기본값 : false)
+                    type: "fraction", // 페이지네비 타입 변경 1/4
                 },
                 // 네비게이션(좌우버튼)
-                navigation : {
-                    prevEl : '.swiper-button-prev',  // 이전버튼이 들어갈박스
-                    nextEl : '.swiper-button-next', // 다음버튼이 들어갈박스
+                navigation: {
+                    prevEl: ".swiper-button-prev", // 이전버튼이 들어갈박스
+                    nextEl: ".swiper-button-next", // 다음버튼이 들어갈박스
                 },
-        });
-
-    </script>
-</body>
+            });
+        </script>
+    </body>
 </html>
 
 <!--

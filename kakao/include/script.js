@@ -1,4 +1,4 @@
-// 서브 메뉴
+// 서브 메뉴 오픈
 const menus = document.querySelectorAll(".mainMenu > li"); // 모든 li 쌍 선택
 
 menus.forEach((menu) => {
@@ -23,6 +23,7 @@ menus.forEach((menu) => {
     }
 });
 
+
 // 메뉴 스크롤
 const header = document.querySelector(".header");
 const moreBtn = document.querySelector(".kakaoMoreBox");
@@ -41,6 +42,7 @@ window.addEventListener("scroll", () => {
     }
 });
 
+
 // 마우스 오버/아웃 이벤트 리스너 추가
 moreBtn.addEventListener("mouseenter", () => {
     if (window.scrollY === 0) {
@@ -55,6 +57,7 @@ moreBtn.addEventListener("mouseleave", () => {
         moreBtn.style.opacity = "0";
     }
 });
+
 
 // 서치 이벤트
 const searchBtn = document.querySelector(".btn_search");
@@ -93,6 +96,31 @@ searchBtn.addEventListener("click", (e) => {
     }
 });
 
+
+// 기부 건수 카운트 다운
+const counters = document.querySelectorAll('.counter')
+
+counters.forEach(counter => {
+    // 초기값을 00,000,000 형식으로 설정
+    counter.innerText = '00,000,000'
+
+    const updateCounter = () => {
+        const target = +counter.getAttribute('data-target')
+        const c = parseInt(counter.innerText.replace(/,/g, '')) // 쉼표를 제거하고 숫자로 변환
+        const increment = target / 200
+
+        if (c < target) {
+            counter.innerText = `${Math.ceil(c + increment).toLocaleString('en-US', { minimumIntegerDigits: 8 })}`
+            setTimeout(updateCounter, 1)
+        } else {
+            counter.innerText = target.toLocaleString('en-US', { minimumIntegerDigits: 8 })
+        }
+    }
+
+    updateCounter()
+})
+
+
 // 모든 슬라이드 세트 초기화
 function initializeSlides(slideSet) {
     const slides = slideSet.querySelectorAll(".visualSlide li");
@@ -101,16 +129,15 @@ function initializeSlides(slideSet) {
     // 슬라이드와 버튼 초기 상태 설정
     slides.forEach((slide, index) => {
         slide.style.opacity = index === 0 ? "1" : "0"; // 첫 슬라이드 표시
-        slide.style.transition = "opacity 0.5s ease"; // 서서히 바뀌는 애니메이션
-        slide.style.position = "absolute"; // 슬라이드가 겹치도록 설정
-        slide.style.top = "0";
-        slide.style.left = "0";
     });
 
     buttons.forEach((button, index) => {
-        button.style.width = index === 0 ? "24px" : "8px"; // 첫 버튼 강조
-        button.style.backgroundColor =
-            index === 0 ? "var(--primary-color)" : "var(--secondary-color)";
+        
+        if(index === 0) {
+            button.classList.add('active');
+        } else {
+            button.classList.remove('active');
+        }
 
         // 각 버튼에 클릭 이벤트 추가
         button.addEventListener("click", () => {
@@ -119,6 +146,7 @@ function initializeSlides(slideSet) {
     });
 }
 
+
 // 슬라이드와 버튼을 동시에 업데이트하는 함수
 function showSlideAndUpdateButtons(slides, buttons, activeIndex) {
     slides.forEach((slide, index) => {
@@ -126,14 +154,17 @@ function showSlideAndUpdateButtons(slides, buttons, activeIndex) {
     });
 
     buttons.forEach((button, index) => {
-        button.style.width = index === activeIndex ? "24px" : "8px"; // 활성 버튼 강조
-        button.style.backgroundColor =
-            index === 0 ? "var(--primary-color)" : "var(--secondary-color)";
+        if (index === activeIndex) {
+            button.classList.add('active'); // 클릭한 버튼에 .active 추가
+        } else {
+            button.classList.remove('active'); // 나머지 버튼의 .active 제거
+        }
     });
 }
 
 // 모든 슬라이드 세트에 기능 적용
 document.querySelectorAll(".visualRightList").forEach(initializeSlides);
+
 
 // // 다크모드
 // let toggle = document.querySelector('.btn_dark')

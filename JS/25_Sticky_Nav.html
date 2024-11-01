@@ -59,6 +59,11 @@
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     }
 
+    /* 
+    .nav.active: 같은 요소에 클래스가 추가되는 경우
+    .nav .active: 상위 요소 안의 하위 요소에 클래스가 있는 경우
+    */
+
     .nav.active a {
         color: #000;
     }
@@ -74,7 +79,7 @@
     }
 
     .hero {
-        background-image: url("https://images.pexels.com/photos/450035/pexels-photo-450035.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+        background-image: url("https://images.unsplash.com/photo-1493552152660-f915ab47ae9d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: bottom center;
@@ -180,6 +185,7 @@
 
         function fixNav() {
             if (window.scrollY > nav.offsetHeight + 150) {
+            // offsetHeight : 요소의 세로값
                 nav.classList.add("active");
             } else {
                 nav.classList.remove("active");
