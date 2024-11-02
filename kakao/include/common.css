@@ -506,7 +506,8 @@ li {
     transition: opacity .5s ease;
 }
 
-.circleBtn {
+.visualRightList1 .circleBtn,
+.visualRightList2 .circleBtn {
     position: absolute;
     left: 50%;
     bottom: 25px;
@@ -514,7 +515,8 @@ li {
     display: flex;
 }
 
-.circleBtn div {
+.visualRightList1 .circleBtn div, 
+.visualRightList2 .circleBtn div {
     height: 8px;
     border-radius: 8px;
     margin: 0 5px;
@@ -609,9 +611,10 @@ li {
     background-color: #fae100;
     overflow: hidden;
     border-radius: 25px 0 0 25px;
+    position: relative;
 }
 
-.visualRightList3::after {
+.visualRight .visualRightList.visualRightList3::after {
     content: '';
     width: 39px;
     height: 168px;
@@ -625,12 +628,12 @@ li {
     z-index: 5;
 }
 
-.visualRightList3 .bgBox {
+.visualRight .visualRightList.visualRightList3 .bgBox {
     border-radius: 24px;
     position: relative;
 }
 
-.visualRightList3 .bgBox li {
+.visualRight .visualRightList.visualRightList3 .bgBox li {
     width: 272px;
     height: 168px;
     display: flex;
@@ -641,7 +644,7 @@ li {
     padding-bottom: 20px;
 }
 
-.visualRightList3 .bgBox li::before {
+.visualRight .visualRightList.visualRightList3 .bgBox li::before {
     position: absolute;
     content: "";
     width: 80px;
@@ -655,18 +658,21 @@ li {
     background-image: url(../images/Kakao_image/kakaogroup.webp);
 }
 
-.visualRightList3 .circleBtn.circleBtn3 {
+.visualRight .visualRightList.visualRightList3 .circleBtn3 {
     width: 272px;
-    left: 0;
-    bottom: 95px;
-    transform: translate(0);
+    position: absolute;
+    top: 50%; 
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    bottom: 0;
 }
 
-.visualRightList3 .circleBtn.circleBtn3 button {
+.visualRight .visualRightList.visualRightList3 .circleBtn3 button {
     border-radius: 50%;
     border: none;
     background-color: rgba(255, 255, 255, 0.7);
-    padding: 5px;
     margin: 0 5px;
     width: 2rem;
     height: 2rem;
@@ -674,13 +680,35 @@ li {
     position: absolute;
 }
 
-.visualRightList3 .circleBtn.circleBtn3 .prev {
+.visualRight .visualRightList.visualRightList3 .circleBtn3 .prev {
     left: 0;
+    position: relative;
 }
 
-.visualRightList3 .circleBtn.circleBtn3 .next {
+.visualRight .visualRightList.visualRightList3 .circleBtn3 .prev:before {
+    content: '';
+    position: absolute;
+    width: 5px; height: 5px;
+    border-top: 1px solid #000;
+    border-right: 1px solid #000;
+    transform: translate(-50%, -50%) rotate(225deg);
+    top: 50%; left: 50%;
+}
+
+.visualRight .visualRightList.visualRightList3 .circleBtn3 .next {
     right: 0;
-} 
+    position: relative;
+}
+
+.visualRight .visualRightList.visualRightList3 .circleBtn3 .next:after {
+    content: '';
+    position: absolute;
+    width: 5px; height: 5px;
+    border-top: 1px solid #000;
+    border-right: 1px solid #000;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
 
 /* storyBox --------------------------------------------------------- */
 
