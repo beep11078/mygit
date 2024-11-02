@@ -18,9 +18,7 @@ menus.forEach((menu) => {
             // 현재 subMenu 토글
             subMenu.classList.toggle("subActive");
         });
-    } else {
-        console.warn("menuTitle 또는 subMenu를 찾을 수 없습니다.", menu);
-    }
+    } 
 });
 
 
@@ -164,6 +162,54 @@ function showSlideAndUpdateButtons(slides, buttons, activeIndex) {
 
 // 모든 슬라이드 세트에 기능 적용
 document.querySelectorAll(".visualRightList").forEach(initializeSlides);
+
+
+// 요소 선택
+const visualSlide = document.querySelector('.visualRight .visualRightList.visualRightList3');
+const slides = visualSlide.querySelectorAll('.visualRightList3 li');
+const prevBtn = document.querySelector('.circleBtn3 .prev');
+const nextBtn = document.querySelector('.circleBtn3 .next');
+
+let currentIndex = 0;
+
+// 슬라이드 표시 함수
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.style.opacity = i === index ? "1" : "0";
+    });
+    
+    // currentIndex에 따라 배경 색상 변경
+    if (index === 0) {
+        visualSlide.style.backgroundColor = "#fae100"; // 0일 때 배경 색상
+    } else {
+        visualSlide.style.backgroundColor = "rgba(0,0,0,.2)"; // 1일 때 배경 색상
+        visualSlide.style.backdropFilter = 'brightness(60%)';
+    }
+}
+
+// 초기 슬라이드 설정
+showSlide(currentIndex);
+
+// 이전 버튼 클릭 이벤트
+prevBtn.addEventListener('click', () => {
+    currentIndex = currentIndex === 0 ? 1 : 0; // 0과 1을 번갈아가며 설정  
+    showSlide(currentIndex);
+});
+
+// 다음 버튼 클릭 이벤트
+nextBtn.addEventListener('click', () => {
+    currentIndex = currentIndex === 0 ? 1 : 0; // 0과 1을 번갈아가며 설정
+    showSlide(currentIndex);
+});
+
+
+
+
+
+
+
+
+
 
 
 // // 다크모드

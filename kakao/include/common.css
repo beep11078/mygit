@@ -499,7 +499,8 @@ li {
     height: 272px;
 }
 
-.visualSlide li {
+.visualSlide li,
+.visualSlide2 li {
     position: absolute;
     top: 0;
     left: 0;
@@ -626,6 +627,7 @@ li {
     background-repeat: no-repeat;
     background-size: cover;
     z-index: 5;
+    pointer-events: none;
 }
 
 .visualRight .visualRightList.visualRightList3 .bgBox {
@@ -633,29 +635,29 @@ li {
     position: relative;
 }
 
-.visualRight .visualRightList.visualRightList3 .bgBox li {
+.visualRight .visualRightList.visualRightList3 .bgBox .visualSlide2 li {
     width: 272px;
     height: 168px;
     display: flex;
     font-size: 20px;
     text-align: center;
-    align-items: end;
+    align-items: center;
     justify-content: center;
-    padding-bottom: 20px;
 }
 
-.visualRight .visualRightList.visualRightList3 .bgBox li::before {
-    position: absolute;
-    content: "";
-    width: 80px;
-    height: 80px;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.visualRight .visualRightList.visualRightList3 .bgBox .visualSlide2 li:first-child {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 80px 80px;
+    background-image: url(../images/Kakao_image/kakaogroup.webp);
+}
+
+.visualRight .visualRightList.visualRightList3 .bgBox .visualSlide2 li:last-child {
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url(../images/Kakao_image/kakaogroup.webp);
+    background-size: 300px auto;
+    background-image: url(../images/Kakao_image/연혁.webp);
+    filter: brightness(0.8);
 }
 
 .visualRight .visualRightList.visualRightList3 .circleBtn3 {
@@ -678,6 +680,7 @@ li {
     height: 2rem;
     font-weight: bolder;
     position: absolute;
+    cursor: pointer;
 }
 
 .visualRight .visualRightList.visualRightList3 .circleBtn3 .prev {
@@ -698,6 +701,7 @@ li {
 .visualRight .visualRightList.visualRightList3 .circleBtn3 .next {
     right: 0;
     position: relative;
+    z-index: 99;
 }
 
 .visualRight .visualRightList.visualRightList3 .circleBtn3 .next:after {
@@ -707,6 +711,7 @@ li {
     border-top: 1px solid #000;
     border-right: 1px solid #000;
     transform: translate(-50%, -50%) rotate(45deg);
+    top: 50%; left: 50%;
 }
 
 

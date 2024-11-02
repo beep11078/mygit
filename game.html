@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <style>
+        * {
+        box-sizing:border-box;
+        margin:0;
+        padding:0;
+        }
+
+        body {
+        background:gray;
+        }
+
+        .contain {
+        width: 900px;
+        max-width:100%;
+        background:#fff;
+        height:800px;
+        max-height:100%;
+        margin:0 auto;
+        position:relative;
+        }
+
+        .box {
+        position:absolute;
+        width:80%;
+        height:80%;
+        border:3px solid red;
+        left: 50%;
+        transform:translate(-50%,0);
+        display:flex;
+        flex-direction:column;
+        }
+
+        .box1 {
+        background:pink;
+        width:26%;
+        max-height:24%;
+        flex-shrink: 0;
+        aspect-ratio: 26 / 24;
+        }
+
+        .box2 {
+        background:black;
+        width:20%;
+        max-height:20%;
+        flex-shrink: 0;
+        aspect-ratio: 1 / 1;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <div class="contain">
+        <div class="box">
+            <div class="box1">
+            </div>
+            <div class="box2">
+            </div>
+            <div class="box3">
+            </div>
+        </div>
+
+        <div class="footer-bar">        
+        </div>
+    </div>
+    
+
+</body>
+</html>
