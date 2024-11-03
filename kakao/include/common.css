@@ -31,6 +31,10 @@ html.dark {
     color: var(--primary-color);
 }
 
+body {
+    overflow-x: hidden;
+}
+
 button.dark {
     backdrop-filter: invert(100%);
 }
@@ -94,8 +98,8 @@ li {
 }
 
 .container .storyBox {
-    margin: 0;
-    margin-bottom: 210px;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
 }
 
 .container .titleBox .titleArticle {
@@ -384,11 +388,10 @@ li {
     font-size: 13px;
     letter-spacing: -0.3px;
 }
-/* 
+
 .main .section1 .mainBox .visu  alBox .kakaoMore:hover .kakaoMoreBox {
-    display: block;
-    pointer-events: auto;
-} */
+    opacity: 1;
+} 
 
 .main .section1 .mainBox .visualBox .kakaoMore .kakaoMoreBox::after {
     content: "";
@@ -734,17 +737,37 @@ li {
 
 /* storyBox --------------------------------------------------------- */
 
+.stotyBox .titleBox {
+    display: flex;
+    justify-content: space-between;
+}
+
+.stotyBox .titleBox .titleArticle {
+    display: inline-block;
+}
+
 .storyBox .titleBox .titleArticle::before {
     background-image: url(../images/Kakao_image/ico_archives.gif);
 }
 
-.storyBox .titleBox .titleArticle .pause {
+.storyBox .titleBox .controlBox {
+    width: 50px;
+    height: 50px;
+    margin-left: auto;
+}
+
+.storyBox .titleBox .titleArticle .pause,
+.storyBox .titleBox .titleArticle .play {
     background-color: var(--primary-color);
     width: 50px;
     height: 50px;
     border-radius: 50%;
     margin-left: auto;
-    position: relative;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 99;
 }
 
 .storyBox .titleBox .titleArticle .pause::before {
@@ -778,7 +801,7 @@ li {
     border-color: transparent transparent transparent var(--secondary-color);
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 55%;
     transform: translate(-50%, -50%);
 }
 
@@ -787,7 +810,6 @@ li {
     display: flex;
     max-width: 100%;
 }
-
 
 .storyBox .storyList .wide {
     width: 1370px;

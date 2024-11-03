@@ -203,13 +203,15 @@ nextBtn.addEventListener('click', () => {
 });
 
 
+
+
 // swiper slide
 // swiper 객체의 인스턴스 생성 = 변수화
 const mySlide01 = new Swiper(".swiper-container ", {
     autoplay: {
         delay: 0,
         stopOnLastSlide: false,
-        disableOnInteraction: true,
+        disableOnInteraction: false,
     },
     speed:30000,
     loop:true,
@@ -223,14 +225,25 @@ const mySlide01 = new Swiper(".swiper-container ", {
     //     type: "fraction", // 페이지네비 타입 변경 1/4
     // },
     // // 네비게이션(좌우버튼)
-    // navigation: {
-    //     prevEl: ".swiper-button-prev", // 이전버튼이 들어갈박스
-    //     nextEl: ".swiper-button-next", // 다음버튼이 들어갈박스
-    // },
 });
 
 
-
+const btns = document.querySelectorAll('.controlBox button');
+btns.forEach(function(el){
+    el.addEventListener('click', function(e){
+        if (e.target.classList.contains('play')) {
+            console.log("Play 버튼 클릭");
+            btns[0].classList.add('hide');
+            btns[1].classList.remove('hide');
+            mySlide01.autoplay.start();
+        } else if (e.target.classList.contains('pause')) {
+            console.log("Pause 버튼 클릭");
+            btns[1].classList.add('hide');
+            btns[0].classList.remove('hide');
+            mySlide01.autoplay.stop();
+        }
+    });
+});
 
 
 
