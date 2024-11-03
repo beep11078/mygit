@@ -24,6 +24,7 @@ menus.forEach((menu) => {
 
 // 메뉴 스크롤
 const header = document.querySelector(".header");
+const more = document.querySelector(".kakaoMore");
 const moreBtn = document.querySelector(".kakaoMoreBox");
 
 window.addEventListener("scroll", () => {
@@ -42,14 +43,14 @@ window.addEventListener("scroll", () => {
 
 
 // 마우스 오버/아웃 이벤트 리스너 추가
-moreBtn.addEventListener("mouseenter", () => {
+more.addEventListener("mouseenter", () => {
     if (window.scrollY === 0) {
         // 스크롤이 없는 경우에만 동작
         moreBtn.style.opacity = "1";
     }
 });
 
-moreBtn.addEventListener("mouseleave", () => {
+more.addEventListener("mouseleave", () => {
     if (window.scrollY > 0) {
         // 스크롤이 있는 경우에만 숨기기
         moreBtn.style.opacity = "0";
