@@ -1,12 +1,9 @@
 @font-face {
     font-family: "NanumSquareNeo";
     src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.eot);
-    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.eot?#iefix)
-            format("embedded-opentype"),
-        url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.woff)
-            format("woff"),
-        url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.ttf)
-            format("truetype");
+    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.eot?#iefix) format("embedded-opentype"),
+        url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.woff) format("woff"),
+        url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.ttf) format("truetype");
 }
 
 * {
@@ -84,14 +81,20 @@ li {
     width: 100%;
     /* border: 1px solid #222; */
 }
-
+/* 
 .wrapper {
-    max-width: 1712px;
-    margin: auto;
-}
+    
+} */
 
 .container {
+    max-width: 1712px;
+    margin: auto;
     position: relative;
+    margin-bottom: 210px;
+}
+
+.container .storyBox {
+    margin: 0;
     margin-bottom: 210px;
 }
 
@@ -652,12 +655,26 @@ li {
     background-image: url(../images/Kakao_image/kakaogroup.webp);
 }
 
+.visualRight .visualRightList.visualRightList3 .bgBox .visualSlide2 li:first-child div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .visualRight .visualRightList.visualRightList3 .bgBox .visualSlide2 li:last-child {
     background-position: center;
     background-repeat: no-repeat;
     background-size: 300px auto;
     background-image: url(../images/Kakao_image/연혁.webp);
     filter: brightness(0.8);
+}
+
+.swpier-wrapper {
+    transition-timing-function: linear;
+}
+
+.visualRight .visualRightList.visualRightList3 .bgBox .visualSlide2 li:last-child div {
+    color: #fff;
 }
 
 .visualRight .visualRightList.visualRightList3 .circleBtn3 {
@@ -771,6 +788,7 @@ li {
     max-width: 100%;
 }
 
+
 .storyBox .storyList .wide {
     width: 1370px;
     height: 538px;
@@ -803,6 +821,7 @@ li {
 
 .storyBox .storyList li {
     width: 417px;
+    height: 538px;
     flex-shrink: 0;
     background-color: #eee;
     border-radius: 40px;
