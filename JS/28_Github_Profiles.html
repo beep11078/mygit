@@ -122,6 +122,7 @@
     </style>
   </head>
   <body>
+    
     <form class="user-form" id="form">
       <input type="text" id="search" placeholder="Search a Github User">
     </form>
@@ -137,6 +138,8 @@
       const search = document.getElementById('search')
 
       async function getUser(username) {
+      // 동기(Synchronous): 작업이 순차적으로 실행되며, 한 작업이 끝날 때까지 다음 작업이 기다림.
+      // 비동기(Asynchronous): 결과가 오래 걸리더라도 기다리지 않고 다른 작업으로 넘어가며, 결과가 준비되면 그때 처리됨.
           try {
               const { data } = await axios(APIURL + username)
 
@@ -152,6 +155,8 @@
                   createErrorCard('No profile with this username')
               }
           }
+          // try { ... } catch(err) { ... }
+          // try-catch 구문을 사용하여 오류를 처리합니다. try 블록 내부에서 오류가 발생하면 catch 블록이 실행되어 오류를 처리합니다.
       }
 
       async function getRepos(username) {
@@ -216,6 +221,8 @@
               })
       }
 
+
+
       form.addEventListener('submit', (e) => {
           e.preventDefault()
           // form에 입력한 값이 남아있도록 Default로 돌아가는 것을 금지(prevent)함
@@ -229,8 +236,8 @@
               search.value = ''
           }
       })
-
-      // 모든 함수가 준비된 후에 이벤트 리스너를 추가함으로써, 실행 시 에러를 방지하고 가독성을 높이는 것을 목적으로 이벤트 리스너를 마지막에 배치하는 것
+    // 모든 함수가 준비된 후에 이벤트 리스너를 추가함으로써, 실행 시 에러를 방지하고 가독성을 높이는 것을 목적으로 이벤트 리스너를 마지막에 배치하는 것
+      
 
 
     </script>
