@@ -817,6 +817,10 @@ li {
     transform: translate(-50%, -50%);
 }
 
+.swiper-container.paused {
+    pointer-events: none; /* 슬라이드 이동을 방지 */
+}
+
 .storyBox .storyList,
 .newsBox .newsList {
     display: flex;

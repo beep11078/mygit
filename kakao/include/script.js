@@ -207,26 +207,23 @@ const mySlide01 = new Swiper(".swiper-container", {
         stopOnLastSlide: false,
         disableOnInteraction: false,
     },
-    speed: 10000,
+    speed: 30000,
     loop: true,
 });
 
 
 const playButton = document.querySelector('.controlBox .play');
 const pauseButton = document.querySelector('.controlBox .pause');
-let isPlaying = true;
-let originalDelay = mySlide01.params.autoplay.delay; // 기존 delay 값 저장
-let originalSpeed = mySlide01.params.speed;           // 기존 speed 값 저장
+let isPlaying = true; // 슬라이드의 재생 상태
 
 playButton.addEventListener('click', function() {
     if (!isPlaying) {
         console.log("Play 버튼 클릭 - autoplay 시작");
         playButton.classList.add('hide');
         pauseButton.classList.remove('hide');
-        
-        // 원래 delay와 speed로 되돌리고 autoplay 시작
-        mySlide01.params.autoplay.delay = originalDelay;
-        mySlide01.params.speed = originalSpeed;
+
+        // 슬라이드가 다시 재생되도록 클래스를 제거
+        document.querySelector('.swiper-container').classList.remove('paused');
         mySlide01.autoplay.start();
         isPlaying = true;
     }
@@ -237,14 +234,14 @@ pauseButton.addEventListener('click', function() {
         console.log("Pause 버튼 클릭 - autoplay 정지");
         pauseButton.classList.add('hide');
         playButton.classList.remove('hide');
-        
-        // 즉시 멈추기 위해 delay를 최소화하고 speed를 빠르게 설정한 후 autoplay 중지
-        mySlide01.params.autoplay.delay = 10; // 최소화하여 빨리 멈추도록 설정
-        mySlide01.params.speed = 0;
+
+        // 슬라이드 멈추기 위해 paused 클래스 추가
+        document.querySelector('.swiper-container').classList.add('paused');
         mySlide01.autoplay.stop();
         isPlaying = false;
     }
 });
+
 
 
 

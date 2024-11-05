@@ -461,8 +461,8 @@ body::-webkit-scrollbar-button:start:decrement,::-webkit-scrollbar-button:end:in
 }
 
 #about2 { background-image: linear-gradient(0deg, #fdfbfb 80%, #c5c5c5 100%); }
-#portfolio2 { background-image: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%); }
-#contact2 { background-image: linear-gradient(-225deg, #FFFEFF 0%, #D7FFFE 100%); }
+#portfolio1, #portfolio2 { background-color: #FFF; }
+#contact2 { background-image: linear-gradient(0deg, #fdfbfb 80%, #c5c5c5 100%); }
 
 .contentsBox {    /*섹션 내부 내용 박스*/
     width: 95%; max-width: 1200px; margin: auto;
@@ -647,6 +647,17 @@ body::-webkit-scrollbar-button:start:decrement,::-webkit-scrollbar-button:end:in
 
 .graphicBox {
     position: relative;
+}
+
+.webThumb {
+    position: absolute;
+    width: 400px;
+    object-fit: cover;
+    display: block;
+    transition: 0.3s;
+    cursor: pointer;
+    border-radius: 1rem;
+    margin-bottom: .5rem;
 }
 
 .thumb { 

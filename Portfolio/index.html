@@ -71,7 +71,7 @@
         <header id="header" class="fullScreen parallax-background" data-section-name="1" style="background-color: #f2f2f2; background-position: 0 0;">
 
             <div id="headerBox" class="typeBox">
-                <h1 id="headerTitle">출근 준비 완료. 김정빈 포트폴리오.
+                <h1 id="headerTitle">김정빈 포트폴리오.
                 </h1>
             </div>
 
@@ -337,12 +337,13 @@
                             <br>
                             좋아하면 더 잘한다는 마음으로 UI 개발 일을 하고 있습니다. -->
 
-                            Javascript, Jquery, HTML, CSS, SCSS 등 코드와 함께할 때 더할 나위 없는 행복함을 느끼는 만큼, 앞으로는 지금보다 더 잘할 수 있다는 마음을 가지고 웹 퍼블리셔로 일하고 있습니다. 웹 퍼블리싱을 빠삭하게 다루며, Javascript에 대해 공부하면 할수록 많은 흥미를 느낍니다.
+                            HTML, CSS, Javascript 등 코드를 가지고 노는 느낌으로 웹 퍼블리싱을 하고 있으며, UI/UX와 표준화 등에 대해 공부하면 할수록 흥미를 느낍니다.
+                            <br>
                             최근에는 Javascript 라이브러리인 React, Vue.js에 대해 공부 중이며, 다양한 프레임 워크 환경에서 새로운 언어로 마크업 작업을 진행해 보는 것을 꿈꾸고 있습니다.
-
+                            <br>
                             맡게 된 프로젝트의 목적을 우선적으로 고려하며, 팀원은 물론 다양한 직군과의 원활한 협업을 가장 중요하게 생각합니다.
-
-                            계속해서 변화하는 세태에 맞춰 지금처럼 새로운 방식에 도전하는 것을 즐기는 프론트엔드 개발자이자 웹 퍼블리셔가 되겠습니다.
+                            <br>
+                            계속해서 변화하는 세태에 맞춰 지금처럼 새로운 방식에 도전하는 것을 즐기는 웹 퍼블리셔가 되겠습니다.
                         </p>
                         <button class="moreButton" data-cursor-text="More" ><div class="moreAbout"></div></button>
                     </li>
@@ -364,11 +365,13 @@
                         <ul id="contactList">
                             <li class="contact">
                                 <!-- 복사하려는 문구를 value값에 입력 -->
+                                <span>E-mail. </span>
                                 <input type="text" value="beep1107@naver.com" id="copyTxt">
                                 <!-- 복사하기 -->
                                 <button onclick="copy()"><i class="fa-regular fa-copy"></i></button>
                             </li>
                             <li class="contact">
+                                <span>Tel. </span>
                                 <!-- 복사하려는 문구를 value값에 입력 -->
                                 <input type="text" value="010-2526-3208" id="copyTxt2">
                                 <!-- 복사하기 -->
@@ -412,14 +415,55 @@
                 웹 표준 준수. 하드 코딩.
             </h1>
             <h1 class="wow sectionTitle titleAnimation2" data-wow-offset="200">
-                웹 접근성. 반응형. 시맨틱
+                웹 접근성. 반응형.
             </h1>
             <h1 class="wow sectionTitle titleAnimation" data-wow-offset="200">
-                논리적인 순서 마크업.
+                시맨틱. 논리적 마크업.
             </h1>
         </section>
         
-        <section id="portfolio2"  class="fullScreen" data-section-name="5">   <!--섹션 내부 내용-->
+
+        <section id="portfolio1"  class="fullScreen" data-section-name="5">   <!--섹션 내부 내용-->
+            <div class="contentsBox contentsAnimation">
+                <h2 class="contentTitle">PORTFOLIO</h2>
+                <h3 class="smallTitle">Graphic Design</h3>
+
+                <ul id="slideBox" class="regular slider">
+
+                    <li class="slide">
+                        <div class="graphicBox">
+                            <img src="portfolio_web/02KAKAO.png" alt="포트폴리오2" data-cursor-text="graphic" data-no="2" data-type="image" class="webThumb">
+                            <div class="graphicInfo">
+                                <h4>클론코딩</h4>
+                                <h3>카카오 그룹</h3>
+                                <h4>기여도 100%</h4>
+                                <h5>사용 프로그램 Adobe Illustrator</h5>
+                                <h5>여행 광고 포스터 </h5>
+                            </div>
+                        </div>
+                    </li>
+
+
+                    <li class="slide">
+                        <div class="graphicBox">
+                            <img src="portfolio_web/04LUSH.png" alt="포트폴리오4" data-cursor-text="video" data-no="4" data-type="video" class="webThumb">
+                            <div class="graphicInfo">
+                                <h4>리디자인</h4>
+                                <h3>러쉬 코리아</h3>
+                                <h4>기여도 100%</h4>
+                                <h5>사용 프로그램 Adobe Illustrator</h5>
+                                <h5>여행 광고 포스터 </h5>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+        
+            </div>
+        </section>
+        
+        
+        <section id="portfolio2"  class="fullScreen" data-section-name="6">   <!--섹션 내부 내용-->
             <div class="contentsBox contentsAnimation">
                 <h2 class="contentTitle">PORTFOLIO</h2>
                 <h3 class="smallTitle">Graphic Design</h3>
@@ -557,12 +601,12 @@
         </div>
 
 
-        <section id="contact" class="fullScreen parallax-background" style="background-image:url('images/bg_contact.jpg');" data-section-name="6">    <!--Contact 섹션 표지-->
+        <section id="contact" class="fullScreen parallax-background" style="background-image:url('images/bg_contact.jpg');" data-section-name="7">    <!--Contact 섹션 표지-->
             <h1 class="wow sectionTitle titleAnimation" data-wow-offset="200">CONTACT ME</h1>
             <h1 class="wow sectionTitle titleAnimation2" data-wow-offset="200">CONTACT ME</h1>
         </section>
         
-        <section id="contact2"  class="fullScreen" data-section-name="7">   <!--섹션 내부 내용-->
+        <section id="contact2"  class="fullScreen" data-section-name="8">   <!--섹션 내부 내용-->
             <div class="wow contentsBox contentsAnimation" data-wow-offset="200">
                 <h2 class="contentTitle">CONTACT</h2>
                 <h3 class="smallTitle">I love photography</h3>
