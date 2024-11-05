@@ -205,46 +205,53 @@ nextBtn.addEventListener('click', () => {
 
 
 
-
-// swiper slide
-// swiper 객체의 인스턴스 생성 = 변수화
-const mySlide01 = new Swiper(".swiper-container ", {
+const mySlide01 = new Swiper(".swiper-container", {
+    centeredSlides: true,
+    slidesPerView: 'auto',
     autoplay: {
-        delay: 0,
+        delay: 0, // 적당한 딜레이로 설정
         stopOnLastSlide: false,
         disableOnInteraction: false,
     },
-    speed:30000,
-    loop:true,
-    slidesPerView: "auto",
-    loopedSlides: 5, //noSwiping : true,
-    observer:true, observeParents:true,
-    // // 페이지네비게이션
-    // pagination: {
-    //     el: ".swiper-pagination", // 페이지네비가 들어갈박스의 클래스명 지정
-    //     clickable: true, // 클릭활성화 (기본값 : false)
-    //     type: "fraction", // 페이지네비 타입 변경 1/4
-    // },
-    // // 네비게이션(좌우버튼)
+    speed: 10000,
+    loop: true,
 });
 
 
-const btns = document.querySelectorAll('.controlBox button');
-btns.forEach(function(el){
-    el.addEventListener('click', function(e){
-        if (e.target.classList.contains('play')) {
-            console.log("Play 버튼 클릭");
-            btns[0].classList.add('hide');
-            btns[1].classList.remove('hide');
-            mySlide01.autoplay.start();
-        } else if (e.target.classList.contains('pause')) {
-            console.log("Pause 버튼 클릭");
-            btns[1].classList.add('hide');
-            btns[0].classList.remove('hide');
-            mySlide01.autoplay.stop();
-        }
-    });
+const playButton = document.querySelector('.controlBox .play');
+const pauseButton = document.querySelector('.controlBox .pause');
+let isPlaying = true;
+let originalDelay = mySlide01.params.autoplay.delay; // 기존 delay 값 저장
+let originalSpeed = mySlide01.params.speed;           // 기존 speed 값 저장
+
+playButton.addEventListener('click', function() {
+    if (!isPlaying) {
+        console.log("Play 버튼 클릭 - autoplay 시작");
+        playButton.classList.add('hide');
+        pauseButton.classList.remove('hide');
+        
+        // 원래 delay와 speed로 되돌리고 autoplay 시작
+        mySlide01.params.autoplay.delay = originalDelay;
+        mySlide01.params.speed = originalSpeed;
+        mySlide01.autoplay.start();
+        isPlaying = true;
+    }
 });
+
+pauseButton.addEventListener('click', function() {
+    if (isPlaying) {
+        console.log("Pause 버튼 클릭 - autoplay 정지");
+        pauseButton.classList.add('hide');
+        playButton.classList.remove('hide');
+        
+        // 즉시 멈추기 위해 delay를 최소화하고 speed를 빠르게 설정한 후 autoplay 중지
+        mySlide01.params.autoplay.delay = 10; // 최소화하여 빨리 멈추도록 설정
+        mySlide01.params.speed = 0;
+        mySlide01.autoplay.stop();
+        isPlaying = false;
+    }
+});
+
 
 
 

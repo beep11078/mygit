@@ -763,7 +763,7 @@ li {
     height: 50px;
     border-radius: 50%;
     margin-left: auto;
-    position: absolute;
+    /* position: absolute; */
     top: 50%;
     right: 0;
     transform: translateY(-50%);
@@ -846,7 +846,7 @@ li {
     height: 538px;
     flex-shrink: 0;
     background-color: #eee;
-    border-radius: 40px;
+    border-radius: 20px;
     padding: 40px;
     margin: 0 10px;
     position: relative;
