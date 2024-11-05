@@ -295,7 +295,7 @@ li {
     background-size: auto 178px;
 }
 
-.searchBox .searchBar {
+.searchBox #searchBar {
     position: relative;
     left: 50%;
     top: calc(454px / 2);
@@ -314,7 +314,7 @@ li {
     outline: 0;
 }
 
-.searchBox .searchBar::placeholder {
+.searchBox #searchBar::placeholder {
     color: var(--secondary-color);
 }
 
@@ -638,6 +638,7 @@ li {
 
 .visualRight .visualRightList.visualRightList3 .bgBox {
     border-radius: 24px;
+    font-weight: bold;
     position: relative;
 }
 
@@ -651,33 +652,44 @@ li {
     justify-content: center;
 }
 
-.visualRight .visualRightList.visualRightList3 .bgBox .visualSlide2 li:first-child {
+.visualRight .visualRightList.visualRightList3 .bgBox .visualSlide2 li:first-child::before {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: 30px; left: 50%;
+    transform: translateX(-50%);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 80px 80px;
     background-image: url(../images/Kakao_image/kakaogroup.webp);
 }
 
-.visualRight .visualRightList.visualRightList3 .bgBox .visualSlide2 li:first-child div {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.visualRight .visualRightList.visualRightList3 .bgBox .visualSlide2 li:first-child span {
+    position: relative;
+    top: 25%;
 }
 
-.visualRight .visualRightList.visualRightList3 .bgBox .visualSlide2 li:last-child {
+.visualRight .visualRightList.visualRightList3 .bgBox .visualSlide2 li:last-child::before {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: 300px auto;
     background-image: url(../images/Kakao_image/연혁.webp);
-    filter: brightness(0.8);
+    filter: brightness(.8);
+}
+
+.visualRight .visualRightList.visualRightList3 .bgBox .visualSlide2 li:last-child span {
+    position: relative;
+    z-index: 99;
+    color: #fff;
 }
 
 .swpier-wrapper {
     transition-timing-function: linear;
-}
-
-.visualRight .visualRightList.visualRightList3 .bgBox .visualSlide2 li:last-child div {
-    color: #fff;
 }
 
 .visualRight .visualRightList.visualRightList3 .circleBtn3 {

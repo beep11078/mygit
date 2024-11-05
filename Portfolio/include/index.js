@@ -65,7 +65,7 @@ $(function(){    //페이지 열린 후 실행 할 내용
     
 
     var typed = new Typed('#headerTitle', {
-        strings: ["일 할 준비 완료. 김정빈 포트폴리오.", "#헤더타이틀"],
+        strings: ["김정빈 포트폴리오.", "#헤더타이틀"],
         startDelay: 1000,     //문자 등장 전 대기 시간   
         typeSpeed: 50,      //문자 타이핑 시간   
         loop:false,               //효과 반복 여부(true, false)   

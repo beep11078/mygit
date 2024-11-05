@@ -44,25 +44,19 @@ window.addEventListener("scroll", () => {
 
 // 마우스 오버/아웃 이벤트 리스너 추가
 more.addEventListener("mouseenter", () => {
-    if (window.scrollY === 0) {
-        // 스크롤이 없는 경우에만 동작
-        moreBtn.style.opacity = "1";
-    }
+    moreBtn.style.opacity = "1";
 });
 
 more.addEventListener("mouseleave", () => {
-    if (window.scrollY > 0) {
-        // 스크롤이 있는 경우에만 숨기기
-        moreBtn.style.opacity = "0";
-    }
+    moreBtn.style.opacity = "0";
 });
 
 
 // 서치 이벤트
-const searchBtn = document.querySelector(".btn_search");
+const searchBtn = document.querySelector(".searchBtn");
 const searchBox = document.querySelector(".searchBox");
 const searchBg = document.querySelector(".searchBg");
-const searchBar = document.querySelector(".searchBar");
+const searchBar = document.querySelector("#searchBar");
 const logo = document.querySelector(".logo");
 const zDown = document.querySelector(".kakaoMore");
 const mainBox = document.querySelector(".main");
