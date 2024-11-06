@@ -251,6 +251,11 @@ li {
     color: var(--secondary-color);
 }
 
+.header .util {
+    display: flex;
+    align-items: center;
+}
+
 .header .util button {
     margin: 0 5px;
     width: 35px;
@@ -270,6 +275,26 @@ li {
 
 .material-symbols-outlined {
     position: relative;
+}
+
+.header .util .hamBtn {
+    display: none;
+    position: relative;
+} 
+
+.header .util .hamBtn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 35px;
+    height: 35px;
+    background-color: transparent;
+    background-image: url(../images/Kakao_image/ham.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
 }
 
 .searchBg {

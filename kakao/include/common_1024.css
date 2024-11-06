@@ -22,6 +22,14 @@
         display: none;
     }
 
+    .header .util .hamBtn {
+        display: inline;
+    }
+
+    .header .util .hamBtn::after {
+        width: 28px; height: 28px;
+    }
+    
     .main {
         margin: auto;
     }
@@ -284,6 +292,8 @@
         height: 14px;
     }
 
+
+
     .storyBox .storyList li,
     .storyBox .storyList .wide,
     .storyBox .storyList .wide::after,
@@ -382,6 +392,8 @@
         opacity: 1 !important;
     }
 
+
+
     .serviceBox .serviceGroup {
         gap: 8px;
     }
@@ -432,6 +444,8 @@
         align-items: center;
     }
 
+
+
     .newsBox {
         width: 712px;
         display: flex;
@@ -450,7 +464,6 @@
         height: 399px;
     }
 
-
     .newsBox .newsList .news1,
     .newsBox .newsList .news2,
     .newsBox .newsList .news3,
@@ -458,8 +471,10 @@
     .newsBox .newsList .news5 {
         position: absolute;
         width: 352px;
-        border-radius: 15px;
+        height: 399px;
         padding: 22px 20px;
+        margin-bottom: 0;
+        border-radius: 15px;
     }
 
     .newsBox .newsList .news1 h4,
@@ -468,17 +483,12 @@
     .newsBox .newsList .news4 h4,
     .newsBox .newsList .news5 h4 {
         font-size: 18px;
-        height: 102px;
+        height: 84px;
         line-height: 24px;
     }
 
-    .newsBox .newsList .news4 h4,
-    .newsBox .newsList .news5 h4 {
-        font-weight: normal;
-    }
-
     .newsBox .newsList .newsInfo {
-        margin-bottom: 15px;
+        margin-bottom: 12px;
     }
 
     .newsBox .newsList .newsInfo .newsTheme::before {
@@ -500,6 +510,7 @@
     }
 
     .newsBox .newsList .keyword {
+        margin-top: 18px;
         margin-bottom: 198px;
         font-size: 12px;
     }
@@ -511,6 +522,11 @@
         position: absolute;
         top: 0;
         right: 0;
+    }
+
+    .newsBox .newsList .news4 h4,
+    .newsBox .newsList .news5 h4 {
+        font-weight: normal;
     }
 
     .newsBox .newsListBottom .news4 .keyword,
@@ -546,6 +562,7 @@
         padding: 24px 18px;
         position: absolute;
         bottom: 78px;
+        border-radius: 15px;
     }
 
     .newsBox .newsList .news7 {
@@ -558,6 +575,7 @@
         padding: 24px 18px;
         position: absolute;
         bottom: 0;
+        border-radius: 15px;
     }
 
     .newsBox .newsList .news6 span:first-child, 
@@ -571,6 +589,8 @@
     .newsBox .newsList .news8 span:nth-child(2) {
         display: none;
     }
+
+
 
     .esgBox .esgList {
         width: 711px;
@@ -654,6 +674,8 @@
         bottom: -1px;
         right: 56px;
     }
+
+
 
     .helpBox .helpBoxTop {
         width: auto;
@@ -755,6 +777,8 @@
     .helpBox .helpBoxBottom a span {
         font-size: 14px;
     }
+
+
 
     .footer {
         display: block;
