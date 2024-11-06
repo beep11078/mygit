@@ -147,7 +147,7 @@
         margin-bottom: 0;
     }
 
-    .circleBtn {
+    .visualRight .circleBtn {
         bottom: 20px;
     }
 
@@ -195,8 +195,22 @@
         border-radius: 25px;
     }
 
-    .visualRight .visualRightList.visualRightList3 .bgBox .visualSlide2 li::before { 
-        top: 45%;
+    .visualRight
+        .visualRightList.visualRightList3
+        .bgBox
+        .visualSlide2
+        li:first-child::before {
+        top: 60px;
+    }
+
+    .visualRight
+        .visualRightList.visualRightList3
+        .bgBox
+        .visualSlide2
+        li:first-child
+        span {
+        position: static;
+        top: 150px;
     }
 
     .visualRight .visualRightList.visualRightList3 .bgBox .visualSlide2 li {
@@ -205,6 +219,34 @@
         align-items: flex-end;
         font-size: 15px;
         padding-bottom: 60px;
+    }
+
+    .visualRight
+        .visualRightList.visualRightList3
+        .bgBox
+        .visualSlide2
+        li:last-child::before {
+        width: 232px;
+        height: 232px;
+        background-size: auto 232px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-position: 42%;
+    }
+
+    .visualRight
+        .visualRightList.visualRightList3
+        .bgBox
+        .visualSlide2
+        li:last-child
+        span {
+        display: flex;
+    }
+
+    .visualRight .visualRightList.visualRightList3 .bgBox .visualSlide2 li {
+        padding-bottom: 0;
+        align-items: center;
     }
 
     .visualRight .visualRightList.visualRightList3::after {
@@ -390,16 +432,30 @@
         align-items: center;
     }
 
+    .newsBox {
+        width: 712px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .newsBox .titleBox {
+        width: 712px;
+    }
+
     .newsBox .newsListTop,
     .newsBox .newsListBottom {
         position: relative;
-
-        margin-bottom: 400px;
+        width: 352px;
+        height: 399px;
     }
+
 
     .newsBox .newsList .news1,
     .newsBox .newsList .news2,
-    .newsBox .newsList .news3 {
+    .newsBox .newsList .news3,
+    .newsBox .newsList .news4,
+    .newsBox .newsList .news5 {
         position: absolute;
         width: 352px;
         border-radius: 15px;
@@ -408,10 +464,21 @@
 
     .newsBox .newsList .news1 h4,
     .newsBox .newsList .news2 h4,
-    .newsBox .newsList .news3 h4 {
+    .newsBox .newsList .news3 h4,
+    .newsBox .newsList .news4 h4,
+    .newsBox .newsList .news5 h4 {
         font-size: 18px;
-        height: 84px;
+        height: 102px;
         line-height: 24px;
+    }
+
+    .newsBox .newsList .news4 h4,
+    .newsBox .newsList .news5 h4 {
+        font-weight: normal;
+    }
+
+    .newsBox .newsList .newsInfo {
+        margin-bottom: 15px;
     }
 
     .newsBox .newsList .newsInfo .newsTheme::before {
@@ -433,12 +500,13 @@
     }
 
     .newsBox .newsList .keyword {
-        margin-bottom: 200px;
+        margin-bottom: 198px;
         font-size: 12px;
     }
 
     .newsBox .newsListBottom .news4,
     .newsBox .newsListBottom .news5 {
+        width: 352px;
         height: 186px;
         position: absolute;
         top: 0;
@@ -455,21 +523,52 @@
         background-image: none;
     }
 
-    .newsBox .newsListTop .circleBtn {
+    .newsBox .newsListTop .circleBtn,
+    .newsBox .newsList .circleBtn {
         display: flex;
         position: absolute;
         z-index: 99;
+        background-color: transparent;
+        padding: 0;
+        top: calc(186px + 16px);
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     .newsBox .newsListTop .circleBtn div {
         background-color: #0073ff;
     }
 
-    .news4,
-    .news5,
-    .news6,
-    .news7,
-    .news8 {
+    .newsBox .newsList .news6,
+    .newsBox .newsList .news7 {
+        width: 170px;
+        height: 66px;
+        padding: 24px 18px;
+        position: absolute;
+        bottom: 78px;
+    }
+
+    .newsBox .newsList .news7 {
+        right: 0;
+    }
+
+    .newsBox .newsList .news8 {
+        width: 352px;
+        height: 66px;
+        padding: 24px 18px;
+        position: absolute;
+        bottom: 0;
+    }
+
+    .newsBox .newsList .news6 span:first-child, 
+    .newsBox .newsList .news7 span:first-child, 
+    .newsBox .newsList .news8 span:first-child {
+        font-size: 18px;
+    }
+
+    .newsBox .newsList .news6 span:nth-child(2), 
+    .newsBox .newsList .news7 span:nth-child(2),
+    .newsBox .newsList .news8 span:nth-child(2) {
         display: none;
     }
 

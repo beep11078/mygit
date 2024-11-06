@@ -1,9 +1,12 @@
 @font-face {
     font-family: "NanumSquareNeo";
     src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.eot);
-    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.eot?#iefix) format("embedded-opentype"),
-        url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.woff) format("woff"),
-        url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.ttf) format("truetype");
+    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.eot?#iefix)
+            format("embedded-opentype"),
+        url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.woff)
+            format("woff"),
+        url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.ttf)
+            format("truetype");
 }
 
 * {
@@ -389,9 +392,9 @@ li {
     letter-spacing: -0.3px;
 }
 
-.main .section1 .mainBox .visu  alBox .kakaoMore:hover .kakaoMoreBox {
+.main .section1 .mainBox .visu alBox .kakaoMore:hover .kakaoMoreBox {
     opacity: 1;
-} 
+}
 
 .main .section1 .mainBox .visualBox .kakaoMore .kakaoMoreBox::after {
     content: "";
@@ -510,7 +513,7 @@ li {
     position: absolute;
     top: 0;
     left: 0;
-    transition: opacity .5s ease;
+    transition: opacity 0.5s ease;
 }
 
 .visualRightList1 .circleBtn,
@@ -522,8 +525,9 @@ li {
     display: flex;
 }
 
-.visualRightList1 .circleBtn div, 
-.visualRightList2 .circleBtn div {
+.visualRightList1 .circleBtn div,
+.visualRightList2 .circleBtn div,
+.newsBox .newsList .circleBtn div {
     height: 8px;
     border-radius: 8px;
     margin: 0 5px;
@@ -532,7 +536,8 @@ li {
 }
 
 .visualRightList1 .circleBtn div.active,
-.visualRightList2 .circleBtn div.active {
+.visualRightList2 .circleBtn div.active,
+.newsBox .newsList .circleBtn div.active {
     width: 24px;
     background-color: var(--primary-color);
     opacity: 1;
@@ -544,10 +549,11 @@ li {
     background-color: var(--secondary-color);
 }
 
-.visualRightList2 .circleBtn div {
+.visualRightList2 .circleBtn div,
+.newsBox .newsList .circleBtn div {
     width: 8px;
     background-color: var(--primary-color);
-    opacity: .4;
+    opacity: 0.4;
 }
 
 .visualRightBox .visualRight .visualRightList1 .donation {
@@ -565,7 +571,12 @@ li {
     align-items: baseline;
 }
 
-.visualRightBox .visualRight .visualRightList1 .donation .donationAmount .counter {
+.visualRightBox
+    .visualRight
+    .visualRightList1
+    .donation
+    .donationAmount
+    .counter {
     font-size: 32px;
     line-height: 2rem;
     font-weight: bold;
@@ -622,7 +633,7 @@ li {
 }
 
 .visualRight .visualRightList.visualRightList3::after {
-    content: '';
+    content: "";
     width: 39px;
     height: 168px;
     position: absolute;
@@ -652,12 +663,17 @@ li {
     justify-content: center;
 }
 
-.visualRight .visualRightList.visualRightList3 .bgBox .visualSlide2 li:first-child::before {
-    content: '';
+.visualRight
+    .visualRightList.visualRightList3
+    .bgBox
+    .visualSlide2
+    li:first-child::before {
+    content: "";
     position: absolute;
     width: 80px;
     height: 80px;
-    top: 30px; left: 50%;
+    top: 30px;
+    left: 50%;
     transform: translateX(-50%);
     background-position: center center;
     background-repeat: no-repeat;
@@ -665,13 +681,22 @@ li {
     background-image: url(../images/Kakao_image/kakaogroup.webp);
 }
 
-.visualRight .visualRightList.visualRightList3 .bgBox .visualSlide2 li:first-child span {
+.visualRight
+    .visualRightList.visualRightList3
+    .bgBox
+    .visualSlide2
+    li:first-child
+    span {
     position: relative;
     top: 25%;
 }
 
-.visualRight .visualRightList.visualRightList3 .bgBox .visualSlide2 li:last-child::before {
-    content: '';
+.visualRight
+    .visualRightList.visualRightList3
+    .bgBox
+    .visualSlide2
+    li:last-child::before {
+    content: "";
     position: absolute;
     width: 300px;
     height: 300px;
@@ -679,10 +704,15 @@ li {
     background-repeat: no-repeat;
     background-size: 300px auto;
     background-image: url(../images/Kakao_image/연혁.webp);
-    filter: brightness(.8);
+    filter: brightness(0.8);
 }
 
-.visualRight .visualRightList.visualRightList3 .bgBox .visualSlide2 li:last-child span {
+.visualRight
+    .visualRightList.visualRightList3
+    .bgBox
+    .visualSlide2
+    li:last-child
+    span {
     position: relative;
     z-index: 99;
     color: #fff;
@@ -695,7 +725,7 @@ li {
 .visualRight .visualRightList.visualRightList3 .circleBtn3 {
     width: 272px;
     position: absolute;
-    top: 50%; 
+    top: 50%;
     transform: translateY(-50%);
     display: flex;
     justify-content: space-between;
@@ -721,13 +751,15 @@ li {
 }
 
 .visualRight .visualRightList.visualRightList3 .circleBtn3 .prev:before {
-    content: '';
+    content: "";
     position: absolute;
-    width: 5px; height: 5px;
+    width: 5px;
+    height: 5px;
     border-top: 1px solid #000;
     border-right: 1px solid #000;
     transform: translate(-50%, -50%) rotate(225deg);
-    top: 50%; left: 50%;
+    top: 50%;
+    left: 50%;
 }
 
 .visualRight .visualRightList.visualRightList3 .circleBtn3 .next {
@@ -737,15 +769,16 @@ li {
 }
 
 .visualRight .visualRightList.visualRightList3 .circleBtn3 .next:after {
-    content: '';
+    content: "";
     position: absolute;
-    width: 5px; height: 5px;
+    width: 5px;
+    height: 5px;
     border-top: 1px solid #000;
     border-right: 1px solid #000;
     transform: translate(-50%, -50%) rotate(45deg);
-    top: 50%; left: 50%;
+    top: 50%;
+    left: 50%;
 }
-
 
 /* storyBox --------------------------------------------------------- */
 
@@ -1845,5 +1878,3 @@ a .blackCircle {
 .footer .footerRelationBox .sub ul {
     display: none;
 }
-
-
