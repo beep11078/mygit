@@ -1,92 +1,102 @@
 // 서브 메뉴 오픈
-const menus = document.querySelectorAll(".mainMenu > li"); // 모든 li 쌍 선택
+const menus = document.querySelectorAll('.mainMenu > li'); // 모든 li 쌍 선택
 
 menus.forEach((menu) => {
-    const menuTitle = menu.querySelector(".menuTitle");
-    const subMenu = menu.querySelector(".subMenu");
+    const menuTitle = menu.querySelector('.menuTitle');
+    const subMenu = menu.querySelector('.subMenu');
 
     if (menuTitle && subMenu) {
-        menuTitle.addEventListener("click", () => {
+        menuTitle.addEventListener('click', () => {
             // 현재 클릭된 메뉴의 subMenu 외의 모든 subMenu 닫기
             menus.forEach((m) => {
-                const otherSubMenu = m.querySelector(".subMenu");
+                const otherSubMenu = m.querySelector('.subMenu');
                 if (otherSubMenu && otherSubMenu !== subMenu) {
-                    otherSubMenu.classList.remove("subActive");
+                    otherSubMenu.classList.remove('subActive');
                 }
             });
 
             // 현재 subMenu 토글
-            subMenu.classList.toggle("subActive");
+            subMenu.classList.toggle('subActive');
         });
     } 
 });
 
 
 // 메뉴 스크롤
-const header = document.querySelector(".header");
-const more = document.querySelector(".kakaoMore");
-const moreBtn = document.querySelector(".kakaoMoreBox");
+const header = document.querySelector('.header');
+const more = document.querySelector('.kakaoMore');
+const moreBtn = document.querySelector('.kakaoMoreBox');
 
-window.addEventListener("scroll", () => {
+window.addEventListener('scroll', () => {
     if (window.scrollY > 0) {
-        header.classList.add("scrolled");
+        header.classList.add('scrolled');
         header.style.zIndex = 999;
-        moreBtn.style.opacity = "0"; // 스크롤 시 숨기기
-        moreBtn.style.pointerEvents = "none"; // hover 방지
+        moreBtn.style.opacity = '0'; // 스크롤 시 숨기기
+        moreBtn.style.pointerEvents = 'none'; // hover 방지
     } else {
-        header.classList.remove("scrolled");
+        header.classList.remove('scrolled');
         header.style.zIndex = 9;
         // moreBtn.style.opacity = '1'; // 스크롤 초기 상태에서 표시
-        moreBtn.style.pointerEvents = "auto"; // hover 가능하게 복원
+        moreBtn.style.pointerEvents = 'auto'; // hover 가능하게 복원
     }
 });
 
 
 // 마우스 오버/아웃 이벤트 리스너 추가
-more.addEventListener("mouseenter", () => {
-    moreBtn.style.opacity = "1";
+more.addEventListener('mouseenter', () => {
+    moreBtn.style.opacity = '1';
 });
 
-more.addEventListener("mouseleave", () => {
-    moreBtn.style.opacity = "0";
+more.addEventListener('mouseleave', () => {
+    moreBtn.style.opacity = '0';
 });
 
 
 // 서치 이벤트
-const searchBtn = document.querySelector(".searchBtn");
-const searchBox = document.querySelector(".searchBox");
-const searchBg = document.querySelector(".searchBg");
-const searchBar = document.querySelector("#searchBar");
-const logo = document.querySelector(".logo");
-const zDown = document.querySelector(".kakaoMore");
-const mainBox = document.querySelector(".main");
-const searchSpan = searchBtn.querySelector(".material-symbols-outlined");
+const searchBtn = document.querySelector('.searchBtn');
+const searchBox = document.querySelector('.searchBox');
+const searchBg = document.querySelector('.searchBg');
+const searchBar = document.querySelector('#searchBar');
+const logo = document.querySelector('.logo');
+const zDown = document.querySelector('.kakaoMore');
+const mainBox = document.querySelector('.main');
 
 let isSearchVisible = false; // 버튼 상태를 나타내는 변수
 
-searchBtn.addEventListener("click", (e) => {
+searchBtn.addEventListener('click', (e) => {
     // searchBtn이 클릭된 경우
 
     if (!isSearchVisible) {
-        searchSpan.textContent = "close"; // 아이콘 변경
-        searchSpan.style.zIndex = 999;
+        searchBtn.style.backgroundImage = 'url(../images/Kakao_image/close.svg)';
+        searchBtn.style.zIndex = 999;
         logo.style.zIndex = 999;
-        zDown.style.zIndex = "-1";
-        searchBox.style.display = "block";
-        searchBg.style.display = "block";
-        mainBox.classList.add("searched");
+        zDown.style.zIndex = '-1';
+        searchBox.style.display = 'block';
+        searchBg.style.display = 'block';
+        mainBox.classList.add('searched');
         isSearchVisible = true; // 상태 업데이트
     } else {
-        searchSpan.textContent = "search"; // 아이콘 변경
-        searchSpan.style.zIndex = "";
-        logo.style.zIndex = "";
-        zDown.style.zIndex = 999;
-        searchBox.style.display = "none";
+        searchBtn.style.backgroundImage = 'url(../images/Kakao_image/search.svg)';
+        searchBtn.style.zIndex = '';
+        logo.style.zIndex = '';
+        zDown.style.zIndex = 99;
+        searchBox.style.display = 'none';
         searchBar.value = null;
-        searchBg.style.display = "none";
-        mainBox.classList.remove("searched");
+        searchBg.style.display = 'none';
+        mainBox.classList.remove('searched');
         isSearchVisible = false; // 상태 업데이트
     }
+});
+
+
+const hamBtn = document.querySelector('.hamBtn');
+const body = document.getElementsByTagName('body')[0];
+const hamBox = document.querySelector('.hamBox');
+
+hamBtn.addEventListener('click', () => {
+    body.classList.add('scrollLock');
+    hamBox.style.display = 'block';
+    zDown.style.zIndex = '0';
 });
 
 
@@ -116,12 +126,12 @@ counters.forEach(counter => {
 
 // 모든 슬라이드 세트 초기화
 function initializeSlides(slideSet) {
-    const slides = slideSet.querySelectorAll(".visualSlide li");
-    const buttons = slideSet.querySelectorAll(".circleBtn div");
+    const slides = slideSet.querySelectorAll('.visualSlide li');
+    const buttons = slideSet.querySelectorAll('.circleBtn div');
 
     // 슬라이드와 버튼 초기 상태 설정
     slides.forEach((slide, index) => {
-        slide.style.opacity = index === 0 ? "1" : "0"; // 첫 슬라이드 표시
+        slide.style.opacity = index === 0 ? '1' : '0'; // 첫 슬라이드 표시
     });
 
     buttons.forEach((button, index) => {
@@ -133,7 +143,7 @@ function initializeSlides(slideSet) {
         }
 
         // 각 버튼에 클릭 이벤트 추가
-        button.addEventListener("click", () => {
+        button.addEventListener('click', () => {
             showSlideAndUpdateButtons(slides, buttons, index); // 슬라이드와 버튼 동시 업데이트
         });
     });
@@ -143,7 +153,7 @@ function initializeSlides(slideSet) {
 // 슬라이드와 버튼을 동시에 업데이트하는 함수
 function showSlideAndUpdateButtons(slides, buttons, activeIndex) {
     slides.forEach((slide, index) => {
-        slide.style.opacity = index === activeIndex ? "1" : "0"; // 활성 슬라이드 표시
+        slide.style.opacity = index === activeIndex ? '1' : '0'; // 활성 슬라이드 표시
     });
 
     buttons.forEach((button, index) => {
@@ -156,7 +166,7 @@ function showSlideAndUpdateButtons(slides, buttons, activeIndex) {
 }
 
 // 모든 슬라이드 세트에 기능 적용
-document.querySelectorAll(".visualRightList").forEach(initializeSlides);
+document.querySelectorAll('.visualRightList').forEach(initializeSlides);
 
 
 // 요소 선택
@@ -170,14 +180,14 @@ let currentIndex = 0;
 // 슬라이드 표시 함수
 function showSlide(index) {
     slides.forEach((slide, i) => {
-        slide.style.opacity = i === index ? "1" : "0";
+        slide.style.opacity = i === index ? '1' : '0';
     });
     
     // currentIndex에 따라 배경 색상 변경
     if (index === 0) {
-        visualSlide.style.backgroundColor = "#fae100"; // 0일 때 배경 색상
+        visualSlide.style.backgroundColor = '#fae100'; // 0일 때 배경 색상
     } else {
-        visualSlide.style.backgroundColor = "rgba(0,0,0,.2)"; // 1일 때 배경 색상
+        visualSlide.style.backgroundColor = 'rgba(0,0,0,.2)'; // 1일 때 배경 색상
         visualSlide.style.backdropFilter = 'brightness(60%)';
     }
 }
@@ -199,7 +209,7 @@ nextBtn.addEventListener('click', () => {
 
 
 
-const mySlide01 = new Swiper(".swiper-container", {
+const mySlide01 = new Swiper('.swiper-container', {
     centeredSlides: true,
     slidesPerView: 'auto',
     autoplay: {
@@ -218,7 +228,7 @@ let isPlaying = true; // 슬라이드의 재생 상태
 
 playButton.addEventListener('click', function() {
     if (!isPlaying) {
-        console.log("Play 버튼 클릭 - autoplay 시작");
+        console.log('Play 버튼 클릭 - autoplay 시작');
         playButton.classList.add('hide');
         pauseButton.classList.remove('hide');
 
@@ -231,7 +241,7 @@ playButton.addEventListener('click', function() {
 
 pauseButton.addEventListener('click', function() {
     if (isPlaying) {
-        console.log("Pause 버튼 클릭 - autoplay 정지");
+        console.log('Pause 버튼 클릭 - autoplay 정지');
         pauseButton.classList.add('hide');
         playButton.classList.remove('hide');
 

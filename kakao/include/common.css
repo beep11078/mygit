@@ -50,6 +50,10 @@ li {
     list-style: none;
 }
 
+.scrollLock { 
+    overflow: hidden; 
+}
+
 .hide {
     width: 1px;
     height: 1px;
@@ -90,11 +94,9 @@ li {
 }
 
 .container {
-    /* 
-    1920px -> 100vw
+    /* 1920px -> 100vw
     1920px : 100vw = 1712px : x 
-    x = 100 * 1712 / 1920 = 89.1667vw
-    */
+    x = 100 * 1712 / 1920 = 89.1667vw */
     width: 89.1667vw;
     max-width: 1712px;
     margin: auto;
@@ -372,6 +374,18 @@ li {
     background-color: #eee;
     border-radius: 16px;
     font-size: 12px;
+}
+
+.hamBox {
+    display: none;
+    position: absolute;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    margin-left: calc(-50vw + 50%);
+    background-color: #fff;
 }
 
 /* mainBox --------------------------------------------------------- */
