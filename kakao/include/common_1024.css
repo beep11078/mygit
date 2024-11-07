@@ -14,12 +14,18 @@
         padding: 25px 0;
     }
 
-    .wrap .header .logo {
-        height: 22px;
-    }
 
     .wrap .header .nav {
         display: none;
+    }
+
+    .searchBox {
+        width: 100%;
+    }
+
+    .searchBox #searchBar {
+        width: 454px;
+        height: 60px;
     }
 
     .header .util .languageBtn {
@@ -225,8 +231,7 @@
         .visualSlide2
         li:first-child
         span {
-        position: static;
-        top: 150px;
+        top: 50px;
     }
 
     .visualRight .visualRightList.visualRightList3 .bgBox .visualSlide2 li {
@@ -285,6 +290,7 @@
         height: 48px;
     }
 
+    .storyBox .titleBox .titleArticle .play,
     .storyBox .titleBox .titleArticle .pause {
         width: 28px;
         height: 28px;
@@ -292,8 +298,12 @@
 
     .storyBox .titleBox .titleArticle .pause::before,
     .storyBox .titleBox .titleArticle .pause::after {
-        width: 3px;
-        height: 14px;
+        width: 2px;
+        height: 10px;
+    }
+
+    .storyBox .titleBox .titleArticle .play::after {
+        border-width: 5px 0px 5px 8px;
     }
 
     .storyBox .storyList li,

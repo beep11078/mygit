@@ -1,4 +1,4 @@
-// 서브 메뉴 오픈
+// 서브 메뉴 토글
 const menus = document.querySelectorAll('.mainMenu > li'); // 모든 li 쌍 선택
 
 menus.forEach((menu) => {
@@ -19,6 +19,51 @@ menus.forEach((menu) => {
             subMenu.classList.toggle('subActive');
         });
     } 
+});
+
+
+// 반응형 햄버거 버튼
+const hamBtn = document.querySelector('.hamBtn');
+const body = document.getElementsByTagName('body')[0];
+const gnbBox = document.querySelector('.gnbBox');
+const gnbWrap = document.querySelector('.gnbWrap');
+const closeBtn = document.querySelector('.closeBtn');
+
+hamBtn.addEventListener('click', (e) => {
+    // searchBtn이 클릭된 경우
+    body.classList.add('scrollLock');
+    gnbBox.style.display = 'block';
+    zDown.style.zIndex = '0';
+});
+
+
+// JavaScript
+closeBtn.addEventListener('click', (e) => {
+    body.classList.remove('scrollLock');
+    
+    // gnbWrap에 애니메이션 클래스 추가
+    gnbBox.classList.add('close-animation');
+    
+    // 애니메이션이 끝난 후 gnbBox를 숨김
+    gnbBox.addEventListener('transitionend', () => {
+        gnbBox.classList.remove('close-animation');
+        gnbBox.style.display = 'none';
+    }, { once: true });
+});
+
+
+
+// gnb 서브 메뉴 토글
+const gnbMenus = document.querySelectorAll('.gnbList > li');
+gnbMenus.forEach((menu) => {
+    const gnbTitle = menu.querySelector('.gnbList .menuTitle');
+    const gnbSub = menu.querySelector('.gnbList .subMenu');
+
+    gnbTitle.addEventListener('click', () => {
+        // 현재 subMenu 토글
+        gnbSub.classList.toggle('subActive');
+    });
+    
 });
 
 
@@ -53,7 +98,7 @@ more.addEventListener('mouseleave', () => {
 
 
 // 서치 이벤트
-const searchBtn = document.querySelector('.searchBtn');
+const searchBtn = document.querySelector('.header .util .searchBtn');
 const searchBox = document.querySelector('.searchBox');
 const searchBg = document.querySelector('.searchBg');
 const searchBar = document.querySelector('#searchBar');
@@ -67,7 +112,7 @@ searchBtn.addEventListener('click', (e) => {
     // searchBtn이 클릭된 경우
 
     if (!isSearchVisible) {
-        searchBtn.style.backgroundImage = 'url(../images/Kakao_image/close.svg)';
+        searchBtn.style.backgroundImage = "url('images/Kakao_image/close.svg')";
         searchBtn.style.zIndex = 999;
         logo.style.zIndex = 999;
         zDown.style.zIndex = '-1';
@@ -76,7 +121,7 @@ searchBtn.addEventListener('click', (e) => {
         mainBox.classList.add('searched');
         isSearchVisible = true; // 상태 업데이트
     } else {
-        searchBtn.style.backgroundImage = 'url(../images/Kakao_image/search.svg)';
+        searchBtn.style.backgroundImage = "url('images/Kakao_image/search.svg')";
         searchBtn.style.zIndex = '';
         logo.style.zIndex = '';
         zDown.style.zIndex = 99;
@@ -86,17 +131,6 @@ searchBtn.addEventListener('click', (e) => {
         mainBox.classList.remove('searched');
         isSearchVisible = false; // 상태 업데이트
     }
-});
-
-
-const hamBtn = document.querySelector('.hamBtn');
-const body = document.getElementsByTagName('body')[0];
-const hamBox = document.querySelector('.hamBox');
-
-hamBtn.addEventListener('click', () => {
-    body.classList.add('scrollLock');
-    hamBox.style.display = 'block';
-    zDown.style.zIndex = '0';
 });
 
 
@@ -273,3 +307,23 @@ pauseButton.addEventListener('click', function() {
 //         bubble.forEach(elem => { e.style.filter = 'invert(100%)'});
 //     }
 // })
+
+
+const footerBtns = document.querySelectorAll(".footerRelationBox .sub h3");
+const footerSubs = document.querySelectorAll(".footerRelationBox .sub ul");
+
+footerBtns.forEach((btn, index) => {
+    btn.addEventListener("click", function () {
+        if (footerSubs[index].classList.contains("active")) {
+            // active 클래스가 있을 때
+            footerSubs[index].classList.remove("active");
+            btn.classList.remove("active");
+        } else {
+            // 모든 요소에서 active 클래스 제거
+            footerSubs.forEach(sub => sub.classList.remove("active"));
+            footerBtns.forEach(b => b.classList.remove("active"));
+            footerSubs[index].classList.add("active");
+            btn.classList.add("active");
+        }
+    });
+})
