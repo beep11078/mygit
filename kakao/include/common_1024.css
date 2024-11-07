@@ -22,19 +22,26 @@
         display: none;
     }
 
+    .header .util .languageBtn {
+        margin-left: 0;
+        display: none;
+    }
+    
+    .header .util .modeBtn {
+        margin-left: 0;
+        display: none;
+    }
+    
     .header .util .hamBtn {
         display: inline;
     }
 
-    .header .util .hamBtn::after {
-        width: 28px; height: 28px;
-    }
-    
     .main {
         margin: auto;
     }
 
     .container {
+        width: 712px;
         margin-bottom: 80px;
     }
 
@@ -43,6 +50,7 @@
     }
 
     .main .section1 .mainBox .visualBox {
+        width: 712px;
         margin-bottom: 20px;
     }
 
@@ -266,10 +274,6 @@
         height: 232px;
     }
 
-    .container {
-        margin-bottom: 86px;
-    }
-
     .container .titleBox .titleArticle {
         gap: 4px;
         font-size: 32px;
@@ -291,8 +295,6 @@
         width: 3px;
         height: 14px;
     }
-
-
 
     .storyBox .storyList li,
     .storyBox .storyList .wide,
@@ -392,8 +394,6 @@
         opacity: 1 !important;
     }
 
-
-
     .serviceBox .serviceGroup {
         gap: 8px;
     }
@@ -443,8 +443,6 @@
         justify-content: center;
         align-items: center;
     }
-
-
 
     .newsBox {
         width: 712px;
@@ -578,19 +576,17 @@
         border-radius: 15px;
     }
 
-    .newsBox .newsList .news6 span:first-child, 
-    .newsBox .newsList .news7 span:first-child, 
+    .newsBox .newsList .news6 span:first-child,
+    .newsBox .newsList .news7 span:first-child,
     .newsBox .newsList .news8 span:first-child {
         font-size: 18px;
     }
 
-    .newsBox .newsList .news6 span:nth-child(2), 
+    .newsBox .newsList .news6 span:nth-child(2),
     .newsBox .newsList .news7 span:nth-child(2),
     .newsBox .newsList .news8 span:nth-child(2) {
         display: none;
     }
-
-
 
     .esgBox .esgList {
         width: 711px;
@@ -675,10 +671,9 @@
         right: 56px;
     }
 
-
-
-    .helpBox .helpBoxTop {
-        width: auto;
+    .helpBox .helpBoxTop,
+    .helpBox .helpBoxBottom {
+        width: 711px;
         margin-bottom: 8px;
     }
 
@@ -778,12 +773,10 @@
         font-size: 14px;
     }
 
-
-
     .footer {
-        display: block;
-        padding-top: 45px;
         width: 100vw;
+        margin-left: calc(-50vw + 50%);
+        padding: 45px calc(calc(100vw - 712px)/2) 0;
     }
 
     .footer .footerServiceBox {
