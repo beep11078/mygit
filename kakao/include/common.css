@@ -185,7 +185,7 @@ li {
 
 .header .nav .mainMenu > li {
     position: relative;
-    margin: 0 2.0833vw;
+    margin: 40px;
     flex-shrink: 0;
 }
 
