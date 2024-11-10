@@ -139,13 +139,10 @@ li {
 
 .header {
     position: fixed;
-    width: clamp(100%, 1712px, 100%);
+    width: 100%;
     height: 85px;
     margin-bottom: 7px;
-<<<<<<< HEAD
-=======
     padding: 0 calc(calc(100% - 1712px)/2);
->>>>>>> 9386b274f7aba8f30fc881f5379716f4c4cb8f8c
     top: 0;
     left: 50%;
     transform: translateX(-50%);
