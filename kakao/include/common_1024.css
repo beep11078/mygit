@@ -21,13 +21,30 @@
 
     .searchBox {
         width: 100%;
+        height: 398px;
+        background-position: calc(100% - 20px) center;
+        background-size: auto 110px;
     }
 
     .searchBox #searchBar {
-        width: 454px;
-        height: 60px;
+        width: 450px;
+        padding: 20px 24px 20px 60px;
+        font-size: 18px;
+        top: 174px;
+        background-image: url(../images/Kakao_image/1024kakaoSearch.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 450px 60px;
+        border-radius: 0;
     }
 
+    .searchBox .searchKeywordBox {
+        top: 240px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
     .header .util .languageBtn {
         margin-left: 0;
         display: none;
@@ -44,6 +61,10 @@
 
     .main {
         margin: auto;
+    }
+
+    .main.searched {
+        transform: translateY(250px);
     }
 
     .container {
@@ -862,5 +883,11 @@
 
     .footer .footerRelationBox .sub:last-child h3::after {
         transform: translate(194px, -50%) rotate(90deg);
+    }
+
+    .footer .footerRelationBox .site ul {
+        width: 298px;
+        left: 58px;
+        bottom: 50px;
     }
 }

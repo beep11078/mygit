@@ -309,7 +309,7 @@ pauseButton.addEventListener('click', function() {
 // })
 
 
-const footerBtns = document.querySelectorAll(".footerRelationBox .sub h3");
+const footerBtns = document.querySelectorAll(".footerRelationBox .sub button");
 const footerSubs = document.querySelectorAll(".footerRelationBox .sub ul");
 
 footerBtns.forEach((btn, index) => {
@@ -327,3 +327,4 @@ footerBtns.forEach((btn, index) => {
         }
     });
 })
+

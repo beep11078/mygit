@@ -216,12 +216,12 @@ li {
 .header .nav .mainMenu li .menuTitle:hover {
     color: var(--primary-color);
 }
-
+/* 
 .header .nav .mainMenu li:hover .subMenu,
 .header .nav .mainMenu li:active .subMenu,
 .header .nav .mainMenu li:focus .subMenu {
     display: block;
-}
+} */
 
 .subActive {
     display: block !important;
@@ -389,6 +389,7 @@ li {
     left: 0;
     width: 100vw;
     height: 100vh;
+    overflow-y: auto;
     margin-left: calc(-50vw + 50%);
     background-color: #fff;
     transition: transform 0.3s ease;
@@ -2086,6 +2087,7 @@ a .blackCircle {
 .footer .footerRelationBox {
     display: flex;
     margin-bottom: 30px;
+    align-items: center;
 }
 
 .footer .footerRelationBox div h3,
@@ -2129,6 +2131,60 @@ a .blackCircle {
     transform: translate(5px, 2px) rotate(135deg);
 }
 
+.footer .footerRelationBox .sub:hover h3::after {
+    border-top: 1px solid var(--primary-color);
+    border-right: 1px solid var(--primary-color);
+    transform: translate(5px, 5px) rotate(315deg);
+}
+
+.footer .footerRelationBox .sub {
+    position: relative;
+}
+
+.footer .footerRelationBox .sub ul {
+    display: none;
+    position: absolute;
+    left: 0;
+    bottom: 30px;
+    background-color: #eee;
+    border-radius: 12px;
+    padding: 16px 0;
+    width: max-content;
+}
+
+.footer .footerRelationBox .sub ul.active {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer .footerRelationBox .sub ul a {
+    color: #666;
+    font-size: 12px;
+    line-height: 24px;
+    padding: 0 20px;
+}
+
+.footer .footerRelationBox .sub ul a:hover {
+    color: var(--primary-color);
+}
+
+.footer .footerRelationBox .sub ul a:hover::after {
+    color: var(--primary-color);
+}
+
+.footer .footerRelationBox .sub ul a::after {
+    content: "↗️";
+    font-size: 14px;
+    font-weight: bold;
+    color: #999;
+    margin-left: 3px;
+}
+
+.footer .footerRelationBox .sub:nth-child(4) ul li:nth-child(2) a::after,
+.footer .footerRelationBox .sub:nth-child(10) ul li:nth-child(1) a::after {
+    content: "";
+}
+
 .footer .footerRelationBox .site {
     margin-left: auto;
 }
@@ -2144,8 +2200,9 @@ a .blackCircle {
     align-items: center;
 }
 
-.footer .footerRelationBox .site h3::before,
-.footer .footerRelationBox .site h3::after {
+
+.footer .footerRelationBox .site button h3::before,
+.footer .footerRelationBox .site button h3::after {
     position: absolute;
     content: "";
     width: 0;
@@ -2158,54 +2215,25 @@ a .blackCircle {
     margin-top: -1px;
 }
 
-.footer .footerRelationBox .sub {
-    position: relative;
-}
-
-.footer .footerRelationBox .site h3::before {
+.footer .footerRelationBox .site button h3::before {
     transform: translate(100px, -50%) rotate(0deg);
 }
 
-.footer .footerRelationBox .site h3::after {
+.footer .footerRelationBox .site button h3::after {
     transform: translate(100px, -50%) rotate(90deg);
 }
 
-.footer .footerRelationBox .sub ul {
-    display: none;
-    position: absolute;
-    left: 0;
-    bottom: 50px;
-    background-color: #eee;
-    border-radius: 12px;
-    padding: 16px 0;
-    width: max-content;
+
+.footer .footerRelationBox .site button.active h3::before {
+    transform: translate(100px, -50%) rotate(45deg);
+}
+
+
+.footer .footerRelationBox .site button.active h3::after {
+    transform: translate(100px, -50%) rotate(135deg);
 }
 
 .footer .footerRelationBox .site ul {
     width: 208px;
-}
-
-.footer .footerRelationBox .sub ul.active {
-    display: flex;
-    flex-direction: column;
-}
-
-.footer .footerRelationBox .sub ul a {
-    color: #666;
-    font-size: 12px;
-    line-height: 24px;
-    padding: 0 20px;
-}
-
-.footer .footerRelationBox .sub ul a::after {
-    content: "↗️";
-    font-size: 14px;
-    font-weight: bold;
-    color: #999;
-    margin-left: 3px;
-}
-
-.footer .footerRelationBox .sub:nth-child(4) ul li:nth-child(2) a::after,
-.footer .footerRelationBox .sub:nth-child(10) ul li:nth-child(1) a::after {
-    content: "";
+    bottom: 50px;
 }
