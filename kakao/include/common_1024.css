@@ -14,7 +14,6 @@
         padding: 25px 0;
     }
 
-
     .wrap .header .nav {
         display: none;
     }
@@ -44,17 +43,17 @@
         flex-wrap: wrap;
         justify-content: center;
     }
-    
+
     .header .util .languageBtn {
         margin-left: 0;
         display: none;
     }
-    
+
     .header .util .modeBtn {
         margin-left: 0;
         display: none;
     }
-    
+
     .header .util .hamBtn {
         display: inline;
     }
@@ -568,7 +567,6 @@
         background-image: none;
     }
 
-    .newsBox .newsListTop .circleBtn,
     .newsBox .newsList .circleBtn {
         display: flex;
         position: absolute;
@@ -580,8 +578,56 @@
         transform: translateX(-50%);
     }
 
-    .newsBox .newsListTop .circleBtn div {
-        background-color: #0073ff;
+    .newsBox .newsListTop .circleBtn {
+        width: 352px;
+        height: 32px;
+        display: flex;
+        justify-content: space-between;
+        top: 212px;
+    }
+
+    .newsBox .newsListTop .circleBtn button {
+        border: none;
+        border-radius: 50%;
+        background-color: #000;
+        margin: 0 5px;
+        width: 2rem;
+        height: 2rem;
+        font-weight: bolder;
+        position: absolute;
+        cursor: pointer;
+    }
+
+    .newsBox .newsListTop .circleBtn .prev {
+        left: 0;
+    }
+
+    .newsBox .newsListTop .circleBtn .prev::before {
+        content: "";
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        border-top: 1px solid #fff;
+        border-right: 1px solid #fff;
+        transform: translate(-50%, -50%) rotate(225deg);
+        top: 50%;
+        left: 50%;
+    }
+
+    .newsBox .newsListTop .circleBtn .next {
+        right: 0;
+    }
+
+    .newsBox .newsListTop .circleBtn .next::after {
+        content: "";
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        border-top: 1px solid #fff;
+        border-right: 1px solid #fff;
+        transform: translate(-50%, -50%) rotate(45deg);
+        top: 50%;
+        left: 50%;
     }
 
     .newsBox .newsList .news6,
@@ -807,7 +853,7 @@
     .footer {
         width: 100vw;
         margin-left: calc(-50vw + 50%);
-        padding: 45px calc(calc(100vw - 712px)/2) 0;
+        padding: 45px calc(calc(100vw - 712px) / 2) 0;
     }
 
     .footer .footerServiceBox {
@@ -820,31 +866,57 @@
     .footer .footerServiceBox div {
         display: block;
         width: 100%;
+        border-top: 1px solid #e6e6e6;
         flex: auto;
+    }
+
+    .footer .footerServiceBox div:first-child {
+        border-top: none;
     }
 
     .footer .footerServiceBox div h3 {
         font-size: 15px;
     }
 
-    .footer .footerServiceBox div strong {
+    .footer .footerServiceBox div button {
+        width: 100%;
         font-size: 12px;
-        border-top: 1px solid #e6e6e6;
         line-height: 52px;
         height: 52px;
         margin-top: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
-    .footer .footerServiceBox div:last-child strong {
+    .footer .footerServiceBox div button::after {
+        content: "";
+        width: 6px;
+        height: 6px;
+        border-top: 2px solid #888;
+        border-right: 2px solid #888;
+        transform: translate(-10px, 0px) rotate(135deg);
+    }
+
+    .footer .footerServiceBox div button.active::after {
+        transform: translate(-10px, 0px) rotate(315deg);
+    }
+
+    .footer .footerServiceBox div:last-child button {
         border-bottom: 1px solid #e6e6e6;
     }
 
-    .footer .footerServiceBox div:first-child ul {
+    .footer .footerServiceBox .todayKakao ul {
         margin-bottom: 24px;
     }
 
     .footer .footerServiceBox div:not(:first-child) ul {
-        display: none !important;
+        display: none;
+    }
+
+    .footer .footerServiceBox div:not(:first-child) ul.active {
+        display: block;
+        padding-bottom: 16px;
     }
 
     .footer .footerRelationBox {
@@ -875,6 +947,10 @@
 
     .footer .footerRelationBox div:last-child button {
         width: 298px;
+    }
+
+    .footer .footerRelationBox button {
+        padding: 0;
     }
 
     .footer .footerRelationBox .sub:last-child h3::before {

@@ -142,7 +142,7 @@ li {
     width: 100%;
     height: 85px;
     margin-bottom: 7px;
-    padding: 0 calc(calc(100% - 1712px)/2);
+    padding: 0 calc(calc(100% - 1712px) / 2);
     top: 0;
     left: 50%;
     transform: translateX(-50%);
@@ -403,7 +403,7 @@ li {
 .gnbBox .gnbWrap {
     width: 412px;
     margin: auto;
-    animation: gnbIn .3s ease-out;
+    animation: gnbIn 0.3s ease-out;
 }
 
 @keyframes gnbIn {
@@ -1466,6 +1466,10 @@ li {
     position: relative;
 }
 
+.newsBox .newsList .circleBtn {
+    display: none;
+}
+
 .newsBox .newsList .news1,
 .newsBox .newsList .news2,
 .newsBox .newsList .news3 {
@@ -2040,7 +2044,7 @@ a .blackCircle {
 }
 
 .footer .footerServiceBox div h3,
-.footer .footerServiceBox div strong {
+.footer .footerServiceBox div button {
     line-height: 40px;
     display: block;
 }
@@ -2049,9 +2053,14 @@ a .blackCircle {
     font-size: 26px;
 }
 
-.footer .footerServiceBox div strong {
+.footer .footerServiceBox div button {
     font-size: 16px;
     margin-top: 34px;
+    background-color: transparent;
+    border: none;
+    text-align: left;
+    padding: 0;
+    font-weight: bold;
 }
 
 .footer .footerServiceBox .kakaoGroup ul {
@@ -2067,6 +2076,7 @@ a .blackCircle {
 .footer .footerServiceBox .accountSupport li::after {
     content: "↗️";
     font-size: 14px;
+    color: #888;
 }
 
 .footer .footerServiceBox div a:hover {
@@ -2084,8 +2094,27 @@ a .blackCircle {
     text-decoration: none;
 }
 
-.footer .footerServiceBox div:first-child a {
+.footer .footerServiceBox .todayKakao li:first-child:hover a::after {
+    border-top: 1px solid #000;
+    border-right: 1px solid #000;
+}
+
+.footer .footerServiceBox .todayKakao li:nth-child(2):hover::after {
+    color: #000;
+}
+
+.footer .footerServiceBox .todayKakao a {
     color: var(--primary-color);
+}
+
+.footer .footerServiceBox .todayKakao li:first-child a::after {
+    position: absolute;
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-top: 1px solid #888;
+    border-right: 1px solid #888;
+    transform: translate(5px, 13px) rotate(45deg);
 }
 
 .footer .footerRelationBox {
@@ -2138,7 +2167,7 @@ a .blackCircle {
 .footer .footerRelationBox .sub:hover h3::after {
     border-top: 1px solid var(--primary-color);
     border-right: 1px solid var(--primary-color);
-    transform: translate(5px, 5px) rotate(315deg);
+    transform: translate(100px, -50%) rotate(90deg);
 }
 
 .footer .footerRelationBox .sub {
@@ -2204,7 +2233,6 @@ a .blackCircle {
     align-items: center;
 }
 
-
 .footer .footerRelationBox .site button h3::before,
 .footer .footerRelationBox .site button h3::after {
     position: absolute;
@@ -2227,11 +2255,9 @@ a .blackCircle {
     transform: translate(100px, -50%) rotate(90deg);
 }
 
-
 .footer .footerRelationBox .site button.active h3::before {
     transform: translate(100px, -50%) rotate(45deg);
 }
-
 
 .footer .footerRelationBox .site button.active h3::after {
     transform: translate(100px, -50%) rotate(135deg);

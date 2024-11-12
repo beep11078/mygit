@@ -308,9 +308,16 @@ pauseButton.addEventListener('click', function() {
 //     }
 // })
 
+const footerBtns = document.querySelectorAll(".footer div button");
+const footerSubs = [];
 
-const footerBtns = document.querySelectorAll(".footerRelationBox .sub button");
-const footerSubs = document.querySelectorAll(".footerRelationBox .sub ul");
+footerBtns.forEach(btn => {
+    const ul = btn.nextElementSibling; // 버튼의 형제 요소인 <ul>을 찾기
+    if (ul && ul.tagName === 'UL') { // <ul>인 경우만 저장
+        footerSubs.push(ul);
+    }
+});
+
 
 footerBtns.forEach((btn, index) => {
     btn.addEventListener("click", function () {
