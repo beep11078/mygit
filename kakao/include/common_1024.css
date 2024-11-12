@@ -965,6 +965,9 @@
         transform: translate(194px, -50%) rotate(90deg);
     }
 
+    .footer .footerRelationBox .sub:hover h3::after {
+        transform: translate(5px, 2px) rotate(315deg);
+    }
     .footer .footerRelationBox .site ul {
         width: 298px;
         left: 58px;

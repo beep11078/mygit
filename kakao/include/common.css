@@ -2085,6 +2085,10 @@ a .blackCircle {
     color: #888;
 }
 
+.footer .footerServiceBox li:hover::after {
+    color: var(--primary-color);
+}
+
 .footer .footerServiceBox div a:hover {
     color: var(--primary-color);
 }
