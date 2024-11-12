@@ -158,53 +158,71 @@ counters.forEach(counter => {
 })
 
 
-// 모든 슬라이드 세트 초기화
-function initializeSlides(slideSet) {
-    const slides = slideSet.querySelectorAll('.visualSlide li');
-    const buttons = slideSet.querySelectorAll('.circleBtn div');
+document.addEventListener('DOMContentLoaded', function() {
+    // 화면 크기가 1024px 미만일 때만 슬라이드 초기화
+    if (window.innerWidth < 1024) {
+        initializeSlides('.newsListBottom', '.circleBtn5 div', '.newsListBottom .news');
+    }
 
-    // 슬라이드와 버튼 초기 상태 설정
-    slides.forEach((slide, index) => {
-        slide.style.opacity = index === 0 ? '1' : '0'; // 첫 슬라이드 표시
-    });
-
-    buttons.forEach((button, index) => {
-        
-        if(index === 0) {
-            button.classList.add('active');
-        } else {
-            button.classList.remove('active');
+    // 윈도우 크기 변경 시 다시 확인하여 조건에 맞으면 슬라이드 초기화
+    window.addEventListener('resize', function() {
+        if (window.innerWidth < 1024) {
+            // 화면 크기가 1024px 미만일 때만 슬라이드 초기화
+            initializeSlides('.newsListBottom', '.circleBtn5 div', '.newsListBottom .news');
         }
+    });
+});
 
-        // 각 버튼에 클릭 이벤트 추가
-        button.addEventListener('click', () => {
-            showSlideAndUpdateButtons(slides, buttons, index); // 슬라이드와 버튼 동시 업데이트
+// 슬라이드 세트를 초기화하는 공통 함수
+function initializeSlides(slideSetSelector, buttonSelector, slideSelector) {
+    const slideSets = document.querySelectorAll(slideSetSelector);
+
+    slideSets.forEach(slideSet => {
+        const slides = slideSet.querySelectorAll(slideSelector);
+        const buttons = slideSet.querySelectorAll(buttonSelector);
+
+        // 슬라이드와 버튼 초기 상태 설정
+        slides.forEach((slide, index) => {
+            slide.style.opacity = index === 0 ? '1' : '0'; // 첫 번째 슬라이드만 보이게 설정
+        });
+
+        buttons.forEach((button, index) => {
+            if (index === 0) {
+                button.classList.add('active');  // 첫 번째 버튼에 'active' 클래스 추가
+            } else {
+                button.classList.remove('active');  // 나머지 버튼에서 'active' 클래스 제거
+            }
+
+            // 각 버튼에 클릭 이벤트 추가
+            button.addEventListener('click', () => {
+                showSlideAndUpdateButtons(slides, buttons, index); // 슬라이드와 버튼 동시 업데이트
+            });
         });
     });
 }
 
-
 // 슬라이드와 버튼을 동시에 업데이트하는 함수
 function showSlideAndUpdateButtons(slides, buttons, activeIndex) {
     slides.forEach((slide, index) => {
-        slide.style.opacity = index === activeIndex ? '1' : '0'; // 활성 슬라이드 표시
+        slide.style.opacity = index === activeIndex ? '1' : '0';  // 활성 슬라이드만 보이게 설정
     });
 
     buttons.forEach((button, index) => {
         if (index === activeIndex) {
-            button.classList.add('active'); // 클릭한 버튼에 .active 추가
+            button.classList.add('active');  // 클릭한 버튼에 'active' 클래스 추가
         } else {
-            button.classList.remove('active'); // 나머지 버튼의 .active 제거
+            button.classList.remove('active');  // 나머지 버튼에서 'active' 클래스 제거
         }
     });
 }
 
-// 모든 슬라이드 세트에 기능 적용
-document.querySelectorAll('.visualRightList').forEach(initializeSlides);
+initializeSlides('.visualRightList', '.circleBtn div', '.visualSlide li');
+
 
 
 // 요소 선택
 const visualSlide = document.querySelector('.visualRight .visualRightList.visualRightList3');
+
 const slides = visualSlide.querySelectorAll('.visualRightList3 li');
 const prevBtn = document.querySelector('.circleBtn3 .prev');
 const nextBtn = document.querySelector('.circleBtn3 .next');
@@ -240,6 +258,65 @@ nextBtn.addEventListener('click', () => {
     currentIndex = currentIndex === 0 ? 1 : 0; // 0과 1을 번갈아가며 설정
     showSlide(currentIndex);
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    // 화면 크기가 1024px 미만일 때만 슬라이드 초기화
+    if (window.innerWidth < 1024) {
+        initializeSlideNavigation(); // 슬라이드 초기화
+    }
+
+    // 윈도우 크기 변경 시 다시 확인하여 조건에 맞으면 슬라이드 초기화
+    window.addEventListener('resize', function() {
+        if (window.innerWidth < 1024) {
+            initializeSlideNavigation(); // 화면 크기가 1024px 미만일 때만 슬라이드 초기화
+        }
+    });
+});
+
+function initializeSlideNavigation() {
+    const newsSlides = document.querySelectorAll('.newsListTop .under');
+    const prevBtn2 = document.querySelector('.circleBtn4 .prev');
+    const nextBtn2 = document.querySelector('.circleBtn4 .next');
+
+    // 슬라이드 표시 함수
+    function showNews(index) {
+        newsSlides.forEach((newsSlide, i) => {
+            newsSlide.style.opacity = i === index ? '1' : '0';
+        });
+    }
+
+    // 버튼 상태 업데이트 함수
+    function updateButtonStates() {
+        // prevBtn2가 0번 인덱스일 때 비활성화
+        prevBtn2.disabled = currentIndex2 === 0;
+
+        // nextBtn2가 마지막 인덱스일 때 비활성화
+        nextBtn2.disabled = currentIndex2 === newsSlides.length - 1;
+    }
+
+    // 초기 슬라이드 설정
+    let currentIndex2 = 0;  // 슬라이드의 초기 인덱스를 0으로 설정
+    showNews(currentIndex2);
+    updateButtonStates();  // 버튼 초기 상태 업데이트
+
+    // 이전 버튼 클릭 이벤트
+    prevBtn2.addEventListener('click', () => {
+        // 슬라이드 인덱스를 0이면 마지막 슬라이드로, 아니면 -1씩 감소
+        currentIndex2 = (currentIndex2 === 0) ? newsSlides.length - 1 : currentIndex2 - 1;
+        showNews(currentIndex2);
+        updateButtonStates();  // 버튼 상태 업데이트
+    });
+
+    // 다음 버튼 클릭 이벤트
+    nextBtn2.addEventListener('click', () => {
+        // 슬라이드 인덱스를 마지막이면 첫 번째 슬라이드로, 아니면 +1씩 증가
+        currentIndex2 = (currentIndex2 === newsSlides.length - 1) ? 0 : currentIndex2 + 1;
+        showNews(currentIndex2);
+        updateButtonStates();  // 버튼 상태 업데이트
+    });
+}
+
 
 
 
@@ -291,23 +368,6 @@ pauseButton.addEventListener('click', function() {
 
 
 
-
-// // 다크모드
-// let toggle = document.querySelector('.btn_dark')
-// let bubble = document.querySelectorAll('button')
-
-// toggle.addEventListener('click', (e) => {
-//     const html = document.querySelector('html')
-//     if (html.classList.contains('dark')) {
-//         html.classList.remove('dark')
-//         e.target.innerHTML = 'dark_mode'
-//     } else {
-//         html.classList.add('dark')
-//         e.target.innerHTML = 'light_mode'
-//         bubble.forEach(elem => { e.style.filter = 'invert(100%)'});
-//     }
-// })
-
 const footerBtns = document.querySelectorAll(".footer div button");
 const footerSubs = [];
 
@@ -335,3 +395,19 @@ footerBtns.forEach((btn, index) => {
     });
 })
 
+
+// // 다크모드
+// let toggle = document.querySelector('.btn_dark')
+// let bubble = document.querySelectorAll('button')
+
+// toggle.addEventListener('click', (e) => {
+//     const html = document.querySelector('html')
+//     if (html.classList.contains('dark')) {
+//         html.classList.remove('dark')
+//         e.target.innerHTML = 'dark_mode'
+//     } else {
+//         html.classList.add('dark')
+//         e.target.innerHTML = 'light_mode'
+//         bubble.forEach(elem => { e.style.filter = 'invert(100%)'});
+//     }
+// })

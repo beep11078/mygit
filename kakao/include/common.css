@@ -1464,10 +1464,16 @@ li {
     background-color: #eee;
     padding: 40px;
     position: relative;
+    transition: opacity 0.5s ease;
 }
 
 .newsBox .newsList .circleBtn {
     display: none;
+}
+
+.newsBox .newsListTop .circleBtn button:disabled {
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events : none;
 }
 
 .newsBox .newsList .news1,
