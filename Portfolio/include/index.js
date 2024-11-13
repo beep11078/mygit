@@ -24,36 +24,32 @@ function getScrollifySectionIndex(anchor){
 };
 
 // 연락처 복사
-function copy() {
+function copy(elementId, isPhone) {
     // 복사문구값 가져오기
-    var copyTxt = document.getElementById("copyTxt");
+    var copyTxt = document.getElementById(elementId);
+    var valueToCopy = copyTxt.value;
+
+    // 전화번호의 경우 숫자만 남기기
+    if (isPhone) {
+        valueToCopy = valueToCopy.replace(/\D/g, ''); // 숫자가 아닌 문자는 제거
+    }
 
     // 복사문구 선택
     copyTxt.select();
     copyTxt.setSelectionRange(0, 99999); // Mobile 대응
 
-        // 복사
-    navigator.clipboard.writeText(copyTxt.value);
+    // 복사
+    navigator.clipboard.writeText(valueToCopy);
 
     // 복사완료에 대해 Alert으로 띄우기
-    alert("이메일이 복사되었습니다.");
+    if (elementId === "copyTxt") {
+        alert("이메일이 복사되었습니다.");
+    } else if (elementId === "copyTxt2") {
+        alert("전화번호가 복사되었습니다.");
+    }
 }
 
-// 연락처 복사
-function copy2() {
-    // 복사문구값 가져오기
-    var copyTxt2 = document.getElementById("copyTxt2");
 
-    // 복사문구 선택
-    copyTxt2.select();
-    copyTxt2.setSelectionRange(0, 99999); // Mobile 대응
-
-        // 복사
-    navigator.clipboard.writeText(copyTxt2.value);
-
-    // 복사완료에 대해 Alert으로 띄우기
-    alert("전화번호가 복사되었습니다.");
-}
 
 $(function(){    //페이지 열린 후 실행 할 내용
 

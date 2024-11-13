@@ -1,4 +1,4 @@
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1024px) {
     .wrap {
         max-width: 712px;
         margin: auto;
@@ -853,7 +853,7 @@
     .footer {
         width: 100vw;
         margin-left: calc(-50vw + 50%);
-        padding: 45px calc(calc(100vw - 712px) / 2) 0;
+        padding: 45px calc(calc(100vw - 712px) / 2);
     }
 
     .footer .footerServiceBox {
@@ -957,17 +957,22 @@
         padding: 0;
     }
 
-    .footer .footerRelationBox .sub:last-child h3::before {
+    .footer .footerRelationBox .site button h3::before {
         transform: translate(194px, -50%) rotate(0deg);
     }
 
-    .footer .footerRelationBox .sub:last-child h3::after {
+    .footer .footerRelationBox .site button h3::after {
         transform: translate(194px, -50%) rotate(90deg);
     }
 
-    .footer .footerRelationBox .sub:hover h3::after {
-        transform: translate(5px, 2px) rotate(315deg);
+    .footer .footerRelationBox .site button.active h3::before {
+        transform: translate(194px, -50%) rotate(45deg);
     }
+
+    .footer .footerRelationBox .site button.active h3::after {
+        transform: translate(194px, -50%) rotate(135deg);
+    }
+
     .footer .footerRelationBox .site ul {
         width: 298px;
         left: 58px;

@@ -260,6 +260,7 @@ nextBtn.addEventListener('click', () => {
 });
 
 
+
 document.addEventListener('DOMContentLoaded', function() {
     // 화면 크기가 1024px 미만일 때만 슬라이드 초기화
     if (window.innerWidth < 1024) {

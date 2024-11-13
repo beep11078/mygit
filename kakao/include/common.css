@@ -2104,15 +2104,6 @@ a .blackCircle {
     text-decoration: none;
 }
 
-.footer .footerServiceBox .todayKakao li:first-child:hover a::after {
-    border-top: 1px solid #000;
-    border-right: 1px solid #000;
-}
-
-.footer .footerServiceBox .todayKakao li:nth-child(2):hover::after {
-    color: #000;
-}
-
 .footer .footerServiceBox .todayKakao a {
     color: var(--primary-color);
 }
@@ -2125,6 +2116,19 @@ a .blackCircle {
     border-top: 1px solid #888;
     border-right: 1px solid #888;
     transform: translate(5px, 13px) rotate(45deg);
+}
+
+.footer .footerServiceBox .todayKakao li:first-child:hover a::after {
+    border-top: 1px solid #000;
+    border-right: 1px solid #000;
+}
+
+.footer .footerServiceBox .todayKakao li:nth-child(2):hover::after {
+    color: #000;
+}
+
+.footerServiceBox .kakaoGroup li:not(:nth-child(1)):hover::after {
+    color: var(--primary-color);
 }
 
 .footer .footerRelationBox {
@@ -2174,12 +2178,6 @@ a .blackCircle {
     transform: translate(5px, 2px) rotate(135deg);
 }
 
-.footer .footerRelationBox .sub:hover h3::after {
-    border-top: 1px solid var(--primary-color);
-    border-right: 1px solid var(--primary-color);
-    transform: translate(100px, -50%) rotate(90deg);
-}
-
 .footer .footerRelationBox .sub {
     position: relative;
 }
@@ -2222,6 +2220,10 @@ a .blackCircle {
     color: #999;
     margin-left: 3px;
 }
+/* 
+.footer .footerRelationBox .sub:hover h3::after {
+    transform: translate(5px, 5px) rotate(315deg);
+} */
 
 .footer .footerRelationBox .sub:nth-child(4) ul li:nth-child(2) a::after,
 .footer .footerRelationBox .sub:nth-child(10) ul li:nth-child(1) a::after {
@@ -2254,7 +2256,6 @@ a .blackCircle {
     background-color: #000;
     right: 0px;
     top: 50%;
-    margin-top: -1px;
 }
 
 .footer .footerRelationBox .site button h3::before {
@@ -2264,6 +2265,20 @@ a .blackCircle {
 .footer .footerRelationBox .site button h3::after {
     transform: translate(100px, -50%) rotate(90deg);
 }
+
+/* 
+.footer .footerRelationBox .site:hover h3::before {
+    border-top: 1px solid var(--primary-color);
+    border-right: 1px solid var(--primary-color);
+    transform: translate(100px, -50%) rotate(45deg);
+}
+
+.footer .footerRelationBox .site:hover h3::after {
+    border-top: 1px solid var(--primary-color);
+    border-right: 1px solid var(--primary-color);
+    transform: translate(100px, -50%) rotate(135deg);
+} */
+
 
 .footer .footerRelationBox .site button.active h3::before {
     transform: translate(100px, -50%) rotate(45deg);
