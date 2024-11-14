@@ -1,10 +1,9 @@
 @media screen and (max-width: 1024px) {
     .wrap {
         max-width: 712px;
-        margin: auto;
     }
 
-    .wrap .header {
+    .header {
         height: 72px;
         background-color: var(--secondary-color);
         display: flex;
@@ -14,7 +13,7 @@
         padding: 25px 0;
     }
 
-    .wrap .header .nav {
+    .header .nav {
         display: none;
     }
 

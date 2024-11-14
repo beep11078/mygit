@@ -1,0 +1,17 @@
+@media screen and (max-width: 1902px) {
+
+    .container {
+        max-width: 1316px;
+        margin: auto;
+    }
+
+    .main .section1 .mainBox .visualBox .mainVideo {
+        border-radius: 35px;
+        max-height: 621px;
+    } 
+
+    .visualRight .visualRightList {
+        width: 206px;
+    }
+    
+}
