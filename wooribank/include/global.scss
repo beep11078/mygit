@@ -102,33 +102,41 @@
             left: 50%;
             transform: translate(-50%, 0);
             display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            gap: 30px;
 
-            .play {
-                width: 10px;
-                height: 14px;
-                background-image: url(../images/slides_btn_play_new0919.png);
-            }
+            .control {
+                display: flex;
+                gap: 20px;
+                
+                .play {
+                    width: 10px;
+                    height: 14px;
+                    background-image: url(../images/slides_btn_play_new0919.png);
+                }
 
-            .pause {
-                width: 10px;
-                height: 14px;
-                background-image: url(../images/slides_btn_pause_new0919.png);
-            }
+                .pause {
+                    width: 10px;
+                    height: 14px;
+                    background-image: url(../images/slides_btn_pause_new0919.png);
+                }
 
-            .prev {
-                width: 10px;
-                height: 14px;
-                background-image: url(../images/slides_btn_previous_new0924.png);
-                background-size: cover;
-            }
-            
-            .next {
-                width: 10px;
-                height: 14px;
-                background-image: url(../images/slides_btn_next_new0924.png);
-                background-size: cover;
-            }
+                .prev {
+                    width: 10px;
+                    height: 14px;
+                    background-image: url(../images/slides_btn_previous_new0924.png);
+                    background-size: cover;
+                }
+                
+                .next {
+                    width: 10px;
+                    height: 14px;
+                    background-image: url(../images/slides_btn_next_new0924.png);
+                    background-size: cover;
+                }
 
+            }
             
             .pagination {
                 display: flex;
@@ -143,7 +151,6 @@
             }
         }
 
-
         .quickMenu {
             position: absolute;
             bottom: 0;
@@ -152,5 +159,16 @@
             background-color: var(--black);
         }
 
+        .addMenu {
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            a {
+                font-weight: bold;
+                color: #333;
+            }
+        }
     }
 }

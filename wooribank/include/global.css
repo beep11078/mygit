@@ -82,24 +82,31 @@
   left: 50%;
   transform: translate(-50%, 0);
   display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 30px;
 }
-.main .slider .sliderCtr .play {
+.main .slider .sliderCtr .control {
+  display: flex;
+  gap: 20px;
+}
+.main .slider .sliderCtr .control .play {
   width: 10px;
   height: 14px;
   background-image: url(../images/slides_btn_play_new0919.png);
 }
-.main .slider .sliderCtr .pause {
+.main .slider .sliderCtr .control .pause {
   width: 10px;
   height: 14px;
   background-image: url(../images/slides_btn_pause_new0919.png);
 }
-.main .slider .sliderCtr .prev {
+.main .slider .sliderCtr .control .prev {
   width: 10px;
   height: 14px;
   background-image: url(../images/slides_btn_previous_new0924.png);
   background-size: cover;
 }
-.main .slider .sliderCtr .next {
+.main .slider .sliderCtr .control .next {
   width: 10px;
   height: 14px;
   background-image: url(../images/slides_btn_next_new0924.png);
@@ -121,4 +128,14 @@
   left: 50%;
   transform: translate(-50%, 0);
   background-color: var(--black);
+}
+.main .slider .addMenu {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.main .slider .addMenu a {
+  font-weight: bold;
+  color: #333;
 }/*# sourceMappingURL=global.css.map */
