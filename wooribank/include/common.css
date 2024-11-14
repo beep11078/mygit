@@ -1,0 +1,44 @@
+@import "global.scss";
+
+* {
+    font-family: "NanumSquareNeo";
+    box-sizing: border-box;
+    margin: 0;
+}
+
+:root {
+    --black: #000;
+    --white: #fff;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+}
+
+.hide {
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: polygon(0 0, 0 0, 0 0);
+}
+
+.wrap {
+    width: 100%;
+}
+
+

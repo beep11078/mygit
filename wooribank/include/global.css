@@ -1,0 +1,124 @@
+.header {
+  width: 958px;
+  margin: auto;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: bold;
+}
+.header .logo {
+  width: 122px;
+  height: 31px;
+  background-image: url(../images/header/logo.png);
+}
+.header .gnb button {
+  font-size: 14px;
+  font-weight: bold;
+  height: 30px;
+  background-size: auto 30px;
+  text-align: center;
+}
+.header .gnb button span {
+  margin-left: 12px;
+}
+.header .gnb button.login {
+  width: 80px;
+  color: var(--white);
+  background-image: url(../images/header/gnb_member_re1121.png);
+}
+.header .gnb button.certifi {
+  width: 98px;
+  color: var(--black);
+  background-image: url(../images/header/gnb_cert_re1203.png);
+}
+.header .gnb ul {
+  display: none;
+}
+.header .menuBox {
+  display: none;
+}
+.header a {
+  color: var(--black);
+}
+.header .nav .mainMenu {
+  display: flex;
+  gap: 20px;
+}
+.header .gnb2 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.header .gnb2 button {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 0;
+}
+.header .gnb2 .search {
+  width: 30px;
+  height: 30px;
+  background-image: url(../images/header/upper_search_icon_new.png);
+}
+
+.main .slider {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  background-color: #f9f3ff;
+  position: relative;
+  margin-bottom: 50px;
+}
+.main .slider ul {
+  display: flex;
+}
+.main .slider img {
+  display: block;
+  margin: auto;
+  height: 520px;
+}
+.main .slider .sliderCtr {
+  position: absolute;
+  bottom: 75px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: flex;
+}
+.main .slider .sliderCtr .play {
+  width: 10px;
+  height: 14px;
+  background-image: url(../images/slides_btn_play_new0919.png);
+}
+.main .slider .sliderCtr .pause {
+  width: 10px;
+  height: 14px;
+  background-image: url(../images/slides_btn_pause_new0919.png);
+}
+.main .slider .sliderCtr .prev {
+  width: 10px;
+  height: 14px;
+  background-image: url(../images/slides_btn_previous_new0924.png);
+  background-size: cover;
+}
+.main .slider .sliderCtr .next {
+  width: 10px;
+  height: 14px;
+  background-image: url(../images/slides_btn_next_new0924.png);
+  background-size: cover;
+}
+.main .slider .sliderCtr .pagination {
+  display: flex;
+  gap: 13px;
+}
+.main .slider .sliderCtr .pagination li {
+  width: 8px;
+  height: 8px;
+  background-color: var(--black);
+  border-radius: 50%;
+}
+.main .slider .quickMenu {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-color: var(--black);
+}/*# sourceMappingURL=global.css.map */

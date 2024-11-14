@@ -1,0 +1,156 @@
+.header {
+    width: 958px;
+    margin: auto;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bold;
+
+    .logo {
+        width: 122px;
+        height: 31px;
+        background-image: url(../images/header/logo.png);
+    }
+
+    .gnb {
+        button {
+            font-size: 14px;
+            font-weight: bold;
+            height: 30px;
+            background-size: auto 30px;
+            text-align: center;
+
+            span {
+                margin-left: 12px;
+            }
+        }
+
+        button.login {
+            width: 80px;
+            color: var(--white);
+            background-image: url(../images/header/gnb_member_re1121.png);
+        }
+
+        button.certifi {
+            width: 98px;
+            color: var(--black);
+            background-image: url(../images/header/gnb_cert_re1203.png);
+        }
+
+        ul {
+            display: none;
+        }
+    }
+
+    .menuBox {
+        display: none;
+    }
+
+    a {
+        color: var(--black);
+    }
+
+    .nav {
+        .mainMenu {
+            display: flex;
+            gap: 20px;
+        }
+    }
+
+    .gnb2 {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        button {
+            font-size: 16px;
+            font-weight: bold;
+            padding: 0;
+        }
+
+        .search {
+            width: 30px;
+            height: 30px;
+            background-image: url(../images/header/upper_search_icon_new.png);
+        }
+    }
+
+}
+
+.main {
+    .slider {
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
+        background-color: #f9f3ff;
+        position: relative;
+        margin-bottom: 50px;
+    
+        ul {
+            display: flex;
+        }
+
+        img {
+            display: block;
+            margin: auto;
+            height: 520px;
+        }
+
+        .sliderCtr {
+            position: absolute;
+            bottom: 75px;
+            left: 50%;
+            transform: translate(-50%, 0);
+            display: flex;
+
+            .play {
+                width: 10px;
+                height: 14px;
+                background-image: url(../images/slides_btn_play_new0919.png);
+            }
+
+            .pause {
+                width: 10px;
+                height: 14px;
+                background-image: url(../images/slides_btn_pause_new0919.png);
+            }
+
+            .prev {
+                width: 10px;
+                height: 14px;
+                background-image: url(../images/slides_btn_previous_new0924.png);
+                background-size: cover;
+            }
+            
+            .next {
+                width: 10px;
+                height: 14px;
+                background-image: url(../images/slides_btn_next_new0924.png);
+                background-size: cover;
+            }
+
+            
+            .pagination {
+                display: flex;
+                gap: 13px;
+
+                li {    
+                    width: 8px;
+                    height: 8px;
+                    background-color: var(--black);
+                    border-radius: 50%;
+                }
+            }
+        }
+
+
+        .quickMenu {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, 0);
+            background-color: var(--black);
+        }
+
+    }
+}
