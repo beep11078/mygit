@@ -1,8 +1,24 @@
 @media screen and (max-width: 1902px) {
 
+    br.break {
+        display: inline;
+    }
+
     .container {
         max-width: 1316px;
         margin: auto;
+    }
+
+    .header {
+        padding: 0 calc(calc(100% - 1316px) / 2);
+    }
+
+    .header .nav .mainMenu > li {
+        margin: 0 20px;
+    }
+
+    .header .nav .mainMenu > li .menuTitle {
+        font-size: 16px;
     }
 
     .main .section1 .mainBox .visualBox .mainVideo {
@@ -10,8 +26,80 @@
         max-height: 621px;
     } 
 
+    .main .section1 .mainBox .visualBox .kakaoMore button  {
+        width: 114px;
+        background-size: 82px 82px;
+    }
+
+    .main .section1 article .mainBox .visualBox .mainMore  {
+        bottom: 33px;
+    }
+
+    .main .section1 article .mainBox .visualBox .mainMore button {
+        width: 207px;
+        height: 98px;
+        font-size: 20px;
+        padding-right: 23px;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+    }
+
+    .main .section1 article .mainBox .visualBox .mainMore .blackCircle {
+        display: inline-block;
+        width: 48px;
+        height: 48px;
+        line-height: 48px;
+        padding: 0;
+    }
+
     .visualRight .visualRightList {
         width: 206px;
     }
+
+    .visualRightBox .visualRight .visualRightList1 .donation {
+        width: 206px;
+        height: 206px;
+    }
     
+    .visualRightBox .visualRight .visualRightList1 .donation .donationTitle { 
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+    }
+
+    .visualRightBox .visualRight .visualRightList1 .donation .donationAmount .counter {
+        font-size: 26px;
+    }
+
+    .visualRightBox .visualRight .visualRightList1 .kakaoimpact a {
+        height: 206px;
+    }
+
+    .visualSlide {
+        height: 206px;
+    }
+
+    .visualRightBox .visualRight .visualRightList2 {
+        height: 259px;
+    }
+
+    .visualRightBox .visualRight .visualRightList2 .campaign .subjectTitle {
+        font-size: 18px;
+    }
+    
+    .visualRight .visualRightList.visualRightList3 {
+        width: 214px;
+
+    }
+    
+    .visualRight .visualRightList.visualRightList3 .bgBox .visualSlide2 li,
+    .visualRight .visualRightList.visualRightList3 .circleBtn3 {
+        height: 124px;
+    }
+
+    .visualRightList1 .circleBtn,
+    .visualRightList2 .circleBtn {
+        bottom: 20px;
+    }
 }

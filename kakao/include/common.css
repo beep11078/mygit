@@ -135,6 +135,10 @@ li {
     color: #777;
 }
 
+br.break {
+    display: none;
+}
+
 /* header --------------------------------------------------------- */
 
 .header {
@@ -185,7 +189,7 @@ li {
 
 .header .nav .mainMenu > li {
     position: relative;
-    margin: 40px;
+    margin: 0 40px;
     flex-shrink: 0;
 }
 

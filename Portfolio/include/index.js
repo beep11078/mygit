@@ -262,6 +262,7 @@ $(window).scroll(function(){
         $('#navi').css('display','block');
         $('#navBox').addClass('navBoxOn');
         $('.main>a').addClass('mainOn');
+        $('#logo').css('filter','invert(100%)');
     }
     else {
         $('#logoBox').css('width','20%');
@@ -269,6 +270,7 @@ $(window).scroll(function(){
         $('#navi').css('display','none');
         $('#navBox').removeClass('navBoxOn');
         $('.main>a').removeClass('mainOn');
+        $('#logo').css('filter','invert(0)');
     }
 
 });     //$(window).scroll  끝

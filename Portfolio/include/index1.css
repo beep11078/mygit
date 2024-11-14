@@ -183,6 +183,7 @@ body::-webkit-scrollbar-button:start:decrement,::-webkit-scrollbar-button:end:in
 #logo {
     width: 100%;
     display: block;
+    /* filter: invert(100%); */
 }
 
 #navi { width: 80%; display: none; }
