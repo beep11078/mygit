@@ -14,6 +14,9 @@
     }
 
     .gnb {
+        display: flex;
+        gap: 6px;
+
         button {
             font-size: 14px;
             font-weight: bold;
@@ -55,6 +58,10 @@
         .mainMenu {
             display: flex;
             gap: 20px;
+
+            a {
+                font-size: 15px;
+            }
         }
     }
 
@@ -79,12 +86,12 @@
 }
 
 .main {
+
     .slider {
         width: 100vw;
         margin-left: calc(-50vw + 50%);
         background-color: #f9f3ff;
         position: relative;
-        margin-bottom: 50px;
     
         ul {
             display: flex;
@@ -98,7 +105,7 @@
 
         .sliderCtr {
             position: absolute;
-            bottom: 75px;
+            bottom: 65px;
             left: 50%;
             transform: translate(-50%, 0);
             display: flex;
@@ -152,23 +159,439 @@
         }
 
         .quickMenu {
+            display: flex;
             position: absolute;
-            bottom: 0;
+            bottom: -38px;
             left: 50%;
             transform: translate(-50%, 0);
-            background-color: var(--black);
+            border-radius: 38px;
+            box-shadow: 0px 3px 10px #999;
+            overflow: hidden;
+
+            .menu {
+                display: none;
+
+                li {
+                    a {
+                        background-color: #3a8dfd;
+                        height: 76px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: var(--white);
+                    }
+
+                    a, button {
+                        font-size: 21px;
+                        font-weight: bold;
+                    }
+
+                    a {
+                        width: 144px;
+                    }
+                }
+
+                li:first-child {
+                    a {
+                        width: 170px;
+                        background-color: #0082cd;
+                    }
+                }
+
+                li:last-child {
+                    background-color: #fff;
+                    color: var(--black);
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    width: 170px;
+                }
+
+                li:last-child::after {
+                    content: '';
+                    width: 12px;
+                    height: 22px;
+                    background-image: url(../images/btn_q_arrow20200618.png);
+                }
+            }
+
+            .menu.active {
+                display: flex;
+            }
         }
 
         .addMenu {
             position: absolute;
-            bottom: -30px;
+            bottom: -100px;
             left: 50%;
             transform: translate(-50%, -50%);
+            gap: 30px;
 
             a {
                 font-weight: bold;
-                color: #333;
+                color: #7e7e7e;
             }
         }
     }
+
+    section {
+        width: 958px;
+        margin: auto;
+        margin-bottom: 30px;
+        
+        h4 {
+            font-size: 21px;
+            margin-bottom: 24px;
+        }
+    }
+
+    .section1 {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 150px;
+    
+        div {
+            ul {
+                display: flex;
+            }
+        }
+
+
+        ul {
+            li {
+                width: 85px;
+                height: 85px;
+                display: flex;
+                justify-content: center;
+                background-color: transparent;
+                align-items: center;
+
+                a {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    color: var(--black);
+                }
+
+                a::before {
+                    content: '';
+                    width: 56px;
+                    height: 44px;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: auto 44px;
+                }
+            }
+
+            li:hover {
+                width: 85px;
+                height: 85px;
+                border-radius: 50%;
+                background-color: #3a8dfd;
+                
+                a  {
+                    color: var(--white);
+                }
+            }
+        }
+
+
+        .sectionLeft {
+            position: relative;
+            margin-bottom: 38px;
+
+            li:nth-child(1) {
+                a::before {
+                    background-image: url(../images/icon_set_011.png);
+                }
+            }
+
+            li:nth-child(1):hover {
+                a::before {
+                    background-image: url(../images/icon_set_011_over.png);
+                }
+            }
+
+            li:nth-child(2) {
+                a::before {
+                    background-image: url(../images/icon_set_022.png);
+                }
+            }
+
+            li:nth-child(2):hover {
+                a::before {
+                    background-image: url(../images/icon_set_022_over.png);
+                }
+            }
+
+            li:nth-child(3) {
+                a::before {
+                    background-image: url(../images/icon_set_033.png);
+                }
+            }
+
+            li:nth-child(3):hover {
+                a::before {
+                    background-image: url(../images/icon_set_033_over.png);
+                }
+            }
+
+            li:nth-child(4) {
+                a::before {
+                    background-image: url(../images/icon_set_044.png);
+                }
+            }
+
+            li:nth-child(4):hover {
+                a::before {
+                    background-image: url(../images/icon_set_044_over.png);
+                }
+            }
+
+            li:nth-child(5) {
+                a::before {
+                    background-image: url(../images/icon_set_055.png);
+                }
+            }
+            
+            li:nth-child(5):hover {
+                a::before {
+                    background-image: url(../images/icon_set_055_over.png);
+                }
+            }
+            
+            li:nth-child(6) {
+                a::before {
+                    background-image: url(../images/icon_set_066.png);
+                }
+            }
+            
+            li:nth-child(6):hover {
+                a::before {
+                    background-image: url(../images/icon_set_066_over.png);
+                }
+            }
+
+            li:nth-child(7) {
+                a::before {
+                    background-image: url(../images/icon_set_077.png);
+                }
+            }
+
+            li:nth-child(7):hover {
+                a::before {
+                    background-image: url(../images/icon_set_077_over.png);
+                }
+            }
+
+            li:nth-child(8) {
+                a::before {
+                    background-image: url(../images/icon_set_088.png);
+                }
+            }            
+            
+            li:nth-child(8):hover {
+                a::before {
+                    background-image: url(../images/icon_set_088_over.png);
+                }
+            }
+        }
+
+        .sectionLeft::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            height: 88px;
+            top: 66%;
+            right: -7px;
+            transform: translate(-50%, -50%);
+            background-color: #e9f2ff;
+        }
+
+        .sectionRight {
+            li:nth-child(1) {
+                a::before {
+                    background-image: url(../images/icon_set_099.png);
+                }
+            }
+
+            li:nth-child(1):hover {
+                a::before {
+                    background-image: url(../images/icon_set_099_over.png);
+                }
+            }
+
+            li:nth-child(2) {
+                a::before {
+                    background-image: url(../images/icon_set_01010.png);
+                }
+            }
+
+            li:nth-child(2):hover {
+                a::before {
+                    background-image: url(../images/icon_set_01010_over.png);
+                }
+            }
+
+            li:nth-child(3) {
+                a::before {
+                    background-image: url(../images/icon_set_01111.png);
+                }
+            }
+            
+            li:nth-child(3):hover {
+                a::before {
+                    background-image: url(../images/icon_set_01111_over.png);
+                }
+            }
+        }
+    }
+
+    .section2 {
+        ul {
+            display: flex;
+            justify-content: space-between;
+
+            li {
+                width: 306px;
+                border: 1px solid #d8d8d8;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                font-size: 14px;
+                color: #666;
+
+                h5 {
+                    font-size: 19px;
+                    color: #555;
+                    margin: 10px 0;
+                }
+
+                span {
+                    margin-bottom: 11px;
+                }
+            }
+
+            li::before {
+                content: '';
+                width: 304px;
+                height: 200px;
+            }
+
+            li:nth-child(1)::before {
+                background-image: url(../images/image_service_01.png);
+            }
+    
+            li:nth-child(2)::before {
+                background-image: url(../images/image_service_02.png);
+            }
+
+            li:nth-child(3)::before {
+                background-image: url(../images/image_service_03.png);
+            }
+        }    
+    }
+
+    .section3 {
+        display: flex;
+        justify-content: center;
+        background-color: #f4f7fa;
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
+        margin-bottom: 50px;
+        h6 {
+            font-size: 18px;
+        }
+
+        div {
+            width: 458px;
+            padding: 40px 0 50px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            height: 150px;
+            
+
+            h6, h6+a {
+                width: 80px;
+                color: var(--black);
+                position: relative;
+            }
+
+            h6+a::after {
+                content: '';
+                width: 20px;
+                height: 12px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translateY(-50%);
+                background-image: url(../images/arrow_link.png);
+                background-repeat: no-repeat;
+                background-size: auto 12px;
+            }
+            
+            ul  {
+                height: 90px;
+            }
+
+            li {
+                display: flex;
+                font-size: 15px;
+                align-items: center;
+
+                a {
+                    color: var(--black);
+                }
+
+                a:hover {
+                    text-decoration: underline;
+                    color: #0082cd;
+                }
+                span {
+                    margin-left: auto;
+                    font-size: 11px;
+                    color: #555;
+                }
+            }
+        }
+
+        .noticeLeft {
+            margin-right: 45px;
+        }
+    }
+}
+
+
+.footer {
+    border-top: 1px solid #e6e6e6;
+
+    .footerLink {
+        display: flex;
+        border-top: 2px solid #d4d4d4;
+        border-bottom: 1px solid #d4d4d4;
+
+        .linkList {
+            display: flex;
+
+            div {
+                display: none;
+            }
+        }
+
+        .snsList {
+            display: flex;
+
+            li {
+                width: 22px;
+                height: 22px;
+            }
+            
+            li:nth-child(1) {
+                background-image: url(../images/footer/icon_facebook_gray.png);
+            }
+        }
+    }
+
 }

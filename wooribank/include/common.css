@@ -1,7 +1,7 @@
 @import "global.scss";
 
 * {
-    font-family: "NanumSquareNeo";
+    font-family: 'NotoSans','Noto Sans KR', sans-serif;
     box-sizing: border-box;
     margin: 0;
 }
