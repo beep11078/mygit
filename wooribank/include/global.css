@@ -1,5 +1,5 @@
 .header {
-  width: 958px;
+  width: 980px;
   margin: auto;
   height: 60px;
   display: flex;
@@ -189,7 +189,7 @@
   color: #7e7e7e;
 }
 .main section {
-  width: 958px;
+  width: 980px;
   margin: auto;
   margin-bottom: 30px;
 }
@@ -416,6 +416,7 @@
   border-top: 1px solid #e6e6e6;
 }
 .footer .footerLink {
+  padding: 10px calc((100vw - 980px) / 2);
   display: flex;
   border-top: 2px solid #d4d4d4;
   border-bottom: 1px solid #d4d4d4;
@@ -427,7 +428,9 @@
   display: none;
 }
 .footer .footerLink .snsList {
+  margin-left: auto;
   display: flex;
+  gap: 5px;
 }
 .footer .footerLink .snsList li {
   width: 22px;
@@ -435,4 +438,16 @@
 }
 .footer .footerLink .snsList li:nth-child(1) {
   background-image: url(../images/footer/icon_facebook_gray.png);
+}
+.footer .footerLink .snsList li:nth-child(2) {
+  background-image: url(../images/footer/icon_instagram_gray.png);
+}
+.footer .footerLink .snsList li:nth-child(3) {
+  background-image: url(../images/footer/icon_post_naver_gray.png);
+}
+.footer .footerLink .snsList li:nth-child(4) {
+  background-image: url(../images/footer/icon_youtube_gray.png);
+}
+.footer .footerLink .snsList li:nth-child(5) {
+  background-image: url(../images/footer/icon_navertv_gray.png);
 }/*# sourceMappingURL=global.css.map */

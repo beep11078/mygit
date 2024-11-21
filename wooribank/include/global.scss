@@ -1,5 +1,5 @@
 .header {
-    width: 958px;
+    width: 980px;
     margin: auto;
     height: 60px;
     display: flex;
@@ -235,7 +235,7 @@
     }
 
     section {
-        width: 958px;
+        width: 980px;
         margin: auto;
         margin-bottom: 30px;
         
@@ -566,8 +566,9 @@
 
 .footer {
     border-top: 1px solid #e6e6e6;
-
+    
     .footerLink {
+        padding: 10px calc(calc(100vw - 980px)/2);
         display: flex;
         border-top: 2px solid #d4d4d4;
         border-bottom: 1px solid #d4d4d4;
@@ -581,7 +582,9 @@
         }
 
         .snsList {
+            margin-left: auto;
             display: flex;
+            gap: 5px;
 
             li {
                 width: 22px;
@@ -590,6 +593,18 @@
             
             li:nth-child(1) {
                 background-image: url(../images/footer/icon_facebook_gray.png);
+            }
+            li:nth-child(2) {
+                background-image: url(../images/footer/icon_instagram_gray.png);
+            }
+            li:nth-child(3) {
+                background-image: url(../images/footer/icon_post_naver_gray.png);
+            }
+            li:nth-child(4) {
+                background-image: url(../images/footer/icon_youtube_gray.png);
+            }
+            li:nth-child(5) {
+                background-image: url(../images/footer/icon_navertv_gray.png);
             }
         }
     }
