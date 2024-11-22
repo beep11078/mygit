@@ -39,28 +39,55 @@
 .header .gnb ul {
   display: none;
 }
-.header .menuBox {
-  display: none;
-}
 .header a {
   color: var(--black);
 }
 .header .nav .mainMenu {
   display: flex;
   gap: 20px;
+  position: relative;
+}
+.header .nav .mainMenu li:hover .menuBox {
+  display: flex;
+  flex-direction: column;
 }
 .header .nav .mainMenu a {
   font-size: 15px;
+}
+.header .nav .mainMenu .menuBox {
+  display: none;
+  position: absolute;
+  z-index: 9;
+  background-color: #fff;
+  border: 1px solid var(--black);
+  padding: 20px;
+}
+.header .nav .mainMenu .menuBox .subMenu {
+  border-top: 2px solid #ddd;
 }
 .header .gnb2 {
   display: flex;
   align-items: center;
   gap: 12px;
 }
-.header .gnb2 button {
+.header .gnb2 a {
   font-size: 16px;
   font-weight: bold;
   padding: 0;
+}
+.header .gnb2 div {
+  position: relative;
+}
+.header .gnb2 div:hover .menuBox {
+  display: flex;
+}
+.header .gnb2 .menuBox {
+  display: none;
+  position: absolute;
+  z-index: 9;
+  background-color: #fff;
+  border: 1px solid var(--black);
+  padding: 10px;
 }
 .header .gnb2 .search {
   width: 30px;

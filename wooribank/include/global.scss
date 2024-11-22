@@ -46,10 +46,6 @@
         }
     }
 
-    .menuBox {
-        display: none;
-    }
-
     a {
         color: var(--black);
     }
@@ -58,9 +54,28 @@
         .mainMenu {
             display: flex;
             gap: 20px;
+            position: relative;
+
+            li:hover .menuBox {
+                display: flex;
+                flex-direction: column;
+            }
 
             a {
                 font-size: 15px;
+            }
+
+            .menuBox {
+                display: none;
+                position: absolute;
+                z-index: 9;
+                background-color: #fff;
+                border: 1px solid var(--black);
+                padding: 20px;
+
+                .subMenu {
+                    border-top: 2px solid #ddd;
+                }
             }
         }
     }
@@ -70,10 +85,27 @@
         align-items: center;
         gap: 12px;
 
-        button {
+        a {
             font-size: 16px;
             font-weight: bold;
             padding: 0;
+        }
+
+        div {
+            position: relative;
+        }
+
+        div:hover .menuBox {
+            display: flex;
+        }
+
+        .menuBox {
+            display: none;
+            position: absolute;
+            z-index: 9;
+            background-color: #fff;
+            border: 1px solid var(--black);
+            padding: 10px;
         }
 
         .search {
