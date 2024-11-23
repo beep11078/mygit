@@ -60,10 +60,18 @@
   z-index: 9;
   background-color: #fff;
   border: 1px solid var(--black);
-  padding: 20px;
+  padding: 20px 30px;
 }
 .header .nav .mainMenu .menuBox .subMenu {
-  border-top: 2px solid #ddd;
+  width: 150px;
+  border-top: 3px solid var(--black);
+}
+.header .nav .mainMenu .menuBox .subMenu a {
+  font-size: 13px;
+}
+.header .nav .mainMenu .menuBox .subMenu a:hover {
+  text-decoration: underline;
+  color: #0082cd;
 }
 .header .gnb2 {
   display: flex;
