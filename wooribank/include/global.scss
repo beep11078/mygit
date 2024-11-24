@@ -107,6 +107,7 @@
 
         div:hover .menuBox {
             display: flex;
+            flex-direction: column;
         }
 
         .menuBox {
@@ -116,6 +117,51 @@
             background-color: #fff;
             border: 1px solid var(--black);
             padding: 10px;
+            
+            .subMenu {
+                width: 150px;
+                border-top: 3px solid var(--black);
+
+                a {
+                    font-size: 13px;
+                    display: flex;
+                }
+
+                a:hover {
+                    text-decoration: underline;
+                    color: #0082cd;
+                }
+
+                a:before {
+                    content:'';
+                    width: 24px;
+                    height: 19px;
+                }
+
+                li:nth-child(1) a:before {
+                    background-image: url(../images/header/flag_us.gif);
+                }
+
+                li:nth-child(2) a:before {
+                    background-image: url(../images/header/flag_china.gif);
+                }
+
+                li:nth-child(3) a:before {
+                    background-image: url(../images/header/flag_japan.gif);
+                }
+
+                li:nth-child(4) a:before {
+                    background-image: url(../images/header/flag_philippines.gif);
+                }
+
+                li:nth-child(5) a:before {
+                    background-image: url(../images/header/flag_vietnam.gif);
+                }
+
+                li:nth-child(6) a:before {
+                    background-image: url(../images/header/flag_mongolia.gif);
+                }
+            }
         }
 
         .search {

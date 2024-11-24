@@ -88,6 +88,7 @@
 }
 .header .gnb2 div:hover .menuBox {
   display: flex;
+  flex-direction: column;
 }
 .header .gnb2 .menuBox {
   display: none;
@@ -96,6 +97,41 @@
   background-color: #fff;
   border: 1px solid var(--black);
   padding: 10px;
+}
+.header .gnb2 .menuBox .subMenu {
+  width: 150px;
+  border-top: 3px solid var(--black);
+}
+.header .gnb2 .menuBox .subMenu a {
+  font-size: 13px;
+  display: flex;
+}
+.header .gnb2 .menuBox .subMenu a:hover {
+  text-decoration: underline;
+  color: #0082cd;
+}
+.header .gnb2 .menuBox .subMenu a:before {
+  content: "";
+  width: 24px;
+  height: 19px;
+}
+.header .gnb2 .menuBox .subMenu li:nth-child(1) a:before {
+  background-image: url(../images/header/flag_us.gif);
+}
+.header .gnb2 .menuBox .subMenu li:nth-child(2) a:before {
+  background-image: url(../images/header/flag_china.gif);
+}
+.header .gnb2 .menuBox .subMenu li:nth-child(3) a:before {
+  background-image: url(../images/header/flag_japan.gif);
+}
+.header .gnb2 .menuBox .subMenu li:nth-child(4) a:before {
+  background-image: url(../images/header/flag_philippines.gif);
+}
+.header .gnb2 .menuBox .subMenu li:nth-child(5) a:before {
+  background-image: url(../images/header/flag_vietnam.gif);
+}
+.header .gnb2 .menuBox .subMenu li:nth-child(6) a:before {
+  background-image: url(../images/header/flag_mongolia.gif);
 }
 .header .gnb2 .search {
   width: 30px;
