@@ -99,12 +99,15 @@
   padding: 10px;
 }
 .header .gnb2 .menuBox .subMenu {
-  width: 150px;
+  width: 200px;
   border-top: 3px solid var(--black);
 }
 .header .gnb2 .menuBox .subMenu a {
   font-size: 13px;
   display: flex;
+  align-items: center;
+  gap: 3px;
+  color: #555;
 }
 .header .gnb2 .menuBox .subMenu a:before {
   content: "";
