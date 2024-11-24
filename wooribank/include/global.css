@@ -106,10 +106,6 @@
   font-size: 13px;
   display: flex;
 }
-.header .gnb2 .menuBox .subMenu a:hover {
-  text-decoration: underline;
-  color: #0082cd;
-}
 .header .gnb2 .menuBox .subMenu a:before {
   content: "";
   width: 24px;
