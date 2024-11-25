@@ -183,6 +183,7 @@
             display: flex;
 
             .swiper-slide {
+                width: 100%;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -194,8 +195,6 @@
                 }
             }
         }
-
-
 
         .sliderCtr {
             position: absolute;
@@ -216,6 +215,7 @@
                     width: 10px;
                     height: 14px;
                     background-image: url(../images/slides_btn_play_new0919.png);
+                    background-repeat: no-repeat;
                 }
 
                 .pause {

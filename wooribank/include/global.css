@@ -148,6 +148,7 @@
   display: flex;
 }
 .main .sliderbox .swiper-wrapper .swiper-slide {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -176,6 +177,7 @@
   width: 10px;
   height: 14px;
   background-image: url(../images/slides_btn_play_new0919.png);
+  background-repeat: no-repeat;
 }
 .main .sliderbox .sliderCtr .control .pause {
   width: 10px;
