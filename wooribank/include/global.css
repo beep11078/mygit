@@ -1,6 +1,6 @@
 .header {
-  width: 980px;
   margin: auto;
+  width: 980px;
   height: 60px;
   display: flex;
   align-items: center;
@@ -15,6 +15,7 @@
 .header .gnb {
   display: flex;
   gap: 6px;
+  position: relative;
 }
 .header .gnb button {
   font-size: 14px;
@@ -36,8 +37,22 @@
   color: var(--black);
   background-image: url(../images/header/gnb_cert_re1203.png);
 }
-.header .gnb ul {
+.header .gnb .loginSub, .header .gnb .certifiSub {
   display: none;
+  position: absolute;
+  top: calc(100% + 5px);
+  z-index: 9;
+  width: 134px;
+  height: 45px;
+  background-image: url(../images/header/intro_login_Indivual_bg.png);
+  justify-content: space-around;
+  align-items: center;
+}
+.header .gnb .loginSub {
+  left: 0;
+}
+.header .gnb .certifiSub {
+  left: 86px;
 }
 .header a {
   color: var(--black);
