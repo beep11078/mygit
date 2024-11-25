@@ -1,5 +1,6 @@
 @media screen and (max-width: 1024px) {
     .wrap {
+        margin: auto;
         max-width: 712px;
     }
 
@@ -41,6 +42,11 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+    }
+
+    .gnbBox {
+        height: 100vh;
+        overflow: auto;
     }
 
     .header .util .languageBtn {
@@ -133,11 +139,12 @@
         background-position: center;
     }
 
-    .main .section1 .mainBox .visualBox .mainMore {
+    .main .section1 article .mainBox .visualBox .mainMore {
         width: 158px;
         height: 54px;
         border-radius: 20px;
         padding: 0;
+        bottom: 0;
     }
 
     .main .section1 article .mainBox .visualBox .mainMore button {
@@ -146,6 +153,8 @@
         padding: 0;
         height: 54px;
         border-radius: 0 20px 0 0;
+        display: flex;
+        justify-content: center;
     }
 
     .main .section1 article .mainBox .visualBox .mainMore .blackCircle {
