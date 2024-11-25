@@ -36,3 +36,11 @@ btn2.forEach(function(el, i){
         }
     });
 });
+
+
+const quickMenuLists = document.querySelectorAll('.quickMenu .menu');
+const menuToggleBtn = document.querySelector('.quickMenu .menu button');
+menuToggleBtn.addEventListener('click', function(){
+    quickMenuLists[0].classList.remove('active');
+    quickMenuLists[1].classList.add('active');
+})
