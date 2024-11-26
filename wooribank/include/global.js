@@ -39,8 +39,16 @@ btn2.forEach(function(el, i){
 
 
 const quickMenuLists = document.querySelectorAll('.quickMenu .menu');
-const menuToggleBtn = document.querySelector('.quickMenu .menu button');
-menuToggleBtn.addEventListener('click', function(){
+const menuToggleBtns = document.querySelectorAll('.quickMenu .menu button');
+
+// 첫 번째 버튼 클릭 시
+menuToggleBtns[0].addEventListener('click', () => {
     quickMenuLists[0].classList.remove('active');
     quickMenuLists[1].classList.add('active');
-})
+});
+
+// 두 번째 버튼 클릭 시
+menuToggleBtns[1].addEventListener('click', () => {
+    quickMenuLists[0].classList.add('active');
+    quickMenuLists[1].classList.remove('active');
+});
