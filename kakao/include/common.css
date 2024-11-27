@@ -91,6 +91,13 @@ li {
     font-weight: normal;
 }
 
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0
+}
+
 .wrap {
     display: block;
     width: 100%;
@@ -202,12 +209,10 @@ br.break {
     color: var(--primary-color);
     text-decoration: none;
     cursor: pointer;
+    display: flex;
+    align-items: center;
 }
 
-.header .nav .mainMenu > li:last-child .menuTitle.arrow::after {
-    content: "↗️";
-    font-size: 0.9rem;
-}
 
 .header .nav .mainMenu:hover > li .menuTitle:not(:hover) {
     color: #888;
