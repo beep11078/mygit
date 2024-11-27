@@ -1,10 +1,3 @@
-
-
-
-
-// swiper slide
-// swiper 객체의 인스턴스 생성 = 변수화
-// swiper 
 let mySlide = new Swiper('.swiper', {
     autoplay : {
         delay : 1000,
@@ -39,7 +32,7 @@ btn2.forEach(function(el, i){
 
 
 const quickMenuLists = document.querySelectorAll('.quickMenu .menu');
-const menuToggleBtns = document.querySelectorAll('.quickMenu .menu button');
+const menuToggleBtns = document.querySelectorAll('.quickMenu .menu .toggleBtn');
 
 // 첫 번째 버튼 클릭 시
 menuToggleBtns[0].addEventListener('click', () => {

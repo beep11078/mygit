@@ -254,34 +254,32 @@
 .main .midMenu .quickMenu .menu:not(.active) {
   display: none !important;
 }
-.main .midMenu .quickMenu .menu.default li a {
-  background-color: #3a8dfd;
+.main .midMenu .quickMenu .menu.default li {
+  cursor: pointer;
+}
+.main .midMenu .quickMenu .menu.default li a, .main .midMenu .quickMenu .menu.default li button {
   height: 76px;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--white);
-}
-.main .midMenu .quickMenu .menu.default li a, .main .midMenu .quickMenu .menu.default li button {
   font-size: 21px;
   font-weight: bold;
 }
 .main .midMenu .quickMenu .menu.default li a {
+  color: var(--white);
   width: 144px;
+  background-color: #3a8dfd;
 }
 .main .midMenu .quickMenu .menu.default li:first-child a {
   width: 170px;
   background-color: #0082cd;
 }
-.main .midMenu .quickMenu .menu.default li:last-child {
+.main .midMenu .quickMenu .menu.default li.toogleBtn {
+  width: 170px;
   background-color: #fff;
   color: var(--black);
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 170px;
 }
-.main .midMenu .quickMenu .menu.default li:last-child::after {
+.main .midMenu .quickMenu .menu.default li.toogleBtn button::after {
   content: "";
   width: 12px;
   height: 22px;
@@ -312,7 +310,7 @@
 .main .midMenu .quickMenu .menu:not(.default) li a {
   font-size: 18px;
 }
-.main .midMenu .quickMenu .menu:not(.default) li:first-child {
+.main .midMenu .quickMenu .menu:not(.default) li.toggleBtn {
   background-color: #fff;
   color: var(--black);
   display: flex;
@@ -321,10 +319,10 @@
   width: 230px;
   flex-shrink: 0;
 }
-.main .midMenu .quickMenu .menu:not(.default) li:first-child button {
+.main .midMenu .quickMenu .menu:not(.default) li.toggleBtn button {
   height: 78px;
 }
-.main .midMenu .quickMenu .menu:not(.default) li:first-child::before {
+.main .midMenu .quickMenu .menu:not(.default) li.toggleBtn::before {
   content: "";
   width: 12px;
   height: 22px;

@@ -314,22 +314,21 @@
 
             .menu.default {
                 li {
-                    a {
-                        background-color: #3a8dfd;
+                    cursor: pointer;
+                    
+                    a, button {
                         height: 76px;
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        color: var(--white);
-                    }
-
-                    a, button {
                         font-size: 21px;
                         font-weight: bold;
                     }
 
                     a {
+                        color: var(--white);
                         width: 144px;
+                        background-color: #3a8dfd;
                     }
                 }
 
@@ -340,20 +339,17 @@
                     }
                 }
 
-                li:last-child {
+                li.toogleBtn {
+                    width: 170px;
                     background-color: #fff;
                     color: var(--black);
-                    display: flex;
-                    justify-content: space-evenly;
-                    align-items: center;
-                    width: 170px;
-                }
 
-                li:last-child::after {
-                    content: '';
-                    width: 12px;
-                    height: 22px;
-                    background-image: url(../images/btn_q_arrow20200618.png);
+                    button::after {
+                        content: '';
+                        width: 12px;
+                        height: 22px;
+                        background-image: url(../images/btn_q_arrow20200618.png);
+                    }
                 }
             }
 
@@ -384,7 +380,7 @@
                     }
                 }
 
-                li:first-child {
+                li.toggleBtn {
                     background-color: #fff;
                     color: var(--black);
                     display: flex;
@@ -397,7 +393,7 @@
                     }
                 }
 
-                li:first-child::before {
+                li.toggleBtn::before {
                     content: '';
                     width: 12px;
                     height: 22px;
