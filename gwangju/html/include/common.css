@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+/*웹폰트(나눔스퀘어) 연결*/
+@import url(https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css);
+
+/*아이콘 폰트(폰트어썸) 연결*/
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css);
+
+
+*{    /*모든 요소 공통*/
+    font-family: 'NanumSquareNeo';
+    box-sizing: border-box; margin: 0;
+}
+
+ul { list-style: none; padding: 0; }
+a { text-decoration: none; }
+
+.wrap {
+    display: block;
+    width: 100%;
+}
