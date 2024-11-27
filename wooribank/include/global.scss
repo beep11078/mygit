@@ -31,7 +31,7 @@
         }
 
         button.login {
-            width: 80px;
+            width: 79px;
             color: var(--white);
             background-image: url(../images/header/gnb_member_re1121.png);
         }
@@ -339,10 +339,16 @@
                     }
                 }
 
-                li.toogleBtn {
-                    width: 170px;
+                li:last-child {
                     background-color: #fff;
                     color: var(--black);
+                    
+                    button {
+                        width: 170px;
+                        display: flex;
+                        justify-content: space-evenly;
+                        cursor: pointer;
+                    }
 
                     button::after {
                         content: '';
@@ -360,8 +366,11 @@
                 flex-direction: column;
                 flex-wrap: wrap;
                 background-color: var(--white);
+
                 li {
                     width: calc(calc(100% - 230px)/3);
+                    cursor: pointer;
+
                     a {
                         height: 39px;
                         display: flex;
@@ -380,20 +389,22 @@
                     }
                 }
 
-                li.toggleBtn {
+                li:first-child {
                     background-color: #fff;
                     color: var(--black);
                     display: flex;
                     justify-content: space-evenly;
                     align-items: center;
-                    width: 230px;
+                    width: 210px;
                     flex-shrink: 0;
+                    
                     button {
+                        cursor: pointer;
                         height: 78px;
                     }
                 }
 
-                li.toggleBtn::before {
+                li:first-child::before {
                     content: '';
                     width: 12px;
                     height: 22px;

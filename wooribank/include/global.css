@@ -28,7 +28,7 @@
   margin-left: 12px;
 }
 .header .gnb button.login {
-  width: 80px;
+  width: 79px;
   color: var(--white);
   background-image: url(../images/header/gnb_member_re1121.png);
 }
@@ -274,12 +274,17 @@
   width: 170px;
   background-color: #0082cd;
 }
-.main .midMenu .quickMenu .menu.default li.toogleBtn {
-  width: 170px;
+.main .midMenu .quickMenu .menu.default li:last-child {
   background-color: #fff;
   color: var(--black);
 }
-.main .midMenu .quickMenu .menu.default li.toogleBtn button::after {
+.main .midMenu .quickMenu .menu.default li:last-child button {
+  width: 170px;
+  display: flex;
+  justify-content: space-evenly;
+  cursor: pointer;
+}
+.main .midMenu .quickMenu .menu.default li:last-child button::after {
   content: "";
   width: 12px;
   height: 22px;
@@ -295,6 +300,7 @@
 }
 .main .midMenu .quickMenu .menu:not(.default) li {
   width: calc((100% - 230px) / 3);
+  cursor: pointer;
 }
 .main .midMenu .quickMenu .menu:not(.default) li a {
   height: 39px;
@@ -310,19 +316,20 @@
 .main .midMenu .quickMenu .menu:not(.default) li a {
   font-size: 18px;
 }
-.main .midMenu .quickMenu .menu:not(.default) li.toggleBtn {
+.main .midMenu .quickMenu .menu:not(.default) li:first-child {
   background-color: #fff;
   color: var(--black);
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: 230px;
+  width: 210px;
   flex-shrink: 0;
 }
-.main .midMenu .quickMenu .menu:not(.default) li.toggleBtn button {
+.main .midMenu .quickMenu .menu:not(.default) li:first-child button {
+  cursor: pointer;
   height: 78px;
 }
-.main .midMenu .quickMenu .menu:not(.default) li.toggleBtn::before {
+.main .midMenu .quickMenu .menu:not(.default) li:first-child::before {
   content: "";
   width: 12px;
   height: 22px;
