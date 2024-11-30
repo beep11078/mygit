@@ -51,5 +51,23 @@ body{ position: relative; }
 }
 
 .header {
-    db
+  max-width: 1400px;
+  margin: auto;
+}
+
+.header__notice {
+  font-size: 14px;
+  line-height: 40px;
+  border-bottom: 1px solid #efefef;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.header__notice::before {
+  content: '';
+  width: 24px;
+  height: 20px;
+  background-image: url(../images/header/topicon_nuri.png);
+  margin-right: 5px;
 }
