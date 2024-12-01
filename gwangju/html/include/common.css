@@ -20,6 +20,7 @@ a { text-decoration: none; }
     width: 100%;
 }
 
+
 body{ position: relative; }
 
 .skip a {
@@ -105,11 +106,15 @@ body{ position: relative; }
 
 .header__familySite > a {
   font-size: 14px;
+  color: #222222;
   width: 125px;
   height: 36px;
   background-color: #F1F1F1;
   padding: 9px 14px;
   border-radius: 15px;
+  gap: 10px;
+  display: flex;
+  align-items: center;
 }
 
 .header__familySiteList, .header__langList, .header__snsList {
