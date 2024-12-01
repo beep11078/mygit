@@ -71,3 +71,51 @@ body{ position: relative; }
   background-image: url(../images/header/topicon_nuri.png);
   margin-right: 5px;
 }
+
+.header__tnb {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__link { 
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  height: 56px;
+  gap: 20px;
+}
+
+.header__call {
+  width: 105px;
+  height: 30px;
+  background-image: url(../images/header/callcenter.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 105px auto;
+}
+
+.header__council {
+  width: 142px;
+  height: 30px;
+  background-image: url(../images/header/council.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 142px auto;
+}
+
+.header__familySite > a {
+  font-size: 14px;
+  width: 125px;
+  height: 36px;
+  background-color: #F1F1F1;
+  padding: 9px 14px;
+  border-radius: 15px;
+}
+
+.header__familySiteList, .header__langList, .header__snsList {
+  display: none;
+}
+
+.header__util {
+  display: flex;
+}
