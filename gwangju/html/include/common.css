@@ -21,7 +21,7 @@ a { text-decoration: none; }
 }
 
 
-body{ position: relative; }
+body { position: relative; }
 
 .skip a {
     position: absolute;
@@ -76,6 +76,7 @@ body{ position: relative; }
 .header__tnb {
   display: flex;
   justify-content: space-between;
+  border-bottom: 1px solid #efefef;
 }
 
 .header__link { 
@@ -123,4 +124,15 @@ body{ position: relative; }
 
 .header__util {
   display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header__util a {
+  font-size: 14px;
+}
+
+.header__lang {
+  display: flex;
+  align-items: center;
 }
