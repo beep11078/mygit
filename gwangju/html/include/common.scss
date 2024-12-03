@@ -1,8 +1,5 @@
 @charset "utf-8";
 
-/*웹폰트(나눔스퀘어) 연결*/
-@import url(https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css);
-
 /*아이콘 폰트(폰트어썸) 연결*/
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css);
 
@@ -104,21 +101,23 @@ body { position: relative; }
     background-size: 142px auto;
   }
 
-  &__familySite > a {
-    font-size: 14px;
-    color: #222222;
-    width: 125px;
-    height: 36px;
-    background-color: #F1F1F1;
-    padding: 9px 11px;
-    border-radius: 15px;
-    gap: 10px;
-    display: flex;
-    align-items: center;
-  }
+  &__familySite {
+    &List {
+      display: none;
+    }
 
-  &__familySiteList, .header__langList, .header__snsList {
-    display: none;
+    >a {
+      font-size: 14px;
+      color: #222222;
+      width: 125px;
+      height: 36px;
+      background-color: #F1F1F1;
+      padding: 9px 11px;
+      border-radius: 15px;
+      gap: 10px;
+      display: flex;
+      align-items: center;
+    }
   }
 
   &__util {
@@ -134,5 +133,9 @@ body { position: relative; }
   &__lang {
     display: flex;
     align-items: center;
+
+    &List {
+      display: none;
+    }
   }
 }
