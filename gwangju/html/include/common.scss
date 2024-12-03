@@ -5,7 +5,8 @@
 
 
 *{    /*모든 요소 공통*/
-    font-family: 'NanumSquareNeo';
+    font-family: 'Pretendard';
+    font-weight: normal;
     box-sizing: border-box; margin: 0;
 }
 
@@ -16,7 +17,6 @@ a { text-decoration: none; }
     display: block;
     width: 100%;
 }
-
 
 body { position: relative; }
 
@@ -117,6 +117,9 @@ body { position: relative; }
       gap: 10px;
       display: flex;
       align-items: center;
+      i {
+        font-size: 18px;
+      }
     }
   }
 
@@ -128,6 +131,11 @@ body { position: relative; }
 
   &__util a {
     font-size: 14px;
+    color: #555;
+    i {
+      font-size: 18px;
+      margin: 0 5px;
+    }
   }
 
   &__lang {
@@ -137,5 +145,243 @@ body { position: relative; }
     &List {
       display: none;
     }
+  }
+
+  &__sns {
+    display: flex;
+
+    &List {
+      display: flex;
+      gap: 5px;
+
+      a {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        background-image: url(../images/header/sns_sprite.png);
+        background-size: cover;
+        border-radius: 50%;
+      }
+
+      &--instagram {
+        background-position: 0 0;
+      }
+
+      &--facebook {
+        background-position: -30px 0;
+      }
+
+      &--youtube {
+        background-position: -90px 0;
+      }
+
+      &--kakaoStory {
+        background-position: -120px 0;
+      }
+
+      &--naverBlog {
+        background-position: -150px 0;
+      }
+      
+      &--kakaoChannel {
+        background-position: -180px 0;
+      }
+    }
+  }
+
+  &__gnb {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  &__logo a {
+    display: inline-block;
+    height: 64px;
+  }
+
+  &__nav {
+    height: 100px;
+    line-height: 100px;
+    margin-right: 60px;
+    
+    &__list {
+      display: flex;
+      gap: 60px;
+      justify-content: flex-end;
+
+      &__item {
+
+        a {
+          font-size: 20px;
+          font-weight: 600;
+          color: #313131;
+          padding: 40px 0;
+        }
+        
+        i {
+          margin-left: 10px;
+        }
+        &--sub {
+          display: none;
+        }
+
+        &--ham {
+          margin: 40px 0;
+          position: relative;
+
+          a {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 30px;
+            height: 3px;
+            background-color: #313131;
+            display: inline-block;  
+          }
+
+          &::before, &::after {
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 3px;
+            background-color: #313131;
+          }
+
+          &::before {
+            top: 0;
+          }
+          
+          &::after {
+            bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+section {
+  width: 1400px;
+  margin: auto;
+}
+
+.search {
+  background-color: #f8f9ff;
+  border-radius: 15px;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 105px;
+  }
+
+  &__weather {
+    &__list {
+      display: flex;
+      gap: 30px;
+      margin-left: 40px;
+    }
+
+    &__item {
+      color: #4670C0;
+      display: flex;
+      flex-direction: row;
+
+      i  { 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 32px;
+        width: 50px;
+        height: 50px;
+        border-radius: 10px;
+        background-color: #d1e0ff;
+      }
+
+      p {
+        margin-left: 10px;
+        text-align: left;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        font-size: 22px;
+        font-weight: bold;
+      }
+
+      &--small {
+        font-size: 12px;
+        font-weight: 400;
+      }
+    }
+  }
+
+  &__search {
+    position: relative;
+
+    &--form {
+      fieldset {
+        display: flex;
+        padding: 0;
+        border: none;
+        height: 50px;
+        gap: 3px;
+      }
+    }
+    
+    input {
+      border: #3e72fc solid 2px;
+      border-radius: 10px;
+    }
+
+    &__txt {
+      width: 410px;
+      font-size: 18px;
+      padding: 18px;
+    }
+
+    &__submit {
+      width: 50px;
+      height: 50px;
+      background: #3E72FC url(../images/icon_sch.svg) no-repeat center;
+      background-size: 20px 20px;
+      color: transparent;
+    }
+
+    span {
+      font-size: 14px;
+      position: absolute;
+      top: 50%;
+      right: 70px;
+      color: #0a115f;
+      background-color: #d0eaf7;
+      border-radius: 5px;
+      padding: 5px;
+      transform: translateY(-50%);
+    }
+  }
+  
+  &__quick__list {
+    display: flex;
+    width: 495px;
+    padding: 39px;
+    gap: 39px;
+
+    i {
+      display: inline-block;
+      background-image: url(../images/icon_quick01_2024.jpg);
+      background-size: auto 50px;
+      width: 50px;
+      height: 50px;
+      border-radius: 10px;
+      border: 1px solid #d1d5e8;
+    }
+
+    span {
+      color: #222222;
+      font-size: 12px;
+    }
+    
   }
 }

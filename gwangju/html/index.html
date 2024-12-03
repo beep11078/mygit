@@ -8,8 +8,9 @@
 
     <!--아이콘 폰트(폰트어썸) 연결-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
     <!--스타일 파일 연결-->
+    <link rel="stylesheet" href="include/Pretendard.css">
     <link rel="stylesheet" href="include/common.css">
 </head>
 
@@ -64,10 +65,10 @@
             <div class="header__gnb">
                 <h1 class="header__logo"><a href="index.html"><img src="images/header/logo_slogan.gif" alt=""></a></h1>
                 <nav class="header__nav"> 
-                    <ul>
-                        <li>
+                    <ul class="header__nav__list">
+                        <li class="header__nav__list__item">
                             <a href="https://www.gwangju.go.kr/boardList.do?boardId=BD_0000000006&pageId=www10">소통ㆍ참여</a>
-                            <ul>
+                            <ul class="header__nav__list__item--sub">
                                 <li>
                                     <a href="https://www.gwangju.go.kr/boardList.do?boardId=BD_0000000006&pageId=www10">참여광장</a>
                                     <ul>
@@ -101,9 +102,9 @@
                                 <li><a href="https://www.gwangju.go.kr/child/" target="_blank" title="새창">어린이시청</a></li>
                             </ul>
                         </li>
-                        <li>
+                        <li class="header__nav__list__item">
                             <a href="https://www.gwangju.go.kr/boardList.do?boardId=BD_0000000022&pageId=www788">시정소식</a>
-                            <ul>
+                            <ul class="header__nav__list__item--sub">
                                 <li><a href="https://www.gwangju.go.kr/boardList.do?boardId=BD_0000000022&pageId=www788">공지사항</a></li>
                                 <li><a href="https://www.gwangju.go.kr/boardList.do?boardId=BD_0000000027&pageId=www789">보도자료</a></li>
                                 <li><a href="https://www.gwangju.go.kr/boardList.do?boardId=BD_0000000029&pageId=www790">언론보도_사실은 이렇습니다</a></li>
@@ -116,9 +117,9 @@
                                 <li><a href="https://www.gwangju.go.kr/contentsView.do?pageId=www1018">광주광역시민대상</a></li>
                             </ul>
                         </li>
-                        <li>
+                        <li class="header__nav__list__item">
                             <a href="https://www.gwangju.go.kr/contentsView.do?pageId=www76">열린민원</a>
-                            <ul>
+                            <ul class="header__nav__list__item--sub">
                                 <li><a href="https://www.gwangju.go.kr/contentsView.do?pageId=www76">민원안내</a></li>
                                 <li><a href="https://www.gwangju.go.kr/contentsView.do?pageId=www1032">여권안내</a></li>
                                 <li><a href="https://baroeungdap.gwangju.go.kr/" target="_blank" title="새창">민원신청</a></li>
@@ -128,9 +129,9 @@
                                 <li><a href="https://www.gwangju.go.kr/contentsView.do?pageId=www60">행정서비스헌장</a></li>
                             </ul>
                         </li>
-                        <li>
+                        <li class="header__nav__list__item">
                             <a href="https://www.gwangju.go.kr/contentsView.do?pageId=www103">정보공개</a>
-                            <ul>
+                            <ul class="header__nav__list__item--sub">
                                 <li><a href="https://www.gwangju.go.kr/contentsView.do?pageId=www103">행정정보공개</a></li>
                                 <li><a href="https://www.gwangju.go.kr/finance/" target="_blank" title="새창">예산·재정정보</a></li>
                                 <li><a href="https://www.gwangju.go.kr/openList.do?pageId=www94">사전정보공표목록</a></li>
@@ -150,9 +151,9 @@
                                 <li><a href="https://www.gwangju.go.kr/contentsView.do?pageId=www1000">조직정보</a></li>
                             </ul>
                         </li>
-                        <li>
+                        <li class="header__nav__list__item">
                             <a href="">광주소개</a>
-                            <ul>
+                            <ul class="header__nav__list__item--sub">
                                 <li><a href="https://www.gwangju.go.kr/contentsView.do?pageId=www138">일반현황</a></li>
                                 <li><a href="https://www.gwangju.go.kr/contentsView.do?pageId=www131">시정구호</a></li>
                                 <li><a href="https://www.gwangju.go.kr/contentsView.do?pageId=www147">시청안내</a></li>
@@ -163,9 +164,9 @@
                                 <li><a href="https://www.gwangju.go.kr/contentsView.do?pageId=www994">ebook</a></li>
                             </ul>
                         </li>
-                        <li>
-                            <a href="https://www.gwangju.go.kr/traffic/" target="_blank" title="새창">분야별정보</a>
-                            <ul>
+                        <li class="header__nav__list__item">
+                            <a href="https://www.gwangju.go.kr/traffic/" target="_blank" title="새창">분야별정보<i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            <ul class="header__nav__list__item--sub">
                                 <li><a href="" target="_blank" title="새창">교통</a></li>
                                 <li><a href="" target="_blank" title="새창">도시·건설</a></li>
                                 <li><a href="" target="_blank" title="새창">산업·경제</a></li>
@@ -182,7 +183,7 @@
                                 <li><a href="" target="_blank" title="새창">군공항이전사업</a></li>
                             </ul>
                         </li>
-                        <li>
+                        <li class="header__nav__list__item--ham">
                             <a href="https://www.gwangju.go.kr/contentsView.do?pageId=www822" target="_blank" title="사이트맵"><span class="hide">사이트맵</span></a>
                         </li>
                     </ul>
@@ -190,15 +191,17 @@
             </div>
         </header>
         <main class="main" id="contents" tabIndex="0">
-            <section class="search">
+            <section class="section search">
                 <div class="search__container">
                     <div class="search__weather">
                         <ul class="search__weather__list">
                             <li class="search__weather__item search__weather__item--temperature">
-                                <span class="search__weather__item--small">6.6℃</span>흐림
+                                <i class="fa-solid fa-cloud"></i>
+                                <p><span class="search__weather__item--small">6.6℃</span>흐림</p>
                             </li>
                             <li class="search__weather__item search__weather__item--air">
-                                <span class="search__weather__item--small">61㎍/㎥</span>보통
+                                <i class="fa-regular fa-face-smile"></i>
+                                <p><span class="search__weather__item--small">61㎍/㎥</span>보통</p>
                             </li>
                         </ul>
                     </div>
@@ -207,18 +210,18 @@
                             <fieldset>
                                 <legend class="hide">통합검색</legend>
                                 <input type="text" class="search__search__txt" placeholder="광주의 모든것을 검색해보세요.">
-                                <input type="submit" class="search__search__submit">
+                                <input type="submit" class="search__search__submit" value="submit">
                             </fieldset>
                         </form>
                         <span>열린게양대</span>
                     </div>
                     <div class="search__quick">
                         <ul class="search__quick__list">
-                            <li><a href="https://news.gwangju.go.kr/" target="_blank" title="새창"><span>모두의광주</span></a></li>
-                            <li><a href="https://gwangjuon.gwangju.go.kr/" target="_blank" title="새창"><span>광주온(ON)</span></a></li>
-                            <li><a href="https://baroeungdap.gwangju.go.kr/" target="_blank" title="새창"><span>바로응답</span></a></li>
-                            <li><a href="https://www.gwangju.go.kr/reserve/" target="_blank" title="새창"><span>바로예약</span></a></li>
-                            <li><a href="https://www.gwangju.go.kr/contentsView.do?pageId=www147" target="_blank" title="새창"><span>행정조직도</span></a></li>
+                            <li><a href="https://news.gwangju.go.kr/" target="_blank" title="새창"><i class="search__quick__icon"></i><span>모두의광주</span></a></li>
+                            <li><a href="https://gwangjuon.gwangju.go.kr/" target="_blank" title="새창"><i class="search__quick__icon"></i><span>광주온(ON)</span></a></li>
+                            <li><a href="https://baroeungdap.gwangju.go.kr/" target="_blank" title="새창"><i class="search__quick__icon"></i><span>바로응답</span></a></li>
+                            <li><a href="https://www.gwangju.go.kr/reserve/" target="_blank" title="새창"><i class="search__quick__icon"></i><span>바로예약</span></a></li>
+                            <li><a href="https://www.gwangju.go.kr/contentsView.do?pageId=www147" target="_blank" title="새창"><i class="search__quick__icon"></i><span>행정조직도</span></a></li>
                         </ul>
                     </div>
                 </div>

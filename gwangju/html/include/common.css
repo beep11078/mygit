@@ -2,7 +2,8 @@
 /*아이콘 폰트(폰트어썸) 연결*/
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css);
 * { /*모든 요소 공통*/
-  font-family: "NanumSquareNeo";
+  font-family: "Pretendard";
+  font-weight: normal;
   box-sizing: border-box;
   margin: 0;
 }
@@ -116,6 +117,9 @@ body {
   display: flex;
   align-items: center;
 }
+.header__familySite > a i {
+  font-size: 18px;
+}
 .header__util {
   display: flex;
   align-items: center;
@@ -123,6 +127,11 @@ body {
 }
 .header__util a {
   font-size: 14px;
+  color: #555;
+}
+.header__util a i {
+  font-size: 18px;
+  margin: 0 5px;
 }
 .header__lang {
   display: flex;
@@ -130,4 +139,199 @@ body {
 }
 .header__langList {
   display: none;
+}
+.header__sns {
+  display: flex;
+}
+.header__snsList {
+  display: flex;
+  gap: 5px;
+}
+.header__snsList a {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-image: url(../images/header/sns_sprite.png);
+  background-size: cover;
+  border-radius: 50%;
+}
+.header__snsList--instagram {
+  background-position: 0 0;
+}
+.header__snsList--facebook {
+  background-position: -30px 0;
+}
+.header__snsList--youtube {
+  background-position: -90px 0;
+}
+.header__snsList--kakaoStory {
+  background-position: -120px 0;
+}
+.header__snsList--naverBlog {
+  background-position: -150px 0;
+}
+.header__snsList--kakaoChannel {
+  background-position: -180px 0;
+}
+.header__gnb {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__logo a {
+  display: inline-block;
+  height: 64px;
+}
+.header__nav {
+  height: 100px;
+  line-height: 100px;
+  margin-right: 60px;
+}
+.header__nav__list {
+  display: flex;
+  gap: 60px;
+  justify-content: flex-end;
+}
+.header__nav__list__item a {
+  font-size: 20px;
+  font-weight: 600;
+  color: #313131;
+  padding: 40px 0;
+}
+.header__nav__list__item i {
+  margin-left: 10px;
+}
+.header__nav__list__item--sub {
+  display: none;
+}
+.header__nav__list__item--ham {
+  margin: 40px 0;
+  position: relative;
+}
+.header__nav__list__item--ham a {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 3px;
+  background-color: #313131;
+  display: inline-block;
+}
+.header__nav__list__item--ham::before, .header__nav__list__item--ham::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background-color: #313131;
+}
+.header__nav__list__item--ham::before {
+  top: 0;
+}
+.header__nav__list__item--ham::after {
+  bottom: 0;
+}
+
+section {
+  width: 1400px;
+  margin: auto;
+}
+
+.search {
+  background-color: #f8f9ff;
+  border-radius: 15px;
+}
+.search__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 105px;
+}
+.search__weather__list {
+  display: flex;
+  gap: 30px;
+  margin-left: 40px;
+}
+.search__weather__item {
+  color: #4670C0;
+  display: flex;
+  flex-direction: row;
+}
+.search__weather__item i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: #d1e0ff;
+}
+.search__weather__item p {
+  margin-left: 10px;
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 22px;
+  font-weight: bold;
+}
+.search__weather__item--small {
+  font-size: 12px;
+  font-weight: 400;
+}
+.search__search {
+  position: relative;
+}
+.search__search--form fieldset {
+  display: flex;
+  padding: 0;
+  border: none;
+  height: 50px;
+  gap: 3px;
+}
+.search__search input {
+  border: #3e72fc solid 2px;
+  border-radius: 10px;
+}
+.search__search__txt {
+  width: 410px;
+  font-size: 18px;
+  padding: 18px;
+}
+.search__search__submit {
+  width: 50px;
+  height: 50px;
+  background: #3E72FC url(../images/icon_sch.svg) no-repeat center;
+  background-size: 20px 20px;
+  color: transparent;
+}
+.search__search span {
+  font-size: 14px;
+  position: absolute;
+  top: 50%;
+  right: 70px;
+  color: #0a115f;
+  background-color: #d0eaf7;
+  border-radius: 5px;
+  padding: 5px;
+  transform: translateY(-50%);
+}
+.search__quick__list {
+  display: flex;
+  width: 495px;
+  padding: 39px;
+  gap: 39px;
+}
+.search__quick__list i {
+  display: inline-block;
+  background-image: url(../images/icon_quick01_2024.jpg);
+  background-size: auto 50px;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  border: 1px solid #d1d5e8;
+}
+.search__quick__list span {
+  color: #222222;
+  font-size: 12px;
 }/*# sourceMappingURL=common.css.map */
