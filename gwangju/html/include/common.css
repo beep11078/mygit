@@ -79,6 +79,7 @@ body {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #efefef;
+  border-bottom: 1px solid #efefef;
 }
 .header__link {
   display: flex;
@@ -123,8 +124,14 @@ body {
   align-items: center;
   gap: 20px;
 }
+
 .header__util a {
   font-size: 14px;
+}
+
+.header__lang {
+  display: flex;
+  align-items: center;
 }
 .header__lang {
   display: flex;
