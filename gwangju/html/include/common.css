@@ -1,61 +1,65 @@
-@charset "utf-8";
-
+@charset "UTF-8";
 /*웹폰트(나눔스퀘어) 연결*/
 @import url(https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css);
-
 /*아이콘 폰트(폰트어썸) 연결*/
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css);
-
-
-*{    /*모든 요소 공통*/
-    font-family: 'NanumSquareNeo';
-    box-sizing: border-box; margin: 0;
+* { /*모든 요소 공통*/
+  font-family: "NanumSquareNeo";
+  box-sizing: border-box;
+  margin: 0;
 }
 
-ul { list-style: none; padding: 0; }
-a { text-decoration: none; }
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
 
 .wrap {
-    display: block;
-    width: 100%;
+  display: block;
+  width: 100%;
 }
 
-
-body { position: relative; }
+body {
+  position: relative;
+}
 
 .skip a {
-    position: absolute;
-    background: rgba(0,0,0,0.7);
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#90000000,endColorstr=#90000000); /* IE8에서 반투명한 배경 적용 */
-    width: 100%;
-    height: 30px;
-    text-align: center;
-    color: #fff;
-    z-index: 100;
-    line-height: 30px;
-    top: -30px;
-    opacity: 0;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.7);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#90000000,endColorstr=#90000000); /* IE8에서 반투명한 배경 적용 */
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  color: #fff;
+  z-index: 100;
+  line-height: 30px;
+  top: -30px;
+  opacity: 0;
 }
 
 .hide {
-    width: 1px;
-    height: 1px;
-    position: absolute;
-    margin: -1px;
-    overflow: hidden;
-    clip-path: polygon(0 0, 0 0, 0 0);
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  margin: -1px;
+  overflow: hidden;
+  -webkit-clip-path: polygon(0 0, 0 0, 0 0);
+          clip-path: polygon(0 0, 0 0, 0 0);
 }
 
 .wrap {
-    display: block;
-    width: 100%;
+  display: block;
+  width: 100%;
 }
 
 .header {
   max-width: 1400px;
   margin: auto;
 }
-
 .header__notice {
   font-size: 14px;
   line-height: 40px;
@@ -64,29 +68,25 @@ body { position: relative; }
   justify-content: start;
   align-items: center;
 }
-
 .header__notice::before {
-  content: '';
+  content: "";
   width: 24px;
   height: 20px;
   background-image: url(../images/header/topicon_nuri.png);
   margin-right: 5px;
 }
-
 .header__tnb {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #efefef;
 }
-
-.header__link { 
+.header__link {
   display: flex;
   justify-content: start;
   align-items: center;
   height: 56px;
   gap: 20px;
 }
-
 .header__call {
   width: 105px;
   height: 30px;
@@ -95,7 +95,6 @@ body { position: relative; }
   background-repeat: no-repeat;
   background-size: 105px auto;
 }
-
 .header__council {
   width: 142px;
   height: 30px;
@@ -104,35 +103,30 @@ body { position: relative; }
   background-repeat: no-repeat;
   background-size: 142px auto;
 }
-
 .header__familySite > a {
   font-size: 14px;
   color: #222222;
   width: 125px;
   height: 36px;
   background-color: #F1F1F1;
-  padding: 9px 14px;
+  padding: 9px 11px;
   border-radius: 15px;
   gap: 10px;
   display: flex;
   align-items: center;
 }
-
-.header__familySiteList, .header__langList, .header__snsList {
+.header__familySiteList, .header .header__langList, .header .header__snsList {
   display: none;
 }
-
 .header__util {
   display: flex;
   align-items: center;
   gap: 20px;
 }
-
 .header__util a {
   font-size: 14px;
 }
-
 .header__lang {
   display: flex;
   align-items: center;
-}
+}/*# sourceMappingURL=common.css.map */
