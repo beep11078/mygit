@@ -39,10 +39,10 @@
                     </div>
                 </div>
                 <div class="header__util">
-                    <a href="https://www.gwangju.go.kr/login.do?pageId=www824" class="header__login">로그인</a>
-                    <a href="https://www.gwangju.go.kr/join.do?pageId=www816" class="header__join">회원가입</a>
+                    <a href="https://www.gwangju.go.kr/login.do?pageId=www824" class="header__login"><i class="fa-solid fa-arrow-right-to-bracket"></i>로그인</a>
+                    <a href="https://www.gwangju.go.kr/join.do?pageId=www816" class="header__join"><i class="fa-regular fa-circle-user"></i>회원가입</a>
                     <div class="header__lang">
-                        <a href="index.html" class="header__language">Language</a>
+                        <a href="index.html" class="header__language"><i class="fa-solid fa-globe"></i>Language<i class="fa-solid fa-caret-down"></i></a>
                         <ul class="header__langList">
                             <li><a href="https://www.gwangju.go.kr/eng/">ENGLISH</a></li>
                             <li><a href="https://www.gwangju.go.kr/chn/">中國語</a></li>
@@ -190,10 +190,30 @@
             </div>
         </header>
         <main class="main" id="contents" tabIndex="0">
-            <section class="section1"></section>
-            <section class="section2"></section>
-            <section class="section3"></section>
+            <section class="search">
+                <div class="search__container">
+                    <div class="search__weather">
+                        <ul class="search__weather__list">
+                            <li class="search__weather__item search__weather__item--temperature">
+                                <span class="search__weather__item--small">6.6℃</span>흐림
+                            </li>
+                            <li class="search__weather__item search__weather__item--air">
+                                <span class="search__weather__item--small">61㎍/㎥</span>보통
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="search__search">
+                        <fieldset>
+                            <legend class="hide">통합검색</legend>
+                            <input type="text" class="search__search--bar" placeholder="광주의 모든것을 검색해보세요.">
+                            <input type="submit" class="search__search--submit">
+                        </fieldset>
+                    </div>
+                    <div class="search__quick"></div>
+                </div>
+            </section>
         </main>
+        
         <footer class="footer"></footer>
     </div>
 
