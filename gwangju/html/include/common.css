@@ -318,9 +318,16 @@ section {
 }
 .search__quick__list {
   display: flex;
-  width: 495px;
-  padding: 39px;
-  gap: 39px;
+  width: 500px;
+}
+.search__quick__list li {
+  width: 25%;
+}
+.search__quick__list a {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
 }
 .search__quick__list i {
   display: inline-block;
@@ -330,6 +337,7 @@ section {
   height: 50px;
   border-radius: 10px;
   border: 1px solid #d1d5e8;
+  margin-bottom: 10px;
 }
 .search__quick__list span {
   color: #222222;
