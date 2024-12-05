@@ -245,11 +245,11 @@ section {
   justify-content: space-between;
   align-items: center;
   height: 105px;
+  padding: 15px 40px;
 }
 .search__weather__list {
   display: flex;
   gap: 30px;
-  margin-left: 40px;
 }
 .search__weather__item {
   color: #4670C0;
