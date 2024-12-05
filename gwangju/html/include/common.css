@@ -62,7 +62,6 @@ body {
 .header__notice {
   font-size: 14px;
   line-height: 40px;
-  border-bottom: 1px solid #efefef;
   display: flex;
   justify-content: start;
   align-items: center;
@@ -75,8 +74,12 @@ body {
   margin-right: 5px;
 }
 .header__tnb {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding: 0 calc((100vw - 1400px) / 2);
   display: flex;
   justify-content: space-between;
+  border-top: 1px solid #efefef;
   border-bottom: 1px solid #efefef;
 }
 .header__link {
@@ -130,8 +133,8 @@ body {
   color: #555;
 }
 .header__util a i {
-  font-size: 18px;
-  margin: 0 5px;
+  font-size: 20px;
+  margin: 0 6px;
 }
 .header__lang {
   display: flex;
@@ -142,15 +145,16 @@ body {
 }
 .header__sns {
   display: flex;
+  margin-left: 32px;
 }
 .header__snsList {
   display: flex;
-  gap: 5px;
+  gap: 10px;
 }
 .header__snsList a {
   display: inline-block;
-  width: 30px;
-  height: 30px;
+  width: 32px;
+  height: 32px;
   background-image: url(../images/header/sns_sprite.png);
   background-size: cover;
   border-radius: 50%;
@@ -159,19 +163,19 @@ body {
   background-position: 0 0;
 }
 .header__snsList--facebook {
-  background-position: -30px 0;
+  background-position: -32px 0;
 }
 .header__snsList--youtube {
-  background-position: -90px 0;
+  background-position: -96px 0;
 }
 .header__snsList--kakaoStory {
-  background-position: -120px 0;
+  background-position: -128px 0;
 }
 .header__snsList--naverBlog {
-  background-position: -150px 0;
+  background-position: -160px 0;
 }
 .header__snsList--kakaoChannel {
-  background-position: -180px 0;
+  background-position: -192px 0;
 }
 .header__gnb {
   display: flex;
@@ -210,25 +214,24 @@ body {
 }
 .header__nav__list__item--ham a {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
   width: 30px;
-  height: 3px;
+  height: 4px;
   background-color: #313131;
   display: inline-block;
+  margin: 11px 0;
 }
 .header__nav__list__item--ham::before, .header__nav__list__item--ham::after {
   content: "";
   position: absolute;
   width: 30px;
-  height: 3px;
+  height: 4px;
   background-color: #313131;
 }
 .header__nav__list__item--ham::before {
   top: 0;
 }
 .header__nav__list__item--ham::after {
-  bottom: 0;
+  bottom: -4px;
 }
 
 section {
@@ -318,10 +321,7 @@ section {
 }
 .search__quick__list {
   display: flex;
-  width: 500px;
-}
-.search__quick__list li {
-  width: 25%;
+  gap: 38px;
 }
 .search__quick__list a {
   display: flex;
@@ -329,7 +329,11 @@ section {
   text-align: center;
   align-items: center;
 }
-.search__quick__list i {
+.search__quick__list span {
+  color: #222222;
+  font-size: 12px;
+}
+.search__quick__icon {
   display: inline-block;
   background-image: url(../images/icon_quick01_2024.jpg);
   background-size: auto 50px;
@@ -339,7 +343,18 @@ section {
   border: 1px solid #d1d5e8;
   margin-bottom: 10px;
 }
-.search__quick__list span {
-  color: #222222;
-  font-size: 12px;
+.search__quick__icon--1 {
+  background-position: 112px 0;
+}
+.search__quick__icon--2 {
+  background-position: 59px 0;
+}
+.search__quick__icon--3 {
+  background-position: 268px 0;
+}
+.search__quick__icon--4 {
+  background-position: 216px 0;
+}
+.search__quick__icon--5 {
+  background-position: 166px 0;
 }/*# sourceMappingURL=common.css.map */
