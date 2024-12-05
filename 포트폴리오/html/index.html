@@ -6,27 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>김정빈 포트폴리오</title>
 
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
+    <link rel="stylesheet" href="include/Pretendard.css">
     <link rel="stylesheet" href="include/index.css">
 </head>
 
 <body>
 
-    <ul class="container">
+    <div class="container">
         <header class="header">
-            <nav class="header__nav">
-                <h1 class="header__logo">김정빈 포트폴리오.</h1>
-                <ul class="header__nav__list">
-                    <li><a href="#header">Home</a></li>
-                    <li><a href="#about">About Me</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+            <div class="header__wrapper">
+                <nav class="header__nav">
+                    <h1 class="header__logo">김정빈 포트폴리오.</h1>
+                    <ul class="header__nav-list">
+                        <li><a class="header__nav-link" href="#header">Home</a></li>
+                        <li><a class="header__nav-link" href="#about">About Me</a></li>
+                        <li><a class="header__nav-link" href="#portfolio">Portfolio</a></li>
+                        <li><a class="header__nav-link" href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
         </header>
-        <main class="main">
 
-            
+        <main class="main">
+            <div class="main__wrapper">
+                <section class="main__profile"></section>
+                <section class="main__portfolio"></section>
+                <section class="main__contact"></section>
+            </div>
         </main>
+
         <footer class="footer"></footer>
     </div>
     
