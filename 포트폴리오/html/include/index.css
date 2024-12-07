@@ -15,4 +15,50 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+.hide {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  margin: -1px;
+  overflow: hidden;
+  -webkit-clip-path: polygon(0 0, 0 0, 0 0);
+          clip-path: polygon(0 0, 0 0, 0 0);
+}
+
+.wrap {
+  width: 100%;
+  display: block;
+}
+
+.header__wrapper {
+  height: 100vh;
+}
+.header__nav {
+  max-width: 1200px;
+  margin: auto;
+}
+.header__logo {
+  text-align: left;
+  font-weight: 700;
+}
+.header__nav-list {
+  width: 500px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.header__nav-list li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header__nav-link {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border: 1px solid #222;
+  border-radius: 15px;
+  box-shadow: 2px 2px 0 #333;
 }/*# sourceMappingURL=index.css.map */
