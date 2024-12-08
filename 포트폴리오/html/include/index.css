@@ -44,7 +44,7 @@ a {
   font-weight: 700;
 }
 .header__nav-list {
-  width: 500px;
+  width: 600px;
   margin: auto;
   display: flex;
   justify-content: space-between;
@@ -56,9 +56,14 @@ a {
 }
 .header__nav-link {
   display: inline-block;
-  width: 100px;
-  height: 100px;
+  width: 125px;
+  height: 125px;
   border: 1px solid #222;
   border-radius: 15px;
   box-shadow: 2px 2px 0 #333;
+  margin-bottom: 10px;
+}
+.header__nav-link img {
+  display: block;
+  width: 100%;
 }/*# sourceMappingURL=index.css.map */
