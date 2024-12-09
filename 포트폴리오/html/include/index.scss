@@ -31,6 +31,7 @@ a {
 .wrap {
     width: 100%;
     display: block;
+    background-color: #fafafa;
 }
 
 .header {
@@ -41,16 +42,20 @@ a {
     &__nav {
         max-width: 1200px;
         margin: auto;
+        transform: translateY(150px);
     }
 
     &__logo {
         text-align: left;
+        font-size: 2.5rem;
         font-weight: 700;
+        margin-bottom: 150px;
+        text-shadow: 0 0 3px rgba(0,0,0,0.3);
     }
 
     &__nav {
         &-list {
-            width: 600px;
+            width: 700px;
             margin: auto;
             display: flex;
             justify-content: space-between;
@@ -64,16 +69,31 @@ a {
 
         &-link {
             display: inline-block;
-            width: 125px;
-            height: 125px;
-            border: 1px solid #222;
-            border-radius: 15px;
-            box-shadow: 2px 2px 0 #333;
+            width: 150px;
+            height: 150px;
+            border-radius: 24px;
+            background: #fafafa;
+            box-shadow:  4px 4px 12px #d5d5d5,
+                        -4px -4px 12px #ffffff;
             margin-bottom: 10px;
+            overflow: hidden;
+            border: 0;
+            outline: 0;
+
+            :active {
+                border-radius: 24px;
+                background: linear-gradient(145deg, #e1e1e1, #ffffff);
+                color: #666;
+                box-shadow: inset 4px 4px 12px #c5c5c5, 
+                            inset -4px -4px 12px #ffffff;
+            }
 
             img {
                 display: block;
                 width: 100%;
+                border: 0;
+                outline: 0;
+                border-radius: 15px;
             }
         }
     }
