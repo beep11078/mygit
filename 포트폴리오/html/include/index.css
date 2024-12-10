@@ -84,4 +84,12 @@ a {
   border: 0;
   outline: 0;
   border-radius: 15px;
+}
+
+.main__title {
+  font-size: 2rem;
+  font-weight: 500;
+}
+.main__profile__modal {
+  display: none;
 }/*# sourceMappingURL=index.css.map */
