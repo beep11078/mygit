@@ -19,6 +19,12 @@ a {
     text-decoration: none;
 }
 
+.container {
+    height: 100vh;
+    max-width: 1200px;
+    margin: auto;
+}
+
 .hide {
     width: 1px;
     height: 1px;
@@ -35,13 +41,8 @@ a {
 }
 
 .header {
-    &__wrapper {
-        height: 100vh;
-    }
 
     &__nav {
-        max-width: 1200px;
-        margin: auto;
         transform: translateY(150px);
     }
 
