@@ -107,6 +107,13 @@ a {
     }
 
     &__profile {
+        &__text {
+            display: grid;
+            grid-template-columns: 2fr 3fr;
+            grid-gap: 1rem;
+            font-size: 20px;
+            align-items: center;
+        }
 
         &__modal {
             display: none;

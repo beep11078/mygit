@@ -90,6 +90,13 @@ a {
   font-size: 2rem;
   font-weight: 500;
 }
+.main__profile__text {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  grid-gap: 1rem;
+  font-size: 20px;
+  align-items: center;
+}
 .main__profile__modal {
   display: none;
 }/*# sourceMappingURL=index.css.map */
