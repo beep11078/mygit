@@ -103,6 +103,7 @@ a {
   grid-template-columns: 2fr 3fr;
   grid-gap: 1rem;
   font-size: 20px;
+  line-height: 30px;
   align-items: center;
 }
 .main__profile__text img {
@@ -110,6 +111,7 @@ a {
   display: block;
 }
 .main__profile__modal {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -134,7 +136,15 @@ a {
 }
 .main__profile__list {
   display: grid;
-  grid-template-columns: 1fr 2fr 2fr;
-  width: calc(1200px + 4rem);
+  grid-template-columns: repeat(3, 1fr);
+  width: 1200px;
   grid-gap: 2rem;
+}
+.main__profile__list li:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+}
+.main__profile__list li:nth-child(1) img {
+  display: block;
+  width: 100%;
 }/*# sourceMappingURL=index.css.map */
