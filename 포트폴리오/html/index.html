@@ -15,84 +15,93 @@
 
     <div class="wrap">
         <header id="header" class="header container">
-            <nav class="header__nav">
-                <h1 class="header__logo">김정빈 포트폴리오.</h1>
-                <ul class="header__nav-list">
-                    <li><a class="header__nav-link" href="#header" title="Home"><img src="images/memoji2.png" alt="Home"></a></li>
-                    <li><a class="header__nav-link" href="#about" title="About Me"><img src="images/memoji3.png" alt="About Me"></a></li>
-                    <li><a class="header__nav-link" href="#portfolio" title="Portfolio"><img src="images/memoji4.png" alt="Portfolio"></a></li>
-                    <li><a class="header__nav-link" href="#contact" title="Contact"><img src="images/memoji5.png" alt="Contact"></a></li>
-                </ul>
-            </nav>
+            <div class="wrapper">
+                <nav class="header__nav">
+                    <h1 class="header__logo">김정빈 포트폴리오.</h1>
+                    <ul class="header__nav-list">
+                        <li><a class="header__nav-link" href="#header" title="Home"><img src="images/memoji2.png" alt="Home"></a></li>
+                        <li><a class="header__nav-link" href="#about" title="About Me"><img src="images/memoji3.png" alt="About Me"></a></li>
+                        <li><a class="header__nav-link" href="#portfolio" title="Portfolio"><img src="images/memoji4.png" alt="Portfolio"></a></li>
+                        <li><a class="header__nav-link" href="#contact" title="Contact"><img src="images/memoji5.png" alt="Contact"></a></li>
+                    </ul>
+                </nav>
+            </div>
         </header>
 
         <main class="main">
             <section id="about" class="main__profile container">
-                <h2 class="main__profile__title main__title">김정빈 자기소개</h2>
-                <div class="main__profile__text">
-                    <img src="images/memoji1.png" alt="김정빈상세자기소개">
-                    <p>
-                        HTML, CSS, JavaScript를 기본으로 코드를 가지고 노는 느낌으로 웹 퍼블리싱을 하고 있습니다. UI/UX와 표준화, 접근성에 대해 공부하면 할수록 흥미와 보람을 느낍니다.<br>
-                        하드 코딩을 기본으로 Javascript 라이브러리인 React, Vue.js에 대해 공부 중입니다. 다양한 프레임 워크 환경에서 새로운 언어로 마크업 작업을 진행해 보는 것을 꿈꾸고 있습니다.<br>
-                        맡게 된 프로젝트의 목적을 우선적으로 고려하며, 팀원은 물론 다양한 직군과의 원활한 협업을 중요하게 생각합니다.<br>
-                        계속해서 변화하는 세태에 맞춰 지금처럼 새로운 방식을 익히고 도전하는 것을 즐기는 웹 퍼블리셔가 되겠습니다.
-                    </p>
-                </div>
+                <div class="wrapper">
+                    <h2 class="main__profile__title main__title">김정빈 자기소개</h2>
+                    <div class="main__profile__text">
+                        <img src="images/memoji1.png" alt="김정빈상세자기소개">
+                        <p>
+                            HTML, CSS, JavaScript를 기본으로 코드를 가지고 노는 느낌으로 웹 퍼블리싱을 하고 있습니다. UI/UX와 표준화, 접근성에 대해 공부하면 할수록 흥미와 보람을 느낍니다.<br>
+                            하드 코딩을 기본으로 Javascript 라이브러리인 React, Vue.js에 대해 공부 중입니다. 다양한 프레임 워크 환경에서 새로운 언어로 마크업 작업을 진행해 보는 것을 꿈꾸고 있습니다.<br>
+                            맡게 된 프로젝트의 목적을 우선적으로 고려하며, 팀원은 물론 다양한 직군과의 원활한 협업을 중요하게 생각합니다.<br>
+                            계속해서 변화하는 세태에 맞춰 지금처럼 새로운 방식을 익히고 도전하는 것을 즐기는 웹 퍼블리셔가 되겠습니다.
+                        </p>
+                    </div>
 
-                <div class="main__profile__modal">
-                    <div class="main__profile__modalbox">
-                        <ul class="main__profile__list">
-                            <li>
-                                <p><img src="images/memoji3.png" alt="김정빈"></p>
-                                <p>김정빈 (Jeongbin Kim)</p>
-                            </li>
-                            <li>
-                                <ul class="main__profile__contactList">
-                                    <li>
-                                        <!-- 복사하려는 문구를 value값에 입력 -->
-                                        <span>E-mail. </span>
-                                        <input type="text" value="beep1107@naver.com" id="copyTxt">
-                                        <!-- 복사하기 -->
-                                        <button onclick="copy('copyTxt', false)"><i class="fa-regular fa-copy"></i></button>
-                                    </li>
-                                    <li>
-                                        <span>Tel. </span>
-                                        <!-- 복사하려는 문구를 value값에 입력 -->
-                                        <input type="text" value="010-2526-3208" id="copyTxt2">
-                                        <!-- 복사하기 -->
-                                        <button onclick="copy('copyTxt2', true)"><i class="fa-regular fa-copy"></i></button>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <h3>Education</h3>
-                                <ul class="educationList">
-                                    <li class="education">
-                                        <span class="date">2024.05.29 ~ 2024.11.15</span>그린컴퓨터아카데미 (멀티미디어)UI/UX(웹퍼블리셔)&영상편집(유튜브,에펙,블렌더3D) 양성과정-혼합
-                                    </li>
-                                    <li class="education"><span class="date">2024.05.29 ~ 2024.11.15</span>통계학과 전공 철학과 복수전공</li>
-                                    <li class="education"><span class="date">2024.05.29 ~ 2024.11.15</span>광주대성여자고등학교</li>
-                                </ul>
-                            </li>
-                            <li>
-                                <h3>License</h3>
-                                <ul class="licenseList">
-                                    <li class="license"><span class="date">2024.00.00</span>웹디자인기능사</li>
-                                    <li class="license"><span class="date">2024.00.00</span>GTQ 포토샵 1급 자격증</li>
-                                    <li class="license"><span class="date">2024.00.00</span>자동차운전면허증 2종</li>
-                                    <li class="license"><span class="date">2024.00.00</span>컴퓨터활용능력 2급</li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <button class="profileClose"><i class="fa-solid fa-circle-xmark"></i></button>
+                    <div class="main__profile__modal">
+                        <div class="main__profile__modalbox">
+                            <ul class="main__profile__list">
+                                <li>
+                                    <p><img src="images/memoji3.png" alt="김정빈"></p>
+                                    <p>김정빈 (Jeongbin Kim)</p>
+                                </li>
+                                <li>
+                                    <ul class="main__profile__contactList">
+                                        <li>
+                                            <!-- 복사하려는 문구를 value값에 입력 -->
+                                            <span>E-mail. </span>
+                                            <input type="text" value="beep1107@naver.com" id="copyTxt">
+                                            <!-- 복사하기 -->
+                                            <button onclick="copy('copyTxt', false)"><i class="fa-regular fa-copy"></i></button>
+                                        </li>
+                                        <li>
+                                            <span>Tel. </span>
+                                            <!-- 복사하려는 문구를 value값에 입력 -->
+                                            <input type="text" value="010-2526-3208" id="copyTxt2">
+                                            <!-- 복사하기 -->
+                                            <button onclick="copy('copyTxt2', true)"><i class="fa-regular fa-copy"></i></button>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h3>Education</h3>
+                                    <ul class="educationList">
+                                        <li class="education">
+                                            <span class="date">2024.05.29 ~ 2024.11.15</span>그린컴퓨터아카데미 (멀티미디어)UI/UX(웹퍼블리셔)&영상편집(유튜브,에펙,블렌더3D) 양성과정-혼합
+                                        </li>
+                                        <li class="education"><span class="date">2024.05.29 ~ 2024.11.15</span>통계학과 전공 철학과 복수전공</li>
+                                        <li class="education"><span class="date">2024.05.29 ~ 2024.11.15</span>광주대성여자고등학교</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h3>License</h3>
+                                    <ul class="licenseList">
+                                        <li class="license"><span class="date">2024.00.00</span>웹디자인기능사</li>
+                                        <li class="license"><span class="date">2024.00.00</span>GTQ 포토샵 1급 자격증</li>
+                                        <li class="license"><span class="date">2024.00.00</span>자동차운전면허증 2종</li>
+                                        <li class="license"><span class="date">2024.00.00</span>컴퓨터활용능력 2급</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <button class="profileClose"><i class="fa-solid fa-circle-xmark"></i></button>
+                        </div>
                     </div>
                 </div>
             </section>
             <section id="portfolio" class="main__portfolio container">
-                <h2 class="main__portfolio__title main__title">퍼블리싱 포트폴리오</h2>
+                <div class="wrapper">
+                    <h2 class="main__portfolio__title main__title">퍼블리싱 포트폴리오</h2>
+
+                </div>
             </section>
             <section id="contact" class="main__contact container">
-                <h2 class="main__contact__title main__title">Contact Me Everything Everywhere All At Once</h2>
+                <div class="wrapper">
+                    <h2 class="main__contact__title main__title">Contact Me Everything Everywhere All At Once</h2>
+                </div>
             </section>
         </main>
 
