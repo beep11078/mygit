@@ -48,14 +48,14 @@ a {
 
 .header {
     &__nav {
-        // transform: translateY(150px);
+        transform: translateY(-30px);
     }
 
     &__logo {
         text-align: left;
         font-size: 2.5rem;
         font-weight: 700;
-        margin-bottom: 150px;
+        margin-bottom: 80px;
         text-shadow: 0 0 3px rgba(0,0,0,0.3);
     }
 
@@ -110,6 +110,8 @@ a {
     &__title {
         font-size: 2rem;
         font-weight: 600;
+        padding-bottom: 5px;
+        border-bottom: 2px solid #222;
     }
 
     &__profile {
@@ -119,10 +121,39 @@ a {
             grid-gap: 1rem;
             font-size: 20px;
             align-items: center;
+
+            img {
+                width: 100%;
+                display: block;
+            }
         }
 
         &__modal {
-            display: none;
+            // display: none;
+            position: fixed; top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.6);
+
+            backdrop-filter: blur(3px);
+        }
+
+        &__modalbox {
+            height: 66vh;
+            display: flex;
+            width: 95%; max-width: calc(1200px + 8rem);
+            background: #fff;
+            padding: 2rem;
+            padding-bottom: 3rem;
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        &__list {
+            display: grid;
+            grid-template-columns: 1fr 2fr 2fr;
+            width: calc(1200px + 4rem);
+            grid-gap: 2rem;
         }
     }
 

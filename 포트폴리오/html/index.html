@@ -35,35 +35,33 @@
                     <div class="main__profile__text">
                         <img src="images/memoji1.png" alt="김정빈상세자기소개">
                         <p>
-                            HTML, CSS, JavaScript를 기본으로 코드를 가지고 노는 느낌으로 웹 퍼블리싱을 하고 있습니다. UI/UX와 표준화, 접근성에 대해 공부하면 할수록 흥미와 보람을 느낍니다.<br>
-                            하드 코딩을 기본으로 Javascript 라이브러리인 React, Vue.js에 대해 공부 중입니다. 다양한 프레임 워크 환경에서 새로운 언어로 마크업 작업을 진행해 보는 것을 꿈꾸고 있습니다.<br>
+                            HTML, CSS를 능숙하게 다루며 코드를 가지고 노는 느낌으로 웹 퍼블리싱을 하고 있습니다.
+                            JavaScript 바닐라 코딩을 기본으로 React/TypeScript 등 프레임워크 환경에서 컴포넌트 단위의 마크업 작업을 능숙하게 합니다. 
+                            UI/UX와 표준화, 접근성에 대해 공부할수록 흥미와 보람을 느끼고 이를 기본으로 작업합니다.<br>
                             맡게 된 프로젝트의 목적을 우선적으로 고려하며, 팀원은 물론 다양한 직군과의 원활한 협업을 중요하게 생각합니다.<br>
                             계속해서 변화하는 세태에 맞춰 지금처럼 새로운 방식을 익히고 도전하는 것을 즐기는 웹 퍼블리셔가 되겠습니다.
                         </p>
                     </div>
-
-                    <div class="main__profile__modal">
+                    <div class="main__profile__modal" aria-hidden="true">
                         <div class="main__profile__modalbox">
                             <ul class="main__profile__list">
                                 <li>
                                     <p><img src="images/memoji3.png" alt="김정빈"></p>
                                     <p>김정빈 (Jeongbin Kim)</p>
-                                </li>
-                                <li>
                                     <ul class="main__profile__contactList">
                                         <li>
                                             <!-- 복사하려는 문구를 value값에 입력 -->
                                             <span>E-mail. </span>
-                                            <input type="text" value="beep1107@naver.com" id="copyTxt">
+                                            <input type="text" value="beep1107@naver.com" id="copyMail">
                                             <!-- 복사하기 -->
-                                            <button onclick="copy('copyTxt', false)"><i class="fa-regular fa-copy"></i></button>
+                                            <button onclick="copy('copyMail', false)"><i class="fa-regular fa-copy"></i></button>
                                         </li>
                                         <li>
                                             <span>Tel. </span>
                                             <!-- 복사하려는 문구를 value값에 입력 -->
-                                            <input type="text" value="010-2526-3208" id="copyTxt2">
+                                            <input type="text" value="010-2526-3208" id="copyTel">
                                             <!-- 복사하기 -->
-                                            <button onclick="copy('copyTxt2', true)"><i class="fa-regular fa-copy"></i></button>
+                                            <button onclick="copy('copyTel', true)"><i class="fa-regular fa-copy"></i></button>
                                         </li>
                                     </ul>
                                 </li>
@@ -73,7 +71,7 @@
                                         <li class="education">
                                             <span class="date">2024.05.29 ~ 2024.11.15</span>그린컴퓨터아카데미 (멀티미디어)UI/UX(웹퍼블리셔)&영상편집(유튜브,에펙,블렌더3D) 양성과정-혼합
                                         </li>
-                                        <li class="education"><span class="date">2024.05.29 ~ 2024.11.15</span>통계학과 전공 철학과 복수전공</li>
+                                        <li class="education"><span class="date">2024.05.29 ~ 2024.11.15</span>서울시립대학교 통계학과 전공 철학과 복수전공</li>
                                         <li class="education"><span class="date">2024.05.29 ~ 2024.11.15</span>광주대성여자고등학교</li>
                                     </ul>
                                 </li>
@@ -95,7 +93,46 @@
             <section id="portfolio" class="main__portfolio container">
                 <div class="wrapper">
                     <h2 class="main__portfolio__title main__title">퍼블리싱 포트폴리오</h2>
+                    <ul id="main__portfolio__slideBox" class="regular slider">
 
+                        <li class="slide">
+                            <div class="graphicBox">
+                                <img src="portfolio_web/04LUSH.png" alt="포트폴리오1" data-cursor-text="video" data-no="4" data-type="video" class="webThumb">
+                                <div class="graphicInfo">
+                                    <h4>클론코딩</h4>
+                                    <h3>우리은행</h3>
+                                    <h4>기여도 100%</h4>
+                                    <h5>사용 프로그램 Adobe Illustrator</h5>
+                                    <h5>여행 광고 포스터 </h5>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="slide">
+                            <div class="graphicBox">
+                                <img src="portfolio_web/02KAKAO.png" alt="포트폴리오2" data-cursor-text="graphic" data-no="2" data-type="image" class="webThumb">
+                                <div class="graphicInfo">
+                                    <h4>클론코딩</h4>
+                                    <h3>카카오 그룹</h3>
+                                    <h4>기여도 100%</h4>
+                                    <h5>사용 프로그램 Adobe Illustrator</h5>
+                                    <h5>여행 광고 포스터 </h5>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="slide">
+                            <div class="graphicBox">
+                                <img src="portfolio_web/04LUSH.png" alt="포트폴리오3" data-cursor-text="video" data-no="4" data-type="video" class="webThumb">
+                                <div class="graphicInfo">
+                                    <h4>리디자인</h4>
+                                    <h3>러쉬 코리아</h3>
+                                    <h4>기여도 100%</h4>
+                                    <h5>사용 프로그램 Adobe Illustrator</h5>
+                                    <h5>여행 광고 포스터 </h5>
+                                </div>
+                            </div>
+                        </li>
+    
+                    </ul>
                 </div>
             </section>
             <section id="contact" class="main__contact container">

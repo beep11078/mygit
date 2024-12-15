@@ -45,11 +45,14 @@ a {
   background-color: #fafafa;
 }
 
+.header__nav {
+  transform: translateY(-30px);
+}
 .header__logo {
   text-align: left;
   font-size: 2.5rem;
   font-weight: 700;
-  margin-bottom: 150px;
+  margin-bottom: 80px;
   text-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
 }
 .header__nav-list {
@@ -92,6 +95,8 @@ a {
 .main__title {
   font-size: 2rem;
   font-weight: 600;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #222;
 }
 .main__profile__text {
   display: grid;
@@ -100,6 +105,36 @@ a {
   font-size: 20px;
   align-items: center;
 }
+.main__profile__text img {
+  width: 100%;
+  display: block;
+}
 .main__profile__modal {
-  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+}
+.main__profile__modalbox {
+  height: 66vh;
+  display: flex;
+  width: 95%;
+  max-width: calc(1200px + 8rem);
+  background: #fff;
+  padding: 2rem;
+  padding-bottom: 3rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.main__profile__list {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  width: calc(1200px + 4rem);
+  grid-gap: 2rem;
 }/*# sourceMappingURL=index.css.map */
