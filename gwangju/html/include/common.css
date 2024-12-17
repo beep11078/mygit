@@ -1,7 +1,8 @@
 @charset "UTF-8";
 /*아이콘 폰트(폰트어썸) 연결*/
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css);
-* { /*모든 요소 공통*/
+* {
+  /*모든 요소 공통*/
   font-family: "Pretendard";
   font-weight: normal;
   box-sizing: border-box;
@@ -82,14 +83,27 @@ body {
   border-top: 1px solid #efefef;
   border-bottom: 1px solid #efefef;
 }
-.header__link {
+.header .tnb__link {
   display: flex;
   justify-content: start;
   align-items: center;
   height: 56px;
   gap: 20px;
 }
-.header__call {
+.header .tnb__util {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.header .tnb__util a {
+  font-size: 14px;
+  color: #555;
+}
+.header .tnb__util a i {
+  font-size: 20px;
+  margin: 0 6px;
+}
+.header .link__call {
   width: 105px;
   height: 30px;
   background-image: url(../images/header/callcenter.jpg);
@@ -97,7 +111,7 @@ body {
   background-repeat: no-repeat;
   background-size: 105px auto;
 }
-.header__council {
+.header .link__council {
   width: 142px;
   height: 30px;
   background-image: url(../images/header/council.jpg);
@@ -105,42 +119,32 @@ body {
   background-repeat: no-repeat;
   background-size: 142px auto;
 }
-.header__familySiteList {
-  display: none;
+.header .link__familySite a {
+  color: #222;
 }
-.header__familySite > a {
+.header .familySite > a {
   font-size: 14px;
   color: #222222;
   width: 125px;
   height: 36px;
-  background-color: #F1F1F1;
+  background-color: #f1f1f1;
   padding: 9px 11px;
   border-radius: 15px;
   gap: 10px;
   display: flex;
   align-items: center;
 }
-.header__familySite > a i {
+.header .familySite > a i {
   font-size: 18px;
 }
-.header__util {
-  display: flex;
-  align-items: center;
-  gap: 20px;
+.header .familySite__list {
+  display: none;
 }
-.header__util a {
-  font-size: 14px;
-  color: #555;
-}
-.header__util a i {
-  font-size: 20px;
-  margin: 0 6px;
-}
-.header__lang {
+.header .lang {
   display: flex;
   align-items: center;
 }
-.header__langList {
+.header .lang__list {
   display: none;
 }
 .header__sns {
@@ -255,7 +259,7 @@ section {
   gap: 30px;
 }
 .search__weather__item {
-  color: #4670C0;
+  color: #4670c0;
   display: flex;
   flex-direction: row;
 }
@@ -304,7 +308,7 @@ section {
 .search__search__submit {
   width: 50px;
   height: 50px;
-  background: #3E72FC url(../images/icon_sch.svg) no-repeat center;
+  background: #3e72fc url(../images/icon_sch.svg) no-repeat center;
   background-size: 20px 20px;
   color: transparent;
 }
@@ -357,4 +361,8 @@ section {
 }
 .search__quick__icon--5 {
   background-position: 166px 0;
+}
+
+.main-banner {
+  display: flex;
 }/*# sourceMappingURL=common.css.map */
