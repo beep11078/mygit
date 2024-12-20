@@ -296,6 +296,7 @@ section {
         align-items: center;
         height: 105px;
         padding: 15px 40px;
+        margin-bottom: 30px;
     }
 
     &__weather {
@@ -435,4 +436,25 @@ section {
 
 .main-banner {
     display: flex;
+
+    &__sliderbox {
+        position: relative;
+    }
+
+    &__swiper-wrapper {
+        display: flex;
+    }
+
+    &__swiper-slide {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        img {
+            display: block;
+            margin: auto;
+            height: 520px;
+        }
+    }
 }

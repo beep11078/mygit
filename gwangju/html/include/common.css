@@ -253,6 +253,7 @@ section {
   align-items: center;
   height: 105px;
   padding: 15px 40px;
+  margin-bottom: 30px;
 }
 .search__weather__list {
   display: flex;
@@ -365,4 +366,21 @@ section {
 
 .main-banner {
   display: flex;
+}
+.main-banner__sliderbox {
+  position: relative;
+}
+.main-banner__swiper-wrapper {
+  display: flex;
+}
+.main-banner__swiper-slide {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-banner__swiper-slide img {
+  display: block;
+  margin: auto;
+  height: 520px;
 }/*# sourceMappingURL=common.css.map */
