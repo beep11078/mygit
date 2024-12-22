@@ -439,6 +439,11 @@ section {
 
     &__sliderbox {
         position: relative;
+        width: 830px;
+        height: 400px;
+        margin: 0;
+        border-radius: 15px;
+        overflow: hidden;
     }
 
     &__swiper-wrapper {
@@ -454,7 +459,6 @@ section {
         img {
             display: block;
             margin: auto;
-            height: 520px;
         }
     }
 }

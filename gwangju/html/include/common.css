@@ -369,6 +369,11 @@ section {
 }
 .main-banner__sliderbox {
   position: relative;
+  width: 830px;
+  height: 400px;
+  margin: 0;
+  border-radius: 15px;
+  overflow: hidden;
 }
 .main-banner__swiper-wrapper {
   display: flex;
@@ -382,5 +387,4 @@ section {
 .main-banner__swiper-slide img {
   display: block;
   margin: auto;
-  height: 520px;
 }/*# sourceMappingURL=common.css.map */

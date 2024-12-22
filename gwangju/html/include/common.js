@@ -1,4 +1,4 @@
-let mySlide = new Swiper(".main-banner__swiper", {
+let mySlide = new Swiper(".swiper", {
     autoplay: {
         delay: 1000,
     },
