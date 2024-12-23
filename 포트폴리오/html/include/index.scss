@@ -98,7 +98,6 @@ a {
 }
 
 .main {
-    
     &__title {
         font-size: 2rem;
         font-weight: 700;
@@ -124,7 +123,7 @@ a {
         }
 
         &__modal {
-            display: none;
+            // display: none;
             position: fixed; top: 0; left: 0;
             width: 100%; height: 100%;
             background: rgba(0,0,0,0.6);
@@ -138,7 +137,7 @@ a {
             background: #fff;
             padding: 2rem;
             padding-bottom: 3rem;
-            position: absolute;
+            position: relative;
             top: 50%; left: 50%;
             transform: translate(-50%, -50%);
         }
@@ -156,6 +155,36 @@ a {
                     display: block;
                     width: 100%;
                 }
+            }
+        }
+
+        &__profile-close {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: none;
+            background-color: #222;
+            position: absolute;
+            top: 0;
+            right: -50px;
+            transform: translate(-50%, -50%);
+
+            ::before, ::after {
+                content: '';
+                width: 2px; height: 20px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: #fff;
+            }
+
+            ::before {
+                transform: translate(-50%, -50%) rotate(45deg);
+            }
+
+            ::after {
+                transform: translate(-50%, -50%) rotate(-45deg);
             }
         }
     }
@@ -188,6 +217,5 @@ a {
         &__title {
             font-weight: 700;
         }
-
     }
 }

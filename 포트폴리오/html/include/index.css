@@ -106,7 +106,6 @@ a {
   display: block;
 }
 .main .profile__modal {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -124,7 +123,7 @@ a {
   background: #fff;
   padding: 2rem;
   padding-bottom: 3rem;
-  position: absolute;
+  position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -142,6 +141,33 @@ a {
 .main .profile__list li:nth-child(1) img {
   display: block;
   width: 100%;
+}
+.main .profile__profile-close {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background-color: #222;
+  position: absolute;
+  top: 0;
+  right: -50px;
+  transform: translate(-50%, -50%);
+}
+.main .profile__profile-close ::before, .main .profile__profile-close ::after {
+  content: "";
+  width: 2px;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+}
+.main .profile__profile-close ::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.main .profile__profile-close ::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
 .main .portfolio__list {
   display: grid;
