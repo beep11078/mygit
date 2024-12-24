@@ -7,7 +7,9 @@
     <title>김정빈 포트폴리오</title>
 
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <!--아이콘 폰트(폰트어썸) 연결-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
@@ -49,39 +51,23 @@
                 <div class="profile__modal" aria-hidden="true">
                     <div class="profile__modalbox">
                         <ul class="profile__list">
-                            <li class="profile__item">
+                            <li class="profile__item profile__contact">
                                 <img src="images/memoji3.png" alt="김정빈">
                                 <p class="profile__name">김정빈 (Jeongbin Kim)</p>
-                                <form class="profile__contact-list">
-                                    <fieldset class="contact__item">
-                                        <label for="copyMail">E-mail.</label>
-                                        <input type="text" value="beep1107@naver.com" id="copyMail">
-                                        <!-- 복사하려는 문구를 value값에 입력 -->
-                                        <button onclick="copy('copyMail', false)"><i class="fa-regular fa-copy"></i></button>
-                                        <!-- 복사하기 -->
-                                    </fieldset>
-                                    <fieldset class="contact__item">
-                                        <label for="copyTel">Tel.</label>
-                                        <input type="text" value="010-2526-3208" id="copyTel">
-                                        <!-- 복사하려는 문구를 value값에 입력 -->
-                                        <button onclick="copy('copyTel', true)"><i class="fa-regular fa-copy"></i></button>
-                                        <!-- 복사하기 -->
-                                    </fieldset>
-                                </form>
-                                <!-- <div class="profile__contact">
+                                <div class="profile__contact-list">
                                     <div class="contact__item">
-                                        <span class="contact__label">E-mail:</span>
+                                        <span class="contact__label">E-mail.</span>
                                         <span id="copyMail">beep1107@naver.com</span>
                                         <button type="button" onclick="copy('copyMail')"><i class="fa-regular fa-copy"></i></button>
                                     </div>
                                     <div class="contact__item">
-                                        <span class="contact__label">Tel:</span>
-                                        <span id="copyTel">010-2526-3208</span>
+                                        <span class="contact__label">Tel.</span>
+                                        <a href="tel:01025263208" id="copyTel">010-2526-3208</a>
                                         <button type="button" onclick="copy('copyTel')"><i class="fa-regular fa-copy"></i></button>
                                     </div>
-                                </div>                                 -->
+                                </div>
                             </li>
-                            <li class="profile__item">
+                            <li class="profile__item profile__education">
                                 <h3>Education</h3>
                                 <ul class="profile__education-list">
                                     <li class="education__item">
@@ -100,7 +86,7 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="profile__item" >
+                            <li class="profile__item profile__license" >
                                 <h3>License</h3>
                                 <ul class="profile__license-list">
                                     <li class="license__item">
@@ -122,7 +108,7 @@
                                 </ul>
                             </li>
                         </ul>
-                        <button class="profile__profile-close">
+                        <button class="profile__modalbox-close">
                             <i class="fa-solid fa-circle-xmark"></i>
                         </button>
                     </div>
@@ -182,6 +168,6 @@
         <footer class="footer"></footer>
     </div>
     
-    <!-- <script src="include/index.js"></script> -->
+    <script src="include/index.js"></script>
 </body>
 </html>
