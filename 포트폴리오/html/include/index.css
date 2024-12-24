@@ -134,6 +134,19 @@ a {
   grid-template-rows: 1fr 1fr;
   width: 1200px;
   padding: 50px;
+  gap: 15px;
+}
+.main .profile__item {
+  line-height: 1.6rem;
+}
+.main .profile__item h3 {
+  font-weight: bold;
+  border-bottom: 1px solid #222;
+  margin-bottom: 15px;
+}
+.main .profile__name {
+  font-weight: bold;
+  text-align: center;
 }
 .main .profile__item:nth-child(1) {
   margin: auto;
@@ -148,16 +161,17 @@ a {
 .main .profile__item:nth-child(1) fieldset {
   border: 0;
   display: flex;
-  padding: 0;
+  padding: 0 25px;
+}
+.main .profile__item:nth-child(1) input {
+  font-size: 1rem;
+  width: 160px;
+  border: 0;
 }
 .main .profile__item:nth-child(1) button {
   margin-left: auto;
   border: 0;
   background-color: transparent;
-}
-.main .profile__item:nth-child(1) input {
-  width: 150px;
-  border: 0;
 }
 .main .profile__item:nth-child(2) {
   grid-column: 2/3;
@@ -166,6 +180,11 @@ a {
 .main .profile__item:nth-child(3) {
   grid-column: 2/3;
   grid-row: 2/3;
+}
+.main .profile [class$=__date] {
+  color: #666;
+  font-size: 0.7rem;
+  margin-right: 5px;
 }
 .main .profile__profile-close {
   width: 50px;
