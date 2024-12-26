@@ -31,6 +31,7 @@ a {
 .wrapper {
   max-width: 1200px;
   margin: auto;
+  overflow: hidden;
 }
 
 .hide {
@@ -229,10 +230,6 @@ a {
 .main .profile__modalbox-close ::after {
   transform: translate(-50%, -50%) rotate(-45deg);
 }
-.main .portfolio__list {
-  display: flex;
-  flex-direction: column;
-}
 .main .portfolio__list .project {
   width: 100%;
   display: grid;
@@ -277,4 +274,15 @@ a {
   border-radius: 10px;
   line-height: 2rem;
   margin-top: auto;
+}
+
+.swiper-container {
+  width: 1200px;
+  overflow: hidden;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }/*# sourceMappingURL=index.css.map */

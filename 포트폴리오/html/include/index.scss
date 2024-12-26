@@ -32,6 +32,7 @@ a {
 .wrapper {
     max-width: 1200px;
     margin: auto;
+    overflow: hidden;
 }
 
 .hide {
@@ -120,7 +121,6 @@ a {
             line-height: 30px;
             font-weight: 500;
             align-items: center;
-            
             padding: 0 15px;
         }
 
@@ -268,9 +268,6 @@ a {
 
     .portfolio {
         &__list {
-            display: flex;
-            flex-direction: column;
-
             .project {
                 width: 100%;
                 display: grid;
@@ -326,6 +323,7 @@ a {
         }
     }
 
+    
 
     // .portfolio {
     //     &__list {
@@ -360,4 +358,15 @@ a {
     //         font-weight: 700;
     //     }
     // }
+}
+
+.swiper-container {
+    width: 1200px;
+    overflow: hidden;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

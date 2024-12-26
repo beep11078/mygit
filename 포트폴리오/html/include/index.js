@@ -1,13 +1,19 @@
-const memoji = document.querySelector('.profile__memoji');
+let mySwiper = new Swiper(".swiper-container", {
+    autoplay: {
+        delay: 2000,
+    },
+    slidesPerView: 1,
+});
+
+const memoji = document.querySelector(".profile__memoji");
 
 const closeBtn = document.querySelector(".profile__modalbox-close");
 const modal = document.querySelector(".profile__modal");
 
-
 memoji.addEventListener("click", (e) => {
-    modal.style.display = 'block';
-    document.body.style.overflow = 'hidden';
-})
+    modal.style.display = "block";
+    document.body.style.overflow = "hidden";
+});
 
 function copy(elementId) {
     const copyText = document.getElementById(elementId).innerText;
@@ -24,6 +30,5 @@ function copy(elementId) {
 closeBtn.addEventListener("click", (e) => {
     // searchBtn이 클릭된 경우
     modal.style.display = "none";
-    document.body.style.overflow = 'auto';
+    document.body.style.overflow = "auto";
 });
-

@@ -7,13 +7,14 @@
     <title>김정빈 포트폴리오</title>
 
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
     <!--아이콘 폰트(폰트어썸) 연결-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
-    <link rel="stylesheet" href="include/index.css">
+    <link rel="stylesheet" href="/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="include/index.css" />
 </head>
 
 <body>
@@ -117,27 +118,59 @@
             <section id="portfolio" class="main__portfolio container">
                 <div class="wrapper">
                     <h2 class="portfolio__title main__title">웹 퍼블리싱 작업</h2>
-                    <div class="portfolio__list">
-                        <div class="portfolio__item project">
-                            <div class="project__image-box">
-                                <img src="portfolio_web/02KAKAO.png" alt="카카오그룹">
+                    <div class="swiper-container">
+                        <div class="portfolio__list swiper-wrapper">
+                            <div class="portfolio__item project swiper-slide">
+                                <div class="project__image-box">
+                                    <img src="portfolio_web/02KAKAO.png" alt="카카오그룹">
+                                </div>
+                                <div class="project__info">
+                                    <h3 class="project__info-title">카카오 그룹</h3>
+                                    <p class="project__info-period">2024.10.01~2024.11.00</p>
+                                    <p class="project__info-contribution">기여도 100%</p>
+                                    <p class="project__info-comment">
+                                        <span>아하 서비스는 궁금한 점을 질문하면 검증된 전문가로 부터 답변을 받을 수 있는 보상형 Q&A 서비스입니다. 아하 서비스의 모바일 디바이스 점유율이 전체 중 60 퍼센트로, 비중이 높아 모바일 디바이스에 대한 어플리케이션 니즈 해결을 위해 시작하게된 프로젝트입니다.</span>
+                                        <span>최대 3명의 개발진으로 이루어진 TF가 만들어져 8개월 동안 여정을 함께했습니다. 이 프로젝트를 통해 React 라이브러리를 더 깊게 이해할 수 있던 계기가 되었습니다.</span>
+                                        <span>모바일 기기에서 실행되는 어플리케이션 특성 상, 성능 최적화가 매우 중요하기 때문에, 효율적인 컴포넌트 아키텍쳐 설계 및 최적화 작업이 필수적이었습니다. 이 과정에서 리액트에 대해 좀 더 알아갈 수 있어 흥미로운 프로젝트였습니다.</span>
+                                    </p>
+                                    <span class="project__info-type">클론코딩</span>
+                                </div>
                             </div>
-                            <div class="project__info">
-                                <h3 class="project__info-title">카카오 그룹</h3>
-                                <p class="project__info-period">2024.10.01~2024.11.00</p>
-                                <p class="project__info-contribution">기여도 100%</p>
-                                <p class="project__info-comment">
-                                    <span>아하 서비스는 궁금한 점을 질문하면 검증된 전문가로 부터 답변을 받을 수 있는 보상형 Q&A 서비스입니다. 아하 서비스의 모바일 디바이스 점유율이 전체 중 60 퍼센트로, 비중이 높아 모바일 디바이스에 대한 어플리케이션 니즈 해결을 위해 시작하게된 프로젝트입니다.</span>
-                                    <span>최대 3명의 개발진으로 이루어진 TF가 만들어져 8개월 동안 여정을 함께했습니다. 이 프로젝트를 통해 React 라이브러리를 더 깊게 이해할 수 있던 계기가 되었습니다.</span>
-                                    <span>모바일 기기에서 실행되는 어플리케이션 특성 상, 성능 최적화가 매우 중요하기 때문에, 효율적인 컴포넌트 아키텍쳐 설계 및 최적화 작업이 필수적이었습니다. 이 과정에서 리액트에 대해 좀 더 알아갈 수 있어 흥미로운 프로젝트였습니다.</span>
-                                </p>
-                                <span class="project__info-type">클론코딩</span>
+                            <div class="portfolio__item project swiper-slide">
+                                <div class="project__image-box">
+                                    <img src="portfolio_web/02KAKAO.png" alt="카카오그룹">
+                                </div>
+                                <div class="project__info">
+                                    <h3 class="project__info-title">카카오 그룹</h3>
+                                    <p class="project__info-period">2024.10.01~2024.11.00</p>
+                                    <p class="project__info-contribution">기여도 100%</p>
+                                    <p class="project__info-comment">
+                                        <span>아하 서비스는 궁금한 점을 질문하면 검증된 전문가로 부터 답변을 받을 수 있는 보상형 Q&A 서비스입니다. 아하 서비스의 모바일 디바이스 점유율이 전체 중 60 퍼센트로, 비중이 높아 모바일 디바이스에 대한 어플리케이션 니즈 해결을 위해 시작하게된 프로젝트입니다.</span>
+                                        <span>최대 3명의 개발진으로 이루어진 TF가 만들어져 8개월 동안 여정을 함께했습니다. 이 프로젝트를 통해 React 라이브러리를 더 깊게 이해할 수 있던 계기가 되었습니다.</span>
+                                        <span>모바일 기기에서 실행되는 어플리케이션 특성 상, 성능 최적화가 매우 중요하기 때문에, 효율적인 컴포넌트 아키텍쳐 설계 및 최적화 작업이 필수적이었습니다. 이 과정에서 리액트에 대해 좀 더 알아갈 수 있어 흥미로운 프로젝트였습니다.</span>
+                                    </p>
+                                    <span class="project__info-type">클론코딩</span>
+                                </div>
+                            </div>
+                            <div class="portfolio__item project swiper-slide">
+                                <div class="project__image-box">
+                                    <img src="portfolio_web/02KAKAO.png" alt="카카오그룹">
+                                </div>
+                                <div class="project__info">
+                                    <h3 class="project__info-title">카카오 그룹</h3>
+                                    <p class="project__info-period">2024.10.01~2024.11.00</p>
+                                    <p class="project__info-contribution">기여도 100%</p>
+                                    <p class="project__info-comment">
+                                        <span>아하 서비스는 궁금한 점을 질문하면 검증된 전문가로 부터 답변을 받을 수 있는 보상형 Q&A 서비스입니다. 아하 서비스의 모바일 디바이스 점유율이 전체 중 60 퍼센트로, 비중이 높아 모바일 디바이스에 대한 어플리케이션 니즈 해결을 위해 시작하게된 프로젝트입니다.</span>
+                                        <span>최대 3명의 개발진으로 이루어진 TF가 만들어져 8개월 동안 여정을 함께했습니다. 이 프로젝트를 통해 React 라이브러리를 더 깊게 이해할 수 있던 계기가 되었습니다.</span>
+                                        <span>모바일 기기에서 실행되는 어플리케이션 특성 상, 성능 최적화가 매우 중요하기 때문에, 효율적인 컴포넌트 아키텍쳐 설계 및 최적화 작업이 필수적이었습니다. 이 과정에서 리액트에 대해 좀 더 알아갈 수 있어 흥미로운 프로젝트였습니다.</span>
+                                    </p>
+                                    <span class="project__info-type">클론코딩</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
-            
             </section>
             <!-- <section id="portfolio2" class="main__portfolio container">
                 <div class="wrapper">
@@ -191,7 +224,7 @@
                     </div>
                 </div>
             </section>
-             -->
+            -->
             <section id="contact" class="main__contact container">
                 <div class="wrapper">
                     <h2 class="contact__title main__title">Contact Me Everything Everywhere All At Once</h2>
@@ -201,7 +234,7 @@
 
         <footer class="footer"></footer>
     </div>
-    
+    <script src="/swiper/swiper-bundle.min.js"></script>
     <script src="include/index.js"></script>
 </body>
 </html>
