@@ -269,31 +269,83 @@ a {
 
     .portfolio {
         &__list {
-            display: grid; 
-            grid-template-columns: repeat(3, 1fr);
+            display: flex;
+            flex-direction: column;
 
-            a {
-                color: #222;
+            .project {
+                width: 100%;
+                display: flex;
+                
+                &__image-box {
+                    
+                    overflow: hidden;                    
+                    background-image: url(../portfolio_web/kakao.png);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                }
+
+                &__info {
+                    padding: 0 15px;
+
+                    &-title {
+                        font-weight: bold;
+                        font-size: 1.5rem;
+                    }
+
+                    &-type {
+                        font-size: .9rem;
+                        background-color: #f9e000;
+                        padding: 3px 5px;
+                        border-radius: 7px;
+                        line-height: 2rem;
+                    }
+
+                    &-period {
+                        // font-family: "Noto Serif", serif;
+                    }
+
+                    
+
+                    &-contribution {
+                    }
+                }
             }
         }
-
-        &__thumb {
-            display: block;
-            width: 100%;
-        }
     }
+
+
+    // .portfolio {
+    //     &__list {
+    //         display: grid; 
+    //         grid-template-columns: repeat(3, 1fr);
+
+    //         a {
+    //             color: #222;
+    //         }
+    //     }
+
+    //     &__image {
+    //         display: block;
+    //         width: 100%;
+    //     }
+
+    //     &__modal {
+    //         display: none;
+    //     }
+    // }
     
-    .info {
-        &__subtitle {
-            font-size: 14px;
-            background-color: #ace;
-            border-radius: 3px;
-            padding: 3px 5px;
-            line-height: 30px;
-        }
+    // .info {
+    //     &__subtitle {
+    //         font-size: 14px;
+    //         background-color: #ace;
+    //         border-radius: 3px;
+    //         padding: 3px 5px;
+    //         line-height: 30px;
+    //     }
 
-        &__title {
-            font-weight: 700;
-        }
-    }
+    //     &__title {
+    //         font-weight: 700;
+    //     }
+    // }
 }

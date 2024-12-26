@@ -231,23 +231,31 @@ a {
   transform: translate(-50%, -50%) rotate(-45deg);
 }
 .main .portfolio__list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-direction: column;
 }
-.main .portfolio__list a {
-  color: #222;
-}
-.main .portfolio__thumb {
-  display: block;
+.main .portfolio__list .project {
   width: 100%;
+  display: flex;
 }
-.main .info__subtitle {
-  font-size: 14px;
-  background-color: #ace;
-  border-radius: 3px;
+.main .portfolio__list .project__image-box {
+  overflow: hidden;
+  background-image: url(../portfolio_web/kakao.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.main .portfolio__list .project__info {
+  padding: 0 15px;
+}
+.main .portfolio__list .project__info-title {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.main .portfolio__list .project__info-type {
+  font-size: 0.9rem;
+  background-color: #f9e000;
   padding: 3px 5px;
-  line-height: 30px;
-}
-.main .info__title {
-  font-weight: 700;
+  border-radius: 7px;
+  line-height: 2rem;
 }/*# sourceMappingURL=index.css.map */
