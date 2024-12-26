@@ -152,6 +152,10 @@ a {
             display: grid;
             grid-template-columns: 1fr 2fr;
             grid-template-rows: 1fr 1fr;
+
+            [class$="-list"] {
+                padding: 0 5px;
+            }
         }
 
         &__item {

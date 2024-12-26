@@ -140,6 +140,9 @@ a {
   grid-template-columns: 1fr 2fr;
   grid-template-rows: 1fr 1fr;
 }
+.main .profile__list [class$=-list] {
+  padding: 0 5px;
+}
 .main .profile__item {
   line-height: 1.6rem;
 }

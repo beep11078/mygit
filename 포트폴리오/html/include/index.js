@@ -6,6 +6,7 @@ const modal = document.querySelector(".profile__modal");
 
 memoji.addEventListener("click", (e) => {
     modal.style.display = 'block';
+    document.body.style.overflow = 'hidden';
 })
 
 function copy(elementId) {
@@ -23,5 +24,6 @@ function copy(elementId) {
 closeBtn.addEventListener("click", (e) => {
     // searchBtn이 클릭된 경우
     modal.style.display = "none";
+    document.body.style.overflow = 'auto';
 });
 
