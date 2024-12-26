@@ -2,7 +2,6 @@
 * {
   /*모든 요소 공통*/
   font-family: "Pretendard";
-  font-weight: 500;
   box-sizing: border-box;
   margin: 0;
 }
@@ -106,7 +105,7 @@ a {
   line-height: 30px;
   font-weight: 500;
   align-items: center;
-  padding: 0 5px;
+  padding: 0 15px;
 }
 .main .profile__memoji {
   width: 100%;
@@ -236,26 +235,46 @@ a {
 }
 .main .portfolio__list .project {
   width: 100%;
-  display: flex;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  align-items: stretch;
 }
 .main .portfolio__list .project__image-box {
   overflow: hidden;
-  background-image: url(../portfolio_web/kakao.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
+  height: 50vh;
+}
+.main .portfolio__list .project__image-box img {
+  display: block;
+  width: 100%;
 }
 .main .portfolio__list .project__info {
+  display: flex;
+  flex-direction: column;
   padding: 0 15px;
 }
 .main .portfolio__list .project__info-title {
   font-weight: bold;
   font-size: 1.5rem;
 }
-.main .portfolio__list .project__info-type {
+.main .portfolio__list .project__info-period, .main .portfolio__list .project__info-contribution {
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding-top: 4px;
+}
+.main .portfolio__list .project__info-comment {
+  margin-top: 10px;
+  font-weight: 300;
   font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.main .portfolio__list .project__info-type {
+  display: block;
+  text-align: center;
   background-color: #f9e000;
   padding: 3px 5px;
-  border-radius: 7px;
+  border-radius: 10px;
   line-height: 2rem;
+  margin-top: auto;
 }/*# sourceMappingURL=index.css.map */

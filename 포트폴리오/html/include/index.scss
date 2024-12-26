@@ -3,7 +3,6 @@
 * {
     /*모든 요소 공통*/
     font-family: "Pretendard";
-    font-weight: 500;
     box-sizing: border-box;
     margin: 0;
 }
@@ -122,7 +121,7 @@ a {
             font-weight: 500;
             align-items: center;
             
-            padding: 0 5px;
+            padding: 0 15px;
         }
 
         &__memoji {
@@ -274,18 +273,23 @@ a {
 
             .project {
                 width: 100%;
-                display: flex;
-                
+                display: grid;
+                grid-template-columns: 3fr 1fr;
+                align-items: stretch;
+
                 &__image-box {
-                    
-                    overflow: hidden;                    
-                    background-image: url(../portfolio_web/kakao.png);
-                    background-position: center;
-                    background-repeat: no-repeat;
-                    background-size: contain;
+                    overflow: hidden;
+                    height: 50vh;
+
+                    img {
+                        display: block;
+                        width: 100%;
+                    }
                 }
 
                 &__info {
+                    display: flex;
+                    flex-direction: column;
                     padding: 0 15px;
 
                     &-title {
@@ -293,21 +297,29 @@ a {
                         font-size: 1.5rem;
                     }
 
-                    &-type {
+                    &-period, &-contribution {
+                        font-weight: bold;
+                        font-size: 1.5rem;
+                        padding-top: 4px;
+                    }
+
+                    &-comment {
+                        margin-top: 10px;
+                        font-weight: 300;
                         font-size: .9rem;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                    }
+
+                    &-type {
+                        display: block;
+                        text-align: center;
                         background-color: #f9e000;
                         padding: 3px 5px;
-                        border-radius: 7px;
+                        border-radius: 10px;
                         line-height: 2rem;
-                    }
-
-                    &-period {
-                        // font-family: "Noto Serif", serif;
-                    }
-
-                    
-
-                    &-contribution {
+                        margin-top: auto;
                     }
                 }
             }
