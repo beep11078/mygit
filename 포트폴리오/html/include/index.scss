@@ -32,7 +32,6 @@ a {
 .wrapper {
     max-width: 1200px;
     margin: auto;
-    overflow: hidden;
 }
 
 .hide {
@@ -276,11 +275,13 @@ a {
 
                 &__image-box {
                     overflow: hidden;
-                    height: 50vh;
+                    height: 500px;
+                    background-color: var(--white-color);
 
                     img {
                         display: block;
                         width: 100%;
+                        transform: translateY(30px);
                     }
                 }
 
@@ -317,6 +318,9 @@ a {
                         border-radius: 10px;
                         line-height: 2rem;
                         margin-top: auto;
+                        border: none;
+                        color: var(--black-color);
+                        font-size: 1rem;
                     }
                 }
             }

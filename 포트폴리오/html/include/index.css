@@ -31,7 +31,6 @@ a {
 .wrapper {
   max-width: 1200px;
   margin: auto;
-  overflow: hidden;
 }
 
 .hide {
@@ -238,11 +237,13 @@ a {
 }
 .main .portfolio__list .project__image-box {
   overflow: hidden;
-  height: 50vh;
+  height: 500px;
+  background-color: var(--white-color);
 }
 .main .portfolio__list .project__image-box img {
   display: block;
   width: 100%;
+  transform: translateY(30px);
 }
 .main .portfolio__list .project__info {
   display: flex;
@@ -274,6 +275,9 @@ a {
   border-radius: 10px;
   line-height: 2rem;
   margin-top: auto;
+  border: none;
+  color: var(--black-color);
+  font-size: 1rem;
 }
 
 .swiper-container {
