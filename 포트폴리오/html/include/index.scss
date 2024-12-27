@@ -266,17 +266,21 @@ a {
     }
 
     .portfolio {
+
         &__list {
+            
             .project {
                 width: 100%;
                 display: grid;
                 grid-template-columns: 3fr 1fr;
-                align-items: stretch;
+                gap: 20px;
 
                 &__image-box {
                     overflow: hidden;
                     height: 500px;
-                    background-color: var(--white-color);
+                    border-radius: 15px;
+                    box-shadow: 5px 5px 5px  #c5c5c5;
+                    background-color: white;
 
                     img {
                         display: block;
@@ -284,89 +288,75 @@ a {
                         transform: translateY(30px);
                     }
                 }
+            }
+        }
 
-                &__info {
-                    display: flex;
-                    flex-direction: column;
-                    padding: 0 15px;
-
-                    &-title {
-                        font-weight: bold;
-                        font-size: 1.5rem;
-                    }
-
-                    &-period, &-contribution {
-                        font-weight: bold;
-                        font-size: 1.5rem;
-                        padding-top: 4px;
-                    }
-
-                    &-comment {
-                        margin-top: 10px;
-                        font-weight: 300;
-                        font-size: .9rem;
-                        display: flex;
-                        flex-direction: column;
-                        gap: 10px;
-                    }
-
-                    &-type {
-                        display: block;
-                        text-align: center;
-                        background-color: #f9e000;
-                        padding: 3px 5px;
-                        border-radius: 10px;
-                        line-height: 2rem;
-                        margin-top: auto;
-                        border: none;
-                        color: var(--black-color);
-                        font-size: 1rem;
-                    }
+        &-graphic {
+            .project {
+                &__image-box {
+                    background-color: transparent;
+                    border: none;
                 }
+            }
+        }
+
+        
+    }
+
+    .project {
+        align-items: stretch;
+        padding: 0 5px;
+        height: calc(510px);
+        &__info {
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            padding: 25px 20px;
+            background-color: var(--white-color);
+            box-shadow: 5px 5px 5px  #c5c5c5;
+            border-radius: 15px;
+
+            &-title {
+                font-weight: bold;
+                font-size: 1.5rem;
+            }
+
+            &-period, &-contribution {
+                font-weight: bold;
+                font-size: 1.5rem;
+                padding-top: 4px;
+            }
+
+            &-comment {
+                margin-top: 10px;
+                font-weight: 300;
+                font-size: .9rem;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            &-type {
+                display: block;
+                text-align: center;
+                background-color: #f9e000;
+                padding: 3px 5px;
+                border-radius: 10px;
+                line-height: 2rem;
+                margin-top: auto;
+                border: none;
+                color: var(--black-color);
+                font-size: 1rem;
             }
         }
     }
 
     
-
-    // .portfolio {
-    //     &__list {
-    //         display: grid; 
-    //         grid-template-columns: repeat(3, 1fr);
-
-    //         a {
-    //             color: #222;
-    //         }
-    //     }
-
-    //     &__image {
-    //         display: block;
-    //         width: 100%;
-    //     }
-
-    //     &__modal {
-    //         display: none;
-    //     }
-    // }
-    
-    // .info {
-    //     &__subtitle {
-    //         font-size: 14px;
-    //         background-color: #ace;
-    //         border-radius: 3px;
-    //         padding: 3px 5px;
-    //         line-height: 30px;
-    //     }
-
-    //     &__title {
-    //         font-weight: 700;
-    //     }
-    // }
 }
 
 .swiper-container {
     width: 1200px;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .swiper-slide {

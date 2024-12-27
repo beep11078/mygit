@@ -233,33 +233,48 @@ a {
   width: 100%;
   display: grid;
   grid-template-columns: 3fr 1fr;
-  align-items: stretch;
+  gap: 20px;
 }
 .main .portfolio__list .project__image-box {
   overflow: hidden;
   height: 500px;
-  background-color: var(--white-color);
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px #c5c5c5;
+  background-color: white;
 }
 .main .portfolio__list .project__image-box img {
   display: block;
   width: 100%;
   transform: translateY(30px);
 }
-.main .portfolio__list .project__info {
+.main .portfolio-graphic .project__image-box {
+  background-color: transparent;
+  border: none;
+}
+.main .project {
+  align-items: stretch;
+  padding: 0 5px;
+  height: 510px;
+}
+.main .project__info {
+  height: 500px;
   display: flex;
   flex-direction: column;
-  padding: 0 15px;
+  padding: 25px 20px;
+  background-color: var(--white-color);
+  box-shadow: 5px 5px 5px #c5c5c5;
+  border-radius: 15px;
 }
-.main .portfolio__list .project__info-title {
+.main .project__info-title {
   font-weight: bold;
   font-size: 1.5rem;
 }
-.main .portfolio__list .project__info-period, .main .portfolio__list .project__info-contribution {
+.main .project__info-period, .main .project__info-contribution {
   font-weight: bold;
   font-size: 1.5rem;
   padding-top: 4px;
 }
-.main .portfolio__list .project__info-comment {
+.main .project__info-comment {
   margin-top: 10px;
   font-weight: 300;
   font-size: 0.9rem;
@@ -267,7 +282,7 @@ a {
   flex-direction: column;
   gap: 10px;
 }
-.main .portfolio__list .project__info-type {
+.main .project__info-type {
   display: block;
   text-align: center;
   background-color: #f9e000;
@@ -282,7 +297,7 @@ a {
 
 .swiper-container {
   width: 1200px;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .swiper-slide {
