@@ -277,7 +277,7 @@ a {
 
                 &__image-box {
                     overflow: hidden;
-                    height: 500px;
+                    height: 490px;
                     border-radius: 15px;
                     box-shadow: 5px 5px 5px  #c5c5c5;
                     background-color: white;
@@ -306,9 +306,9 @@ a {
     .project {
         align-items: stretch;
         padding: 0 5px;
-        height: calc(510px);
+        height: 500px;
         &__info {
-            height: 500px;
+            height: 490px;
             display: flex;
             flex-direction: column;
             padding: 25px 20px;

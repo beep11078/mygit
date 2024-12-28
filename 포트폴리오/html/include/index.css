@@ -237,7 +237,7 @@ a {
 }
 .main .portfolio__list .project__image-box {
   overflow: hidden;
-  height: 500px;
+  height: 490px;
   border-radius: 15px;
   box-shadow: 5px 5px 5px #c5c5c5;
   background-color: white;
@@ -254,10 +254,10 @@ a {
 .main .project {
   align-items: stretch;
   padding: 0 5px;
-  height: 510px;
+  height: 500px;
 }
 .main .project__info {
-  height: 500px;
+  height: 490px;
   display: flex;
   flex-direction: column;
   padding: 25px 20px;
