@@ -98,9 +98,7 @@ a {
   margin-bottom: 15px;
 }
 .main .profile__text {
-  display: grid;
-  grid-template-columns: 2fr 3fr;
-  grid-gap: 1rem;
+  display: flex;
   font-size: 20px;
   line-height: 30px;
   font-weight: 500;
@@ -111,6 +109,26 @@ a {
   width: 100%;
   display: block;
   cursor: pointer;
+}
+.main .profile__more-btn {
+  display: block;
+  margin-left: auto;
+  width: 50px;
+  margin-left: auto;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transform: translateY(30px);
+}
+.main .profile__more-btn .moreAbout {
+  border: none;
+  color: white;
+  width: 0;
+  height: 0;
+  border-bottom: 25px solid rgb(0, 0, 0);
+  border-top: 25px solid transparent;
+  border-right: 25px solid rgb(0, 0, 0);
+  border-left: 25px solid transparent;
 }
 .main .profile__modal {
   display: none;
