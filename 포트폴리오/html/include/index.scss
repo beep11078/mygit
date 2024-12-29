@@ -340,6 +340,9 @@ a {
                 }
             }
         }
+        &__modal {
+            display: none;
+        }
     }
     
     
@@ -362,7 +365,9 @@ a {
     #portfolio2 {
         .portfolio__list {
             .project {
+
                 button {
+                    height: 590px;
                     border: 0;
                     position: relative;
                     padding: 0;
@@ -374,6 +379,7 @@ a {
                 }
 
                 &__info {
+                    height: 590px;
                     position: absolute;
                     top: 0; left: 0;
                     width: 100%;
@@ -385,7 +391,6 @@ a {
             }
         }
     }
-    
 }
 
 .swiper-container {

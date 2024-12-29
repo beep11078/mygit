@@ -292,6 +292,9 @@ a {
   color: var(--black-color);
   font-size: 1rem;
 }
+.main .portfolio__modal {
+  display: none;
+}
 .main #portfolio1 .portfolio__list .project {
   display: grid;
   grid-template-columns: 3fr 1fr;
@@ -303,6 +306,7 @@ a {
   transform: translateY(30px);
 }
 .main #portfolio2 .portfolio__list .project button {
+  height: 590px;
   border: 0;
   position: relative;
   padding: 0;
@@ -312,6 +316,7 @@ a {
   height: 100%;
 }
 .main #portfolio2 .portfolio__list .project__info {
+  height: 590px;
   position: absolute;
   top: 0;
   left: 0;
