@@ -286,97 +286,111 @@ a {
     }
 
     .portfolio {
-
         &__list {
-            
             .project {
-                width: 100%;
-                display: grid;
-                grid-template-columns: 3fr 1fr;
-                gap: 20px;
-
                 &__image-box {
                     overflow: hidden;
                     height: 490px;
                     border-radius: 15px;
-                    box-shadow: 5px 5px 5px  #c5c5c5;
+                    box-shadow: 4px 4px 12px #d5d5d5, -4px -4px 12px #ffffff;
                     background-color: white;
+                }
 
-                    img {
+                &__info {
+                    height: 490px;
+                    display: flex;
+                    flex-direction: column;
+                    padding: 25px 20px;
+                    background-color: var(--white-color);
+                    box-shadow: 4px 4px 12px #d5d5d5, -4px -4px 12px #ffffff;
+                    border-radius: 15px;
+    
+                    &-title {
+                        font-weight: bold;
+                        font-size: 1.5rem;
+                    }
+    
+                    &-period, &-contribution {
+                        font-weight: bold;
+                        font-size: 1.5rem;
+                        padding-top: 4px;
+                    }
+    
+                    &-comment {
+                        margin-top: 10px;
+                        font-weight: 300;
+                        font-size: 0.9rem;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                    }
+    
+                    &-type {
                         display: block;
-                        width: 100%;
-                        transform: translateY(30px);
+                        text-align: center;
+                        background-color: #f9e000;
+                        padding: 3px 5px;
+                        border-radius: 10px;
+                        line-height: 2rem;
+                        margin-top: auto;
+                        border: none;
+                        color: var(--black-color);
+                        font-size: 1rem;
                     }
                 }
             }
         }
-
-        &-graphic {
+    }
+    
+    
+    #portfolio1 {
+        .portfolio__list {
             .project {
-                &__image-box {
-                    background-color: transparent;
-                    border: none;
+                display: grid;
+                grid-template-columns: 3fr 1fr;
+                gap: 20px;
+    
+                img {
+                    display: block;
+                    width: 100%;
+                    transform: translateY(30px);
                 }
             }
         }
-
-        
     }
+    
+    #portfolio2 {
+        .portfolio__list {
+            .project {
+                button {
+                    border: 0;
+                    position: relative;
+                    padding: 0;
+                }
 
-    .project {
-        align-items: stretch;
-        padding: 0 5px;
-        height: 500px;
-        &__info {
-            height: 490px;
-            display: flex;
-            flex-direction: column;
-            padding: 25px 20px;
-            background-color: var(--white-color);
-            box-shadow: 5px 5px 5px  #c5c5c5;
-            border-radius: 15px;
+                img {
+                    display: block;
+                    height: 100%;
+                }
 
-            &-title {
-                font-weight: bold;
-                font-size: 1.5rem;
-            }
-
-            &-period, &-contribution {
-                font-weight: bold;
-                font-size: 1.5rem;
-                padding-top: 4px;
-            }
-
-            &-comment {
-                margin-top: 10px;
-                font-weight: 300;
-                font-size: .9rem;
-                display: flex;
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            &-type {
-                display: block;
-                text-align: center;
-                background-color: #f9e000;
-                padding: 3px 5px;
-                border-radius: 10px;
-                line-height: 2rem;
-                margin-top: auto;
-                border: none;
-                color: var(--black-color);
-                font-size: 1rem;
+                &__info {
+                    position: absolute;
+                    top: 0; left: 0;
+                    width: 100%;
+                    display: block;
+                    background-color: rgba(0, 0, 0, .3);
+                    text-align: left;
+                    color: var(--white-color);
+                }
             }
         }
     }
-
     
 }
 
 .swiper-container {
     width: 1200px;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .swiper-slide {

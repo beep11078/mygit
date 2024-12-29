@@ -1,8 +1,17 @@
-let mySwiper = new Swiper(".swiper-container", {
+let mySwiper1 = new Swiper("#portfolio1 .swiper-container", {
     autoplay: {
         delay: 2000,
     },
     slidesPerView: 1,
+    spaceBetween: 30,
+});
+
+let mySwiper2 = new Swiper("#portfolio2 .swiper-container", {
+    autoplay: {
+        delay: 2000,
+    },
+    slidesPerView: 3,
+    spaceBetween: 30,
 });
 
 const memoji = document.querySelector(".profile__memoji");
