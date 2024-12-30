@@ -312,8 +312,8 @@ a {
   padding: 0;
 }
 .main #portfolio2 .portfolio__list .project img {
-  display: block;
-  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .main #portfolio2 .portfolio__list .project__info {
   height: 590px;
