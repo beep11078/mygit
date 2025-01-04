@@ -13,6 +13,8 @@
     --color-blue: #03e8f9;
     --color-orange: #fd6413;
     --color-gray: #1b1e26;
+
+    --size-max-width: 1200px;
 }
 
 * {
@@ -62,6 +64,11 @@ button:focus {
         font-size: 1.5rem;
         margin: .5rem 0;
     }
+}
+
+.max--container {
+    margin: auto;
+    width: var(--size-max-width);
 }
 
 /* Header */
@@ -151,3 +158,59 @@ button:focus {
         }
     }
 }
+
+/* About */
+.majors {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    gap: 1rem;
+    margin: 2.5rem 0;
+}
+
+.major {
+    background-color: var(--color-primary-variant);
+    padding: 2rem 1rem;
+    color: var(--color-text);
+    border-radius: 1rem;
+    cursor: default;
+    box-shadow: 0 0 5px var(--color-blue);
+
+    &__icon {
+        font-size: 4rem;
+        margin: 1rem 0;
+        color: var(--color-accent);
+    }
+
+    &__title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+    }
+
+    &:hover .major__icon {
+        transform: rotate(-15deg) scale(1.2);
+        transition: all .3s ease;
+    }
+}
+
+.jobs {
+    text-align: start;
+}
+
+.job {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 1rem;
+
+    &__name {
+        color: var(--color-primary);
+    }
+
+    &__period {
+        color: var(--color-primary);
+        font-size: .8rem;
+    }
+}
+
