@@ -214,3 +214,39 @@ button:focus {
     }
 }
 
+/* Skills */
+#skills {
+    background-color: var(--color-primary-variant);
+    color: var(--color-text);
+}
+
+.skills {
+    display: grid;
+    grid-template-columns: 6fr 4fr;
+    margin: 2rem 3rem;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 5px var(--color-accent);
+
+    &__title {
+        color: var(--color-accent);
+        margin: 1rem 0;
+        font-size: 1.2rem;
+    }
+
+    &__coding {
+        grid-row: span 2;
+        padding: 1rem;
+        background-color: var(--color-primary);
+    }
+
+    &__tools {
+        padding: 1rem;
+    }
+
+    &__etc {
+        padding: 1rem;
+        background-color: var(--color-primary);
+        filter: brightness(150%);
+    }
+}
