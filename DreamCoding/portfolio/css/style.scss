@@ -23,6 +23,8 @@
 
 body {
     font-family: "Noto Sans KR", serif;
+    margin: 0;
+    width: 100%;
 }
 
 h1, h2, h3, p, ul {
@@ -162,8 +164,7 @@ button:focus {
 
 /* About */
 .majors {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
     justify-content: space-between;
     gap: 1rem;
     margin: 2.5rem 0;
@@ -443,5 +444,89 @@ button:focus {
     transition: color .2s ease-in;
     &:hover {
         color: var(--color-accent);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .section {
+        padding: 3rem 2rem;
+
+        &__title {
+            font-size: 2rem;
+        }
+
+        &__description {
+            font-size: 1rem;
+        }
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: start;
+
+        &__menu {
+            flex-direction: column;
+            text-align: center;
+            padding: 1rem 4rem;
+            gap: 1rem;
+        }
+
+        &__nav {
+            width: 100%;
+            display: block;
+        }
+    }
+
+    .home {
+        padding-bottom: 3rem;
+
+        &__title {
+            font-size: 2.5rem;
+            margin-bottom: .5rem;
+        }
+    }
+
+    .majors { 
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .major {
+        max-width: 25rem;
+    }
+
+    .job {
+        justify-content: center;
+    }
+
+    .skills {
+        grid-template-columns: 1fr;
+    }
+
+    .categories {
+        flex-direction: column;
+    }
+
+    .category {
+        width: 100%;
+    }
+
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .testimonial {
+        flex-direction: column;
+        &:nth-child(even) .testimonial__img {
+            order: 0;
+        }
+    }
+
+    .arrow-up {
+        font-size: 2rem;
+        width: 3rem;
+        height: 3rem;
+        bottom: 1.5rem;
+        right: 1.5rem;
     }
 }
