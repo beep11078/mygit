@@ -375,3 +375,38 @@ button:focus {
         background-color: var(--color-accent);
     }
 }
+
+/* Testimonial */
+.testimonials {
+    margin: 3rem;
+}
+
+.testimonial {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    &:nth-child(even) .testimonial__img {
+        order: 1;
+    }
+
+    &__img {
+        width: 150px;
+        height: 150px;
+        border-radius: 100%;
+        box-shadow: 2px 2px 5px var(--color-blue);
+    }
+
+    &__bubble {
+        padding: 1rem;
+        border-radius: 8px;
+        box-shadow: 2px 2px 5px var(--color-blue);
+
+        &__name {
+            color: var(--color-accent);
+            font-weight: bold;
+            filter: brightness(70%);
+        }
+    }
+}
