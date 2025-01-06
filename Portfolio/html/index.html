@@ -3,298 +3,306 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>김정빈 포트폴리오</title>
-
+    <!-- SEO -->
+    <meta name="description" content="Portfolio for FRONT-END frontend software engineer Jeongbin"> 
+    <meta name="author" content="Jeongbin">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="images/profile.png" type="image/x-icon">
+    <!-- OG (Open Graph Data) -->
+    <meta property="og:title" content="김정빈 포트폴리오">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="배포 후에 생성된 url">
+    <meta property="og:image" content="배포 후에 생성된 이미지 url">
+    <!-- Font -->
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
-
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-    <!--아이콘 폰트(폰트어썸) 연결-->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+    <!-- CSS -->
     <link rel="stylesheet" href="/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="include/index.css" />
 </head>
 
 <body>
-
-    <div class="wrap">
-        <header id="header" class="header container">
+    <!-- Header -->
+    <header id="header" class="header container">
+        <div class="wrapper">
+            <nav class="header__nav">
+                <h1 class="header__logo">김정빈 포트폴리오.</h1>
+                <ul class="header__nav-list">
+                    <li><a class="header__nav-link" href="#header" title="Home"><img src="images/memoji2.png" alt="Home"></a></li>
+                    <li><a class="header__nav-link" href="#about" title="About Me"><img src="images/memoji3.png" alt="About Me"></a></li>
+                    <li><a class="header__nav-link" href="#portfolio" title="Portfolio"><img src="images/memoji4.png" alt="Portfolio"></a></li>
+                    <li><a class="header__nav-link" href="#contact" title="Contact"><img src="images/memoji5.png" alt="Contact"></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Main -->
+    <main class="main">
+        <section id="about" class="main__profile container">
             <div class="wrapper">
-                <nav class="header__nav">
-                    <h1 class="header__logo">김정빈 포트폴리오.</h1>
-                    <ul class="header__nav-list">
-                        <li><a class="header__nav-link" href="#header" title="Home"><img src="images/memoji2.png" alt="Home"></a></li>
-                        <li><a class="header__nav-link" href="#about" title="About Me"><img src="images/memoji3.png" alt="About Me"></a></li>
-                        <li><a class="header__nav-link" href="#portfolio" title="Portfolio"><img src="images/memoji4.png" alt="Portfolio"></a></li>
-                        <li><a class="header__nav-link" href="#contact" title="Contact"><img src="images/memoji5.png" alt="Contact"></a></li>
-                    </ul>
-                </nav>
+                <h2 class="profile__title main__title">김정빈 자기소개</h2>
+                <div class="profile__text">
+                    <img class="profile__memoji" src="images/memoji1.png" alt="김정빈상세자기소개">
+                    <p>
+                        HTML, CSS를 능숙하게 다루며 코드가 재미있어 웹 퍼블리싱을 하고 있습니다.
+                        UI/UX와 표준화, 접근성에 대해 공부할수록 흥미와 보람을 느끼고 이를 기본으로 작업합니다.<br>
+                        JavaScript 바닐라 코딩을 기본으로 React/TypeScript 등 프레임워크 환경에서 컴포넌트 단위의 마크업 작업을 능숙하게 할 수 있도록 배우고 있습니다. 
+                        맡게 된 프로젝트의 목적을 우선적으로 고려하며, 팀원은 물론 다양한 직군과의 원활한 협업을 중요하게 생각합니다.<br>
+                        계속해서 변화하는 세태에 맞춰 지금처럼 새로운 방식을 익히고 도전하는 것을 즐기는 웹 퍼블리셔가 되겠습니다.<br>
+                        <button class="profile__more-btn" data-cursor-text="More" ><div class="moreAbout"></div></button>
+                    </p>
+                </div>
             </div>
-        </header>
-
-        <main class="main">
-            <section id="about" class="main__profile container">
-                <div class="wrapper">
-                    <h2 class="profile__title main__title">김정빈 자기소개</h2>
-                    <div class="profile__text">
-                        <img class="profile__memoji" src="images/memoji1.png" alt="김정빈상세자기소개">
-                        <p>
-                            HTML, CSS를 능숙하게 다루며 코드가 재미있어 웹 퍼블리싱을 하고 있습니다.
-                            UI/UX와 표준화, 접근성에 대해 공부할수록 흥미와 보람을 느끼고 이를 기본으로 작업합니다.<br>
-                            JavaScript 바닐라 코딩을 기본으로 React/TypeScript 등 프레임워크 환경에서 컴포넌트 단위의 마크업 작업을 능숙하게 할 수 있도록 배우고 있습니다. 
-                            맡게 된 프로젝트의 목적을 우선적으로 고려하며, 팀원은 물론 다양한 직군과의 원활한 협업을 중요하게 생각합니다.<br>
-                            계속해서 변화하는 세태에 맞춰 지금처럼 새로운 방식을 익히고 도전하는 것을 즐기는 웹 퍼블리셔가 되겠습니다.<br>
-                            <button class="profile__more-btn" data-cursor-text="More" ><div class="moreAbout"></div></button>
-                        </p>
-                    </div>
-                </div>
-                <div class="profile__modal" aria-hidden="true">
-                    <div class="profile__modalbox">
-                        <ul class="profile__list">
-                            <li class="profile__item profile__contact">
-                                <img src="images/memoji3.png" alt="김정빈">
-                                <p class="profile__name">김정빈 (Jeongbin Kim)</p>
-                                <div class="profile__contact-list">
-                                    <div class="contact__item">
-                                        <span class="contact__label">E-mail.</span>
-                                        <span id="copyMail">beep1107@naver.com</span>
-                                        <button type="button" onclick="copy('copyMail')"><i class="fa-regular fa-copy"></i></button>
-                                    </div>
-                                    <div class="contact__item">
-                                        <span class="contact__label">Tel.</span>
-                                        <a href="tel:01025263208" id="copyTel">010-2526-3208</a>
-                                        <button type="button" onclick="copy('copyTel')"><i class="fa-regular fa-copy"></i></button>
-                                    </div>
+            <div class="profile__modal" aria-hidden="true">
+                <div class="profile__modalbox">
+                    <ul class="profile__list">
+                        <li class="profile__item profile__contact">
+                            <img src="images/memoji3.png" alt="김정빈">
+                            <p class="profile__name">김정빈 (Jeongbin Kim)</p>
+                            <div class="profile__contact-list">
+                                <div class="contact__item">
+                                    <span class="contact__label">E-mail.</span>
+                                    <span id="copyMail">beep1107@naver.com</span>
+                                    <button type="button" onclick="copy('copyMail')"><i class="fa-regular fa-copy"></i></button>
                                 </div>
-                            </li>
-                            <li class="profile__item profile__education">
-                                <h3>Education</h3>
-                                <ul class="profile__education-list">
-                                    <li class="education__item">
-                                        <span class="education__date">2024.05.29 ~ 2024.11.15</span>
-                                        <span class="education__institute">그린컴퓨터아카데미 (멀티미디어)</span>
-                                        <span class="education__details">UI/UX(웹퍼블리셔) & 영상편집(유튜브, 에펙, 블렌더3D) 양성과정-혼합 수료</span>
-                                    </li>
-                                    <li class="education__item">
-                                        <span class="education__date">2024.05.29 ~ 2024.11.15</span>
-                                        <span class="education__institute">서울시립대학교</span>
-                                        <span class="education__details">통계학과 전공 철학과 복수전공 중퇴</span>
-                                    </li>
-                                    <li class="education__item">
-                                        <span class="education__date">2024.05.29 ~ 2024.11.15</span>
-                                        <span class="education__institute">광주대성여자고등학교 졸업</span>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="profile__item profile__license" >
-                                <h3>License</h3>
-                                <ul class="profile__license-list">
-                                    <li class="license__item">
-                                        <span class="license__date">2024.00.00</span>
-                                        <span class="license__name">웹디자인기능사</span>
-                                    </li>
-                                    <li class="license__item">
-                                        <span class="license__date">2024.00.00</span>
-                                        <span class="license__name">GTQ 포토샵 1급 자격증</span>
-                                    </li>
-                                    <li class="license__item">
-                                        <span class="license__date">2024.00.00</span>
-                                        <span class="license__name">자동차운전면허증 2종</span>
-                                    </li>
-                                    <li class="license__item">
-                                        <span class="license__date">2024.00.00</span>
-                                        <span class="license__name">컴퓨터활용능력 2급</span>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <button class="profile__modalbox-close">
-                            <i class="fa-solid fa-circle-xmark"></i>
-                        </button>
-                    </div>
-                </div>
-            </section>
-            <section id="portfolio1" class="main__portfolio container">
-                <div class="wrapper">
-                    <h2 class="portfolio__title main__title">웹 퍼블리싱 작업</h2>
-                    <div class="swiper-container">
-                        <ul class="portfolio__list swiper-wrapper">
-                            <li class="portfolio__item project swiper-slide">
-                                <div class="project__image-box">
-                                    <img src="portfolio_web/02KAKAO.png" alt="카카오그룹">
+                                <div class="contact__item">
+                                    <span class="contact__label">Tel.</span>
+                                    <a href="tel:01025263208" id="copyTel">010-2526-3208</a>
+                                    <button type="button" onclick="copy('copyTel')"><i class="fa-regular fa-copy"></i></button>
                                 </div>
+                            </div>
+                        </li>
+                        <li class="profile__item profile__education">
+                            <h3>Education</h3>
+                            <ul class="profile__education-list">
+                                <li class="education__item">
+                                    <span class="education__date">2024.05.29 ~ 2024.11.15</span>
+                                    <span class="education__institute">그린컴퓨터아카데미 (멀티미디어)</span>
+                                    <span class="education__details">UI/UX(웹퍼블리셔) & 영상편집(유튜브, 에펙, 블렌더3D) 양성과정-혼합 수료</span>
+                                </li>
+                                <li class="education__item">
+                                    <span class="education__date">2024.05.29 ~ 2024.11.15</span>
+                                    <span class="education__institute">서울시립대학교</span>
+                                    <span class="education__details">통계학과 전공 철학과 복수전공 중퇴</span>
+                                </li>
+                                <li class="education__item">
+                                    <span class="education__date">2024.05.29 ~ 2024.11.15</span>
+                                    <span class="education__institute">광주대성여자고등학교 졸업</span>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="profile__item profile__license" >
+                            <h3>License</h3>
+                            <ul class="profile__license-list">
+                                <li class="license__item">
+                                    <span class="license__date">2024.00.00</span>
+                                    <span class="license__name">웹디자인기능사</span>
+                                </li>
+                                <li class="license__item">
+                                    <span class="license__date">2024.00.00</span>
+                                    <span class="license__name">GTQ 포토샵 1급 자격증</span>
+                                </li>
+                                <li class="license__item">
+                                    <span class="license__date">2024.00.00</span>
+                                    <span class="license__name">자동차운전면허증 2종</span>
+                                </li>
+                                <li class="license__item">
+                                    <span class="license__date">2024.00.00</span>
+                                    <span class="license__name">컴퓨터활용능력 2급</span>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <button class="profile__modalbox-close">
+                        <i class="fa-solid fa-circle-xmark"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section id="portfolio1" class="main__portfolio container">
+            <div class="wrapper">
+                <h2 class="portfolio__title main__title">웹 퍼블리싱 작업</h2>
+                <div class="swiper-container">
+                    <ul class="portfolio__list swiper-wrapper">
+                        <li class="portfolio__item project swiper-slide">
+                            <div class="project__image-box">
+                                <img src="portfolio_web/02KAKAO.png" alt="카카오그룹">
+                            </div>
+                            <div class="project__info">
+                                <h3 class="project__info-title">카카오 그룹</h3>
+                                <p class="project__info-period">2024.10.01~2024.11.00</p>
+                                <p class="project__info-contribution">기여도 100%</p>
+                                <p class="project__info-comment">
+                                    <span>아하 서비스는 궁금한 점을 질문하면 검증된 전문가로 부터 답변을 받을 수 있는 보상형 Q&A 서비스입니다. 아하 서비스의 모바일 디바이스 점유율이 전체 중 60 퍼센트로, 비중이 높아 모바일 디바이스에 대한 어플리케이션 니즈 해결을 위해 시작하게된 프로젝트입니다.</span>
+                                    <span>최대 3명의 개발진으로 이루어진 TF가 만들어져 8개월 동안 여정을 함께했습니다. 이 프로젝트를 통해 React 라이브러리를 더 깊게 이해할 수 있던 계기가 되었습니다.</span>
+                                    <span>모바일 기기에서 실행되는 어플리케이션 특성 상, 성능 최적화가 매우 중요하기 때문에, 효율적인 컴포넌트 아키텍쳐 설계 및 최적화 작업이 필수적이었습니다. 이 과정에서 리액트에 대해 좀 더 알아갈 수 있어 흥미로운 프로젝트였습니다.</span>
+                                </p>
+                                <a href="#" target="_blank" title="카카오그룹" class="project__info-type">클론코딩 보러가기</a>
+                            </div>
+                        </li>
+                        <li class="portfolio__item project swiper-slide">
+                            <div class="project__image-box">
+                                <img src="portfolio_web/04LUSH.png" alt="러쉬">
+                            </div>
+                            <div class="project__info">
+                                <h3 class="project__info-title">러쉬</h3>
+                                <p class="project__info-period">2024.10.01~2024.11.00</p>
+                                <p class="project__info-contribution">기여도 100%</p>
+                                <p class="project__info-comment">
+                                    <span>아하 서비스는 궁금한 점을 질문하면 검증된 전문가로 부터 답변을 받을 수 있는 보상형 Q&A 서비스입니다. 아하 서비스의 모바일 디바이스 점유율이 전체 중 60 퍼센트로, 비중이 높아 모바일 디바이스에 대한 어플리케이션 니즈 해결을 위해 시작하게된 프로젝트입니다.</span>
+                                    <span>최대 3명의 개발진으로 이루어진 TF가 만들어져 8개월 동안 여정을 함께했습니다. 이 프로젝트를 통해 React 라이브러리를 더 깊게 이해할 수 있던 계기가 되었습니다.</span>
+                                    <span>모바일 기기에서 실행되는 어플리케이션 특성 상, 성능 최적화가 매우 중요하기 때문에, 효율적인 컴포넌트 아키텍쳐 설계 및 최적화 작업이 필수적이었습니다. 이 과정에서 리액트에 대해 좀 더 알아갈 수 있어 흥미로운 프로젝트였습니다.</span>
+                                </p>
+                                <span class="project__info-type">클론코딩</span>
+                            </div>
+                        </li>
+                        <li class="portfolio__item project swiper-slide">
+                            <div class="project__image-box">
+                                <img src="portfolio_web/woori.png" alt="우리은행">
+                            </div>
+                            <div class="project__info">
+                                <h3 class="project__info-title">카카오 그룹</h3>
+                                <p class="project__info-period">2024.10.01~2024.11.00</p>
+                                <p class="project__info-contribution">기여도 100%</p>
+                                <p class="project__info-comment">
+                                    <span>아하 서비스는 궁금한 점을 질문하면 검증된 전문가로 부터 답변을 받을 수 있는 보상형 Q&A 서비스입니다. 아하 서비스의 모바일 디바이스 점유율이 전체 중 60 퍼센트로, 비중이 높아 모바일 디바이스에 대한 어플리케이션 니즈 해결을 위해 시작하게된 프로젝트입니다.</span>
+                                    <span>최대 3명의 개발진으로 이루어진 TF가 만들어져 8개월 동안 여정을 함께했습니다. 이 프로젝트를 통해 React 라이브러리를 더 깊게 이해할 수 있던 계기가 되었습니다.</span>
+                                    <span>모바일 기기에서 실행되는 어플리케이션 특성 상, 성능 최적화가 매우 중요하기 때문에, 효율적인 컴포넌트 아키텍쳐 설계 및 최적화 작업이 필수적이었습니다. 이 과정에서 리액트에 대해 좀 더 알아갈 수 있어 흥미로운 프로젝트였습니다.</span>
+                                </p>
+                                <span class="project__info-type">클론코딩</span>
+                            </div>
+                        </li>
+                    </u>
+                </div>
+            </div>
+        </section>
+        <section id="portfolio2" class="main__portfolio main__portfolio container">
+            <div class="wrapper">
+                <h2 class="portfolio__title main__title">그래픽, 영상 작업</h2>
+                <div class="swiper-container">
+                    <ul class="portfolio__list regular swiper-wrapper">
+                        <li class="portfolio__item project swiper-slide">
+                            <button class="project__image-box">
+                                <img src="portfolio_graphic/thumb00.png" alt="포트폴리오0" data-cursor-text="graphic" data-no="0" data-type="image" class="project__image">
                                 <div class="project__info">
-                                    <h3 class="project__info-title">카카오 그룹</h3>
-                                    <p class="project__info-period">2024.10.01~2024.11.00</p>
+                                    <span class="project__info-subtitle">제작기간 2일일</span>
+                                    <h3 class="project__info-title">여행 포스터</h3>
                                     <p class="project__info-contribution">기여도 100%</p>
-                                    <p class="project__info-comment">
-                                        <span>아하 서비스는 궁금한 점을 질문하면 검증된 전문가로 부터 답변을 받을 수 있는 보상형 Q&A 서비스입니다. 아하 서비스의 모바일 디바이스 점유율이 전체 중 60 퍼센트로, 비중이 높아 모바일 디바이스에 대한 어플리케이션 니즈 해결을 위해 시작하게된 프로젝트입니다.</span>
-                                        <span>최대 3명의 개발진으로 이루어진 TF가 만들어져 8개월 동안 여정을 함께했습니다. 이 프로젝트를 통해 React 라이브러리를 더 깊게 이해할 수 있던 계기가 되었습니다.</span>
-                                        <span>모바일 기기에서 실행되는 어플리케이션 특성 상, 성능 최적화가 매우 중요하기 때문에, 효율적인 컴포넌트 아키텍쳐 설계 및 최적화 작업이 필수적이었습니다. 이 과정에서 리액트에 대해 좀 더 알아갈 수 있어 흥미로운 프로젝트였습니다.</span>
-                                    </p>
-                                    <a href="#" target="_blank" title="카카오그룹룹" class="project__info-type">클론코딩 보러가기</a>
+                                    <p class="project__info-program">사용 프로그램: Adobe Illustrator</p>
+                                    <p class="project__info-comment">여행 광고 포스터</p>
                                 </div>
-                            </li>
-                            <li class="portfolio__item project swiper-slide">
-                                <div class="project__image-box">
-                                    <img src="portfolio_web/04LUSH.png" alt="러쉬">
-                                </div>
+                            </button>
+                        </li>
+                        <li class="portfolio__item project swiper-slide">
+                            <button class="project__image-box">
+                                <img src="portfolio_graphic/thumb01.png" alt="포트폴리오1" data-cursor-text="graphic" data-no="1" data-type="image" class="project__image">
                                 <div class="project__info">
-                                    <h3 class="project__info-title">러쉬</h3>
-                                    <p class="project__info-period">2024.10.01~2024.11.00</p>
+                                    <span class="project__info-subtitle">클론코딩</span>
+                                    <h3 class="project__info-title">우리은행</h3>
                                     <p class="project__info-contribution">기여도 100%</p>
-                                    <p class="project__info-comment">
-                                        <span>아하 서비스는 궁금한 점을 질문하면 검증된 전문가로 부터 답변을 받을 수 있는 보상형 Q&A 서비스입니다. 아하 서비스의 모바일 디바이스 점유율이 전체 중 60 퍼센트로, 비중이 높아 모바일 디바이스에 대한 어플리케이션 니즈 해결을 위해 시작하게된 프로젝트입니다.</span>
-                                        <span>최대 3명의 개발진으로 이루어진 TF가 만들어져 8개월 동안 여정을 함께했습니다. 이 프로젝트를 통해 React 라이브러리를 더 깊게 이해할 수 있던 계기가 되었습니다.</span>
-                                        <span>모바일 기기에서 실행되는 어플리케이션 특성 상, 성능 최적화가 매우 중요하기 때문에, 효율적인 컴포넌트 아키텍쳐 설계 및 최적화 작업이 필수적이었습니다. 이 과정에서 리액트에 대해 좀 더 알아갈 수 있어 흥미로운 프로젝트였습니다.</span>
-                                    </p>
-                                    <span class="project__info-type">클론코딩</span>
+                                    <p class="project__info-program">사용 프로그램: Adobe Illustrator</p>
+                                    <p class="project__info-comment">여행 광고 포스터</p>
                                 </div>
-                            </li>
-                            <li class="portfolio__item project swiper-slide">
-                                <div class="project__image-box">
-                                    <img src="portfolio_web/woori.png" alt="우리은행">
-                                </div>
+                            </button>
+                        </li>
+                        <li class="portfolio__item project swiper-slide">
+                            <button class="project__image-box">
+                                <img src="portfolio_graphic/thumb02.png" alt="포트폴리오2" data-cursor-text="graphic" data-no="2" data-type="image" class="project__image">
                                 <div class="project__info">
-                                    <h3 class="project__info-title">카카오 그룹</h3>
-                                    <p class="project__info-period">2024.10.01~2024.11.00</p>
+                                    <span class="project__info-subtitle">클론코딩</span>
+                                    <h3 class="project__info-title">우리은행</h3>
                                     <p class="project__info-contribution">기여도 100%</p>
-                                    <p class="project__info-comment">
-                                        <span>아하 서비스는 궁금한 점을 질문하면 검증된 전문가로 부터 답변을 받을 수 있는 보상형 Q&A 서비스입니다. 아하 서비스의 모바일 디바이스 점유율이 전체 중 60 퍼센트로, 비중이 높아 모바일 디바이스에 대한 어플리케이션 니즈 해결을 위해 시작하게된 프로젝트입니다.</span>
-                                        <span>최대 3명의 개발진으로 이루어진 TF가 만들어져 8개월 동안 여정을 함께했습니다. 이 프로젝트를 통해 React 라이브러리를 더 깊게 이해할 수 있던 계기가 되었습니다.</span>
-                                        <span>모바일 기기에서 실행되는 어플리케이션 특성 상, 성능 최적화가 매우 중요하기 때문에, 효율적인 컴포넌트 아키텍쳐 설계 및 최적화 작업이 필수적이었습니다. 이 과정에서 리액트에 대해 좀 더 알아갈 수 있어 흥미로운 프로젝트였습니다.</span>
-                                    </p>
-                                    <span class="project__info-type">클론코딩</span>
+                                    <p class="project__info-program">사용 프로그램: Adobe Illustrator</p>
+                                    <p class="project__info-comment">여행 광고 포스터</p>
                                 </div>
-                            </li>
-                        </u>
-                    </div>
+                            </button>
+                        </li>
+                        <li class="portfolio__item project swiper-slide">
+                            <button class="project__image-box">
+                                <img src="portfolio_graphic/thumb03.png" alt="포트폴리오3" data-cursor-text="graphic" data-no="3" data-type="image" class="project__image">
+                                <div class="project__info">
+                                    <span class="project__info-subtitle">클론코딩</span>
+                                    <h3 class="project__info-title">우리은행</h3>
+                                    <p class="project__info-contribution">기여도 100%</p>
+                                    <p class="project__info-program">사용 프로그램: Adobe Illustrator</p>
+                                    <p class="project__info-comment">여행 광고 포스터</p>
+                                </div>
+                            </button>
+                        </li>
+                        <li class="portfolio__item project swiper-slide">
+                            <button class="project__image-box">
+                                <img src="portfolio_graphic/thumb04.png" alt="포트폴리오4" data-cursor-text="graphic" data-no="4" data-type="image" class="project__image">
+                                <div class="project__info">
+                                    <span class="project__info-subtitle">클론코딩</span>
+                                    <h3 class="project__info-title">우리은행</h3>
+                                    <p class="project__info-contribution">기여도 100%</p>
+                                    <p class="project__info-program">사용 프로그램: Adobe Illustrator</p>
+                                    <p class="project__info-comment">여행 광고 포스터</p>
+                                </div>
+                            </button>
+                        </li>
+                        <li class="portfolio__item project swiper-slide">
+                            <button class="project__image-box">
+                                <img src="portfolio_graphic/thumb05.png" alt="포트폴리오5" data-cursor-text="graphic" data-no="5" data-type="image" class="project__image">
+                                <div class="project__info">
+                                    <span class="project__info-subtitle">클론코딩</span>
+                                    <h3 class="project__info-title">우리은행</h3>
+                                    <p class="project__info-contribution">기여도 100%</p>
+                                    <p class="project__info-program">사용 프로그램: Adobe Illustrator</p>
+                                    <p class="project__info-comment">여행 광고 포스터</p>
+                                </div>
+                            </button>
+                        </li>
+                        <li class="portfolio__item project swiper-slide">
+                            <button class="project__image-box">
+                                <img src="portfolio_graphic/thumb06.png" alt="포트폴리오6" data-cursor-text="graphic" data-no="6" data-type="image" class="project__image">
+                                <div class="project__info">
+                                    <span class="project__info-subtitle">클론코딩</span>
+                                    <h3 class="project__info-title">우리은행</h3>
+                                    <p class="project__info-contribution">기여도 100%</p>
+                                    <p class="project__info-program">사용 프로그램: Adobe Illustrator</p>
+                                    <p class="project__info-comment">여행 광고 포스터</p>
+                                </div>
+                            </button>
+                        </li>
+                        <li class="portfolio__item project swiper-slide">
+                            <button class="project__image-box">
+                                <img src="portfolio_graphic/thumb07.png" alt="포트폴리오7" data-cursor-text="graphic" data-no="7" data-type="image" class="project__image">
+                                <div class="project__info">
+                                    <span class="project__info-subtitle">클론코딩</span>
+                                    <h3 class="project__info-title">우리은행</h3>
+                                    <p class="project__info-contribution">기여도 100%</p>
+                                    <p class="project__info-program">사용 프로그램: Adobe Illustrator</p>
+                                    <p class="project__info-comment">여행 광고 포스터</p>
+                                </div>
+                            </button>
+                        </li>
+                    </ul>
                 </div>
-            </section>
-            <section id="portfolio2" class="main__portfolio main__portfolio container">
-                <div class="wrapper">
-                    <h2 class="portfolio__title main__title">그래픽, 영상 작업</h2>
-                    <div class="swiper-container">
-                        <ul class="portfolio__list regular swiper-wrapper">
-                            <li class="portfolio__item project swiper-slide">
-                                <button class="project__image-box">
-                                    <img src="portfolio_graphic/thumb00.png" alt="포트폴리오0" data-cursor-text="graphic" data-no="0" data-type="image" class="project__image">
-                                    <div class="project__info">
-                                        <span class="project__info-subtitle">제작기간 2일일</span>
-                                        <h3 class="project__info-title">여행 포스터</h3>
-                                        <p class="project__info-contribution">기여도 100%</p>
-                                        <p class="project__info-program">사용 프로그램: Adobe Illustrator</p>
-                                        <p class="project__info-comment">여행 광고 포스터</p>
-                                    </div>
-                                </button>
-                            </li>
-                            <li class="portfolio__item project swiper-slide">
-                                <button class="project__image-box">
-                                    <img src="portfolio_graphic/thumb01.png" alt="포트폴리오1" data-cursor-text="graphic" data-no="1" data-type="image" class="project__image">
-                                    <div class="project__info">
-                                        <span class="project__info-subtitle">클론코딩</span>
-                                        <h3 class="project__info-title">우리은행</h3>
-                                        <p class="project__info-contribution">기여도 100%</p>
-                                        <p class="project__info-program">사용 프로그램: Adobe Illustrator</p>
-                                        <p class="project__info-comment">여행 광고 포스터</p>
-                                    </div>
-                                </button>
-                            </li>
-                            <li class="portfolio__item project swiper-slide">
-                                <button class="project__image-box">
-                                    <img src="portfolio_graphic/thumb02.png" alt="포트폴리오2" data-cursor-text="graphic" data-no="2" data-type="image" class="project__image">
-                                    <div class="project__info">
-                                        <span class="project__info-subtitle">클론코딩</span>
-                                        <h3 class="project__info-title">우리은행</h3>
-                                        <p class="project__info-contribution">기여도 100%</p>
-                                        <p class="project__info-program">사용 프로그램: Adobe Illustrator</p>
-                                        <p class="project__info-comment">여행 광고 포스터</p>
-                                    </div>
-                                </button>
-                            </li>
-                            <li class="portfolio__item project swiper-slide">
-                                <button class="project__image-box">
-                                    <img src="portfolio_graphic/thumb03.png" alt="포트폴리오3" data-cursor-text="graphic" data-no="3" data-type="image" class="project__image">
-                                    <div class="project__info">
-                                        <span class="project__info-subtitle">클론코딩</span>
-                                        <h3 class="project__info-title">우리은행</h3>
-                                        <p class="project__info-contribution">기여도 100%</p>
-                                        <p class="project__info-program">사용 프로그램: Adobe Illustrator</p>
-                                        <p class="project__info-comment">여행 광고 포스터</p>
-                                    </div>
-                                </button>
-                            </li>
-                            <li class="portfolio__item project swiper-slide">
-                                <button class="project__image-box">
-                                    <img src="portfolio_graphic/thumb04.png" alt="포트폴리오4" data-cursor-text="graphic" data-no="4" data-type="image" class="project__image">
-                                    <div class="project__info">
-                                        <span class="project__info-subtitle">클론코딩</span>
-                                        <h3 class="project__info-title">우리은행</h3>
-                                        <p class="project__info-contribution">기여도 100%</p>
-                                        <p class="project__info-program">사용 프로그램: Adobe Illustrator</p>
-                                        <p class="project__info-comment">여행 광고 포스터</p>
-                                    </div>
-                                </button>
-                            </li>
-                            <li class="portfolio__item project swiper-slide">
-                                <button class="project__image-box">
-                                    <img src="portfolio_graphic/thumb05.png" alt="포트폴리오5" data-cursor-text="graphic" data-no="5" data-type="image" class="project__image">
-                                    <div class="project__info">
-                                        <span class="project__info-subtitle">클론코딩</span>
-                                        <h3 class="project__info-title">우리은행</h3>
-                                        <p class="project__info-contribution">기여도 100%</p>
-                                        <p class="project__info-program">사용 프로그램: Adobe Illustrator</p>
-                                        <p class="project__info-comment">여행 광고 포스터</p>
-                                    </div>
-                                </button>
-                            </li>
-                            <li class="portfolio__item project swiper-slide">
-                                <button class="project__image-box">
-                                    <img src="portfolio_graphic/thumb06.png" alt="포트폴리오6" data-cursor-text="graphic" data-no="6" data-type="image" class="project__image">
-                                    <div class="project__info">
-                                        <span class="project__info-subtitle">클론코딩</span>
-                                        <h3 class="project__info-title">우리은행</h3>
-                                        <p class="project__info-contribution">기여도 100%</p>
-                                        <p class="project__info-program">사용 프로그램: Adobe Illustrator</p>
-                                        <p class="project__info-comment">여행 광고 포스터</p>
-                                    </div>
-                                </button>
-                            </li>
-                            <li class="portfolio__item project swiper-slide">
-                                <button class="project__image-box">
-                                    <img src="portfolio_graphic/thumb07.png" alt="포트폴리오7" data-cursor-text="graphic" data-no="7" data-type="image" class="project__image">
-                                    <div class="project__info">
-                                        <span class="project__info-subtitle">클론코딩</span>
-                                        <h3 class="project__info-title">우리은행</h3>
-                                        <p class="project__info-contribution">기여도 100%</p>
-                                        <p class="project__info-program">사용 프로그램: Adobe Illustrator</p>
-                                        <p class="project__info-comment">여행 광고 포스터</p>
-                                    </div>
-                                </button>
-                            </li>
-                        </ul>
-                    </div>
+            </div>
+            <div class="portfolio__modal" aria-hidden="true">
+                <div class="portfolio__modalbox">
+                    
+                    <button class="portfolio__modalbox-close">
+                        <i class="fa-solid fa-circle-xmark"></i>
+                    </button>
                 </div>
-                <div class="portfolio__modal" aria-hidden="true">
-                    <div class="portfolio__modalbox">
-                        
-                        <button class="portfolio__modalbox-close">
-                            <i class="fa-solid fa-circle-xmark"></i>
-                        </button>
-                    </div>
-                </div>
-            </section>
-            <section id="contact" class="main__contact container">
-                <div class="wrapper">
-                    <h2 class="contact__title main__title">Contact Me Everything Everywhere All At Once</h2>
-                </div>
-            </section>
-        </main>
-
-        <footer class="footer"></footer>
-    </div>
+            </div>
+        </section>
+        <section id="contact" class="main__contact container">
+            <div class="wrapper">
+                <h2 class="contact__title main__title">Contact Me Everything Everywhere All At Once</h2>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="footer"></footer>
+    <!-- Javascript -->
     <script src="/swiper/swiper-bundle.min.js"></script>
     <script src="include/index.js"></script>
 </body>
