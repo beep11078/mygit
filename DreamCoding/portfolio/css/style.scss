@@ -47,7 +47,7 @@ button {
 }
 
 button:focus {
-    outline: 1px solid var(--color-accent);
+    outline: 1px solid transparent;
 }
 
 
@@ -103,7 +103,10 @@ button:focus {
         gap: 4px;
 
         &__item {
+            display: block;
             padding: 8px 16px;
+            border-bottom: 1px solid transparent;
+
             &:hover {
                 border-bottom: 1px solid var(--color-accent);
             }
@@ -113,6 +116,17 @@ button:focus {
                 border-radius: 4px;
             }
         }
+
+        
+    }
+
+    &__toggle {
+        display: none;
+        color: var(--color-white);
+        font-size: 1.5rem;
+        position: absolute;
+        top: 1.5rem;
+        right: 1rem;
     }
 
     &--dark {
@@ -454,9 +468,9 @@ button:focus {
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1023px) {
     .section {
-        padding: 3rem 2rem;
+        padding: 4rem 2rem;
 
         &__title {
             font-size: 2rem;
@@ -470,17 +484,29 @@ button:focus {
     .header {
         flex-direction: column;
         align-items: start;
+        background-color: var(--color-primary);
 
         &__menu {
+            display: none;
             flex-direction: column;
             text-align: center;
-            padding: 1rem 4rem;
+            margin: 1rem 4rem;
             gap: 1rem;
+
+            &.open {
+                display: flex;
+            }
         }
 
         &__nav {
             width: 100%;
         }
+
+        &__toggle {
+            display: block;
+        }
+
+        
     }
 
     .home {
