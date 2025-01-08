@@ -16,7 +16,7 @@ let mySwiper2 = new Swiper("#portfolio2 .swiper-container", {
 
 const memoji = document.querySelector(".profile__memoji");
 
-const closeBtn = document.querySelector(".profile__modalbox-close");
+const closeBtn = document.querySelector(".profile__modal-close");
 const modal = document.querySelector(".profile__modal");
 
 memoji.addEventListener("click", (e) => {
@@ -42,8 +42,8 @@ function copy(targetId) {
   }
 }
 
-// closeBtn.addEventListener("click", (e) => {
-//   // searchBtn이 클릭된 경우
-//   modal.style.display = "none";
-//   document.body.style.overflow = "auto";
-// });
+closeBtn.addEventListener("click", (e) => {
+  // searchBtn이 클릭된 경우
+  modal.style.display = "none";
+  document.body.style.overflow = "auto";
+});

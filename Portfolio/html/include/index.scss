@@ -205,8 +205,6 @@ a {
         }
   
         &__name {
-          color: var(--white-color);
-          background-color: var(--black-color);
           font-size: 1.4rem;
           font-weight: bold;
           text-align: center;
@@ -385,7 +383,8 @@ a {
         }
 
         img {
-          object-fit: cover;
+          display: block;
+          height: 100%;
         }
 
         &__info {
@@ -407,6 +406,7 @@ a {
 .swiper-container {
   width: 1200px;
   overflow: hidden;
+  padding: 0 15px;
 }
 
 .swiper-slide {
