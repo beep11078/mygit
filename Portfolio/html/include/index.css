@@ -53,18 +53,14 @@ a {
   margin-bottom: 80px;
   text-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
 }
-.header__nav-menu-list {
+.header__menu {
   width: 700px;
   margin: auto;
   display: flex;
   justify-content: space-between;
-}
-.header__nav-menu-item {
-  display: flex;
-  flex-direction: column;
   align-items: center;
 }
-.header__nav-menu {
+.header__menu-item {
   display: inline-block;
   width: 150px;
   height: 150px;
@@ -76,18 +72,17 @@ a {
   border: 0;
   outline: 0;
 }
-.header__nav-menu :active {
+.header__menu-item :active {
   border-radius: 24px;
   background: linear-gradient(145deg, #e1e1e1, #ffffff);
   color: #666;
   box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
 }
-.header__nav-menu img {
+.header__menu-image {
   display: block;
   width: 100%;
   border: 0;
   outline: 0;
-  border-radius: 15px;
 }
 
 .main__title {
