@@ -115,32 +115,32 @@
         <div class="profile__modal" aria-hidden="true">
           <div class="profile__modal-box">
             <ul class="modal-list">
-              <li class="modal-list-item profile__contact">
+              <li class="modal-list-item profile__modal-contact">
                 <img
-                  class="contact__modal-image"
+                  class="profile__image"
                   src="images/memoji3.png"
                   alt="김정빈"
                 />
-                <h3 class="contact__title">김정빈 (Jeongbin Kim)</h3>
-                <div class="contact__list">
-                  <div class="contact__list-item">
-                    <span class="contact__label">E-mail.</span>
-                    <span id="copyMail">beep1107@naver.com</span>
-                    <button type="button" onclick="copy('copyMail')">
+                <p class="profile__name">김정빈 (Jeongbin Kim)</p>
+                <div class="profile__contact">
+                  <div class="profile__contact-item">
+                    <span class="profile__contact-label">E-mail.</span>
+                    <a href="mailto:beep1107@naver.com" id="copyMail">beep1107@naver.com</a>
+                    <button class="copyMail" type="button" onclick="copy('copyMail')">
                       <i class="fa-regular fa-copy"></i>
                     </button>
                   </div>
-                  <div class="contact__list-item">
-                    <span class="contact__label">Tel.</span>
+                  <div class="profile__contact-item">
+                    <span class="profile__contact-label">Tel.</span>
                     <a href="tel:01025263208" id="copyTel">010-2526-3208</a>
-                    <button type="button" onclick="copy('copyTel')">
+                    <button class="copyTel" type="button" onclick="copy('copyTel')">
                       <i class="fa-regular fa-copy"></i>
                     </button>
-                  </div>
+                  </div>                  
                 </div>
               </li>
-              <li class="profile__list-item profile__modal-education">
-                <h3 class="profile__item-title">Education</h3>
+              <li class="modal-list-item profile__modal-education">
+                <h3 class="modal-list-title">Education</h3>
                 <ul class="profile__education-list">
                   <li class="education__item">
                     <span class="education__date">2024.11.21 ~ 2025.00.00</span>
@@ -150,10 +150,10 @@
                   <li class="education__item">
                     <span class="education__date">2024.05.29 ~ 2024.11.15</span>
                     <span class="education__institute"
-                      >그린컴퓨터아카데미 (멀티미디어)</span
+                      >그린컴퓨터아카데미</span
                     >
                     <span class="education__details"
-                      >UI/UX(웹퍼블리셔) & 영상편집(유튜브, 에펙, 블렌더3D)
+                      >(멀티미디어)UI/UX(웹퍼블리셔) & 영상편집(유튜브, 에펙, 블렌더3D)
                       양성과정-혼합 수료</span
                     >
                   </li>
@@ -172,8 +172,8 @@
                   </li>
                 </ul>
               </li>
-              <li class="profile__list-item profile__modal-license">
-                <h3 class="profile__item-title">License</h3>
+              <li class="modal-list-item profile__modal-license">
+                <h3 class="modal-list-title">License</h3>
                 <ul class="profile__license-list">
                   <li class="license__item">
                     <span class="license__date">2024.00.00</span>
@@ -193,14 +193,15 @@
                   </li>
                 </ul>
               </li>
-              <li class="profile__list-item profile__modal-skills">
-                <h3 class="profile__item-title">Skills</h3>
+              <li class="modal-list-item profile__modal-skills">
+                <h3 class="modal-list-title">Skills</h3>
                 <p>HTML, CSS, JavaScript</p>
                 <p>Figma, Photoshop, Illustrator,</p>
                 <p>PremierePro, AfterEffects, Blender</p>
+                <p>MS Excel, Powerpoint, Word</p>
               </li>
             </ul>
-            <button class="profile__modal-box-close">
+            <button class="profile__modal-close">
               <i class="fa-solid fa-circle-xmark"></i>
             </button>
           </div>

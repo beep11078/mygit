@@ -126,7 +126,6 @@ a {
   border-left: 25px solid transparent;
 }
 .main .profile__modal {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -149,50 +148,21 @@ a {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.main .profile__modal-box-close {
-  cursor: pointer;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  border: none;
-  background-color: #222;
-  position: absolute;
-  top: 0;
-  right: -50px;
-  transform: translate(-50%, -50%);
-}
-.main .profile__modal-box-close ::before,
-.main .profile__modal-box-close ::after {
-  content: "";
-  width: 2px;
-  height: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #fff;
-}
-.main .profile__modal-box-close ::before {
-  transform: translate(-50%, -50%) rotate(45deg);
-}
-.main .profile__modal-box-close ::after {
-  transform: translate(-50%, -50%) rotate(-45deg);
-}
-.main .profile__modal-list {
+.main .profile__modal .modal-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr 1fr;
   gap: 4rem 3rem;
 }
-.main .profile__modal-list-item {
+.main .profile__modal .modal-list-item {
   line-height: 1.6rem;
 }
-.main .profile__modal-list-item-title {
+.main .profile__modal .modal-list-title {
   font-weight: bold;
   border-bottom: 1px solid #222;
   margin-bottom: 15px;
 }
-.main .profile__modal-list-item [class$=__date] {
+.main .profile__modal .modal-list [class$=__date] {
   font-family: "Noto Serif", serif;
   margin-right: 0.3rem;
   font-size: 0.9rem;
@@ -212,27 +182,28 @@ a {
   display: block;
   width: 100%;
 }
-.main .profile__modal-contact p {
-  text-align: center;
+.main .profile__modal-contact .profile__name {
+  color: var(--white-color);
+  background-color: var(--black-color);
   font-size: 1.4rem;
-  line-height: 1.6rem;
   font-weight: bold;
-  margin-bottom: 15px;
-  border-bottom: 1px solid #222;
+  text-align: center;
+  padding: 5px 0 6px;
+  transform: translateY(-1rem);
 }
-.main .profile__modal-contact-list .contact__item {
+.main .profile__modal-contact .profile__contact-item {
   display: flex;
 }
-.main .profile__modal-contact-list .contact__item a {
+.main .profile__modal-contact .profile__contact-item [id^=copy] {
   color: var(--black-color);
 }
-.main .profile__modal-contact-list .contact__label {
+.main .profile__modal-contact .profile__contact-label {
   font-family: "Noto Serif", serif;
   margin-right: 0.3rem;
   font-size: 0.9rem;
   width: 50px;
 }
-.main .profile__modal-contact-list button {
+.main .profile__modal-contact .profile__contact [class^=copy] {
   margin-left: auto;
   background-color: transparent;
   border: none;
@@ -242,13 +213,48 @@ a {
   grid-column: 2/4;
   align-self: center;
 }
+.main .profile__modal-education .education__date {
+  display: inline-block;
+  width: 165x;
+}
 .main .profile__modal-license {
+  margin-top: auto;
   grid-row: 2/3;
   grid-column: 2/3;
 }
 .main .profile__modal-skills {
+  margin-top: auto;
   grid-row: 2/3;
   grid-column: 3/4;
+}
+.main .profile__modal-close {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background-color: #222;
+  position: absolute;
+  top: 0;
+  right: -50px;
+  transform: translate(-50%, -50%);
+}
+.main .profile__modal-close ::before,
+.main .profile__modal-close ::after {
+  content: "";
+  width: 2px;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+}
+.main .profile__modal-close ::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.main .profile__modal-close ::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
 .main .portfolio__list .project__image-box {
   overflow: hidden;
