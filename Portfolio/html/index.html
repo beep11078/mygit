@@ -40,6 +40,9 @@
     <!-- CSS -->
     <link rel="stylesheet" href="/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="include/index.css" />
+    <!-- Javascript -->
+    <script src="/swiper/swiper-bundle.min.js" defer></script>
+    <script src="include/index.js" defer></script>
   </head>
   <body>
     <!-- Header -->
@@ -88,7 +91,7 @@
     <main class="main">
       <section id="about" class="main__profile container">
         <div class="wrapper">
-          <h2 class="profile__title main__title">김정빈 자기소개</h2>
+          <h2 class="main__title">김정빈 자기소개</h2>
           <div class="profile__text">
             <img
               class="profile__memoji"
@@ -125,18 +128,28 @@
                 <div class="profile__contact">
                   <div class="profile__contact-item">
                     <span class="profile__contact-label">E-mail.</span>
-                    <a href="mailto:beep1107@naver.com" id="copyMail">beep1107@naver.com</a>
-                    <button class="copyMail" type="button" onclick="copy('copyMail')">
+                    <a href="mailto:beep1107@naver.com" id="copyMail"
+                      >beep1107@naver.com</a
+                    >
+                    <button
+                      class="copyMail"
+                      type="button"
+                      onclick="copy('copyMail')"
+                    >
                       <i class="fa-regular fa-copy"></i>
                     </button>
                   </div>
                   <div class="profile__contact-item">
                     <span class="profile__contact-label">Tel.</span>
                     <a href="tel:01025263208" id="copyTel">010-2526-3208</a>
-                    <button class="copyTel" type="button" onclick="copy('copyTel')">
+                    <button
+                      class="copyTel"
+                      type="button"
+                      onclick="copy('copyTel')"
+                    >
                       <i class="fa-regular fa-copy"></i>
                     </button>
-                  </div>                  
+                  </div>
                 </div>
               </li>
               <li class="modal-list-item profile__modal-education">
@@ -149,12 +162,10 @@
                   </li>
                   <li class="profile__education-item">
                     <span class="education__date">2024.05.29 ~ 2024.11.15</span>
-                    <span class="education__institute"
-                      >그린컴퓨터아카데미</span
-                    >
+                    <span class="education__institute">그린컴퓨터아카데미</span>
                     <span class="education__details"
-                      >(멀티미디어)UI/UX(웹퍼블리셔) & 영상편집(유튜브, 에펙, 블렌더3D)
-                      양성과정-혼합 수료</span
+                      >(멀티미디어)UI/UX(웹퍼블리셔) & 영상편집(유튜브, 에펙,
+                      블렌더3D) 양성과정-혼합 수료</span
                     >
                   </li>
                   <li class="profile__education-item">
@@ -209,7 +220,7 @@
       </section>
       <section id="portfolio1" class="main__portfolio container">
         <div class="wrapper">
-          <h2 class="portfolio__title main__title">웹 퍼블리싱 작업</h2>
+          <h2 class="main__title">웹 퍼블리싱 작업</h2>
           <div class="swiper-container">
             <ul class="portfolio__list swiper-wrapper">
               <li class="portfolio__item project swiper-slide">
@@ -318,12 +329,9 @@
           </div>
         </div>
       </section>
-      <section
-        id="portfolio2"
-        class="main__portfolio main__portfolio container"
-      >
+      <section id="portfolio2" class="main__portfolio container">
         <div class="wrapper">
-          <h2 class="portfolio__title main__title">그래픽, 영상 작업</h2>
+          <h2 class="main__title">그래픽, 영상 작업</h2>
           <div class="swiper-container">
             <ul class="portfolio__list regular swiper-wrapper">
               <li class="portfolio__item project swiper-slide">
@@ -505,18 +513,14 @@
           </div>
         </div>
       </section>
-      <section id="contact" class="main__contact container">
-        <div class="wrapper">
-          <h2 class="contact__title main__title">
-            Contact Me Everything Everywhere All At Once
-          </h2>
-        </div>
-      </section>
     </main>
     <!-- Footer -->
-    <footer class="footer"></footer>
-    <!-- Javascript -->
-    <script src="/swiper/swiper-bundle.min.js"></script>
-    <script src="include/index.js"></script>
+    <footer id="contact" class="main__contact container">
+      <div class="wrapper">
+        <h2 class="main__title">
+          Contact Me Everything Everywhere All At Once
+        </h2>
+      </div>
+    </footer>
   </body>
 </html>
