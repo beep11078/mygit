@@ -114,17 +114,29 @@ class Idol{
     }
 }
 
-class FemaleIdol extends Idol{
-    sing(){
-        return `${this.name}이 노래를 합니다.`;
+class FemaleIdol extends Idol {
+    dance(){
+        return `${this.name}이 춤을 춥니다.`
     }
 }
 
-class MaleIdol extends Idol{
-    dance(){
-        return `${this.name}이 춤을 춥니다.`;
-    }
-}
+const yuJin = new FemaleIdol('안유진', 2004);
+console.log(yuJin)
+
+
+
+
+// class FemaleIdol extends Idol{
+//     sing(){
+//         return `${this.name}이 노래를 합니다.`;
+//     }
+// }
+
+// class MaleIdol extends Idol{
+//     dance(){
+//         return `${this.name}이 춤을 춥니다.`;
+//     }
+// }
 
 const cIveMembers = iveMembers.map(
     (x) => new FemaleIdol(x['name'], x['year']),
