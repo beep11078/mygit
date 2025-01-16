@@ -73,9 +73,9 @@ let iveMembers4 = iveMembers;
 console.log(iveMembers4);
 console.log(iveMembers4 === iveMembers);
 
-console.log([
-    ...iveMembers,
-] === iveMembers);
+// console.log([
+//     ...iveMembers,
+// ] === iveMembers);
 
 // join()
 console.log(iveMembers.join());
