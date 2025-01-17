@@ -12,27 +12,27 @@ let iveMembers = [
 
 console.log(iveMembers);
 
-// push()
+// push() : 추가
 console.log(iveMembers.push('코드팩토리'));
 console.log(iveMembers);
 
 console.log('---------------_');
-// pop()
+// pop() : 제외
 console.log(iveMembers.pop());
 console.log(iveMembers);
 
 console.log('---------------_');
-// shift()
+// shift() : 빼오기
 console.log(iveMembers.shift());
 console.log(iveMembers);
 
-// unshift()
+// unshift() : 넣기
 console.log(iveMembers.unshift('안유진'));
 console.log(iveMembers);
 
 console.log('---------------_');
 
-// splice()
+// splice() : 자르기
 console.log(iveMembers.splice(0, 3))
 console.log(iveMembers);
 
@@ -110,7 +110,7 @@ console.log(numbers);
 numbers.sort((a, b) => a > b ? -1 : 1);
 console.log(numbers);
 
-// map()
+// map() : 반환값 대체
 console.log('--------------');
 console.log(iveMembers.map((x) => x));
 console.log(iveMembers.map((x) => `아이브: ${x}`));
@@ -124,22 +124,22 @@ console.log(iveMembers.map((x) => {
 }));
 console.log(iveMembers);
 
-// filter()
-numbers = [1, 8, 7, 6, 3];
+// // filter()
+// numbers = [1, 8, 7, 6, 3];
 
-console.log(numbers.filter((x) => x % 2 === 0));
+// console.log(numbers.filter((x) => x % 2 === 0));
 
-// find()
-console.log(numbers.find((x) => x % 2 === 0));
+// // find()
+// console.log(numbers.find((x) => x % 2 === 0));
 
-// findIndex()
-console.log(numbers.findIndex((x) => x % 2 === 0));
+// // findIndex()
+// console.log(numbers.findIndex((x) => x % 2 === 0));
 
-// reduce()
-console.log(numbers.reduce((p, n) => p + n, 0));
+// // reduce()
+// console.log(numbers.reduce((p, n) => p + n, 0));
 
-// reduce() 퀴즈
-// reduce() 함수를 사용해서 iveMembers 변수에 있는 모든 스트링 값들의
-// 길이를 더해서 반환하라.
-// 참고로 string의 길이는 .length를 이용해서 구할 수 있다.
-console.log(iveMembers.reduce((p, n) => p + n.length, 0))
+// // reduce() 퀴즈
+// // reduce() 함수를 사용해서 iveMembers 변수에 있는 모든 스트링 값들의
+// // 길이를 더해서 반환하라.
+// // 참고로 string의 길이는 .length를 이용해서 구할 수 있다.
+// console.log(iveMembers.reduce((p, n) => p + n.length, 0))

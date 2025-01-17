@@ -47,3 +47,24 @@ closeBtn.addEventListener("click", (e) => {
   modal.style.display = "none";
   document.body.style.overflow = "auto";
 });
+
+const options = {
+        rootMargin: '200px',
+        threshold: [0, 0.25, 0.5],
+      };
+      const observer = new IntersectionObserver(callback, options);
+      // IntersectionObserver: 클래스
+      // 관찰할 클래스의 인스턴스 생성 <= 관찰할 때마다 호출하는 콜백 함수 전달
+      const boxes = document.querySelectorAll('.box');
+      boxes.forEach((box) => observer.observe(box));
+      // observer야, box요소마다 관찰해줘!
+
+      function callback(entries){
+        entries.forEach((entry) => {
+          if(entry.isIntersecting) {
+            entry.target.classList.add('active');
+          } else {
+            entry.target.classList.remove('active');
+          }
+        })
+      }
