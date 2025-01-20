@@ -1,57 +1,67 @@
 /**
  * Static Keyword
- * 객체를 클래스에 귀속
+ * 객체가 아니라 클래스에 인스턴스가 귀속되도록
  */
+class IdolModel {
+  name;
+  year;
+  static groupName = '아이브';
 
-// class MyBias {
-//   name;
-//   number;
-//   static groupName = "북산";
+  constructor (name, year) {
+    this.name = name;
+    this.year = year;
+  }
 
-//   constructor(name, number) {
-//     this.name = name;
-//     this.number = number;
-//   }
+  static returnGroupName() {
+    return '아이브';
+  }
+}
 
-//   static returnGroupName() {
-//     return "북산";
-//   }
-// }
+const yuJin = new IdolModel('안유진', 2003);
+console.log(yuJin);
 
-// const mitchi = new MyBias("정대만", 14);
-// console.log(mitchi);
-
-// console.log(MyBias.groupName);
-// console.log(MyBias.returnGroupName());
+console.log(IdolModel.groupName);
+console.log(IdolModel.returnGroupName());
 
 /**
  * factory constructor
  */
-
-class MyBias {
+class IdolModel2 {
   name;
-  number;
+  year;
 
-  constructor(name, number) {
+  constructor(name, year) {
     this.name = name;
-    this.number = number;
+    this.year = year;
   }
 
   static fromObject(object) {
-    return new MyBias(object.name, object.number);
+    return new IdolModel2(
+      object.name,
+      object.year,
+    );
   }
 
   static fromList(list) {
-    return new MyBias(list[0], list[1]);
+    return new IdolModel2(
+      list[0],
+      list[1],
+    );
   }
 }
 
-const mitchi = MyBias.fromObject({
-  name: "정대만",
-  number: 14,
+const yuJin2 =  IdolModel2.fromObject({
+  name: '안유진',
+  year: 2003,
 });
-console.log(mitchi);
 
-const mitsui = MyBias.fromList(["정대만", 3]);
+console.log(yuJin2);
 
-console.log(mitsui);
+const wonYoung = IdolModel2.fromList(
+  [
+    '장원영',
+    2003,
+  ]
+);
+
+console.log(wonYoung);
