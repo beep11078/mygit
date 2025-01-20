@@ -4,7 +4,7 @@
 class BasketTeam {
   name;
   number;
-  
+
   constructor(name, number) {
     this.name = name;
     this.number = number;
@@ -12,21 +12,21 @@ class BasketTeam {
 }
 
 class Shohoku extends BasketTeam {
-  goal(){
-    return '정대만의 3점 슛!';
+  goal() {
+    return "정대만의 3점 슛!";
   }
 }
 
 class Ryonan extends BasketTeam {
-  do(){
-    return '윤대협이 한다.';
+  do() {
+    return "윤대협이 한다.";
   }
 }
 
-const daeMan = new Shohoku('정대만', 14);
+const daeMan = new Shohoku("정대만", 14);
 console.log(daeMan);
 
-const daeHyup = new Ryonan('윤대협', 7);
+const daeHyup = new Ryonan("윤대협", 7);
 console.log(daeHyup);
 
 console.log(daeMan.goal());
@@ -40,4 +40,3 @@ console.log(daeHyup.number);
 console.log(daeMan instanceof BasketTeam);
 console.log(daeMan instanceof Shohoku);
 console.log(daeMan instanceof Ryonan);
-

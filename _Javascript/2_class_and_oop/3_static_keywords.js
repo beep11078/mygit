@@ -24,10 +24,9 @@
 // console.log(MyBias.groupName);
 // console.log(MyBias.returnGroupName());
 
-
-/** 
+/**
  * factory constructor
-*/ 
+ */
 
 class MyBias {
   name;
@@ -39,31 +38,20 @@ class MyBias {
   }
 
   static fromObject(object) {
-    return new MyBias (
-      object.name,
-      object.number,
-    );
+    return new MyBias(object.name, object.number);
   }
 
   static fromList(list) {
-    return new MyBias (
-      list[0],
-      list[1],
-    )
+    return new MyBias(list[0], list[1]);
   }
 }
 
 const mitchi = MyBias.fromObject({
-  name:"정대만",
+  name: "정대만",
   number: 14,
 });
 console.log(mitchi);
 
-const mitsui = MyBias.fromList(
-  [
-    '정대만',
-    3,
-  ]
-);
+const mitsui = MyBias.fromList(["정대만", 3]);
 
 console.log(mitsui);
