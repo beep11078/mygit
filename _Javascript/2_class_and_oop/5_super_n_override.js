@@ -26,7 +26,7 @@ class Shohoku extends BasketTeam {
 
   myName() {
     // return `난 ${this.name}. 포기를 모르는 ${this.position}지⋯.`
-    return `${super.myName()} ${this.position}이 다.`;
+    return `${super.myName()} 포지션은 ${this.position}다.`;
   }
 }
 
