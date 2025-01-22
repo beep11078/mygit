@@ -1,0 +1,83 @@
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  background-color: #f0f0f0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  /* border: 1px solid #ddd; */
+  box-shadow: 1px 1px 3px #ddd;
+  border-radius: 5px;
+  background-color: #f6f6f2;
+}
+
+.todo-form {
+  margin-bottom: 2px;
+
+  &-label {
+    font-size: 1rem;
+  }
+
+  &-input {
+    padding: 0;
+    font-size: 1rem;
+  }
+
+  &-submit {
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    color: #f6f6f2;
+    background-color: #444;
+    border: none;
+    border-radius: 50%;
+  }
+}
+
+#task {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.todo-note {
+  position: relative;
+  height: 500px;
+  background: repeating-linear-gradient(
+    #444,
+    #444 1px,
+    #f6f6f2 0,
+    #f6f6f2 35px
+  );
+  overflow-y: auto;
+}
+
+.todo-line {
+  height: 35px; /* 줄 높이를 배경과 동일하게 설정 */
+  line-height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5px;
+  border-bottom: 1px solid transparent; /* 선택 시 강조 스타일 가능 */
+}
+
+.todo-line span {
+  flex: 1;
+}
+
+.todo-line button {
+  background-color: #ff5c5c;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.todo-line button:hover {
+  background-color: #ff2c2c;
+}

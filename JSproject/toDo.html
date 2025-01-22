@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>투두리스트</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/toDo.css">
+  </head>
+  <body>
+    <div class="container">
+      <form class="todo-form">
+        <label class="todo-form-label" for="task">해야 할 일 : </label>
+        <input class="todo-form-input" type="text" name="task" id="task" placeholder="입력해주세요!" autofocus required />
+        <button class="todo-form-submit" type="submit">✓</button>
+      </form>
+      <div class="todo-note">
+        <!-- 줄마다 할 일이 추가될 영역 -->
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const todoForm = document.getElementById("todoForm");
+        const taskInput = document.getElementById("task");
+        const todoNote = document.querySelector(".todo-note");
+
+        todoForm.addEventListener("submit", (e) => {
+          e.preventDefault(); // 폼 제출 시 새로고침 방지
+          const taskValue = taskInput.value.trim();
+
+          if (taskValue) {
+            addTodoLine(taskValue);
+            taskInput.value = ""; // 입력 필드 초기화
+          }
+        });
+
+        function addTodoLine(task) {
+          const todoLine = document.createElement("div");
+          todoLine.className = "todo-line";
+
+          todoLine.innerHTML = `
+          <span>${task}</span>
+          <button class="delete-btn">삭제</button>
+        `;
+
+          // 삭제 버튼 이벤트
+          const deleteBtn = todoLine.querySelector(".delete-btn");
+          deleteBtn.addEventListener("click", () => {
+            todoLine.remove();
+          });
+
+          todoNote.appendChild(todoLine);
+        }
+      });
+    </script>
+  </body>
+</html>
