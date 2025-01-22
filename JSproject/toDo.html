@@ -10,13 +10,21 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/toDo.css">
+    <link rel="stylesheet" href="css/toDo.css" />
   </head>
   <body>
     <div class="container">
       <form class="todo-form">
         <label class="todo-form-label" for="task">해야 할 일 : </label>
-        <input class="todo-form-input" type="text" name="task" id="task" placeholder="입력해주세요!" autofocus required />
+        <input
+          class="todo-form-input"
+          type="text"
+          name="task"
+          id="task"
+          placeholder="을 입력해주세요!"
+          autofocus
+          required
+        />
         <button class="todo-form-submit" type="submit">✓</button>
       </form>
       <div class="todo-note">
@@ -26,7 +34,7 @@
 
     <script>
       document.addEventListener("DOMContentLoaded", () => {
-        const todoForm = document.getElementById("todoForm");
+        const todoForm = document.querySelector(".todo-form");
         const taskInput = document.getElementById("task");
         const todoNote = document.querySelector(".todo-note");
 
@@ -46,7 +54,7 @@
 
           todoLine.innerHTML = `
           <span>${task}</span>
-          <button class="delete-btn">삭제</button>
+          <button class="delete-btn">⨯</button>
         `;
 
           // 삭제 버튼 이벤트
