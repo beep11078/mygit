@@ -57,6 +57,7 @@ body {
 .todo-line {
   font-size: 1rem;
   height: 35px; /* 줄 높이를 배경과 동일하게 설정 */
+  line-height: 35px;
   display: flex;
   align-items: center;
   justify-content: space-between;
