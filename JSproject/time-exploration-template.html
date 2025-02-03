@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시간 탐구 다이어리</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            gap: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 20px;
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .card-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .grid {
+            display: grid;
+            gap: 10px;
+        }
+
+        .grid-4 {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .grid-2 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .section {
+            margin-bottom: 24px;
+        }
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .tracker-box {
+            border: 1px solid #e2e8f0;
+            padding: 12px;
+            border-radius: 6px;
+        }
+
+        .tracker-label {
+            font-size: 0.875rem;
+            color: #64748b;
+            margin-bottom: 4px;
+        }
+
+        .tracker-value {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #1e293b;
+        }
+
+        .meta-box {
+            border: 1px solid #e2e8f0;
+            padding: 16px;
+            border-radius: 6px;
+            margin-bottom: 12px;
+        }
+
+        .meta-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        .meta-content {
+            color: #475569;
+            font-size: 0.875rem;
+        }
+
+        .insights-list {
+            list-style: none;
+        }
+
+        .insights-item {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+
+        .insights-bullet {
+            color: #3b82f6;
+        }
+
+        .time-perception {
+            background-color: #f0f9ff;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 8px;
+        }
+
+        .icon {
+            width: 20px;
+            height: 20px;
+        }
+
+        .input-group {
+            margin-bottom: 12px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 4px;
+            font-size: 0.875rem;
+            color: #64748b;
+        }
+
+        .input-group input,
+        .input-group textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #e2e8f0;
+            border-radius: 4px;
+        }
+
+        .btn {
+            background-color: #3b82f6;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #2563eb;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                <h1 class="card-title">일간 기록 - <span id="currentDate"></span></h1>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                    시간 인식 체크
+                </h2>
+                <div class="grid grid-2">
+                    <div class="tracker-box">
+                        <div class="tracker-label">예상 소요 시간</div>
+                        <input type="number" id="expectedTime" class="tracker-value" placeholder="분 단위로 입력">
+                    </div>
+                    <div class="tracker-box">
+                        <div class="tracker-label">실제 소요 시간</div>
+                        <input type="number" id="actualTime" class="tracker-value" placeholder="분 단위로 입력">
+                    </div>
+                </div>
+                <div id="timeDifference" class="time-perception"></div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    에너지 & 집중력
+                </h2>
+                <div class="grid grid-4" id="energyTracker">
+                    <!-- 동적으로 생성될 트래커 -->
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">활동 기록</h2>
+                <div class="input-group">
+                    <label>활동 시간</label>
+                    <input type="time" id="activityTime">
+                </div>
+                <div class="input-group">
+                    <label>활동 내용</label>
+                    <input type="text" id="activityContent">
+                </div>
+                <div class="input-group">
+                    <label>메타인지 관찰</label>
+                    <textarea id="metaCognition" rows="3"></textarea>
+                </div>
+                <button class="btn" onclick="addActivity()">기록하기</button>
+                <div id="activitiesList" class="meta-box"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 현재 날짜 표시
+        document.getElementById('currentDate').textContent = new Date().toLocaleDateString();
+
+        // 시간 차이 계산
+        function calculateTimeDifference() {
+            const expected = parseInt(document.getElementById('expectedTime').value) || 0;
+            const actual = parseInt(document.getElementById('actualTime').value) || 0;
+            const diff = actual - expected;
+            const diffText = `시간 차이: ${diff > 0 ? '+' : ''}${diff}분`;
+            document.getElementById('timeDifference').textContent = diffText;
+        }
+
+        document.getElementById('expectedTime').addEventListener('input', calculateTimeDifference);
+        document.getElementById('actualTime').addEventListener('input', calculateTimeDifference);
+
+        // 에너지 트래커 초기화
+        const timeSlots = ['아침', '점심', '저녁', '밤'];
+        const energyTracker = document.getElementById('energyTracker');
+
+        timeSlots.forEach(slot => {
+            const trackerBox = document.createElement('div');
+            trackerBox.className = 'tracker-box';
+            trackerBox.innerHTML = `
+                <div class="tracker-label">${slot}</div>
+                <div class="grid grid-2">
+                    <div>
+                        <div class="tracker-label">에너지</div>
+                        <input type="number" min="0" max="10" class="tracker-value" placeholder="/10">
+                    </div>
+                    <div>
+                        <div class="tracker-label">집중</div>
+                        <input type="number" min="0" max="10" class="tracker-value" placeholder="/10">
+                    </div>
+                </div>
+            `;
+            energyTracker.appendChild(trackerBox);
+        });
+
+        // 활동 기록 추가
+        function addActivity() {
+            const time = document.getElementById('activityTime').value;
+            const content = document.getElementById('activityContent').value;
+            const metaCognition = document.getElementById('metaCognition').value;
+
+            if (!time || !content) return;
+
+            const activityElement = document.createElement('div');
+            activityElement.className = 'meta-box';
+            activityElement.innerHTML = `
+                <div class="meta-header">
+                    <span class="meta-title">${time} - ${content}</span>
+                </div>
+                <div class="meta-content">
+                    <p>메타인지: ${metaCognition}</p>
+                </div>
+            `;
+
+            document.getElementById('activitiesList').appendChild(activityElement);
+
+            // 입력 필드 초기화
+            document.getElementById('activityTime').value = '';
+            document.getElementById('activityContent').value = '';
+            document.getElementById('metaCognition').value = '';
+        }
+    </script>
+</body>
+</html>

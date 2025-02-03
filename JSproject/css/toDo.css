@@ -55,7 +55,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 5px;
   border-bottom: 1px solid transparent; /* 선택 시 강조 스타일 가능 */
 }
 
